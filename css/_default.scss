@@ -492,15 +492,31 @@ header{
 	}
 }
 .ft_l, .ft_r{
-	display: block;
-	float: left;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0) scale(0);
 	transition: 1s;
 }
+.ft_l{
+	&.resize{
+		transform: translate3d(-120%, -50%, 0) scale(0.8);
+	}
+	&.resize_2{
+		transform: translate3d(-170%, -50%, 0) scale(1);
+	}
+}
 .ft_r{
-	float: right;
+	&.resize{
+		transform: translate3d(20%, -50%, 0) scale(0.8);
+	}
+	&.resize_2{
+		transform: translate3d(70%, -50%, 0) scale(1);
+	}
 }
 .b1_2_content{
 	display: inline-block;
+	height: 360px;
 	position: absolute;
 	left: 50%;
 	bottom: 50%;

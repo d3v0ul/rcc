@@ -118,18 +118,22 @@ $(".top_block").bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         $(".b1_2").addClass("hidden");
         $(".mouse_icon").show();
+        $(".ft_l, .ft_r").removeClass("resize");
     }
     else {
         $(".b1_2").removeClass("hidden");
         $(".mouse_icon").hide();
+        $(".ft_l, .ft_r").addClass("resize");
     }
 });
 $(".b1_2").bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         $(".b1_2").addClass("resize");
+        $(".ft_l, .ft_r").removeClass("resize_2");
     }
     else {
-        $(".b1_2").removeClass("resize");
+        $(".b1_2").removeClass("resize");        
+        $(".ft_l, .ft_r").addClass("resize_2");
     }
 });
 
