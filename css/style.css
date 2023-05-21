@@ -1941,9 +1941,21 @@ footer.main_footer {
   margin-top: 40px;
   height: 600px;
   position: relative;
+  overflow: hidden;
+  /*&.eb_1{
+  	background: url(../images/eb_1.jpg) center no-repeat;
+  }*/
 }
-.e_block.eb_1 {
-  background: url(../images/eb_1.jpg) center no-repeat;
+
+.eb_img {
+  display: block;
+  width: 1520px;
+  max-width: 1520px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
 }
 
 .eb_content {
@@ -5017,9 +5029,15 @@ img {
     margin-top: 40px;
     height: 414px;
     position: relative;
+    /*&.eb_1{
+    	background: url(../images/eb_mob_1.jpg) center no-repeat;
+    }*/
   }
-  .e_block.eb_1 {
-    background: url(../images/eb_mob_1.jpg) center no-repeat;
+
+  .eb_img {
+    width: 800px;
+    max-width: 800px;
+    height: 414px;
   }
 
   .eb_content {
