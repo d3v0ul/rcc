@@ -126,14 +126,16 @@ $(".top_block").bind('mousewheel DOMMouseScroll', function(event){
         $(".ft_l, .ft_r").addClass("resize");
     }
 });
-$(".b1_2").bind('mousewheel DOMMouseScroll', function(event){
+$(".b1_2, .b2_2_wrap").bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         $(".b1_2").addClass("resize");
         $(".ft_l, .ft_r").removeClass("resize_2");
+        $(".b2_2_wrap").removeClass("visible");
     }
     else {
         $(".b1_2").removeClass("resize");        
         $(".ft_l, .ft_r").addClass("resize_2");
+        $(".b2_2_wrap").addClass("visible");
     }
 });
 

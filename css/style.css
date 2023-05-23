@@ -174,6 +174,7 @@ header.h_main {
   background-size: cover;
   height: 100vh;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -329,20 +330,34 @@ header.h_main {
 }
 
 .b2_2_wrap {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.b2_2_wrap .b1b_all {
+  bottom: -100vh;
+  transition: 0.2s;
+}
+.b2_2_wrap.visible .b1_block {
+  bottom: 0;
+}
+.b2_2_wrap.visible .b1b_all {
+  bottom: 0;
 }
 
 .b1_block {
-  /*display: none;*/
   display: block;
   width: 33.3vw;
   height: 100vh;
   overflow: hidden;
   position: absolute;
+  z-index: 1;
   left: 0;
-  bottom: 0;
-  /*background: url(../images/b1i_1.jpg) 0 0 no-repeat;
-  background-size: cover;*/
+  bottom: -100vh;
+  transition: 1s;
 }
 .b1_block:hover > img {
   filter: brightness(100%);
@@ -363,11 +378,13 @@ header.h_main {
   /*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 33.3vw;
+  transition: 2s;
 }
 .b1_block.b1b_3 {
   /*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 66.6vw;
+  transition: 3s;
 }
 .b1_block.b1b_3 .b1b_all {
   display: none;
@@ -559,9 +576,6 @@ header.h_main {
 .b1_2.resize {
   opacity: 0.5;
 }
-.b1_2.resize .ft_l, .b1_2.resize .ft_r {
-  transform: scale(0.5);
-}
 .b1_2.resize .b1_2_content {
   /*bottom: -50%;*/
 }
@@ -570,12 +584,14 @@ header.h_main {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0) scale(0);
+  transform: translate3d(-50%, -50%, 0) scale(0.5);
+  opacity: 0;
   transition: 1s;
 }
 
 .ft_l.resize {
   transform: translate3d(-120%, -50%, 0) scale(0.8);
+  opacity: 1;
 }
 .ft_l.resize_2 {
   transform: translate3d(-170%, -50%, 0) scale(1);
@@ -583,6 +599,7 @@ header.h_main {
 
 .ft_r.resize {
   transform: translate3d(20%, -50%, 0) scale(0.8);
+  opacity: 1;
 }
 .ft_r.resize_2 {
   transform: translate3d(70%, -50%, 0) scale(1);
@@ -4692,6 +4709,11 @@ img {
   header {
     height: 70px;
     padding-top: 19px;
+  }
+
+  .b2_2_wrap {
+    position: relative;
+    height: auto;
   }
 
   .vert_slider_demo {

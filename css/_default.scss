@@ -118,6 +118,7 @@ header{
 	background-size: cover;
 	height: 100vh;
 	position: relative;
+	z-index: 1;
 	overflow: hidden;
 }
 .video_background{
@@ -265,19 +266,35 @@ header{
 	top: 0;
 }
 .b2_2_wrap{
-	position: relative;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	.b1b_all{
+		bottom: -100vh;
+		transition: .2s;
+	}
+	&.visible{
+		.b1_block{
+			bottom: 0;
+		}
+		.b1b_all{
+			bottom: 0;
+		}
+	}
 }
 .b1_block{
-	/*display: none;*/
 	display: block;
 	width: 33.3vw;
 	height: 100vh;
 	overflow: hidden;
 	position: absolute;
+	z-index: 1;
 	left: 0;
-	bottom: 0;
-	/*background: url(../images/b1i_1.jpg) 0 0 no-repeat;
-	background-size: cover;*/
+	bottom: -100vh;
+	transition: 1s;
 	&:hover{
 		>img{
 			filter: brightness(100%);
@@ -299,11 +316,13 @@ header{
 		/*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 33.3vw;
+		transition: 2s;
 	}
 	&.b1b_3{
 		/*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 66.6vw;
+		transition: 3s;
 		.b1b_all{
 			display: none;
 		}
@@ -483,9 +502,6 @@ header{
 	}
 	&.resize{
 		opacity: 0.5;		
-		.ft_l, .ft_r{
-			transform: scale(0.5);
-		}
 		.b1_2_content{
 			/*bottom: -50%;*/
 		}
@@ -495,12 +511,14 @@ header{
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate3d(-50%, -50%, 0) scale(0);
+	transform: translate3d(-50%, -50%, 0) scale(0.5);
+	opacity: 0;
 	transition: 1s;
 }
 .ft_l{
 	&.resize{
 		transform: translate3d(-120%, -50%, 0) scale(0.8);
+		opacity: 1;
 	}
 	&.resize_2{
 		transform: translate3d(-170%, -50%, 0) scale(1);
@@ -509,6 +527,7 @@ header{
 .ft_r{
 	&.resize{
 		transform: translate3d(20%, -50%, 0) scale(0.8);
+		opacity: 1;
 	}
 	&.resize_2{
 		transform: translate3d(70%, -50%, 0) scale(1);
