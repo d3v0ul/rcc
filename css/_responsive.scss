@@ -8,10 +8,13 @@ img {
 }
 /* MEDIA QUERIES*/
 @media only screen and (min-width : 1550px){
-.mf_img{
-	left: 50%;
-	transform: translateX(-760px);
+.fighter{
+	.mf_img{
+		left: 50%;
+		transform: translateX(-760px);
+	}
 }
+
 
 
 
@@ -920,6 +923,16 @@ header{
 
 
 } /*920*/
+
+@media only screen and (max-width : 760px){
+.vs_1{
+	display: none;
+}
+.vs_2{
+	display: block;
+}
+
+} /*760*/
 @media only screen and (max-width : 740px){
 .footer{
 	margin-top: 80px;
@@ -1399,7 +1412,9 @@ header{
 		border-bottom: none;
 	}
 }
-
+.nr_main{
+	margin-top: -50px;
+}
 
 
 
@@ -1539,9 +1554,11 @@ header{
 }
 .ts_content{	
 	>a{
-		height: 40px;
-		padding: 0 10px;	
-		line-height: 40px;
+		height: 46px;
+		padding: 0 15px;	
+		font-size: 12px;
+		border-radius: 2px;
+		line-height: 46px;
 	}
 }
 .b_items{
@@ -1826,12 +1843,6 @@ header{
 	width: 213px;
 	bottom: 60px;
 	right: 20px;
-}
-.vs_1{
-	display: none;
-}
-.vs_2{
-	display: block;
 }
 .m_head{
 	font-size: 46px;
@@ -2235,7 +2246,7 @@ header{
 }
 .burger{
 	float: right;
-	margin: 0;
+	margin: 4px 0 0;
 }
 .e_time{
 	display: grid;

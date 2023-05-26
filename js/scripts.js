@@ -9,7 +9,7 @@ setTimeout(() => {
 //burger popup
 $(".burger").click(function() {
     $(".burger_popup").slideToggle(0);
-    $(".h_choose").slideToggle(0);
+    // $(".h_choose").slideToggle(0);
     $(this).toggleClass('opened');
     $("body").toggleClass('noscroll');
     $(".hl_menu, .hr_menu").slideToggle(0, function() {
@@ -38,9 +38,12 @@ $(".burger").click(function() {
 
 
 //выбрать лигу
-// setTimeout(() => {
-//   $('.h_choose').show();
-// }, 3000)
+setTimeout(() => {
+  $('.h_choose').show();
+}, 2000)
+setTimeout(() => {
+  $('.h_choose').hide();
+}, 6000)
 
 
 //video hide controls
