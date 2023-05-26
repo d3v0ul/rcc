@@ -143,6 +143,14 @@ $(".b1_2, .b2_2_wrap").bind('mousewheel DOMMouseScroll', function(event){
 });
 
 
+//swipe
+$(".top_block").on("swipe",function(){
+    $(".b1_2").removeClass("hidden");
+    $(".mouse_icon").hide();
+    $(".ft_l, .ft_r").addClass("resize");
+});
+
+
 //mma flame mobile
 var fm = window.matchMedia('all and (max-width: 600px)');
 if (fm.matches) {
