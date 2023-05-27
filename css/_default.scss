@@ -289,6 +289,9 @@ header{
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
+	.b1_block{
+		bottom: -100vh;
+	}
 	.b1b_all{
 		bottom: -100vh;
 		transition: .2s;
@@ -302,11 +305,6 @@ header{
 		}
 	}
 }
-.b2_2_wrap{
-	.b1_block{
-		bottom: -100vh;
-	}
-}
 .b1_block{
 	display: block;
 	width: 33.3vw;
@@ -314,8 +312,7 @@ header{
 	overflow: hidden;
 	position: absolute;
 	z-index: 1;
-	left: 0;
-	
+	left: 0;	
 	transition: 1s;
 	&:hover{
 		>img{
@@ -1445,13 +1442,25 @@ footer{
 }
 .news_socials_wrap{
 	height: 600px;
-	background: url(../images/news_social.jpg) center no-repeat;
+	/*background: url(../images/news_social.jpg) center no-repeat;*/
 	background-size: cover;
 	margin-top: 140px;
+	position: relative;
+	overflow: hidden;
+}
+.nsw_img{
+	display: block;
+	height: 900px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate3d(-50%, 400px, 0);
 }
 .news_socials{
 	@extend %ct;
 	padding-top: 180px;
+	position: relative;
+	z-index: 1;
 }
 .nc_head{
 	font-size: 96px;
@@ -1976,8 +1985,8 @@ footer{
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			>span{
-				display: block;
+			>a{
+				display: inline-block;
 				font-size: 40px;
 				font-family: $r;
 				font-style: italic;

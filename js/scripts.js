@@ -144,11 +144,38 @@ $(".b1_2, .b2_2_wrap").bind('mousewheel DOMMouseScroll', function(event){
 
 
 //swipe
-$(".top_block").on("swipe",function(){
-    $(".b1_2").removeClass("hidden");
-    $(".mouse_icon").hide();
-    $(".ft_l, .ft_r").addClass("resize");
+// $(".top_block").on("swipe",function(){
+//     $(".b1_2").removeClass("hidden");
+//     $(".mouse_icon").hide();
+//     $(".ft_l, .ft_r").addClass("resize");
+// });
+
+
+//2,3 mobile screen scroll
+var ms = window.matchMedia('all and (max-width: 800px)');
+if (ms.matches) {
+    $(window).scroll(function(){    
+    if ($(this).scrollTop()>0)
+    {
+        $(".b1_2").removeClass("hidden");
+        $(".mouse_icon").hide();
+        $(".ft_l, .ft_r").addClass("resize");     
+    }else{
+        $(".b1_2").addClass("hidden");
+        $(".mouse_icon").show();
+        $(".ft_l, .ft_r").removeClass("resize");
+    }
+    if ($(this).scrollTop()>150)
+    {        
+        $(".b2_2_wrap").addClass("visible");    
+    }else{        
+        $(".b2_2_wrap").removeClass("visible");
+    }
 });
+} else {
+   
+}
+
 
 
 //mma flame mobile
@@ -161,7 +188,7 @@ if (fm.matches) {
 
 
 //mma main block 3 scroll on
-$(".m3_wrap").bind('mousewheel DOMMouseScroll', function(event){
+$(".m3_wrap, .no_b3_wrap").bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         // $("body").addClass("one_page");
         // $("*").addClass("screen");
@@ -332,7 +359,7 @@ new WOW().init();
 
 
 //phone mask
-jQuery(function($){
+$(function($){
    $(".phone").mask("+7 (999) 999-9999");
 });
 
@@ -343,6 +370,21 @@ $('.bp_content').mCustomScrollbar({
         scrollAmount:'300%' /* <<< speed percent */
     }
 });
+
+
+//parallax news_socials_wrap
+$(window).bind('scroll',function(e){
+    parallaxScroll();
+}); 
+function parallaxScroll(){
+    var scrolled = $(window).scrollTop();
+    $('.nsw_img').css('top',(0-(scrolled*0.3))+'px');
+}
+
+
+
+
+
 
 
 //owl sliders
