@@ -498,6 +498,23 @@ header.h_main {
   background: #2B2B2B;
 }
 
+.hlm_events {
+  display: none !important;
+  float: none;
+  width: 100% !important;
+  height: 60px;
+  background: #E04141;
+  font-size: 14px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+}
+.hlm_events:hover {
+  background: #2B2B2B;
+}
+
 .hl_menu {
   float: left;
   margin: 5px 0 0 60px;
@@ -4267,10 +4284,6 @@ img {
     padding-top: 0;
   }
 
-  .b3_wrap {
-    height: auto;
-  }
-
   .news_left {
     float: none;
     max-width: 100%;
@@ -4881,15 +4894,6 @@ img {
 
   .ns_content {
     max-width: 350px;
-  }
-
-  .b3_wrap {
-    min-height: auto;
-    padding: 50px 0 20px;
-  }
-
-  .b3 {
-    padding-left: 95px;
   }
 
   .b3_text {
@@ -6232,6 +6236,7 @@ img {
   }
 
   .b2_wrap {
+    background: #EE4B45 url(../images/b2_bg.svg) center 20px no-repeat;
     padding: 30px 15px;
   }
   .b2_wrap .c_head {
@@ -6421,6 +6426,10 @@ img {
 
   .h_events, .eit_btn {
     display: none;
+  }
+
+  .hlm_events {
+    display: block !important;
   }
 
   .burger {

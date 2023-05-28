@@ -429,6 +429,22 @@ header{
 		background: #2B2B2B;
 	}
 }
+.hlm_events{
+	display: none !important;
+	float: none;
+	width: 100% !important;
+	height: 60px;
+	background: #E04141;
+	font-size: 14px;
+	line-height: 60px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	transition: .3s;
+	&:hover{
+		background: #2B2B2B;
+	}
+}
 .hl_menu{
 	float: left;
 	margin: 5px 0 0 60px;

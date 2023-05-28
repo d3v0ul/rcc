@@ -280,9 +280,6 @@ footer{
 		padding-top: 0;
 	}
 }
-.b3_wrap{
-	height: auto;
-}
 .news_left{
 	float: none;
 	max-width: 100%;
@@ -838,13 +835,6 @@ header{
 }
 .ns_content{
 	max-width: 350px;
-}
-.b3_wrap{
-	min-height: auto;
-	padding: 50px 0 20px;
-}
-.b3{
-	padding-left: 95px;
 }
 .b3_text{
 	margin-bottom: 50px;
@@ -2079,6 +2069,7 @@ header{
 	font-size: 10px;
 }
 .b2_wrap{
+	background: #EE4B45 url(../images/b2_bg.svg) center 20px no-repeat;
 	padding: 30px 15px;
 	.c_head{
 		margin-bottom: 0;
@@ -2252,6 +2243,9 @@ header{
 }
 .h_events{
 	display: none;
+}
+.hlm_events{
+	display: block !important;
 }
 .burger{
 	float: right;
