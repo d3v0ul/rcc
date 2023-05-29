@@ -1578,7 +1578,7 @@ footer.main_footer {
 
 .news_socials_wrap {
   height: 600px;
-  /*background: url(../images/news_social.jpg) center no-repeat;*/
+  background: url(../images/news_social.jpg) center no-repeat;
   background-size: cover;
   margin-top: 140px;
   position: relative;
@@ -3231,7 +3231,7 @@ footer.main_footer {
   grid-gap: 0;
 }
 .champs.boxing .champ:hover .ch_img:after {
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 100%);
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 100%);
 }
 .champs.fairfight .champ:hover .ch_img:after {
   background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #307DFF 100%);
@@ -4880,10 +4880,6 @@ img {
     right: 30px;
   }
 
-  .b2_wrap {
-    min-height: auto;
-  }
-
   .c_head {
     font-size: 64px;
   }
@@ -6236,8 +6232,7 @@ img {
   }
 
   .b2_wrap {
-    background: #EE4B45 url(../images/b2_bg.svg) center 20px no-repeat;
-    padding: 30px 15px;
+    height: 570px;
   }
   .b2_wrap .c_head {
     margin-bottom: 0;

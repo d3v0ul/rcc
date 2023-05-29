@@ -822,9 +822,6 @@ header{
 	top: 20px;
 	right: 30px;	
 }
-.b2_wrap{
-	min-height: auto;
-}
 .c_head{
 	font-size: 64px;
 }
@@ -2069,8 +2066,7 @@ header{
 	font-size: 10px;
 }
 .b2_wrap{
-	background: #EE4B45 url(../images/b2_bg.svg) center 20px no-repeat;
-	padding: 30px 15px;
+	height: 570px;
 	.c_head{
 		margin-bottom: 0;
 	}
