@@ -3225,16 +3225,20 @@ footer.main_footer {
   margin-bottom: 55px;
 }
 
+.remove_one_screen {
+  height: auto !important;
+}
+
 .champs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0;
 }
 .champs.boxing .champ:hover .ch_img:after {
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 100%);
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
 }
 .champs.fairfight .champ:hover .ch_img:after {
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #307DFF 100%);
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #000 150%);
 }
 
 .champ {
@@ -3255,7 +3259,7 @@ footer.main_footer {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 100%);
+  background: linear-gradient(180deg, #1d1d1d 0%, #E92121 150%);
   position: absolute;
   left: 0;
   top: 0;

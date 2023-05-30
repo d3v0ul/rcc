@@ -198,6 +198,7 @@ $(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(eve
     else {
         $("body").removeClass("one_page");
         $("*").removeClass("screen");
+        $(".screen_hide").hide();
     }
 });
 
