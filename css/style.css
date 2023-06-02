@@ -368,7 +368,8 @@ header.h_main {
   bottom: 0;
 }
 .b2_2_wrap.visible .b1b_all {
-  bottom: 0;
+  bottom: 30px;
+  transition: 0.1s;
 }
 
 .b1_block {
@@ -406,7 +407,7 @@ header.h_main {
   /*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 66.6vw;
-  transition: 3s;
+  transition: 2.3s;
 }
 .b1_block.b1b_3 .b1b_all {
   display: none;
@@ -460,6 +461,7 @@ header.h_main {
   text-transform: uppercase;
   font-weight: 700;
   position: absolute;
+  z-index: 1;
   left: 50%;
   transform: translateX(-50%);
   bottom: 4vh;
@@ -560,6 +562,9 @@ header.h_main {
   text-transform: uppercase;
   transition: 0.3s;
 }
+.hr_menu > li > a.rcc_shop {
+  color: #7A7A7A;
+}
 .hr_menu > li > a.rcc_shop:after {
   display: inline-block;
   vertical-align: top;
@@ -613,7 +618,7 @@ header.h_main {
   transform: translateY(100%);
 }
 .b1_2.resize {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
 }
 .b1_2.resize .b1_2_content {
   /*bottom: -50%;*/
@@ -826,6 +831,17 @@ header.h_main {
   font-size: 36px;
   line-height: 140%;
   text-transform: uppercase;
+  position: relative;
+}
+.b3_bot:before {
+  display: block;
+  content: "";
+  width: 23px;
+  height: 23px;
+  background: url(../images/b3_bot_arrow_23x23.svg) 0 0 no-repeat;
+  position: absolute;
+  top: 13px;
+  right: -33px;
 }
 
 footer {
@@ -1493,8 +1509,7 @@ footer.main_footer {
   transition: 0.3s;
 }
 .nri_more:hover {
-  filter: alpha(Opacity=70);
-  opacity: 0.7;
+  background: #E04141;
 }
 
 .nr_listing {
@@ -1557,6 +1572,7 @@ footer.main_footer {
   display: block;
   margin-bottom: 20px;
   transition: 0.3s;
+  filter: grayscale(100%);
 }
 
 .pns_name {
@@ -1800,7 +1816,7 @@ footer.main_footer {
   color: #fff;
 }
 .b_item:hover .bi_right > span > a {
-  margin-left: 18px;
+  /*margin-left: 16px;	*/
 }
 
 .bi_fighters {
@@ -1827,7 +1843,8 @@ footer.main_footer {
   display: inline-block;
   width: 74px;
   height: 74px;
-  margin: 5px 0 5px -25px;
+  /*margin: 5px 0 5px -25px;*/
+  margin: 5px 0 5px 16px;
   transition: 0.3s;
 }
 .bi_right > span > a:hover {
@@ -1941,6 +1958,21 @@ footer.main_footer {
   color: #E04141;
   cursor: pointer;
 }
+.bp_text_all.opened {
+  text-align: left;
+}
+.bp_text_all.opened > span {
+  display: none;
+}
+.bp_text_all.opened:after {
+  display: inline-block;
+  content: "Скрыть";
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 120%;
+  color: #E04141;
+  margin-top: 7px;
+}
 
 .bp_tvs {
   margin: 60px 0 30px;
@@ -1975,8 +2007,12 @@ footer.main_footer {
   margin-top: 68px;
 }
 .e_btns .nr_tags_slider {
-  max-width: 575px;
+  max-width: 620px;
   float: right;
+}
+.e_btns .nr_tags_slider > div {
+  display: inline-block;
+  margin-left: 2px;
 }
 
 .e_time {
@@ -3234,11 +3270,14 @@ footer.main_footer {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0;
 }
+.champs.mma .champ:hover .ch_img:after {
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 150%);
+}
 .champs.boxing .champ:hover .ch_img:after {
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 150%);
 }
 .champs.fairfight .champ:hover .ch_img:after {
-  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #000 150%);
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
 }
 
 .champ {
@@ -4993,6 +5032,14 @@ img {
   .vs_2 {
     display: block;
   }
+
+  .e_btns .nr_tags_slider {
+    max-width: 100%;
+  }
+  .e_btns .nr_tags_slider > div {
+    display: block;
+    margin-left: 0;
+  }
 }
 /*760*/
 @media only screen and (max-width: 740px) {
@@ -6274,6 +6321,13 @@ img {
 
   .b3_bot {
     font-size: 20px;
+  }
+  .b3_bot:before {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    right: -25px;
+    top: 7px;
   }
 
   .nr_items {

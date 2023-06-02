@@ -301,7 +301,8 @@ header{
 			bottom: 0;
 		}
 		.b1b_all{
-			bottom: 0;
+			bottom: 30px;
+			transition: .1s;
 		}
 	}
 }
@@ -341,7 +342,7 @@ header{
 		/*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 66.6vw;
-		transition: 3s;
+		transition: 2.3s;
 		.b1b_all{
 			display: none;
 		}
@@ -393,6 +394,7 @@ header{
 	text-transform: uppercase;
 	font-weight: 700;
 	position: absolute;
+	z-index: 1;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 4vh;
@@ -487,6 +489,7 @@ header{
 			text-transform: uppercase;
 			transition: .3s;
 			&.rcc_shop{
+				color: #7A7A7A;
 				&:after{
 					display: inline-block;
 					vertical-align: top;
@@ -536,7 +539,7 @@ header{
 		transform: translateY(100%);
 	}
 	&.resize{
-		opacity: 0.5;		
+		/*opacity: 0.5;*/		
 		.b1_2_content{
 			/*bottom: -50%;*/
 		}
@@ -740,6 +743,17 @@ header{
 	font-size: 36px;
 	line-height: 140%;
 	text-transform: uppercase;
+	position: relative;
+	&:before{
+		display: block;
+		content: '';
+		width: 23px;
+		height: 23px;
+		background: url(../images/b3_bot_arrow_23x23.svg) 0 0 no-repeat;
+		position: absolute;
+		top: 13px;
+		right: -33px;
+	}
 }
 footer{
 	background: #1D1D1D;
@@ -1375,7 +1389,7 @@ footer{
 	cursor: pointer;
 	transition: .3s;
 	&:hover{
-		@include opa(7);		
+		background: #E04141;		
 	}
 }
 .nr_listing{
@@ -1439,6 +1453,7 @@ footer{
 		display: block;
 		margin-bottom: 20px;
 		transition: .3s;
+		filter: grayscale(100%);
 	}
 }
 .pns_name{
@@ -1680,7 +1695,7 @@ footer{
 		.bi_right{
 			>span{
 				>a{
-					margin-left: 18px;	
+					/*margin-left: 16px;	*/
 				}
 			}
 		}
@@ -1711,7 +1726,8 @@ footer{
 			display: inline-block;
 			width: 74px;
 			height: 74px;
-			margin: 5px 0 5px -25px;
+			/*margin: 5px 0 5px -25px;*/
+			margin: 5px 0 5px 16px;
 			transition: .3s;
 			&:hover{
 				@include opa(7);				
@@ -1819,6 +1835,21 @@ footer{
 		color: #E04141;
 		cursor: pointer;
 	}
+	&.opened{
+		text-align: left;
+		>span{
+			display: none;
+		}
+		&:after{
+			display: inline-block;
+			content: 'Скрыть';
+			cursor: pointer;
+			font-size: 24px;
+			line-height: 120%;
+			color: #E04141;
+			margin-top: 7px;
+		}
+	}
 }
 .bp_tvs{
 	margin: 60px 0 30px;
@@ -1852,8 +1883,12 @@ footer{
 	margin-top: 68px;
 	@extend .cl;
 	.nr_tags_slider{
-		max-width: 575px;
+		max-width: 620px;
 		float: right;
+		>div{
+			display: inline-block;
+			margin-left: 2px;
+		}
 	}
 }
 .e_time{
@@ -2089,8 +2124,7 @@ footer{
 	transform: translateX(-50%);
 	.bi_right{
 		float: right;
-		margin: 10px 140px 0 0;
-		
+		margin: 10px 140px 0 0;		
 		>span{
 			display: inline-block;
 			vertical-align: middle;
@@ -3048,12 +3082,23 @@ footer{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 0;
+	&.mma{
+		.champ{
+			&:hover{
+				.ch_img{
+					&:after{
+						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 150%);
+					}
+				}				
+			}
+		}
+	}
 	&.boxing{
 		.champ{
 			&:hover{
 				.ch_img{
 					&:after{
-						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
+						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 150%);
 					}
 				}				
 			}
@@ -3064,7 +3109,7 @@ footer{
 			&:hover{
 				.ch_img{
 					&:after{
-						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #000 150%);
+						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
 					}
 				}				
 			}

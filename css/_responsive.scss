@@ -928,6 +928,15 @@ header{
 .vs_2{
 	display: block;
 }
+.e_btns{
+	.nr_tags_slider{
+		max-width: 100%;
+		>div{
+			display: block;
+			margin-left: 0;
+		}
+	}
+}
 
 } /*760*/
 @media only screen and (max-width : 740px){
@@ -2098,6 +2107,13 @@ header{
 }
 .b3_bot{
 	font-size: 20px;
+	&:before{
+		width: 15px;
+		height: 15px;
+		background-size: cover;
+		right: -25px;
+		top: 7px;
+	}
 }
 .nr_items{
 	grid-template-columns: repeat(1, 1fr);

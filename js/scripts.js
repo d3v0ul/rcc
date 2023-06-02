@@ -349,8 +349,8 @@ $(".sf_submit").click(function() {
 
 //bp more
 $(".bp_text_all").click(function() {
-    $(this).hide();
-    $(".bp_text").removeClass("strings_3");
+    $(this).toggleClass("opened");
+    $(".bp_text").toggleClass("strings_3");
 });
 
 
@@ -438,14 +438,18 @@ $('.nr_slider').owlCarousel({
     autoWidth: false,
 });
 
-$('.nr_tags_slider').addClass('owl-carousel');
-$('.nr_tags_slider').owlCarousel({
-    center: false,
-    items: 8,
-    loop: false,
-    margin: 8,
-    autoWidth: true,
-});
+var ts = window.matchMedia('all and (max-width: 760px)');
+if (ts.matches) {
+    $('.nr_tags_slider').addClass('owl-carousel');
+    $('.nr_tags_slider').owlCarousel({
+        center: false,
+        items: 8,
+        loop: false,
+        margin: 8,
+        autoWidth: true,
+    });
+} else {}
+
 
 $('.time_slider').addClass('owl-carousel');
 $('.time_slider').owlCarousel({
