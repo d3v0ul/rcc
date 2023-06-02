@@ -700,6 +700,9 @@ footer{
 .desktop{
 	display: none;
 }
+.left_margin{
+	margin-left: 170px;
+}
 
 
 } /*1000*/
@@ -937,6 +940,13 @@ header{
 		}
 	}
 }
+.nr_tags_slider{
+	max-width: 100%;
+	>div{
+		display: block;
+		margin-left: 0;
+	}
+}
 
 } /*760*/
 @media only screen and (max-width : 740px){
@@ -958,7 +968,7 @@ header{
 }
 .f_slogan{
 	font-size: 18px;
-	margin-bottom: 60px;
+	margin-bottom: 130px;
 }
 .f_type{
 	>li{
@@ -983,7 +993,10 @@ header{
 	font-size: 14px;
 }
 .f_menu{
-	margin-bottom: 50px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 210px;
 	>li{
 		display: inline-block;
 		margin: 0 15px;
@@ -1004,19 +1017,41 @@ header{
 	}
 }
 .fb_menu{
-	float: none;	
+	float: none;
+	max-width: 320px;
+	margin: 0 auto;
+	>li{
+		margin-bottom: 52px;
+		&:last-child{
+			margin-bottom: 25px;
+		}
+		>a{
+			font-size: 10px;
+		}
+	}
 }
 .fb_conf{
 	float: none;
 	margin-top: 20px;
+	font-size: 10px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-160px);
+	bottom: 100px;
+	margin: 0;
 }
 .f_socials{
-	max-width: 290px;
-	text-align: left;
+	max-width: 145px;
+	text-align: center;
 	margin: 0 auto 40px;
+	>li{
+		display: inline-block;
+		width: auto;
+		float: none;
+	}
 }
 .news_socials_wrap{
-	height: 464px;
+	height: 470px;
 	background: url(../images/news_social_mob.jpg) center no-repeat;
 	background-size: cover;
 	margin-top: 80px;
@@ -1027,12 +1062,20 @@ header{
 .nc_head{
 	text-align: center;
 	font-size: 46px;
+	letter-spacing: 0.11em;
+	margin-bottom: 14px;
+	br{
+		&.mob{
+			display: block;
+		}
+	}
 }
 .nc_list{
 	text-align: center;
 	>li{
 		>a{
-			font-size: 14px;
+			font-size: 10px;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -1421,7 +1464,9 @@ header{
 .nr_main{
 	margin-top: -50px;
 }
-
+.left_margin{
+	margin-left: 0;
+}
 
 
 

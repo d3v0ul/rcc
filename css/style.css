@@ -540,7 +540,7 @@ header.h_main {
   color: #676666;
 }
 .hl_menu > li > a:hover {
-  color: #E04141;
+  color: #7A7A7A;
 }
 
 .hr_menu {
@@ -562,9 +562,6 @@ header.h_main {
   text-transform: uppercase;
   transition: 0.3s;
 }
-.hr_menu > li > a.rcc_shop {
-  color: #7A7A7A;
-}
 .hr_menu > li > a.rcc_shop:after {
   display: inline-block;
   vertical-align: top;
@@ -575,7 +572,7 @@ header.h_main {
   margin: -2px 0 0 4px;
 }
 .hr_menu > li > a:hover {
-  color: #E04141;
+  color: #7A7A7A;
 }
 
 .mouse_icon {
@@ -746,6 +743,7 @@ header.h_main {
 }
 .news_slider .c_head {
   text-align: left;
+  letter-spacing: 0.16em;
 }
 .news_slider .owl-item {
   display: table;
@@ -849,7 +847,7 @@ footer {
   margin-top: 60px;
 }
 footer.main_footer {
-  padding-top: 20vh;
+  /*padding-top: 20vh;*/
 }
 
 .f_top {
@@ -1160,6 +1158,9 @@ footer.main_footer {
   line-height: 120%;
   text-transform: uppercase;
 }
+.nr_main > a:hover {
+  color: #813D4A;
+}
 
 .nr_head {
   font-size: 96px;
@@ -1210,9 +1211,33 @@ footer.main_footer {
   margin-bottom: 40px;
 }
 
+@keyframes line_fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.nrs_line {
+  width: 100%;
+  height: 2px;
+  background: #424242;
+  position: relative;
+  margin: 10px 0 40px;
+  overflow: hidden;
+}
+.nrs_line:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #E04141;
+  animation: line_fill 4s linear infinite;
+}
+
 .nr_slider {
   width: 100%;
-  margin-bottom: 40px;
 }
 .nr_slider .nr_top {
   margin-bottom: 0;
@@ -1222,6 +1247,7 @@ footer.main_footer {
 }
 .nr_slider .owl-dots {
   display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 4px;
   margin-top: 12px;
@@ -1308,6 +1334,10 @@ footer.main_footer {
 }
 .nr_tags_slider .owl-nav, .nr_tags_slider .owl-dots {
   display: none !important;
+}
+.nr_tags_slider > div {
+  display: inline-block;
+  margin-left: 2px;
 }
 
 .nrt_content {
@@ -1623,6 +1653,9 @@ footer.main_footer {
   text-transform: uppercase;
   margin-bottom: 40px;
   font-style: italic;
+}
+.nc_head br.mob {
+  display: none;
 }
 
 .nc_list > li {
@@ -3058,6 +3091,10 @@ footer.main_footer {
   margin: 120px auto;
 }
 
+.left_margin {
+  margin-left: 380px;
+}
+
 .cf_text {
   font-size: 32px;
   color: #E04141;
@@ -3261,7 +3298,7 @@ footer.main_footer {
   margin-bottom: 55px;
 }
 
-.remove_one_screen {
+.remove_one_screen.ha {
   height: auto !important;
 }
 
@@ -4795,6 +4832,10 @@ img {
   .desktop {
     display: none;
   }
+
+  .left_margin {
+    margin-left: 170px;
+  }
 }
 /*1000*/
 @media only screen and (max-width: 920px) {
@@ -5040,6 +5081,14 @@ img {
     display: block;
     margin-left: 0;
   }
+
+  .nr_tags_slider {
+    max-width: 100%;
+  }
+  .nr_tags_slider > div {
+    display: block;
+    margin-left: 0;
+  }
 }
 /*760*/
 @media only screen and (max-width: 740px) {
@@ -5065,7 +5114,7 @@ img {
 
   .f_slogan {
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 130px;
   }
 
   .f_type > li {
@@ -5091,7 +5140,10 @@ img {
   }
 
   .f_menu {
-    margin-bottom: 50px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 210px;
   }
   .f_menu > li {
     display: inline-block;
@@ -5115,21 +5167,43 @@ img {
 
   .fb_menu {
     float: none;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .fb_menu > li {
+    margin-bottom: 52px;
+  }
+  .fb_menu > li:last-child {
+    margin-bottom: 25px;
+  }
+  .fb_menu > li > a {
+    font-size: 10px;
   }
 
   .fb_conf {
     float: none;
     margin-top: 20px;
+    font-size: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-160px);
+    bottom: 100px;
+    margin: 0;
   }
 
   .f_socials {
-    max-width: 290px;
-    text-align: left;
+    max-width: 145px;
+    text-align: center;
     margin: 0 auto 40px;
+  }
+  .f_socials > li {
+    display: inline-block;
+    width: auto;
+    float: none;
   }
 
   .news_socials_wrap {
-    height: 464px;
+    height: 470px;
     background: url(../images/news_social_mob.jpg) center no-repeat;
     background-size: cover;
     margin-top: 80px;
@@ -5142,13 +5216,19 @@ img {
   .nc_head {
     text-align: center;
     font-size: 46px;
+    letter-spacing: 0.11em;
+    margin-bottom: 14px;
+  }
+  .nc_head br.mob {
+    display: block;
   }
 
   .nc_list {
     text-align: center;
   }
   .nc_list > li > a {
-    font-size: 14px;
+    font-size: 10px;
+    text-transform: uppercase;
   }
 
   .e_block {
@@ -5573,6 +5653,10 @@ img {
 
   .nr_main {
     margin-top: -50px;
+  }
+
+  .left_margin {
+    margin-left: 0;
   }
 }
 /*740*/

@@ -434,8 +434,10 @@ $('.nr_slider').addClass('owl-carousel');
 $('.nr_slider').owlCarousel({
     center: false,
     items: 1,
-    loop: false,
+    loop: true,
     autoWidth: false,
+    autoplay: true,
+    autoplayTimeout: 4000,
 });
 
 var ts = window.matchMedia('all and (max-width: 760px)');
