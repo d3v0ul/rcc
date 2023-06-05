@@ -372,11 +372,26 @@ $(function($){
 
 
 //custom scrollbar
-$('.bp_content').mCustomScrollbar({
+$('.bp_content, .nl_scroll').mCustomScrollbar({
     mouseWheel:{
         scrollAmount:'300%' /* <<< speed percent */
     }
 });
+
+
+//touch bottob bg for mobiles
+document.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".mma_touch").show();
+}, false);
+
+document.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".mma_touch").hide();
+}, false);
+
 
 
 //parallax news_socials_wrap
@@ -389,7 +404,14 @@ function parallaxScroll(){
 }
 
 
-
+$(window).scroll(function() {
+    var trigger = $('.popular_news').offset().top - 780;
+    if ($(this).scrollTop() > trigger) {
+        $(".news_left").addClass('static');
+    } else {
+        $(".news_left").removeClass('static');
+    }
+});
 
 
 

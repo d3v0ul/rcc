@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/animate.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/mCustomScrollbar.min.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -41,8 +42,8 @@
 <div class="news">
 	<div class="news_right">
 		<div class="nr_main"><a href="index.html">На главную</a></div>
-		<div class="nr_head wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">новости</div>
-		<div class="nr_slider wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nr_head">новости</div>
+		<div class="nr_slider">
 		  <div>
 		  	<div class="nr_top">
 					<a href=""><img src="images/nrt_1.jpg" alt=""></a>
@@ -68,9 +69,10 @@
 				</div>
 		  </div>
 		</div>
-		<div class="nrs_line wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s"></div>
+		<div class="nrs_line"></div>
 	</div>
 	<div class="news_left">
+		<div class="nl_scroll">
 		<div class="nl_status">Live</div>
 		<div class="live_slider">
 		  <div><div class="nl_item">
@@ -118,15 +120,16 @@
 				<div class="nli_text">«Я просто хочу драться с лучшими» Чжан Пеймиан нацелен на титул чемпиона Мира.</div>
 			</div></div>
 		</div>
+		</div>
 	</div>
 	<div class="news_right">
-		<div class="nr_tags_slider wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nr_tags_slider">
 		  <div><a href="" class="nrt_content nrtc_1"><span><img src="images/nrt_1.svg" alt=""></span></a></div>
 		  <div><a href="" class="nrt_content nrtc_2"><span><img src="images/nrt_2.svg" alt=""></span></a></div>
 		  <div><a href="" class="nrt_content nrtc_3"><span><img src="images/nrt_3.svg" alt=""></span></a></div>
 		  <div><a href="" class="nrt_content nrtc_4"><span><img src="images/nrt_4.svg" alt=""></span></a></div>
 		</div>
-		<div class="nr_tags wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nr_tags">
 			<a href="" class="nr_tag">#Бросилвызов</a>
 			<a href="" class="nr_tag">#RCCFightNight</a>
 			<a href="" class="nr_tag">#Тег</a>
@@ -137,11 +140,11 @@
 			<a href="" class="nr_tag">Полутяжелый</a>
 			<a href="" class="nr_tag">Тяжелый</a>
 		</div>
-		<div class="nr_items_top wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nr_items_top">
 			<div class="nri_sort">Сортировка по дате</div>
 			<input type="text" class="nri_search" placeholder="ПОИСК">
 		</div>
-		<div class="nr_items show_6 wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nr_items show_6">
 			<a href="news_1.html" class="nr_item">
 				<img src="images/nri_1.jpg" alt="">
 				<span class="nri_cat">MMA</span>
@@ -198,8 +201,8 @@
 				<span class="nri_date">10 октября 2021</span>
 			</a>
 		</div>
-		<div class="nri_more wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">Еще</div>
-		<ul class="nr_listing wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+		<div class="nri_more">Еще</div>
+		<ul class="nr_listing">
 			<li><a href="">1</a></li>
 			<li><a href="">...</a></li>
 			<li><a href="">4</a></li>
@@ -213,7 +216,7 @@
 	</div>
 </div>
 
-<div class="news_bot wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+<div class="news_bot">
 	<div class="popular_news">
 		<div class="pn_head">значимые новости</div>
 		<div class="popular_news_slider">
@@ -244,7 +247,7 @@
 
 <div class="news_socials_wrap">
 	<div class="news_socials">
-		<div class="nc_head">Следите <br clear="mob"> за нами <br>в соцсетях</div>
+		<div class="nc_head">Следите <br class="mob"> за нами <br>в соцсетях</div>
 		<ul class="nc_list">
 			<li><a href="">Twitter</a></li>
 			<li><a href="">YouTube</a></li>
@@ -254,7 +257,8 @@
 	</div>
 </div>
 
-<footer class="wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s">
+<!-- <footer class="wow slideInUp" data-wow-duration="3s" data-wow-delay="-1s"> -->
+<footer>
 	<div class="f_top">
 		<div class="f_left">
 			<a href="" class="f_logo"><img src="images/f_logo.svg" alt=""></a>
@@ -278,7 +282,7 @@
 				<li><a href="broadcasts.html">Трансляции</a></li>
 			</ul>
 			<div class="f_contacts">
-				<a href="tel:+73433652930">8 343 365 29 30</a> <br>
+				<!-- <a href="tel:+73433652930">8 343 365 29 30</a> <br> -->
 				<a href="mailto:info@rcc-group.ru" class="h_email">info@rcc-group.ru</a>
 			</div>
 			<div class="f_address">г. Екатеринбург, <br>ул. Шейнкмана, 121а</div>
