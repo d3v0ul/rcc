@@ -380,17 +380,17 @@ $('.bp_content, .nl_scroll').mCustomScrollbar({
 
 
 //touch bottob bg for mobiles
-document.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(".mma_touch").show();
-}, false);
+// document.addEventListener('touchstart', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     $(".mma_touch").show();
+// }, false);
 
-document.addEventListener('touchend', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(".mma_touch").hide();
-}, false);
+// document.addEventListener('touchend', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     $(".mma_touch").hide();
+// }, false);
 
 
 

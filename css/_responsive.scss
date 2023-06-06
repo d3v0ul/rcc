@@ -942,10 +942,10 @@ header{
 .e_twins{
 	>div{
 		>div{
-			font-size: 30px;
+			font-size: 20px;
 			>span{
-				font-size: 32px;
-				margin-bottom: 7px;
+				font-size: 26px;
+				margin-bottom: 11px;
 			}
 		}
 	}
@@ -974,7 +974,9 @@ header{
 	}
 }
 .nr_tags_slider{
-	max-width: 100%;
+	width: calc(100% + 30px);	
+	max-width: calc(100% + 30px) !important;
+	transform: translateX(-15px);
 	>div{
 		display: block;
 		margin-left: 0;
@@ -1146,7 +1148,7 @@ header{
 	>a{
 		height: 50px;
 		line-height: 50px;
-		font-size: 12px;
+		font-size: 10px;
 		margin: 0 2px;
 	}
 }
@@ -2121,7 +2123,9 @@ header{
 .mfv_source, .mfv_name{
 	font-size: 14px;
 }
-
+.b1_2_content{
+	height: 150px;
+}
 
 
 
@@ -2157,8 +2161,12 @@ header{
 .b1b_all, .b2b_all{
 	font-size: 10px;
 }
+.b2b_all{
+	margin-top: 100px;
+}
 .b2_wrap{
 	height: 570px;
+	padding-left: 0;
 	.c_head{
 		margin-bottom: 0;
 	}
@@ -2182,8 +2190,12 @@ header{
 	font-size: 6px;
 }
 .nsb_name{
-	font-size: 12px;
-	width: calc(100% - 40px)
+	font-size: 14px;
+	line-height: 20px;
+	width: calc(100% - 40px);
+	br{
+		display: none;
+	}
 }
 .b3_text{
 	font-size: 14px;

@@ -655,7 +655,7 @@ header{
 	padding: 15vh 0 40px 15px;
 	text-align: center;
 	&.gray{
-		background: none;
+		background: url(../images/b2_bg_gray.svg) center 100px no-repeat;
 		.b2b_all{
 			&:before{
 				background: #E04141;
@@ -694,9 +694,16 @@ header{
 .ns_content{
 	display: block;
 	transition: .3s;
-	&:hover{
+	&.red{
+		&:hover{
 		.nsb_type, .nsb_name{
 			color: #1D1D1D;
+		}
+	}
+	}
+	&:hover{
+		.nsb_type, .nsb_name{
+			color: #E04141;
 		}
 	}
 	.c_head{
@@ -2094,7 +2101,7 @@ footer{
 			width: 100%;
 			padding: 0 15px;
 			font-size: 35px;
-			font-weight: 500;
+			font-weight: 400;
 			color: #fff;
 			text-align: center;
 			letter-spacing: -0.02em;
@@ -2103,6 +2110,14 @@ footer{
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
+			>span{
+				display: block;
+				font-family: $dc;
+				font-size: 40px;
+				letter-spacing: 0.16em;
+				font-weight: 500;
+				margin-bottom: 15px;
+			}
 			>a{
 				display: inline-block;
 				font-size: 40px;

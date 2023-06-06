@@ -737,7 +737,7 @@ header.h_main {
   text-align: center;
 }
 .b2_wrap.gray {
-  background: none;
+  background: url(../images/b2_bg_gray.svg) center 100px no-repeat;
 }
 .b2_wrap.gray .b2b_all:before {
   background: #E04141;
@@ -777,8 +777,11 @@ header.h_main {
   display: block;
   transition: 0.3s;
 }
-.ns_content:hover .nsb_type, .ns_content:hover .nsb_name {
+.ns_content.red:hover .nsb_type, .ns_content.red:hover .nsb_name {
   color: #1D1D1D;
+}
+.ns_content:hover .nsb_type, .ns_content:hover .nsb_name {
+  color: #E04141;
 }
 .ns_content .c_head {
   text-align: center;
@@ -2227,7 +2230,7 @@ footer.main_footer {
   width: 100%;
   padding: 0 15px;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   text-align: center;
   letter-spacing: -0.02em;
@@ -2236,6 +2239,14 @@ footer.main_footer {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+.e_twins > div > div > span {
+  display: block;
+  font-family: "Druk Cyr";
+  font-size: 40px;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 .e_twins > div > div > a {
   display: inline-block;
@@ -5412,11 +5423,11 @@ img {
   }
 
   .e_twins > div > div {
-    font-size: 30px;
+    font-size: 20px;
   }
   .e_twins > div > div > span {
-    font-size: 32px;
-    margin-bottom: 7px;
+    font-size: 26px;
+    margin-bottom: 11px;
   }
 }
 /*920*/
@@ -5438,7 +5449,9 @@ img {
   }
 
   .nr_tags_slider {
-    max-width: 100%;
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px) !important;
+    transform: translateX(-15px);
   }
   .nr_tags_slider > div {
     display: block;
@@ -5627,7 +5640,7 @@ img {
   .eb_btns > a {
     height: 50px;
     line-height: 50px;
-    font-size: 12px;
+    font-size: 10px;
     margin: 0 2px;
   }
 
@@ -6695,6 +6708,10 @@ img {
   .mfv_source, .mfv_name {
     font-size: 14px;
   }
+
+  .b1_2_content {
+    height: 150px;
+  }
 }
 /*600*/
 @media only screen and (max-width: 500px) {
@@ -6729,8 +6746,13 @@ img {
     font-size: 10px;
   }
 
+  .b2b_all {
+    margin-top: 100px;
+  }
+
   .b2_wrap {
     height: 570px;
+    padding-left: 0;
   }
   .b2_wrap .c_head {
     margin-bottom: 0;
@@ -6758,8 +6780,12 @@ img {
   }
 
   .nsb_name {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 20px;
     width: calc(100% - 40px);
+  }
+  .nsb_name br {
+    display: none;
   }
 
   .b3_text {
