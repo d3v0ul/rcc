@@ -362,7 +362,7 @@ $(".cfi_top").click(function() {
 
 
 //wow js
-// new WOW().init();
+new WOW().init();
 
 
 //phone mask

@@ -142,7 +142,7 @@ img {
 	}
 }
 .ft_l, .ft_r{
-	width: 36vw;
+	width: 50vw;
 }
 .b1_2_names{	
 	margin: 3vw 0;
@@ -745,7 +745,8 @@ header{
 }
 .b2_2_wrap{
 	position: relative;
-	height: auto;
+	/*height: auto;*/
+	height: 100vh;
 	.b1_block{
 		bottom: 0;
 		left: -100vw !important;
@@ -812,13 +813,16 @@ header{
 }
 .b1{
 	position: static;
-	height: auto;
+	/*height: auto;*/
 	/*padding-top: 70px;*/
+	margin-top: 70px;
+  height: 100vh;
 }
 .b1_block{
 	display: block;
 	width: 100%;
-	height: 310px;
+	/*height: 310px;*/
+	height: calc(33.3% - 23.3px);
 	position: relative;
 	background: url(../images/b1i_1m.jpg) 0 0 no-repeat;
 	background-size: cover;
@@ -950,6 +954,7 @@ header{
 		}
 	}
 }
+
 
 
 
@@ -2142,7 +2147,7 @@ header{
 	}
 }
 .b1_block{
-	height: 160px;
+	/*height: 160px;*/	
 }
 .b1b_head{
 	>span{
@@ -2154,6 +2159,7 @@ header{
 }
 .b1b_date{
 	font-size: 10px;
+	letter-spacing: 0.16em;
 	>span{
 		font-size: 26px;
 	}
@@ -2162,13 +2168,19 @@ header{
 	font-size: 10px;
 }
 .b2b_all{
-	margin-top: 100px;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+	margin-top: 0;
 }
 .b2_wrap{
 	height: 570px;
 	padding-left: 0;
+	background-size: 880px;
 	.c_head{
-		margin-bottom: 0;
+		margin-bottom: 20px;
 	}
 }
 .c_head{
@@ -2197,8 +2209,15 @@ header{
 		display: none;
 	}
 }
+.b3{
+	padding-left: 90px;
+	.c_head{
+		font-size: 46px;
+		letter-spacing: 0.16em;
+	}
+}
 .b3_text{
-	font-size: 14px;
+	line-height: 140%;
 }
 .b3_bot{
 	font-size: 20px;

@@ -654,6 +654,7 @@ header{
 	background: #EE4B45 url(../images/b2_bg.svg) center 100px no-repeat;
 	padding: 15vh 0 40px 15px;
 	text-align: center;
+	position: relative;
 	&.gray{
 		background: url(../images/b2_bg_gray.svg) center 100px no-repeat;
 		.b2b_all{
@@ -740,8 +741,8 @@ header{
 	text-transform: uppercase;
 	font-weight: 700;
 	transition: .3s;
-	margin-top: 50px;
 	position: relative;
+	margin-top: 30px;	
 	&:hover{
 		color: #E04141;
 	}
