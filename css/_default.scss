@@ -797,12 +797,13 @@ footer{
 	background: #1D1D1D;
 	margin-top: 60px;
 	&.main_footer{
-		/*padding-top: 20vh;*/
+		padding-top: 20vh;
 	}
 }
 .f_top{
 	@extend %ct;
 	position: relative;
+	margin-top: 250px;
 }
 .f_left{
 	float: left;

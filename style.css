@@ -5214,6 +5214,11 @@ img {
     position: relative;
     height: 100vh;
   }
+
+  .b1 {
+    margin-top: 70px;
+  }
+
   .b2_2_wrap .b1_block {
     bottom: 0;
     left: -100vw !important;
