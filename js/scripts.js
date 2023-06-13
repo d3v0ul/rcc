@@ -192,8 +192,8 @@ if (fm.matches) {
 //mma main block 3 scroll on
 $(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        // $("body").addClass("one_page");
-        // $("*").addClass("screen");
+        $("body").addClass("one_page");
+        $("*").addClass("screen");
     }
     else {
         $("body").removeClass("one_page");
@@ -458,8 +458,8 @@ $('.nr_slider').owlCarousel({
     items: 1,
     loop: true,
     autoWidth: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
+    // autoplay: true,
+    // autoplayTimeout: 4000,
 });
 
 var ts = window.matchMedia('all and (max-width: 760px)');
@@ -492,6 +492,7 @@ if (ls.matches) {
         items: 1,
         loop: false,
         autoWidth: false,
+        autoHeight: true,
         autoplay: true,
         autoplayTimeout: 5000,
     });
