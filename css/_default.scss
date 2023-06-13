@@ -469,6 +469,9 @@ header{
 		display: inline-block;
 		vertical-align: top;
 		margin-right: 38px;
+		&.hlm_events{
+			display: none;
+		}
 		&:last-child{
 			margin-right: 0;
 		}
@@ -1503,6 +1506,9 @@ footer{
 	font-size: 36px;
 	line-height: 120%;
 	margin-bottom: 80px;
+	br{
+		display: none;
+	}
 }
 .popular_news_slider{
 	width: 100%;
@@ -3273,6 +3279,7 @@ footer{
 .cht_weight{
 	color: #444343;
 	margin-left: 10px;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 .cht_stats{
@@ -3881,13 +3888,14 @@ footer{
 .mfv_head{
 	font-size: 36px;
 	letter-spacing: -0.02em;
+	font-weight: 500;
 	text-transform: uppercase;
 	margin: 140px 0 60px;
 }
 .mf_videos{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 16px;
+	grid-gap: 20px 16px;
 }
 .mfv_video{
 	display: inline-block;
@@ -3943,6 +3951,9 @@ footer{
 	left: 16px;
 	bottom: 16px;
 	padding-right: 16px;
+	br{
+		display: none;
+	}
 }
 
 /* ==========================burger-popup-slider====================== */

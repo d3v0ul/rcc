@@ -542,6 +542,9 @@ header.h_main {
   vertical-align: top;
   margin-right: 38px;
 }
+.hl_menu > li.hlm_events {
+  display: none;
+}
 .hl_menu > li:last-child {
   margin-right: 0;
 }
@@ -1615,6 +1618,9 @@ footer.main_footer {
   font-size: 36px;
   line-height: 120%;
   margin-bottom: 80px;
+}
+.pn_head br {
+  display: none;
 }
 
 .popular_news_slider {
@@ -3432,6 +3438,7 @@ footer.main_footer {
 .cht_weight {
   color: #444343;
   margin-left: 10px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -4059,6 +4066,7 @@ footer.main_footer {
 .mfv_head {
   font-size: 36px;
   letter-spacing: -0.02em;
+  font-weight: 500;
   text-transform: uppercase;
   margin: 140px 0 60px;
 }
@@ -4066,7 +4074,7 @@ footer.main_footer {
 .mf_videos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+  grid-gap: 20px 16px;
 }
 
 .mfv_video {
@@ -4125,6 +4133,9 @@ footer.main_footer {
   left: 16px;
   bottom: 16px;
   padding-right: 16px;
+}
+.mfv_name br {
+  display: none;
 }
 
 /* ==========================burger-popup-slider====================== */
@@ -5255,6 +5266,13 @@ img {
     margin: 0;
     transition: 0.3s;
   }
+  .hl_menu > li.hlm_events {
+    display: block;
+    float: none;
+    width: 100%;
+    border: none;
+    background: #E04141;
+  }
   .hl_menu > li:hover {
     background: #E04141;
     border: 1px solid #E04141;
@@ -5481,12 +5499,31 @@ img {
     width: 83vw;
   }
 
+  .ft_l.resize {
+    transform: translate3d(-93%, -50%, 0) scale(0.8);
+    opacity: 1;
+  }
   .ft_l.resize_2 {
     transform: translate3d(-190%, -50%, 0) scale(4);
   }
 
+  .ft_r.resize {
+    transform: translate3d(-8%, -50%, 0) scale(0.8);
+    opacity: 1;
+  }
   .ft_r.resize_2 {
     transform: translate3d(90%, -50%, 0) scale(4);
+  }
+
+  .mfv_name {
+    line-height: 19px;
+  }
+  .mfv_name br {
+    display: block;
+  }
+
+  .mf_videos {
+    grid-gap: 16px;
   }
 }
 /*760*/
@@ -6084,6 +6121,7 @@ img {
   }
   .mf_about > div {
     font-size: 14px;
+    line-height: 19px;
   }
 
   .mf_stats {
@@ -6119,6 +6157,15 @@ img {
 
   .cfi_content {
     padding-left: 0;
+  }
+
+  .progress-value, .progress-value2 {
+    font-size: 26px;
+  }
+
+  .popular_news {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 /*740*/
@@ -6935,6 +6982,17 @@ img {
     font-size: 20px;
     margin-bottom: 30px;
   }
+  .pn_head br {
+    display: block;
+  }
+
+  .mfn_all {
+    margin-top: 20px;
+  }
+
+  .pns_content > img {
+    margin-bottom: 10px;
+  }
 
   .popular_news_slider {
     margin: 0 auto;
@@ -7116,10 +7174,6 @@ img {
     width: 80px;
     height: 80px;
     margin: 0 5px 5px 0;
-  }
-
-  .mfn_top .pn_head {
-    font-size: 16px;
   }
 }
 /*400*/
