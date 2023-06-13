@@ -190,17 +190,17 @@ if (fm.matches) {
 
 
 //mma main block 3 scroll on
-// $(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(event){
-//     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-//         // $("body").addClass("one_page");
-//         // $("*").addClass("screen");
-//     }
-//     else {
-//         $("body").removeClass("one_page");
-//         $("*").removeClass("screen");
-//         $(".screen_hide").hide();
-//     }
-// });
+$(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(event){
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        // $("body").addClass("one_page");
+        // $("*").addClass("screen");
+    }
+    else {
+        $("body").removeClass("one_page");
+        $("*").removeClass("screen");
+        $(".screen_hide").hide();
+    }
+});
 
 
 

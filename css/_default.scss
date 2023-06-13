@@ -21,7 +21,8 @@ textarea{outline:none; resize:none; overflow:auto;}
 ul{list-style:none;}
 
 $sr: 'Suisse Intl';
-$r: 'a_RubricaXtCn';
+/*$r: 'a_RubricaXtCn';*/
+$r: 'Druk Cyr';
 $dc: 'Druk Cyr';
 
 @mixin opa($opa){
@@ -67,7 +68,7 @@ body{
 		filter: brightness(100%);
 	}
 	&.one_page{
-		overflow: hidden;
+		overflow-x: hidden;
 	}	
 	&.noscroll{
 		overflow: hidden;
@@ -612,7 +613,7 @@ header{
 		font-size: 96px;
 		letter-spacing: 0.16em;
 		font-style: italic;
-		font-family: $r;
+		font-family: $dc;
 	}
 }
 .b1_2_cat{
@@ -631,7 +632,7 @@ header{
 	transition: .3s;
 	margin-top: 50px;
 	position: absolute;
-	bottom: 40px;
+	bottom: 90px;
 	left: 50%;
 	transform: translateX(-50%);
 	&:hover{
@@ -804,7 +805,7 @@ footer{
 .f_top{
 	@extend %ct;
 	position: relative;
-	margin-top: 250px;
+	/*margin-top: 250px;*/
 }
 .f_left{
 	float: left;

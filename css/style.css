@@ -98,6 +98,7 @@ ul {
   list-style: none;
 }
 
+/*$r: 'a_RubricaXtCn';*/
 /*Стилизация скролла body*/
 html, body {
   scrollbar-color: #282828 transparent;
@@ -131,7 +132,7 @@ body.visible {
   filter: brightness(100%);
 }
 body.one_page {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body.noscroll {
   overflow: hidden;
@@ -465,7 +466,7 @@ header.h_main {
   display: block;
   margin-bottom: 16px;
   font-size: 40px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
 }
 
@@ -692,7 +693,7 @@ header.h_main {
   font-size: 96px;
   letter-spacing: 0.16em;
   font-style: italic;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
 }
 
 .b1_2_cat {
@@ -712,7 +713,7 @@ header.h_main {
   transition: 0.3s;
   margin-top: 50px;
   position: absolute;
-  bottom: 40px;
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -887,7 +888,7 @@ footer.main_footer {
 
 .f_top {
   position: relative;
-  margin-top: 250px;
+  /*margin-top: 250px;*/
 }
 
 .f_left {
@@ -1202,7 +1203,7 @@ footer.main_footer {
 .nr_head {
   font-size: 96px;
   line-height: 110%;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-style: italic;
@@ -1212,7 +1213,7 @@ footer.main_footer {
   display: inline-block;
   font-size: 96px;
   line-height: 110%;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-style: italic;
@@ -1686,7 +1687,7 @@ footer.main_footer {
 .nc_head {
   font-size: 96px;
   line-height: 110%;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   text-transform: uppercase;
   margin-bottom: 40px;
   font-style: italic;
@@ -1999,7 +2000,7 @@ footer.main_footer {
 .bp_head, .cf_head, .ft_head {
   font-size: 96px;
   line-height: 110%;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2154,7 +2155,7 @@ footer.main_footer {
 
 .eb_text_2 {
   font-size: 96px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   letter-spacing: 0.16em;
   margin: 40px 0;
@@ -2253,7 +2254,7 @@ footer.main_footer {
 .e_twins > div > div > a {
   display: inline-block;
   font-size: 40px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   margin-bottom: 12px;
   letter-spacing: 0.16em;
@@ -2380,7 +2381,7 @@ footer.main_footer {
 .eit_text {
   float: left;
   font-size: 96px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   letter-spacing: 0.16em;
   font-style: italic;
   text-transform: uppercase;
@@ -2498,7 +2499,7 @@ footer.main_footer {
 
 .fcc_head {
   font-size: 96px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.16em;
@@ -2540,7 +2541,7 @@ footer.main_footer {
   display: block;
   font-size: 40px;
   line-height: 120%;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   letter-spacing: 0.16em;
   font-style: italic;
 }
@@ -3309,7 +3310,7 @@ footer.main_footer {
 .mt_names {
   display: inline-block;
   font-size: 74px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   color: #fff;
   letter-spacing: 0.16em;
@@ -3341,7 +3342,7 @@ footer.main_footer {
   font-weight: 500;
   font-size: 96px;
   letter-spacing: 0.16em;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 55px;
@@ -3449,7 +3450,7 @@ footer.main_footer {
   line-height: 120%;
   font-weight: 500;
   color: #fff;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -3735,7 +3736,7 @@ footer.main_footer {
   font-style: italic;
   font-size: 96px;
   letter-spacing: 0.16em;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   text-transform: uppercase;
 }
 
@@ -3839,7 +3840,7 @@ footer.main_footer {
   float: left;
   font-size: 96px;
   letter-spacing: 0.16em;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   text-transform: uppercase;
   margin-left: 500px;
@@ -3905,7 +3906,7 @@ footer.main_footer {
 
 .mfs_digit {
   font-style: italic;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-size: 40px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -3955,7 +3956,7 @@ footer.main_footer {
 .progress-value, .progress-value2 {
   display: inline-block;
   font-size: 40px;
-  font-family: "a_RubricaXtCn";
+  font-family: "Druk Cyr";
   font-style: italic;
   color: #fff;
   position: absolute;
@@ -4545,7 +4546,7 @@ img {
   }
 
   .ft_l, .ft_r {
-    width: 50vw;
+    width: 60vw;
   }
 
   .b1_2_names {
@@ -5221,6 +5222,9 @@ img {
   .b2_2_wrap.visible .b1_block {
     left: 0 !important;
   }
+  .b2_2_wrap.visible .b1b_all {
+    bottom: 80px;
+  }
 
   .vert_slider_demo {
     top: calc(50% + 35px);
@@ -5329,7 +5333,7 @@ img {
   .b1b_date {
     left: auto;
     bottom: auto;
-    top: 20px;
+    top: 25px;
     right: 30px;
   }
 
@@ -5339,6 +5343,7 @@ img {
 
   .news_slider {
     margin-left: 0;
+    margin-top: 70px;
   }
   .news_slider .owl-item {
     min-height: 500px !important;
@@ -5594,7 +5599,7 @@ img {
     margin-bottom: 14px;
   }
   .nc_head br.mob {
-    display: block;
+    display: block !important;
   }
 
   .nc_list {
@@ -5833,15 +5838,19 @@ img {
   }
 
   .b1_2_top > a {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .b1_2_names {
     margin: 15px 0;
   }
+  .b1_2_names > a {
+    font-size: 46px;
+  }
 
   .b1_2_cat > a {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   .m_head {
@@ -5954,6 +5963,18 @@ img {
   }
   .mf_tags > div {
     margin: 0 6px 6px;
+  }
+
+  .f_form {
+    margin-bottom: 250px;
+  }
+
+  .f_socials {
+    position: absolute;
+    top: 770px;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
   }
 
   .mf_socials {
@@ -6731,7 +6752,7 @@ img {
   }
 
   .b1_block {
-    /*height: 160px;*/
+    height: calc(33.3% - 42px);
   }
 
   .b1b_head > span {
@@ -6765,7 +6786,8 @@ img {
   .b2_wrap {
     height: 570px;
     padding-left: 0;
-    background-size: 880px;
+    background: #EE4B45 url(../images/b2_bg.svg) left 170px no-repeat;
+    background-size: 560px;
   }
   .b2_wrap .c_head {
     margin-bottom: 20px;
