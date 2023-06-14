@@ -396,7 +396,6 @@ header.h_main {
   position: absolute;
   z-index: 1;
   left: 0;
-  transition: 1s;
 }
 .b1_block:hover > img {
   filter: brightness(100%);
@@ -413,17 +412,20 @@ header.h_main {
   transition: 0.9s;
   filter: brightness(50%);
 }
+.b1_block.b1b_1 {
+  transition: 1s;
+}
 .b1_block.b1b_2 {
   /*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 33.3vw;
-  transition: 2s;
+  transition: 0.9s;
 }
 .b1_block.b1b_3 {
   /*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 66.6vw;
-  transition: 2.3s;
+  transition: 0.6s;
 }
 .b1_block.b1b_3 .b1b_all {
   display: none;
@@ -493,7 +495,7 @@ header.h_main {
   height: 10px;
   background: #E04141;
   position: absolute;
-  top: -15px;
+  top: -23px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -717,7 +719,7 @@ header.h_main {
   transition: 0.3s;
   margin-top: 50px;
   position: absolute;
-  bottom: 90px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -731,7 +733,7 @@ header.h_main {
   height: 10px;
   background: #E04141;
   position: absolute;
-  top: -15px;
+  top: -22px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -5235,11 +5237,11 @@ img {
     height: 100vh;
   }
   .b2_2_wrap .b1_block {
-    bottom: 0;
-    left: -100vw !important;
+    /*bottom: 0;
+    left: -100vw !important;*/
   }
   .b2_2_wrap.visible .b1_block {
-    left: 0 !important;
+    /*left: 0 !important;*/
   }
   .b2_2_wrap.visible .b1b_all {
     bottom: 80px;
@@ -5359,7 +5361,7 @@ img {
   .b1b_date {
     left: auto;
     bottom: auto;
-    top: 25px;
+    top: 30px;
     right: 30px;
   }
 
@@ -5369,7 +5371,10 @@ img {
 
   .news_slider {
     margin-left: 0;
-    margin-top: 70px;
+    /*margin-top: 70px;*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
   }
   .news_slider .owl-item {
     min-height: 500px !important;
@@ -6167,6 +6172,10 @@ img {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .b1_2_all {
+    bottom: 130px;
+  }
 }
 /*740*/
 @media only screen and (min-width: 600px) {
@@ -6902,7 +6911,7 @@ img {
   .b2_wrap {
     height: 570px;
     padding-left: 0;
-    background: #EE4B45 url(../images/b2_bg.svg) left 170px no-repeat;
+    background: #EE4B45 url(../images/b2_bg.svg) left center no-repeat;
     background-size: 560px;
   }
   .b2_wrap .c_head {

@@ -750,12 +750,12 @@ header{
 	/*height: auto;*/
 	height: 100vh;
 	.b1_block{
-		bottom: 0;
-		left: -100vw !important;
+		/*bottom: 0;
+		left: -100vw !important;*/
 	}
 	&.visible{
 		.b1_block{
-			left: 0 !important;
+			/*left: 0 !important;*/
 		}
 		.b1b_all{
 			bottom: 80px;
@@ -870,7 +870,7 @@ header{
 .b1b_date{
 	left: auto;
 	bottom: auto;
-	top: 25px;
+	top: 30px;
 	right: 30px;	
 }
 .c_head{
@@ -878,7 +878,10 @@ header{
 }
 .news_slider{
 	margin-left: 0;
-	margin-top: 70px;
+	/*margin-top: 70px;*/
+	position: absolute;
+	top: 50%;
+	transform: translateY(-45%);
 	.owl-item{
 		min-height: 500px !important;
 	}
@@ -1606,8 +1609,9 @@ header{
 	padding-left: 0;
 	padding-right: 0;
 }
-
-
+.b1_2_all{
+	bottom: 130px;
+}
 
 } /*740*/
 @media only screen and (min-width : 600px){
@@ -2277,7 +2281,7 @@ header{
 .b2_wrap{
 	height: 570px;
 	padding-left: 0;	
-	background: #EE4B45 url(../images/b2_bg.svg) left 170px no-repeat;
+	background: #EE4B45 url(../images/b2_bg.svg) left center no-repeat;
 	background-size: 560px;
 	.c_head{
 		margin-bottom: 20px;
