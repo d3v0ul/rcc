@@ -357,6 +357,41 @@ header.h_main {
   padding-top: 70px;
 }
 
+.see_promo {
+  display: block;
+  --rot: 00deg;
+  width: 180px;
+  height: 180px;
+  background: conic-gradient(#f00 0deg, #f00 var(--rot), #333 var(--rot));
+  animation: wrap 3s linear;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+}
+.see_promo.hide {
+  display: none !important;
+}
+.see_promo .si_box {
+  display: block;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: #1D1D1D;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-top: 70px;
+}
+
 .b1 {
   width: 100vw;
   height: 100vh;
@@ -419,13 +454,13 @@ header.h_main {
   /*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 33.3vw;
-  transition: 0.9s;
+  transition: 1.2s;
 }
 .b1_block.b1b_3 {
   /*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
   background-size: cover;*/
   left: 66.6vw;
-  transition: 0.6s;
+  transition: 1.4s;
 }
 .b1_block.b1b_3 .b1b_all {
   display: none;
@@ -887,7 +922,7 @@ header.h_main {
 
 footer {
   background: #1D1D1D;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 footer.main_footer {
   padding-top: 20vh;
@@ -912,6 +947,9 @@ footer.main_footer {
   font-size: 32px;
   color: #DFDDDD;
   margin: 30px 0 75px;
+}
+.f_slogan br {
+  display: none;
 }
 
 .f_socials > li {
@@ -1639,6 +1677,9 @@ footer.main_footer {
   display: inline-block;
   position: relative;
 }
+.pns_content.old > img {
+  filter: grayscale(100%);
+}
 .pns_content:hover > img {
   filter: alpha(Opacity=70);
   opacity: 0.7;
@@ -1650,7 +1691,6 @@ footer.main_footer {
   display: block;
   margin-bottom: 20px;
   transition: 0.3s;
-  filter: grayscale(100%);
 }
 
 .pns_name {
@@ -1842,6 +1882,7 @@ footer.main_footer {
   padding: 0 20px;
   color: #DFDDDD;
   text-align: center;
+  border-radius: 2px;
   font-size: 14px;
   line-height: 54px;
   text-transform: uppercase;
@@ -3452,6 +3493,8 @@ footer.main_footer {
 .ch_img {
   display: block;
   margin: 30px 0;
+  background: url(../images/ch_bg.jpg) center no-repeat;
+  background-size: cover;
   position: relative;
 }
 .ch_img > img {
@@ -3534,6 +3577,7 @@ footer.main_footer {
 }
 .m_about .c_head {
   text-align: left;
+  letter-spacing: 0.16em;
 }
 
 .ma_content {
@@ -5338,9 +5382,13 @@ img {
     transform: translateX(-100%);
     transition: none;
   }
+  .b1_block.b1b_1 {
+    transition: 1s;
+  }
   .b1_block.b1b_2 {
     background: url(../images/b1i_2m.jpg) 0 0 no-repeat;
     background-size: cover;
+    transition: 0.9s;
   }
   .b1_block.b1b_2 .b1b_all {
     display: none;
@@ -5348,6 +5396,7 @@ img {
   .b1_block.b1b_3 {
     background: url(../images/b1i_3m.jpg) 0 0 no-repeat;
     background-size: cover;
+    transition: 0.6s;
   }
   .b1_block.b1b_3 .b1b_all {
     display: block;
@@ -5504,6 +5553,9 @@ img {
     width: 83vw;
   }
 
+  .ft_l {
+    transform: translate3d(-90%, -50%, 0) scale(0.5);
+  }
   .ft_l.resize {
     transform: translate3d(-93%, -50%, 0) scale(0.8);
     opacity: 1;
@@ -5512,6 +5564,9 @@ img {
     transform: translate3d(-190%, -50%, 0) scale(4);
   }
 
+  .ft_r {
+    transform: translate3d(-10%, -50%, 0) scale(0.5);
+  }
   .ft_r.resize {
     transform: translate3d(-8%, -50%, 0) scale(0.8);
     opacity: 1;
@@ -5556,6 +5611,9 @@ img {
   .f_slogan {
     font-size: 18px;
     margin-bottom: 130px;
+  }
+  .f_slogan br {
+    display: block;
   }
 
   .f_type > li {
@@ -5645,7 +5703,7 @@ img {
 
   .news_socials_wrap {
     height: 470px;
-    background: url(../images/news_social_mob.jpg) center no-repeat;
+    background: url(../images/news_social_mob.jpg) center bottom no-repeat;
     background-size: cover;
     margin-top: 80px;
   }
@@ -6059,7 +6117,7 @@ img {
 
   .f_socials {
     position: absolute;
-    top: 770px;
+    top: 788px;
     left: 50%;
     margin: 0;
     grid-gap: 30px 35px;
@@ -6175,6 +6233,10 @@ img {
 
   .b1_2_all {
     bottom: 130px;
+  }
+
+  .see_promo {
+    top: 190px;
   }
 }
 /*740*/
@@ -6876,6 +6938,15 @@ img {
     padding-top: 35px;
   }
 
+  .see_promo {
+    width: 140px;
+    height: 140px;
+  }
+  .see_promo .si_box {
+    font-size: 10px;
+    padding-top: 55px;
+  }
+
   .b1_block {
     height: calc(33.3% - 42px);
   }
@@ -7007,7 +7078,7 @@ img {
     margin: 0 auto;
   }
   .popular_news_slider .owl-item {
-    width: 100vw !important;
+    width: calc(100vw - 1px) !important;
   }
 
   .nri_search {

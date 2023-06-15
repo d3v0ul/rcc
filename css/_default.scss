@@ -290,6 +290,40 @@ header{
 			padding-top: 70px;
     }
 }
+.see_promo {
+    display: block;
+    --rot: 00deg;
+    width: 180px;
+    height: 180px;
+    background: conic-gradient(#f00 0deg, #f00 var(--rot), #333 var(--rot));
+    animation: wrap 3s linear;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    &.hide{
+    	display: none !important;
+    }
+    .si_box{
+			display: block;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background-color: #1D1D1D;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 140%;
+      font-weight: 700;
+      text-align: center;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			padding-top: 70px;
+    }
+}
 .b1{
 	width: 100vw;
 	height: 100vh;
@@ -353,13 +387,13 @@ header{
 		/*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 33.3vw;
-		transition: 0.9s;
+		transition: 1.2s;
 	}
 	&.b1b_3{
 		/*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 66.6vw;
-		transition: 0.6s;
+		transition: 1.4s;
 		.b1b_all{
 			display: none;
 		}
@@ -804,7 +838,7 @@ header{
 }
 footer{
 	background: #1D1D1D;
-	margin-top: 60px;
+	margin-top: 80px;
 	&.main_footer{
 		padding-top: 20vh;
 	}
@@ -826,6 +860,9 @@ footer{
 	font-size: 32px;
 	color: #DFDDDD;
 	margin: 30px 0 75px;
+	br{
+		display: none;
+	}
 }
 .f_socials{
 	@extend .cl;
@@ -1524,6 +1561,11 @@ footer{
 .pns_content{
 	display: inline-block;
 	position: relative;
+	&.old{
+		>img{
+			filter: grayscale(100%);
+		}
+	}
 	&:hover{
 		>img{
 			@include opa(7);
@@ -1535,8 +1577,7 @@ footer{
 	>img{
 		display: block;
 		margin-bottom: 20px;
-		transition: .3s;
-		filter: grayscale(100%);
+		transition: .3s;		
 	}
 }
 .pns_name{
@@ -1728,6 +1769,7 @@ footer{
 		padding: 0 20px;
 		color: #DFDDDD;
 		text-align: center;
+		border-radius: 2px;
 		font-size: 14px;
 		line-height: 54px;
 		text-transform: uppercase;
@@ -3291,6 +3333,8 @@ footer{
 .ch_img{
 	display: block;
 	margin: 30px 0;
+	background: url(../images/ch_bg.jpg) center no-repeat;
+	background-size: cover;
 	position: relative;	
 	>img{
 		display: block;
@@ -3369,6 +3413,7 @@ footer{
 	z-index: 1;
 	.c_head{
 		text-align: left;
+		letter-spacing: 0.16em;
 	}
 }
 .ma_content{

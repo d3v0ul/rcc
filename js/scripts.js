@@ -206,82 +206,82 @@ $(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(eve
 
 
 //preload 3x events
-// var hq = window.matchMedia('all and (max-width: 920px)');
-// if (hq.matches) {    
-//     $(".b1_block").addClass("hidden");
-//     $(".b1_block").addClass("v");
-//     let i = 0;
-// 		function cycl() {
-// 		    requestAnimationFrame(() => {
-// 		        if (i > 360) {
-// 		        	$(".skip_intro").addClass('hide');
-// 		        	setTimeout(() => {
-// 							  $('.b1b_1').removeClass("hidden");
-// 							}, 000)
-// 							setTimeout(() => {
-// 							  $('.b1b_2').removeClass("hidden");
-// 							}, 100)
-// 							setTimeout(() => {
-// 							  $('.b1b_3').removeClass("hidden");
-// 							}, 200)
-// 		        }
-// 		        else{
-// 		        	$(".skip_intro").click(function() {
-// 		        		$(this).addClass('hide');
-// 						    setTimeout(() => {
-// 								  $('.b1b_1').removeClass("hidden");
-// 								}, 000)
-// 								setTimeout(() => {
-// 								  $('.b1b_2').removeClass("hidden");
-// 								}, 100)
-// 								setTimeout(() => {
-// 								  $('.b1b_3').removeClass("hidden");
-// 								}, 200)
-// 							});
-// 		        }
-// 		        let g = document.getElementById("si").style = `--rot: ${i}deg;`;
-// 		        i++;
-// 		        cycl();
-// 		    })
-// 		};
-// 		cycl();
-// } else {
-//     let i = 0;
-// 		function cycl() {
-// 		    requestAnimationFrame(() => {
-// 		        if (i > 360) {
-// 		        	$(".skip_intro").addClass('hide');
-// 		        	setTimeout(() => {
-// 							  $('.b1b_1').slideDown(1200);
-// 							}, 000)
-// 							setTimeout(() => {
-// 							  $('.b1b_2').slideDown(1200);
-// 							}, 100)
-// 							setTimeout(() => {
-// 							  $('.b1b_3').slideDown(1200);
-// 							}, 200)
-// 		        }
-// 		        else{
-// 		        	$(".skip_intro").click(function() {
-// 		        		$(this).addClass('hide');
-// 						    setTimeout(() => {
-// 								  $('.b1b_1').slideDown(1200);
-// 								}, 000)
-// 								setTimeout(() => {
-// 								  $('.b1b_2').slideDown(1200);
-// 								}, 100)
-// 								setTimeout(() => {
-// 								  $('.b1b_3').slideDown(1200);
-// 								}, 200)
-// 							});
-// 		        }
-// 		        let g = document.getElementById("si").style = `--rot: ${i}deg;`;
-// 		        i++;
-// 		        cycl();
-// 		    })
-// 		};
-// 		cycl();
-// }
+var hq = window.matchMedia('all and (max-width: 920px)');
+if (hq.matches) {    
+    $(".b1_block").addClass("hidden");
+    $(".b1_block").addClass("v");
+    let i = 0;
+		function cycl() {
+		    requestAnimationFrame(() => {
+		        if (i > 360) {
+		        	$(".skip_intro").addClass('hide');
+		        	setTimeout(() => {
+							  $('.b1b_1').removeClass("hidden");
+							}, 000)
+							setTimeout(() => {
+							  $('.b1b_2').removeClass("hidden");
+							}, 100)
+							setTimeout(() => {
+							  $('.b1b_3').removeClass("hidden");
+							}, 200)
+		        }
+		        else{
+		        	$(".skip_intro").click(function() {
+		        		$(this).addClass('hide');
+						    setTimeout(() => {
+								  $('.b1b_1').removeClass("hidden");
+								}, 000)
+								setTimeout(() => {
+								  $('.b1b_2').removeClass("hidden");
+								}, 100)
+								setTimeout(() => {
+								  $('.b1b_3').removeClass("hidden");
+								}, 200)
+							});
+		        }
+		        let g = document.getElementById("si").style = `--rot: ${i}deg;`;
+		        i++;
+		        cycl();
+		    })
+		};
+		cycl();
+} else {
+    let i = 0;
+		function cycl() {
+		    requestAnimationFrame(() => {
+		        if (i > 360) {
+		        	$(".skip_intro").addClass('hide');
+		        	setTimeout(() => {
+							  $('.b1b_1').slideDown(1200);
+							}, 000)
+							setTimeout(() => {
+							  $('.b1b_2').slideDown(1200);
+							}, 100)
+							setTimeout(() => {
+							  $('.b1b_3').slideDown(1200);
+							}, 200)
+		        }
+		        else{
+		        	$(".skip_intro").click(function() {
+		        		$(this).addClass('hide');
+						    setTimeout(() => {
+								  $('.b1b_1').slideDown(1200);
+								}, 000)
+								setTimeout(() => {
+								  $('.b1b_2').slideDown(1200);
+								}, 100)
+								setTimeout(() => {
+								  $('.b1b_3').slideDown(1200);
+								}, 200)
+							});
+		        }
+		        let g = document.getElementById("si").style = `--rot: ${i}deg;`;
+		        i++;
+		        cycl();
+		    })
+		};
+		cycl();
+}
 
 
 
@@ -417,14 +417,27 @@ $(window).scroll(function() {
 
 
 //owl sliders
-$('.news_slider').addClass('owl-carousel');
-$('.news_slider').owlCarousel({
-    center: false,
-    items: 4,
-    loop: false,
-    margin: 20,
-    autoWidth: true,
-});
+// var ns = window.matchMedia('all and (min-width: 920px)');
+// if (ns.matches) {
+    $('.news_slider').addClass('owl-carousel');
+    $('.news_slider').owlCarousel({
+        center: false,
+        items: 4,
+        loop: false,
+        margin: 20,
+        autoWidth: true,
+    });
+// } else {
+//     $('.news_slider').addClass('owl-carousel');
+//     $('.news_slider').owlCarousel({
+//         center: false,
+//         items: 4,
+//         loop: false,
+//         margin: 0,
+//         autoWidth: true,
+//     });
+// }
+
 
 $('.brands_slider').addClass('owl-carousel');
 $('.brands_slider').owlCarousel({
@@ -445,6 +458,7 @@ $('.popular_news_slider').owlCarousel({
     responsive: {
         0: {
             items: 1,
+            autoWidth: false,
         },
         500: {
             
