@@ -253,7 +253,13 @@ img {
 .mf_socials{
 	margin-top: 50px;
 }
-
+.nc_head{
+	br{
+		&.mob{
+			display: block !important;
+		}
+	}
+}
 
 
 
@@ -745,24 +751,6 @@ header{
 	height: 70px;
 	padding-top: 19px;
 }
-.b2_2_wrap{
-	position: relative;
-	/*height: auto;*/
-	height: 100vh;
-	.b1_block{
-		/*bottom: 0;
-		left: -100vw !important;*/
-	}
-	&.visible{
-		.b1_block{
-			/*left: 0 !important;*/
-		}
-		.b1b_all{
-			bottom: 80px;
-		}
-	}
-	
-}
 .vert_slider_demo{
 	top: calc(50% + 35px);
 }
@@ -830,6 +818,23 @@ header{
 	margin-top: 70px;
   height: 100vh;
 }
+.b2_2_wrap{
+	position: relative;
+	/*height: auto;*/
+	height: 100vh;
+	.b1_block{
+		/*bottom: 0;
+		left: -100vw !important;*/
+	}
+	&.visible{
+		.b1_block{
+			/*left: 0 !important;*/
+		}
+		.b1b_all{
+			bottom: 80px;
+		}
+	}	
+}
 .b1_block{
 	display: block;
 	width: 100%;
@@ -844,10 +849,10 @@ header{
 	&.v{
 		opacity: 1;
 	}
-	&.hidden{
+	/*&.hidden{
 		transform: translateX(-100%);
 		transition: none;
-	}
+	}*/
 	&.b1b_1{
 		transition: 1.0s;
 	}
@@ -933,6 +938,7 @@ header{
 }
 .pns_name{
 	font-size: 16px;
+	padding-right: 30px;
 }
 .pns_date{
 	font-size: 12px;
@@ -950,7 +956,7 @@ header{
 }
 #sync2{
 	.owl-prev, .owl-next{
-		transform: scale(0.5);
+		transform: scale(0.7);
 		transform-origin: center; 
 	}
 	.owl-prev{
@@ -958,7 +964,7 @@ header{
 	}
 	.owl-next{
 		right: 5px;
-		transform: scale(0.5) rotate(180deg);
+		transform: scale(0.7) rotate(180deg);
 	}
 }
 .news_bot{
@@ -975,7 +981,9 @@ header{
 		}
 	}
 }
-
+.news_socials{
+	padding-left: 65px;
+}
 
 
 
@@ -1040,8 +1048,14 @@ header{
 .mf_videos{
 	grid-gap: 16px;
 }
-
-
+.popular_news_slider{
+	>div{
+		margin-bottom: 30px;
+	}
+}
+.news_socials{
+	padding-left: 0;
+}
 
 
 
@@ -1879,6 +1893,7 @@ header{
 }
 .ft_head{
 	text-align: center;
+	margin-bottom: 45px;
 }
 .ft_form{
 	.sf_item{
@@ -1917,6 +1932,9 @@ header{
 			float: none;
 		}
 	}
+	&.files{
+		margin-top: 40px;
+	}
 }
 .selectbox{
 	margin-top: 0;
@@ -1932,26 +1950,43 @@ header{
 	border: 1px solid #2B2B2B;
 	padding: 15px 15px 5px;
 	>a{
-		font-size: 14px;
+		font-size: 10px;
+		text-transform: uppercase;
 		margin: 0 15px 10px 0;
 	}
 }
 .sfi_label{
 	width: 100px;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 40px;
 	padding-left: 10px;
 }
 .sf_inputs{
 	background: #333333;
+	.selectbox{
+		.select{
+			height: 60px;
+			.text{
+				line-height: 60px;
+				font-size: 10px;				
+			}			
+		}
+		ul.dropdown{
+				top: 44px;
+				>li{
+					font-size: 10px;
+				}
+			}
+	}
 }
 .sfi_input{
 	width: calc(100% - 120px);
-	height: 40px;
-	font-size: 12px;
+	height: 60px;
+	font-size: 10px;
 }
 .smi_area{
 	padding: 15px 0 10px;
+	margin-bottom: 20px;
 }
 .sf_files{
 	margin-top: 15px;
@@ -1971,22 +2006,26 @@ header{
 }
 .sf_bot{
 	margin-top: 25px;
+	margin-bottom: 50px;
 }
 .niceCheck{
-	padding-left: 30px;
+	float: none;
+	padding-left: 45px;
 	margin-bottom: 15px;
 	>span{
 		font-size: 13px;
 		&:before{
-			width: 16px;
-			height: 16px;
+			width: 36px;
+			height: 36px;
 		}
 	}
 }
 .sf_submit{
-	width: 80px;
-	height: 80px;
-	font-size: 12px;
+	float: none;
+	margin: 40px auto 0;
+	width: 120px;
+	height: 120px;
+	font-size: 10px;
 }
 .smi_text{
 	font-size: 18px;
@@ -2034,6 +2073,15 @@ header{
 }
 .conf{
 	margin-bottom: 50px;
+	.cf_head{
+		font-size: 46px;
+		span{
+			display: inline;
+		}
+		br{
+			display: block;
+		}
+	}
 }
 .cf_text{
 	font-size: 18px;
@@ -2088,6 +2136,10 @@ header{
 .mt_RCC{
 	font-size: 28px;
 }
+.m_top{
+	padding-bottom: 280px;
+	position: relative;
+}
 .m_col{
 	width: 50%;
 	float: left;
@@ -2096,6 +2148,8 @@ header{
 	border: none !important;
 	img{
 		position: static;
+		width: 212px;
+		height: 267px;
 	}
 	&.mc_1{
 		width: 100vw; 
@@ -2104,6 +2158,38 @@ header{
 		.mc_content{
 			float: none;
 			padding-left: 0;
+		}
+	}
+	&.mc_2{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 540px;
+		>a{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-180px);
+		}
+		img{			
+			transform: translateX(0);
+		}		
+	}
+	&.mc_3{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 540px;
+		>a{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-30px);
+		}
+		img{
+			transform: translateX(0);
 		}
 	}
 	&.orange{		
@@ -2249,6 +2335,32 @@ header{
 	height: 150px;
 	bottom: 56%;
 }
+.ch_top{
+	position: relative;
+	padding-bottom: 20px;
+	.cht_place{
+		font-size: 10px;
+	}
+	.cht_weight{
+		position: absolute;
+		left: 0;
+		top: 37px;
+		margin: 0;
+		font-size: 10px;
+	}
+	.cht_stats{
+		display: block;
+		margin-top: 5px;
+		float: none;
+		font-size: 10px;
+	}
+}
+.ch_img{
+	margin: 10px 0;
+}
+
+
+
 
 
 
@@ -2308,6 +2420,12 @@ header{
 	background-size: 560px;
 	.c_head{
 		margin-bottom: 20px;
+	}
+}
+.b3_wrap{
+	&:after{
+		background: url(../images/b2_bg.svg) left 180px no-repeat;
+		background-size: 920px;
 	}
 }
 .c_head{
@@ -2391,7 +2509,7 @@ header{
 .popular_news_slider{
 	margin: 0 auto;
 	.owl-item{
-		width: calc(100vw - 1px) !important;
+		/*width: calc(100vw - 2px) !important;*/
 	}
 }
 .nri_search{
@@ -2545,16 +2663,35 @@ header{
 	border-bottom: none;
 }
 
+.m_col{
+	&.mc_2, &.mc_3{
+		top: 450px;
+	}
+}
+.pns_name{
+	padding-right: 60px;
+}
+.pns_date{
+	font-size: 10px;
+}
+
+
+
+
+
+
+
+
 
 } /*500*/
 @media only screen and (max-width : 400px){
 
-.sfi_img{
+/*.sfi_img{
 	float: left;
 	width: 80px;
 	height: 80px;
 	margin: 0 5px 5px 0;
-}
+}*/
 
 } /*400*/
 @media only screen and (max-width : 350px){

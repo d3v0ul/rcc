@@ -448,23 +448,28 @@ $('.brands_slider').owlCarousel({
     autoWidth: true,
 });
 
-$('.popular_news_slider').addClass('owl-carousel');
-$('.popular_news_slider').owlCarousel({
-    center: false,
-    items: 3,
-    loop: false,
-    margin: 15,
-    autoWidth: true,
-    responsive: {
-        0: {
-            items: 1,
-            autoWidth: false,
-        },
-        500: {
-            
+
+var pns = window.matchMedia('all and (min-width: 760px)');
+if (pns.matches) {
+    $('.popular_news_slider').addClass('owl-carousel');
+    $('.popular_news_slider').owlCarousel({
+        center: false,
+        items: 3,
+        loop: false,
+        margin: 15,
+        autoWidth: true,
+        responsive: {
+            0: {
+                items: 1,
+                autoWidth: false,
+            },
+            500: {
+
+            }
         }
-    }
-});
+    });
+} else {}
+
 
 $('.nr_slider').addClass('owl-carousel');
 $('.nr_slider').owlCarousel({

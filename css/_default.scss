@@ -693,6 +693,7 @@ header{
 
 .b2_wrap{
 	max-width: 100%;
+	height: 100vh;
 	background: #EE4B45 url(../images/b2_bg.svg) center 100px no-repeat;
 	padding: 15vh 0 40px 15px;
 	text-align: center;
@@ -712,6 +713,7 @@ header{
 	font-family: $dc;
 	font-style: italic;
 	text-transform: uppercase;
+	letter-spacing: 0.16em;
 	margin-bottom: 30px;
 	text-align: center;
 }
@@ -806,6 +808,17 @@ header{
 	background: #000 url(../images/b3_bg.jpg) center top no-repeat;
 	background-size: cover;
 	padding-top: 200px;
+	position: relative;
+	&:after{
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: url(../images/b2_bg.svg) center 170px no-repeat;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 }
 .b3{
 	@extend %ct;
@@ -1532,7 +1545,7 @@ footer{
 	}
 }
 .news_bot{
-	border-top: 1px solid #6A6969;
+	border-top: 1px solid #4A4A4A;
 	margin-top: 130px;
 	padding-top: 25px;
 }
@@ -1614,6 +1627,7 @@ footer{
 .news_socials{
 	@extend %ct;
 	padding-top: 180px;
+	padding-left: 155px;
 	position: relative;
 	z-index: 1;
 }
@@ -1621,6 +1635,7 @@ footer{
 	font-size: 96px;
 	line-height: 110%;
 	font-family: $r;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	margin-bottom: 40px;
 	font-style: italic;
@@ -1708,6 +1723,10 @@ footer{
   	width: 100%;
   	@include opa(2);
     cursor: pointer;
+    transition: .3s;
+    &:hover{
+    	@include opa(4);
+    }
     >span{
     	display: table-cell;
     	vertical-align: middle;
@@ -1831,6 +1850,7 @@ footer{
 	}
 }
 .bi_fighters{
+	display: block;
 	font-size: 24px;
 	line-height: 120%;
 }
@@ -2926,14 +2946,15 @@ footer{
 	float: right;
 	width: 120px;
 	height: 120px;
-	background: #777777;
-	color: #929292;
+	background: #E04141;
+	color: #fff;
 	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
 	cursor: pointer;
 	transition: .3s;
 	&:hover{
-		background: #E04141;
-		color: #fff;
+		@include opa(7);
 	}
 }
 
@@ -3018,6 +3039,11 @@ footer{
 .conf{
 	@extend %ct;
 	margin: 120px auto;
+	.cf_head{
+		span, br{
+			display: none;
+		}
+	}
 }
 .cf_head{
 	@extend .bp_head;
@@ -3136,6 +3162,7 @@ footer{
 .m_logo{
 	display: block;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 .m_col{
 	width: 33.3vw;
@@ -3154,14 +3181,17 @@ footer{
 		right: 0;
 	}
 	&.mc_2, &.mc_3{
-		&:hover, &:active{
-		&:before{
-			@include opa(10);
-		}
 		img{
-			filter: grayscale(0);
-			transition: .3s;
+			transform: translateX(6vw);
 		}
+		&:hover, &:active{
+			&:before{
+				@include opa(10);
+			}
+			img{
+				filter: grayscale(0);
+				transition: .3s;
+			}
 	}
 }	
 	&.mc_2{
@@ -3335,9 +3365,11 @@ footer{
 	margin: 30px 0;
 	background: url(../images/ch_bg.jpg) center no-repeat;
 	background-size: cover;
-	position: relative;	
+	position: relative;
 	>img{
 		display: block;
+		position: relative;
+		z-index: 1;
 	}
 }
 .ch_name{
