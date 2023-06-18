@@ -569,6 +569,17 @@ header{
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 14px;
+	&:before{
+		display: block;
+		content: '';
+		width: 4px;
+		height: 48px;
+		background: url(../images/use_scroll.png) 0 0 no-repeat;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -50px;
+	}
 }
 .mouse_icon{
 	/*width: 20px;
@@ -1558,20 +1569,15 @@ footer{
 		}
 	}
 }
+.razdel{
+	width: 100vw;
+	height: 1px;
+	background: #4A4A4A;
+	margin-top: 70px;
+}
 .news_bot{
-	margin-top: 130px;
-	padding-top: 25px;
+	padding-top: 30px;
 	position: relative;
-	&:before{
-		display: block;
-		content: '';
-		width: calc(100% + 30px);
-		height: 1px;
-		background: #4A4A4A;
-		position: absolute;
-		left: -15px;
-		top: 0;
-	}
 }
 .popular_news{
 	@extend %ct;
@@ -1867,7 +1873,7 @@ footer{
 		.bi_right{
 			>span{
 				>a{
-					/*margin-left: 16px;	*/
+					margin-left: 12px;	
 				}
 			}
 		}
@@ -1899,8 +1905,8 @@ footer{
 			display: inline-block;
 			width: 74px;
 			height: 74px;
-			/*margin: 5px 0 5px -25px;*/
-			margin: 5px 0 5px 12px;
+			margin: 5px 0 5px -25px;
+			/*margin: 5px 0 5px 12px;*/
 			transition: .3s;
 			&:hover{
 				@include opa(7);				
@@ -3205,12 +3211,18 @@ footer{
 		right: 0;
 	}
 	&.mc_2, &.mc_3{
+		&:before, &:after{
+			transform: translate3d(-100%,100%,0);
+			transition: .3;
+		}
 		img{
 			transform: translateX(6vw);
 		}
 		&:hover, &:active{
-			&:before{
-				@include opa(10);
+		background: linear-gradient(180deg, rgba(204, 26, 26, 0.5) 0%, rgba(204, 26, 26, 0.1) 6.25%, #CC1A1A 100%);
+			&:before, &:after{
+				/*@include opa(10);*/
+				transform: translate3d(0,0,0);
 			}
 			img{
 				filter: grayscale(0);

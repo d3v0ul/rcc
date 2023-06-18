@@ -1657,9 +1657,17 @@ header{
 			background: url(../images/flame_blue.png) left bottom no-repeat;
 		}
 	}
+	&.mc_1{
+		&:before, &:after{
+			display: none;
+		}
+		.mt_content{
+			padding-left: 10px;
+		}
+	}
 	&:before{
 		display: block;
-		@include opa(0);
+		/*@include opa(0);*/
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -1667,15 +1675,35 @@ header{
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		transition: 1s;
-		&.mc_1{
-		&:before{
-			display: none;
-		}
-		.mt_content{
-			padding-left: 10px;
+		transition: 1s;		
+	}
+	&.orange{		
+		&:after{
+			background: url(../images/flame_top_orange.png) left bottom no-repeat;
 		}
 	}
+	&.blue{		
+		&:after{
+			background: url(../images/flame_top_blue.png) left bottom no-repeat;
+		}
+	}		
+	&:after{
+		display: block;
+		/*@include opa(0);*/
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: url(../images/flame_top.png) left bottom no-repeat;
+		position: absolute;
+		z-index: 5;
+		left: 0;
+		bottom: 0;
+		transition: 1s;
+		&.mc_1{
+			&:after{
+				display: none;
+			}
+		}
 	}		
 }
 
