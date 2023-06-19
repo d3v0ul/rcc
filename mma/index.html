@@ -134,7 +134,7 @@
 </div> -->
 
 
-<div class="m4 remove_one_screen ha screen screen3">
+<div class="m4 remove_one_screen ha screen screen3 stop-scroll">
 	<div class="m_head">Чемпионы</div>
 	<div class="champs mma">
 		<a href="fighter.html" class="champ">
@@ -434,42 +434,7 @@
 <script src="../js/scripts.js"></script>
 
 <!-- one page scrolling -->
-<script>
-var hq = window.matchMedia('all and (min-width: 1000px)');
-if (hq.matches) {
-    
-function slidescreen() { h = $(window).height(); $(".screen").css('height', h); };
-
-$(window).resize(slidescreen);
-$(document).ready(slidescreen);
-
-$(document).bind('mousewheel DOMMouseScroll', function(event) { scroll(event); });
-
-var num = 1;
-var scrolling = false;
-
-function scroll(event) {
-  event.preventDefault();
-  if (!scrolling) {
-    scrolling = true;
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-      num--;
-      num = num < 1 ? 1 : num;
-    } else {
-      num++;
-      num = num > $(".screen").length ? $(".screen").length : num;
-    }
-
-    $('html, body').animate({
-      scrollTop: $(".screen" + num).offset().top
-    }, 500, "linear", function() {
-      scrolling = false;
-    });
-  }
-}
-    
-} else {}
-</script>
+<script src="../js/scroller.js"></script>
 <!-- end of one page scrolling -->
 
 </body>

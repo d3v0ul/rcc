@@ -56,8 +56,9 @@ $.each(vids, function(){
 
 //fighter strikes animation
 $(function() {
-    var target_block = $(".mf_strikes"); // Ищем блок при прокрутке до которого начнется анимация (+400 верхний отступ)
-    var target_block = $(".screen1");
+    if (document.querySelector('.mf_strikes')){ 
+        var target_block = $(".mf_strikes"); // Ищем блок при прокрутке до которого начнется анимация (+400 верхний отступ)
+    // var target_block = $(".screen1");
     var blockStatus = true;
     $(window).scroll(function() {
         var scrollEvent = ($(window).scrollTop() > (target_block.position().top +400 - $(window).height()));
@@ -78,44 +79,46 @@ $(function() {
                 }
             });
             // круговые прогресбары
-            // let circularProgress = document.querySelector(".circular-progress"),
-            //     progressValue = document.querySelector(".progress-value");
+            let circularProgress = document.querySelector(".circular-progress"),
+                progressValue = document.querySelector(".progress-value");
 
-            // let progressStartValue = 0,    
-            //     progressEndValue = 48,    
-            //     speed = 30;
+            let progressStartValue = 0,    
+                progressEndValue = 48,    
+                speed = 30;
                 
-            // let progress = setInterval(() => {
-            //     progressStartValue++;
+            let progress = setInterval(() => {
+                progressStartValue++;
 
-            //     progressValue.textContent = `${progressStartValue} %`
-            //     circularProgress.style.background = `conic-gradient(#E04141 ${progressStartValue * 3.6}deg, #2B2B2B 0deg)`
+                progressValue.textContent = `${progressStartValue} %`
+                circularProgress.style.background = `conic-gradient(#E04141 ${progressStartValue * 3.6}deg, #2B2B2B 0deg)`
 
-            //     if(progressStartValue == progressEndValue){
-            //         clearInterval(progress);
-            //     }    
-            // }, speed);
-            // let circularProgress2 = document.querySelector(".circular-progress2"),
-            //     progressValue2 = document.querySelector(".progress-value2");
+                if(progressStartValue == progressEndValue){
+                    clearInterval(progress);
+                }    
+            }, speed);
+            let circularProgress2 = document.querySelector(".circular-progress2"),
+                progressValue2 = document.querySelector(".progress-value2");
 
-            // let progressStartValue2 = 0,    
-            //     progressEndValue2 = 48,    
-            //     speed2 = 30;
+            let progressStartValue2 = 0,    
+                progressEndValue2 = 48,    
+                speed2 = 30;
                 
-            // let progress2 = setInterval(() => {
-            //     progressStartValue2++;
+            let progress2 = setInterval(() => {
+                progressStartValue2++;
 
-            //     progressValue2.textContent = `${progressStartValue2} %`
-            //     circularProgress2.style.background = `conic-gradient(#E04141 ${progressStartValue2 * 3.6}deg, #2B2B2B 0deg)`
+                progressValue2.textContent = `${progressStartValue2} %`
+                circularProgress2.style.background = `conic-gradient(#E04141 ${progressStartValue2 * 3.6}deg, #2B2B2B 0deg)`
 
-            //     if(progressStartValue2 == progressEndValue2){
-            //         clearInterval(progress2);
-            //     }    
-            // }, speed2);
+                if(progressStartValue2 == progressEndValue2){
+                    clearInterval(progress2);
+                }    
+            }, speed2);
             //столбцы
             $(".column_progress > div").addClass("fill");
         }
     });
+    }
+    
 });
 
 
@@ -190,17 +193,17 @@ if (fm.matches) {
 
 
 //mma main block 3 scroll on
-$(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(event){
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        $("body").addClass("one_page");
-        $("*").addClass("screen");
-    }
-    else {
-        $("body").removeClass("one_page");
-        $("*").removeClass("screen");
-        $(".screen_hide").hide();
-    }
-});
+// $(".m3_wrap, .remove_one_screen").bind('mousewheel DOMMouseScroll', function(event){
+//     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+//         $("body").addClass("one_page");
+//         $("*").addClass("screen");
+//     }
+//     else {
+//         $("body").removeClass("one_page");
+//         $("*").removeClass("screen");
+//         $(".screen_hide").hide();
+//     }
+// });
 
 
 
@@ -275,7 +278,9 @@ if (hq.matches) {
 								}, 200)
 							});
 		        }
-		        let g = document.getElementById("si").style = `--rot: ${i}deg;`;
+                if (document.querySelector('#si')){
+                    let g = document.getElementById("si").style = `--rot: ${i}deg;`;
+                }	        
 		        i++;
 		        cycl();
 		    })
@@ -405,12 +410,15 @@ function parallaxScroll(){
 
 
 $(window).scroll(function() {
-    var trigger = $('.popular_news').offset().top - 780;
+    if(document.querySelector('.popular_news')){
+        var trigger = $('.popular_news').offset().top - 780;
     if ($(this).scrollTop() > trigger) {
         $(".news_left").addClass('static');
     } else {
         $(".news_left").removeClass('static');
     }
+    }
+    
 });
 
 
@@ -602,3 +610,8 @@ sync2.on("click", ".owl-item", function(e) {
     sync1.data('owl.carousel').to(number, 300, true);
 });
 });
+
+/* Zoom */
+$(window).on('load', ()=>{
+    $('.zoomed').addClass('unzoomed');   
+})

@@ -276,7 +276,7 @@ img {
 	left: 15px;
 	bottom: 0;
 	transform: translateX(0);
-	height: calc(100vh-120px);
+	height: calc(100vh - 120px);
 	&.static{
 		max-width: 340px;
 		position: static;
