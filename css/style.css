@@ -1042,7 +1042,7 @@ footer.main_footer {
 .f_menu {
   position: absolute;
   left: 50%;
-  top: 265px;
+  bottom: -10px;
 }
 .f_menu > li {
   display: block;
@@ -1238,6 +1238,12 @@ footer.main_footer {
 }
 .nli_head > div {
   display: inline;
+  color: #E04141;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+}
+.nli_head > a {
   color: #E04141;
   font-weight: 700;
   font-size: 14px;
@@ -6333,8 +6339,14 @@ img {
 }
 /*740*/
 @media only screen and (min-width: 600px) {
+  .m_col.orange {
+    background: none !important;
+  }
   .m_col.orange:before {
     background: url(../images/flame_orange.png) left bottom no-repeat;
+  }
+  .m_col.blue {
+    background: none !important;
   }
   .m_col.blue:before {
     background: url(../images/flame_blue.png) left bottom no-repeat;

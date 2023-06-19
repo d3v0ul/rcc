@@ -958,7 +958,7 @@ footer{
 .f_menu{
 	position: absolute;
 	left: 50%;
-	top: 265px;
+	bottom: -10px;
 	>li{
 		display: block;
 		margin-bottom: 18px;
@@ -1141,6 +1141,12 @@ footer{
 	}
 	>div{
 		display: inline;
+		color: #E04141;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 120%;
+	}
+	>a{
 		color: #E04141;
 		font-weight: 700;
 		font-size: 14px;

@@ -1648,11 +1648,13 @@ header{
 @media only screen and (min-width : 600px){
 .m_col{
 	&.orange{		
+		background: none !important;
 		&:before{
 			background: url(../images/flame_orange.png) left bottom no-repeat;
 		}
 	}
 	&.blue{		
+		background: none !important;
 		&:before{
 			background: url(../images/flame_blue.png) left bottom no-repeat;
 		}
