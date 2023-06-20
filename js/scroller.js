@@ -51,12 +51,12 @@ $(document).on('touchend', ()=>{
         
         if (deltaY<0 && num === 1) {
             $(".b1_2").addClass("hidden");
-            $(".mouse_icon").show();
+            $(".mouse_icon, .use_scroll").show();
             $(".ft_l, .ft_r").removeClass("resize");
         }
         if (deltaY>0 && num === 2) {
             $(".b1_2").removeClass("hidden");
-            $(".mouse_icon").hide();
+            $(".mouse_icon, .use_scroll").hide();
             $(".ft_l, .ft_r").addClass("resize");
         }
         if (deltaY<0 && num === 2) {
@@ -167,12 +167,12 @@ function scrollAnimation () {
 function mainPageAnimation (event) {
     if ((event.deltaY < 0 || event.detail < 0 || event.wheelDelta > 0 || event.deltaY < 0) && num === 1) {
         $(".b1_2").addClass("hidden");
-        $(".mouse_icon").show();
+        $(".mouse_icon, .use_scroll").show();
         $(".ft_l, .ft_r").removeClass("resize");
     }
     if ((event.deltaY > 0 || event.detail > 0 || event.wheelDelta < 0 || event.deltaY > 0) && num === 2) {
         $(".b1_2").removeClass("hidden");
-        $(".mouse_icon").hide();
+        $(".mouse_icon, .use_scroll").hide();
         $(".ft_l, .ft_r").addClass("resize");
     }
     if ((event.deltaY < 0 || event.detail < 0 || event.wheelDelta > 0 || event.deltaY < 0) && num === 2) {

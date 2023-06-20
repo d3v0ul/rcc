@@ -27,7 +27,7 @@ $dc: 'Druk Cyr';
 
 @mixin opa($opa){
 	filter: alpha(Opacity=$opa*10);
-  opacity: calc ($opa/10);
+  opacity: $opa/10;
 }
 
 @mixin lg($b_grad, $t_grad){
@@ -134,7 +134,8 @@ header{
 	position: fixed;
 	z-index: 5;
 	left: 0;
-	top: 0;
+	top: -100px;
+	opacity: 0;
 	&.h_main{
 		background: rgba(29, 29, 29, 0);
 	}
@@ -3337,6 +3338,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 150%);
+						z-index: 2;
 					}
 				}				
 			}
@@ -3348,6 +3350,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 150%);
+						z-index: 2;
 					}
 				}				
 			}
@@ -3359,6 +3362,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
+						z-index: 2;
 					}
 				}				
 			}
@@ -3406,6 +3410,7 @@ footer{
 	}
 }
 .cht_place{
+	font-weight: 700;
 	background: linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3420,7 +3425,8 @@ footer{
 	}
 }
 .cht_weight{
-	color: #444343;
+	color: #DFDDDD;
+	opacity: .2;
 	margin-left: 10px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -3428,6 +3434,7 @@ footer{
 .cht_stats{
 	float: right;
 	color: #E04141;
+	font-weight: 700;
 }
 .ch_img{
 	display: block;
@@ -3459,7 +3466,8 @@ footer{
 	font-size: 14px;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
-	color: #4A4A4A;
+	color: #FFFFFF;
+	@include opa(2);
 }
 .ch_all{
 	text-align: center;
