@@ -751,7 +751,7 @@ footer{
 @media only screen and (max-width : 920px){
 header{
 	height: 70px;
-	padding-top: 19px;
+	padding-top: 17px;
 }
 .vert_slider_demo{
 	top: calc(50% + 35px);
@@ -1032,7 +1032,7 @@ left: 0;
 margin: auto;
 }
 .b1_2_all{
-bottom: 48px !important;
+bottom: 80px !important;
 font-size: 10px !important;
 }
 .use_scroll{
@@ -1193,7 +1193,7 @@ transform: unset;
 	max-width: 320px;
 	margin: 0 auto;
 	>li{
-		margin-bottom: 52px;
+		margin-bottom: 67px;
 		&:last-child{
 			margin-bottom: 25px;
 		}
@@ -1209,7 +1209,7 @@ transform: unset;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-160px);
-	bottom: 100px;
+	bottom: 104px;
 	margin: 0;
 }
 .f_socials{
@@ -1588,7 +1588,7 @@ transform: unset;
 	}
 }
 .f_form{
-	margin-bottom: 250px;
+	margin-bottom: 290px;
 }
 .f_socials{
 	position: absolute;
@@ -1597,9 +1597,12 @@ transform: unset;
 	margin: 0;
 	grid-gap: 30px 35px;
 	transform: translateX(-50%);
-	>a{
-		font-size: 16px;
-	}
+	>li{
+		margin-bottom: 30px;
+		>a{
+			font-size: 16px;
+		}
+	}	
 }
 .mf_socials{
 	position: absolute;
@@ -1697,7 +1700,12 @@ transform: unset;
 .see_promo{
 	top: 190px;
 }
-
+.logo{
+	max-width: 76px;
+}
+.f_bot{
+	padding-top: 60px;
+}
 
 
 } /*740*/
@@ -2494,7 +2502,7 @@ transform: unset;
 	z-index: 1;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 16px;
+	bottom: 80px;
 	margin-top: 0;
 }
 .owl-item,
@@ -2724,7 +2732,7 @@ transform: unset;
 }
 .burger{
 	float: right;
-	margin: 4px 0 0;
+	margin: 0;
 }
 .e_time{
 	display: grid;

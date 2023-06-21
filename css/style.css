@@ -272,6 +272,7 @@ header.h_main {
   display: block;
   max-width: 93px;
   float: left;
+  margin-top: 5px;
 }
 .logo > img {
   display: block;
@@ -849,6 +850,14 @@ header.h_main {
   background: #E04141;
 }
 
+.b2 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .c_head {
   font-size: 96px;
   line-height: 110%;
@@ -1172,6 +1181,11 @@ footer.main_footer {
   display: none !important;
 }
 
+.bs_content {
+  filter: alpha(Opacity=20);
+  opacity: 0.2;
+}
+
 .f_bot {
   position: relative;
   padding: 30px 15px;
@@ -1196,6 +1210,7 @@ footer.main_footer {
   text-transform: uppercase;
   font-weight: 700;
   color: #777777;
+  letter-spacing: 0.04em;
   transition: 0.3s;
 }
 .fb_menu > li > a:hover {
@@ -1215,6 +1230,7 @@ footer.main_footer {
   text-transform: uppercase;
   font-weight: 700;
   color: #777777;
+  letter-spacing: 0.04em;
   transition: 0.3s;
   margin: 2px 0 0 110px;
 }
@@ -1270,7 +1286,7 @@ footer.main_footer {
   margin-bottom: 10px;
 }
 .nli_head > span {
-  color: #4A4A4A;
+  color: #DFDDDD;
   font-weight: 700;
   font-size: 14px;
   line-height: 120%;
@@ -1320,7 +1336,8 @@ footer.main_footer {
   color: #E04141;
   font-weight: 700;
   font-size: 14px;
-  line-height: 120%;
+  line-height: 140%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .nr_main > a:hover {
@@ -2218,6 +2235,9 @@ footer.main_footer {
 /*events*/
 .events {
   margin-top: 120px;
+}
+.events .nr_tags_slider {
+  margin-bottom: 0;
 }
 
 .e_btns {
@@ -3438,8 +3458,9 @@ footer.main_footer {
 .m_col.mc_2 img, .m_col.mc_3 img {
   transform: translateX(6vw);
 }
-.m_col.mc_2:hover, .m_col.mc_2:active, .m_col.mc_3:hover, .m_col.mc_3:active {
-  background: linear-gradient(180deg, rgba(204, 26, 26, 0.5) 0%, rgba(204, 26, 26, 0.1) 6.25%, #CC1A1A 100%);
+.m_col.mc_2:hover .mc_bg, .m_col.mc_2:active .mc_bg, .m_col.mc_3:hover .mc_bg, .m_col.mc_3:active .mc_bg {
+  filter: alpha(Opacity=60);
+  opacity: 0.6;
 }
 .m_col.mc_2:hover:before, .m_col.mc_2:hover:after, .m_col.mc_2:active:before, .m_col.mc_2:active:after, .m_col.mc_3:hover:before, .m_col.mc_3:hover:after, .m_col.mc_3:active:before, .m_col.mc_3:active:after {
   /*@include opa(10);*/
@@ -3455,6 +3476,18 @@ footer.main_footer {
 .m_col.mc_3 {
   left: 66.6vw;
   border-right: none;
+}
+
+.mc_bg {
+  filter: alpha(Opacity=0);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(204, 26, 26, 0.4) 0%, rgba(204, 26, 26, 0.1) 6.25%, #CC1A1A 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 2s;
 }
 
 .mt_content {
@@ -3952,6 +3985,9 @@ footer.main_footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 60px 20px;
+}
+.mf_info.mt {
+  margin-top: 140px;
 }
 
 .mfi_head {
@@ -5404,7 +5440,7 @@ img {
 @media only screen and (max-width: 920px) {
   header {
     height: 70px;
-    padding-top: 19px;
+    padding-top: 17px;
   }
 
   .vert_slider_demo {
@@ -5704,7 +5740,7 @@ img {
   }
 
   .b1_2_all {
-    bottom: 48px !important;
+    bottom: 80px !important;
     font-size: 10px !important;
   }
 
@@ -5885,7 +5921,7 @@ img {
     margin: 0 auto;
   }
   .fb_menu > li {
-    margin-bottom: 52px;
+    margin-bottom: 67px;
   }
   .fb_menu > li:last-child {
     margin-bottom: 25px;
@@ -5901,7 +5937,7 @@ img {
     position: absolute;
     left: 50%;
     transform: translateX(-160px);
-    bottom: 100px;
+    bottom: 104px;
     margin: 0;
   }
 
@@ -6327,7 +6363,7 @@ img {
   }
 
   .f_form {
-    margin-bottom: 250px;
+    margin-bottom: 290px;
   }
 
   .f_socials {
@@ -6338,7 +6374,10 @@ img {
     grid-gap: 30px 35px;
     transform: translateX(-50%);
   }
-  .f_socials > a {
+  .f_socials > li {
+    margin-bottom: 30px;
+  }
+  .f_socials > li > a {
     font-size: 16px;
   }
 
@@ -6452,6 +6491,14 @@ img {
 
   .see_promo {
     top: 190px;
+  }
+
+  .logo {
+    max-width: 76px;
+  }
+
+  .f_bot {
+    padding-top: 60px;
   }
 }
 /*740*/
@@ -7308,7 +7355,7 @@ img {
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 16px;
+    bottom: 80px;
     margin-top: 0;
   }
 
@@ -7558,7 +7605,7 @@ img {
 
   .burger {
     float: right;
-    margin: 4px 0 0;
+    margin: 0;
   }
 
   .e_time {
