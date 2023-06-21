@@ -200,6 +200,8 @@ header.h_main {
 
 .header {
   position: relative;
+  padding-left: 24px;
+  padding-top: 5px;
 }
 
 .top_block {
@@ -516,13 +518,16 @@ header.h_main {
 .b1b_date {
   display: inline-block;
   font-size: 14px;
-  line-height: 120%;
+  line-height: 140%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0 2.5vw;
   position: absolute;
   left: 0;
   bottom: 20vh;
   transition: 0.3s;
+  color: #DFDDDD;
+  font-weight: 700;
 }
 .b1b_date > span {
   display: block;
@@ -530,6 +535,8 @@ header.h_main {
   font-size: 40px;
   font-family: "Druk Cyr";
   font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.16em;
 }
 
 .b1b_all {
@@ -799,9 +806,10 @@ header.h_main {
 }
 
 .b1_2_all {
+  font-family: "Suisse Intl";
   display: inline-block;
   font-size: 14px;
-  line-height: 120%;
+  line-height: 140%;
   text-transform: uppercase;
   font-weight: 700;
   transition: 0.3s;
@@ -829,7 +837,7 @@ header.h_main {
 .b2_wrap {
   max-width: 100%;
   height: 100vh;
-  background: #EE4B45 url(../images/b2_bg.svg) center 100px no-repeat;
+  background: #E04141 url(../images/b2_bg.svg) center 100px no-repeat;
   padding: 15vh 0 40px 0;
   text-align: center;
   position: relative;
@@ -5403,6 +5411,26 @@ img {
     top: calc(50% + 35px);
   }
 
+  .b2b_all {
+    bottom: 24px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .b2_wrap {
+    background: #E04141 url(../images/b2_bg.svg) 0% no-repeat;
+    background-position-y: 55%;
+    background-size: 130vh;
+  }
+
+  .b2b_all:before {
+    height: 8px;
+    width: 8px;
+  }
+
   .hl_menu {
     display: none;
     width: 100%;
@@ -5441,6 +5469,11 @@ img {
     font-size: 12px;
     line-height: 60px;
     text-align: center;
+  }
+
+  .owl-item,
+.owl-item .active {
+    margin-right: 16px !important;
   }
 
   .hr_menu {
@@ -5536,6 +5569,10 @@ img {
     bottom: auto;
     top: 30px;
     right: 30px;
+    font-size: 12px;
+  }
+  .b1b_date span {
+    font-size: 32px;
   }
 
   .c_head {
@@ -5649,9 +5686,50 @@ img {
   .news_socials {
     padding-left: 65px;
   }
+
+  .b1_2_all {
+    bottom: 48px;
+    font-size: 12px;
+    line-height: 140%;
+  }
 }
 /*920*/
 @media only screen and (max-width: 760px) {
+  .mouse_icon {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .b1_2_all {
+    bottom: 48px !important;
+    font-size: 10px !important;
+  }
+
+  .use_scroll {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    transform: unset;
+  }
+
+  @keyframes bounce {
+    0% {
+      bottom: 110px;
+    }
+    50% {
+      bottom: 50px;
+    }
+    100% {
+      bottom: 110px;
+    }
+  }
   .vs_1 {
     display: none;
   }
@@ -7216,7 +7294,6 @@ img {
 
   .b1b_date {
     font-size: 10px;
-    letter-spacing: 0.16em;
   }
   .b1b_date > span {
     font-size: 26px;
@@ -7231,14 +7308,20 @@ img {
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20px;
+    bottom: 16px;
     margin-top: 0;
+  }
+
+  .owl-item,
+.owl-item .active {
+    margin-right: 8px !important;
   }
 
   .b2_wrap {
     padding-left: 0;
-    background: #EE4B45 url(../images/b2_bg.svg) left center no-repeat;
-    background-size: 560px;
+    background: #EE4B4A url(../images/b2_bg.svg) 9% no-repeat;
+    background-size: 130vh;
+    background-position-y: 57%;
   }
   .b2_wrap .c_head {
     margin-bottom: 20px;
