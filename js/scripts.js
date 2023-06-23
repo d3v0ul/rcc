@@ -1,5 +1,30 @@
 $(() =>{ 
 
+    /*заливка шапки*/
+if(!$("body").hasClass('one_page')){
+   document.addEventListener('scroll', ()=>{
+    if(pageYOffset > 100) {
+        $('header.h_main').css('background', "#1D1D1D");
+    } else $('header.h_main').css('background', "transparent");
+   }); 
+}
+if (document.querySelector('.stop-scroll')){
+    document.addEventListener ('scroll',()=>{
+        if (pageYOffset>=$('.stop-scroll').offset().top) {
+        $('header.h_main').css('background', "#1D1D1D");
+    } else $('header.h_main').css('background', "#1D1D1D00");
+    })   
+}
+/*заливка шапки*/
+
+/*квадратные картинки в events*/
+if(document.querySelector('.e_twins')){
+    $('.e_twins>div').css('height', $('.e_twins>div').width());
+    window.addEventListener('resize', ()=>{
+        $('.e_twins>div').css('height', $('.e_twins>div').width());
+    })
+}
+/*квадратные картинки в events*/
 
 //body show
 setTimeout(() => {
@@ -184,12 +209,12 @@ $(function() {
 
 
 //mma flame mobile
-var fm = window.matchMedia('all and (max-width: 600px)');
-if (fm.matches) {
-    $(".mc_2, .mc_3").click(function() {
-        $(".m_top").addClass('flame');
-    });
-} else {}
+// var fm = window.matchMedia('all and (max-width: 600px)');
+// if (fm.matches) {
+//     $(".mc_2, .mc_3").click(function() {
+//         $(".m_top").addClass('flame');
+//     });
+// } else {}
 
 
 //mma main block 3 scroll on
@@ -467,7 +492,7 @@ if (pns.matches) {
         items: 3,
         loop: false,
         margin: 15,
-        autoWidth: true,
+        autoWidth: false,
         responsive: {
             0: {
                 items: 1,
@@ -497,9 +522,20 @@ if (ts.matches) {
     $('.nr_tags_slider').owlCarousel({
         center: false,
         items: 8,
-        loop: false,
+        loop: true,
         margin: 8,
         autoWidth: true,
+        startPosition: 2,
+        items: 1,
+        // stagePadding: 80,
+        // rtl: true,
+        center: true,    
+        responsive: {
+            500:{
+                loop: false,
+                center: false,
+            }
+        }
     });
 } else {}
 
@@ -511,7 +547,8 @@ $('.time_slider').owlCarousel({
     loop: false,
     margin: 8,
     autoWidth: true,
-});
+    // stagePadding: 40,
+    });
 
 var ls = window.matchMedia('all and (max-width: 1000px)');
 if (ls.matches) {
@@ -614,20 +651,54 @@ sync2.on("click", ".owl-item", function(e) {
 });
 
 /* Zoom */
-$(window).on('load', ()=>{
-    $('.zoomed').addClass('unzoomed'); 
-    console.log(sessionStorage.getItem('visited'))
-    if(sessionStorage.getItem('visited') != 1){    
-        $('.slide-menu').animate({
+
+function animateHeader () {
+    $('.slide-menu').animate({
                 top: -50,
             }, 500, ()=>{ $('.slide-menu').animate({
                 top: 0,
                 opacity: 1,
             }, 500);
         });
+}
+
+$(window).on('load', ()=>{
+    $('.zoomed').addClass('unzoomed');
+    /* выплывание шапки*/
+    if(sessionStorage.getItem('visited') != 1){    
+        animateHeader();
         sessionStorage.setItem('visited', 1);
-    } else {
+    }else {
         $('.slide-menu').css('top', "0");
         $('.slide-menu').css('opacity', "1");
     }
+    /* выплывание шапки*/
 })
+// альтернативная шапка
+// $(window).on('load', ()=>{
+//     $('.zoomed').addClass('unzoomed');
+//     /* выплывание шапки*/
+//     var shown = false;
+//     window.addEventListener('scroll', ()=>{
+//         if($("body").hasClass('one_page') && pageYOffset >= $('.stop-scroll').offset().top){    
+//             if(!shownMenu){
+//                 shownMenu = true;
+//                 animateHeader(shownMenu);
+//             }
+//             // sessionStorage.setItem('visited', 1);
+//         } else if (!$("body").hasClass('one_page') && pageYOffset>=100) {
+//             if (!shownMenu){
+//                 shownMenu = true;
+//                 animateHeader(shownMenu);
+//             }                
+//         } else if (!$("body").hasClass('one_page') && pageYOffset<=100){}
+//         else {
+//             if (shownMenu) {
+//                 shownMenu = false;
+//                 animateHeader(shownMenu);
+//             }            
+//         }
+//     })
+    
+//     /* выплывание шапки*/
+// });

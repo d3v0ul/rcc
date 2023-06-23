@@ -19,7 +19,32 @@ img {
 	transform: translateX(-760px) !important;
 }
 
-
+.ft_l, .ft_r{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0) scale(0.5);
+	opacity: 0;
+	transition: 1s;
+}
+.ft_l{
+	&.resize{
+		transform: translate3d(-120%, -50%, 0) scale(0.8);
+		opacity: 1;
+	}
+	&.resize_2{
+		transform: translate3d(-170%, -50%, 0) scale(1);
+	}
+}
+.ft_r{
+	&.resize{
+		transform: translate3d(20%, -50%, 0) scale(0.8);
+		opacity: 1;
+	}
+	&.resize_2{
+		transform: translate3d(70%, -50%, 0) scale(1);
+	}
+}
 
 } /*+1550*/
 @media only screen and (max-width : 1550px){
@@ -141,9 +166,9 @@ img {
 		display: none;
 	}
 }
-.ft_l, .ft_r{
-	width: 60vw;
-}
+// .ft_l, .ft_r{
+// 	width: 60vw;
+// }
 .b1_2_names{	
 	margin: 3vw 0;
 	>a{
@@ -517,7 +542,7 @@ footer{
 }
 .champ{
 	font-size: 12px;
-	padding: 30px 10px;
+    padding: 32px 16px;
 }
 .ch_img{
 	margin: 20px 0;
@@ -753,7 +778,7 @@ footer{
 } /*1000*/
 @media only screen and (max-width : 920px){
 header{
-	height: 70px;
+	height: 90px;
 	padding-top: 17px;
 }
 .vert_slider_demo{
@@ -812,20 +837,32 @@ header{
 			font-size: 12px;
 			line-height: 60px;
 			text-align: center;
+			letter-spacing: 0.48px;
 		}
 	}
 }
-.owl-item,
-.owl-item .active {
-	margin-right: 16px !important;
+.nrt_content{
+	height: 48px;
 }
-
+.nr_main > a{
+	font-size: 12px;
+	letter-spacing: 0.48px;
+}
+.rating > .content {
+	.owl-stage-outer{
+		padding-left: 24px;
+	}	
+	>.fighters{
+		padding: 0;
+	}
+}
 .hr_menu{
 	display: none;
 	float: none;
 	margin: 0;
 	position: fixed;
 	width: 100%;
+	left: 0;
 	bottom: 40px;
 	text-align: center;
 	>li{
@@ -925,6 +962,7 @@ header{
 	transform: translateY(-45%);
 	.owl-item{
 		min-height: 500px !important;
+		margin-right: 16px !important;
 	}
 }
 .ns_content{
@@ -1005,7 +1043,7 @@ header{
 	>div{
 		>div{
 			font-size: 20px;
-			>span{
+			>a{
 				font-size: 26px;
 				margin-bottom: 11px;
 			}
@@ -1303,7 +1341,7 @@ transform: unset;
 				font-size: 26px;
 			}
 		}
-	}
+	}	
 }
 .events_old{
 	grid-template-columns: repeat(2, 1fr);
@@ -1316,11 +1354,11 @@ transform: unset;
 		display: block;
 		float: none;
 		text-align: center;
-		margin: 0;
+		margin: auto;
 		position: absolute;
-		bottom: 100px;
-		left: 50%;
-		transform: translateX(-50%);
+		bottom: 150px;
+		right: 0;
+		left: 0;
 		&:hover{
 			>span{
 				margin-left: 0;
@@ -1357,7 +1395,7 @@ transform: unset;
 .eit_yt{
 	float: none;
 	position: absolute;
-	bottom: 20px;
+	bottom: 70px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 14px;
@@ -1372,9 +1410,11 @@ transform: unset;
 	}
 }
 .eit_back{
-	left: 50%;
-	transform: translateX(-50%);
+	right: 0;
+    left: 0;
+    text-align: center;
 	font-size: 12px;
+	top: 82px;
 }
 .eit_btn{
 	max-width: 328px;
@@ -1384,7 +1424,7 @@ transform: unset;
 	float: none;
 	margin: 0;
 	position: absolute;
-	bottom: 15px;
+	bottom: 65px;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -1488,7 +1528,9 @@ transform: unset;
 	text-align: center;
 }
 .champ_content{
-	max-width: 160px;
+	max-width: 148px;
+    margin: auto;
+    max-height: 276px;
 }
 .ch_top{
 	position: relative;
@@ -1509,7 +1551,7 @@ transform: unset;
 		display: block;
 		content: '';
 		width: 100%;
-		height: 564px;
+		height: 544px;
 		background: url(../images/m_top_about_bg_mob.jpg) center top no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -1525,7 +1567,8 @@ transform: unset;
 }
 .mac_text{
 	font-size: 18px;
-	margin: 465px 0 24px;
+	margin: 435px 0 24px;
+	line-height: 112%;
 }
 .mac_col{
 	float: none !important;
@@ -1701,7 +1744,7 @@ transform: unset;
 	bottom: 130px;
 }
 .see_promo{
-	top: 190px;
+	top: 128px;
 }
 .logo{
 	max-width: 76px;
@@ -1713,8 +1756,9 @@ transform: unset;
 
 } /*740*/
 @media only screen and (min-width : 600px){
+	
 .m_col{
-	&.orange{		
+		&.orange{		
 		background: none !important;
 		&:before{
 			background: url(../images/flame_orange.png) left bottom no-repeat;
@@ -1874,8 +1918,19 @@ transform: unset;
 }
 .time_slider{
 	margin-bottom: 30px;
-	width: calc(100% + 30px);
-	transform: translateX(-15px);
+	// width: calc(100% + 30px);
+	// transform: translateX(-15px);
+	>.owl-stage-outer{
+		padding-left: 16px !important;
+	}
+}
+.broadcasts{
+	>.nr_head {
+		letter-spacing: 7.36px;
+	}
+	>.time_slider{
+		margin-bottom: 32px;
+	}
 }
 .ts_content{	
 	>a{
@@ -1884,6 +1939,7 @@ transform: unset;
 		font-size: 12px;
 		border-radius: 2px;
 		line-height: 46px;
+		letter-spacing: .48px;
 	}
 }
 .b_items{
@@ -2173,6 +2229,7 @@ transform: unset;
 .conf{
 	margin-bottom: 50px;
 	.cf_head{
+		margin-bottom: 40px;
 		font-size: 46px;
 		span{
 			display: inline;
@@ -2184,7 +2241,7 @@ transform: unset;
 }
 .cf_text{
 	font-size: 18px;
-	margin-bottom: 30px;
+	margin-bottom: 48px;
 }
 .cfi_number{
 	font-size: 16px;
@@ -2209,20 +2266,28 @@ transform: unset;
 }
 .champs{
 	grid-template-columns: repeat(2, 1fr);
-	width: calc(100% + 30px);
-	transform: translateX(-15px);
+	width: 100%;
+}
+.champ{
+	padding: 7vw 4.267vw 8.533vw 4.267vw;
+}
+.champ_content{
+	max-width: 36vw;
+    margin: auto;
+	max-height: unset;
 }
 .ch_bot{
 	font-size: 10px;
+	margin-top: 8px;
 }
 .ch_name{
-	font-size: 26px;
+	font-size: 6.933vw;
 }
 .m_top_wrap{
 	height: auto;
 }
 .m_top{
-	height: auto;
+	// height: auto;
 	padding-top: 100px;
 }
 .m_logo{
@@ -2240,11 +2305,15 @@ transform: unset;
 	position: relative;
 }
 .m_col{
+	>.mc_bg{
+		background: unset;
+	}
 	width: 50%;
 	float: left;
 	height: auto;
 	position: static;
 	border: none !important;
+	overflow: visible;
 	img{
 		position: static;
 		width: 212px;
@@ -2267,7 +2336,8 @@ transform: unset;
 		>a{
 			display: block;
 			position: absolute;
-			top: 0;
+			// top: 0;
+			bottom: 0;
 			left: 50%;
 			transform: translateX(-180px);
 		}
@@ -2283,12 +2353,21 @@ transform: unset;
 		>a{
 			display: block;
 			position: absolute;
-			top: 0;
+			// top: 0;
+			bottom: 0;
 			left: 50%;
 			transform: translateX(-30px);
 		}
 		img{
 			transform: translateX(0);
+		}
+	}
+	&.mc_2, &mc_3{
+		&:hover, &:active{
+			&:before, &:after{
+					/*@include opa(10);*/
+					transform: unset;
+				}
 		}
 	}
 	&.orange{		
@@ -2443,9 +2522,9 @@ transform: unset;
 	.cht_weight{
 		position: absolute;
 		left: 0;
-		top: 37px;
+		top: 8.867vw;
 		margin: 0;
-		font-size: 10px;
+		font-size: 2.667vw;
 	}
 	.cht_stats{
 		display: block;
@@ -2455,7 +2534,9 @@ transform: unset;
 	}
 }
 .ch_img{
-	margin: 10px 0;
+	margin: 1.567vw 0 !important;
+	max-width: 38.933vw;
+	margin: auto;
 }
 
 
@@ -2467,6 +2548,14 @@ transform: unset;
 
 } /*600*/
 @media only screen and (max-width : 500px){
+	header {
+		height: 74px;
+		padding-top: 14px;
+	}
+	.logo img {
+		min-width: 78px;
+		max-height: 26px;
+	}
 .skip_intro{
 	width: 100px;
 	height: 100px;	
@@ -2500,7 +2589,7 @@ transform: unset;
 .b1b_all, .b2b_all{
 	font-size: 10px;
 }
-.b2b_all{
+.b2_wrap .b2b_all{
 	position: absolute;
 	z-index: 1;
 	left: 50%;
@@ -2508,10 +2597,26 @@ transform: unset;
 	bottom: 80px;
 	margin-top: 0;
 }
-.owl-item,
-.owl-item .active{
-	margin-right: 8px !important;
+/*owl настройки на events*/
+.nr_main > a{
+	font-size: 10px;
+	letter-spacing: 0.4px;
 }
+.nrt_content {
+	width: auto;
+	max-width: 150px;
+	height: 40px;
+}
+/*owl настройки на events*/
+/*owl настройки на news*/
+.nr_slider .owl-item {
+	margin-right: 0 !important;
+}
+.nr_top img{
+	height: 236px;
+	object-fit: cover;
+}
+/*owl настройки на news*/
 .b2_wrap{
 	padding-left: 0;	
 	background: #EE4B4A url(../images/b2_bg.svg) 9% no-repeat;
@@ -2528,11 +2633,12 @@ transform: unset;
 	}
 }
 .c_head{
-	font-size: 38px;
+	font-size: 46px;
 }
 .news_slider{
 	.owl-item{
 		min-height: 300px !important;
+		margin-right: 8px !important;
 	}
 }
 .ns_content{
@@ -2627,7 +2733,7 @@ transform: unset;
 	}
 }
 .nr_head{
-	font-size: 40px;
+	font-size: 46px;
 	>a{
 		font-size: 40px;
 	}
@@ -2714,6 +2820,12 @@ transform: unset;
 }
 .cf_head{
 	font-size: 30px;
+	>span{
+		display: inline;
+	}
+	>.defis {
+		display: inline;
+	}
 }
 .m3_wrap{
 	height: auto;
@@ -2730,12 +2842,15 @@ transform: unset;
 .h_events{
 	display: none;
 }
+.eit_btn{
+	display: block;
+}
 .hlm_events{
 	display: block !important;
 }
 .burger{
 	float: right;
-	margin: 0;
+	// margin: 0;
 }
 .e_time{
 	display: grid;
@@ -2749,6 +2864,11 @@ transform: unset;
 }
 .e_btns{
 	margin-top: 30px;
+	>.time_slider {
+		.owl-item:last-child{
+			margin-right: 0 !important;
+		}
+	}
 }
 .eb_text_2{
 	font-weight: 500;
