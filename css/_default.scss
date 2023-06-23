@@ -1442,9 +1442,7 @@ footer{
 }
 .nrt_content{
 	display: table-cell;
-	width: auto;
-	max-width: 150px;
-	min-width: 95px;
+	width: 150px;
 	text-align: center;
 	vertical-align: middle;
 	height: 54px;
@@ -2748,6 +2746,7 @@ footer{
 }
 .results_table{
 	margin-top: 70px;
+	margin-bottom: 100px;
 }
 .rt_head{
 	font-size: 36px;
@@ -3331,7 +3330,7 @@ footer{
 			transition: .3;
 		}
 		&:after{
-			z-index: -1;
+			/*z-index: -1;*/
 		}
 		img{
 			transform: translateX(6vw);
@@ -3367,6 +3366,12 @@ footer{
 	left: 0;
 	top: 0;
 	transition: 2s;
+	&.faifight{
+		background: linear-gradient(180deg, rgba(13, 32, 64, 0) 0%, #225BBB 100%);
+	}
+	&.boxing{
+		background: linear-gradient(180deg, #222222 0%, #E4683C 100%);
+	}
 }
 .mt_content{
 	position: absolute;

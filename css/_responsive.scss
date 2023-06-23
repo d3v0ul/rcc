@@ -1155,7 +1155,9 @@ transform: unset;
 .news_socials{
 	padding-left: 0;
 }
-
+.results_table{
+	margin-bottom: 0;
+}
 
 
 } /*760*/
@@ -2603,7 +2605,7 @@ transform: unset;
 	letter-spacing: 0.4px;
 }
 .nrt_content {
-	width: auto;
+	width: auto !important;
 	max-width: 150px;
 	height: 40px;
 }
