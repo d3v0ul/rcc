@@ -1937,7 +1937,6 @@ footer{
 }
 .b_items{
 	margin: 50px 0;
-	max-width: 1550px;
 	margin: auto
 }
 .b_item{
@@ -1947,7 +1946,25 @@ footer{
 	position: relative;
 	&:last-child{
 		border-bottom: 1px solid #4A4A4A;
+	}	
+	&:hover{
+		border-top: 1px solid #E04141;
+		background: #E04141;
+		.bi_type{
+			color: #fff;
+		}
+		.bi_right{
+			>span{
+				>a{
+					margin-left: 12px;	
+				}
+			}
+		}
 	}
+}
+.bi_content{
+	@extend %ct;
+	padding: 0;
 	>div{
 		display: table;
 		float: left;
@@ -1970,20 +1987,6 @@ footer{
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
-		}
-	}
-	&:hover{
-		border-top: 1px solid #E04141;
-		background: #E04141;
-		.bi_type{
-			color: #fff;
-		}
-		.bi_right{
-			>span{
-				>a{
-					margin-left: 12px;	
-				}
-			}
 		}
 	}
 }
@@ -2176,7 +2179,8 @@ footer{
 	margin-top: 68px;
 	@extend .cl;
 	.nr_tags_slider{
-		max-width: 620px;
+		max-width: 560px;
+		margin-top: 5px;
 		float: right;
 		>div{
 			display: inline-block;
@@ -2355,7 +2359,7 @@ footer{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 15px;
-	margin-top: 10px;
+	margin-top: 40px;
 }
 .eo_item{
 	display: block;
@@ -3609,8 +3613,8 @@ footer{
 	&:after{
 		display: block;
 		content: '';
-		width: 1602px;
-		height: 620px;
+		width: 1804px;
+		height: 618px;
 		background: url(../images/RCC_big_latters.svg) center top no-repeat;
 		position: absolute;
 		bottom: 0;
@@ -4487,3 +4491,24 @@ transition: all 0.7s linear 0s;
  }
 
 /* ==========================burger-popup-slider-end===================== */
+
+/*events_soon*/
+.events_soon{
+	text-align: center;
+	margin: 150px 0 230px;	
+	>span{
+		display: block;		
+		font-size: 14px;
+		font-weight: 700;
+		color: #E04141;
+		text-transform: uppercase;
+		&:nth-child(1){
+			font-family: $dc;
+			font-size: 96px;
+			line-height: 110%;
+			letter-spacing: 15.36px;
+			margin-bottom: 15px;
+			transform: translateX(7px);
+		}
+	}
+}

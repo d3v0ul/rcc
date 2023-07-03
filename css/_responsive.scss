@@ -2540,7 +2540,15 @@ transform: unset;
 	max-width: 38.933vw;
 	margin: auto;
 }
-
+.events_soon{
+	margin: 100px 0;	
+	>span{
+		&:nth-child(1){
+			font-size: 50px;
+			margin-bottom: 5px;
+		}
+	}
+}
 
 
 
@@ -2886,7 +2894,8 @@ transform: unset;
 
 .m_col{
 	&.mc_2, &.mc_3{
-		top: 450px;
+		top: auto;
+		bottom: 40px;
 	}
 }
 .pns_name{
