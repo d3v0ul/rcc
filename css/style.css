@@ -449,6 +449,16 @@ header.h_main {
   left: 0;
   top: 0;
 }
+.b1.x2 .b1_block {
+  width: 50vw;
+}
+.b1.x2 .b1_block.b1b_2 {
+  left: 50vw;
+  transition: 1.2s;
+}
+.b1.x1 .b1_block {
+  width: 100vw;
+}
 
 .b2_2_wrap {
   position: absolute;
@@ -1175,6 +1185,8 @@ footer.main_footer {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .ff_submit {
@@ -1189,6 +1201,8 @@ footer.main_footer {
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .ff_submit:hover {
   background: #2B2B2B;
@@ -2085,9 +2099,6 @@ footer.main_footer {
   width: 33.3%;
   min-height: 140px;
   padding: 10px 0;
-}
-.bi_content > div.bi_left {
-  padding-left: 2%;
 }
 .bi_content > div.bi_left > span {
   text-align: left;
@@ -5015,6 +5026,10 @@ img {
   .mac_btn {
     transform: translateX(0);
   }
+
+  .hr_menu.pda {
+    display: none;
+  }
 }
 /*1200*/
 @media only screen and (min-width: 1000px) {
@@ -5669,6 +5684,12 @@ img {
     margin-top: 70px;
     height: 100vh;
   }
+  .b1.x2 .b1_block {
+    height: calc(50% - 35px);
+  }
+  .b1.x1 .b1_block {
+    height: calc(100% - 69px);
+  }
 
   .b2_2_wrap {
     position: relative;
@@ -5688,7 +5709,7 @@ img {
 
   .b1_block {
     display: block;
-    width: 100%;
+    width: 100% !important;
     /*height: 310px;*/
     height: calc(33.3% - 23.3px);
     position: relative;

@@ -378,6 +378,20 @@ header{
 	position: absolute;
 	left: 0;
 	top: 0;
+	&.x2{
+		.b1_block{
+			width: 50vw;
+			&.b1b_2{
+				left: 50vw;
+				transition: 1.2s;
+			}
+		}
+	}
+	&.x1{
+		.b1_block{
+			width: 100vw;
+		}
+	}
 }
 .b2_2_wrap{
 	position: absolute;
@@ -1083,6 +1097,8 @@ footer{
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
+	-webkit-appearance: none;
+	border-radius: 0;
 }
 .ff_submit{
 	display: block;
@@ -1096,6 +1112,8 @@ footer{
 	text-align: center;
 	cursor: pointer;
 	transition: .3s;
+	-webkit-appearance: none;
+	border-radius: 0;
 	&:hover{
 		background: #2B2B2B;
 	}
@@ -1972,7 +1990,7 @@ footer{
 		min-height: 140px;
 		padding: 10px 0;
 		&.bi_left{
-			padding-left: 2%;
+			
 			>span{
 				text-align: left;
 			}
