@@ -353,7 +353,9 @@ footer{
 	max-width: 100%;
 }
 .b_item{
-	padding: 30px 15px;
+	padding: 30px 15px;	
+}
+.bi_content{
 	>div{
 		display: block;
 		float: none;
@@ -376,6 +378,7 @@ footer{
 		}
 	}
 }
+
 .bi_type{
 	position: absolute;
 	top: 30px;
@@ -394,7 +397,7 @@ footer{
 	>span{
 		font-size: 20px;
 		>span{
-			display: block;
+			
 		}
 	}
 }
@@ -1961,7 +1964,9 @@ transform: unset;
 	margin: 20px 0;
 }
 .b_item{
-	padding: 25px 15px;
+	padding: 25px 15px;	
+}
+.bi_content{
 	>div{
 		&.bi_right{
 			margin-top: 20px;

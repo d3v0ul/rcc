@@ -668,7 +668,7 @@ header.h_main {
 
 .hr_menu {
   float: right;
-  margin: 5px 40px 0 0;
+  margin: 9px 40px 0 0;
 }
 .hr_menu > li {
   display: inline-block;
@@ -2018,13 +2018,7 @@ footer.main_footer {
 }
 
 .broadcasts {
-  padding: 0;
-}
-.broadcasts > * {
   padding: 0 15px;
-}
-.broadcasts > .time_slider {
-  padding: 0;
 }
 .broadcasts > .time_slider .owl-item:last-child {
   margin: 0 !important;
@@ -2090,9 +2084,6 @@ footer.main_footer {
   margin-left: 12px;
 }
 
-.bi_content {
-  padding: 0;
-}
 .bi_content > div {
   display: table;
   float: left;
@@ -5094,23 +5085,24 @@ img {
   .b_item {
     padding: 30px 15px;
   }
-  .b_item > div {
+
+  .bi_content > div {
     display: block;
     float: none;
     width: auto;
     min-height: auto;
     padding: 0 !important;
   }
-  .b_item > div > span {
+  .bi_content > div > span {
     display: block;
   }
-  .b_item > div.bi_right {
+  .bi_content > div.bi_right {
     margin-top: 45px;
   }
-  .b_item > div.bi_right > span {
+  .bi_content > div.bi_right > span {
     text-align: center;
   }
-  .b_item > div.bi_right > span > a {
+  .bi_content > div.bi_right > span > a {
     width: 54px;
     height: 54px;
     margin: 0 5px !important;
@@ -5137,10 +5129,6 @@ img {
   .bi_center > span {
     font-size: 20px;
   }
-  .bi_center > span > span {
-    display: block;
-  }
-
   .b_popup, .smi_popup, .manager_popup {
     width: 100%;
   }
@@ -6859,7 +6847,8 @@ img {
   .b_item {
     padding: 25px 15px;
   }
-  .b_item > div.bi_right {
+
+  .bi_content > div.bi_right {
     margin-top: 20px;
   }
 

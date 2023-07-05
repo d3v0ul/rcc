@@ -597,7 +597,7 @@ header{
 }
 .hr_menu{
 	float: right;
-	margin: 5px 40px 0 0;
+	margin: 9px 40px 0 0;
 	>li{
 		display: inline-block;
 		vertical-align: top;
@@ -1906,12 +1906,8 @@ footer{
 	margin-top: 120px;
 }
 .broadcasts{
-	padding: 0;
-	>*{
-		padding: 0 15px;
-	}
+	padding: 0 15px;
 	>.time_slider {
-		padding: 0;
 		.owl-item:last-child{
 			margin: 0 !important;
 		}
@@ -1982,15 +1978,13 @@ footer{
 }
 .bi_content{
 	@extend %ct;
-	padding: 0;
 	>div{
 		display: table;
 		float: left;
 		width: 33.3%;
 		min-height: 140px;
 		padding: 10px 0;
-		&.bi_left{
-			
+		&.bi_left{			
 			>span{
 				text-align: left;
 			}
