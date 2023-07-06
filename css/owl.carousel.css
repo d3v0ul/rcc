@@ -51,7 +51,7 @@
 }
 
 .owl-carousel .owl-item img {
-    display: block;
+    display: inline-block;
 }
 
 .owl-carousel .owl-nav .owl-prev,
