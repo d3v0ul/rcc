@@ -267,14 +267,18 @@ header.h_main {
   width: 100vw;
   height: 100vh;
   background: #000;
+  text-align: center;
   top: 0;
   left: 0;
 }
 .video_background video {
   display: block;
-  width: 100%;
   height: 100%;
   object-fit: fill;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
 }
 
 .vs_2 {
@@ -5880,10 +5884,11 @@ img {
   /*} 920*/
   /*@media only screen and (max-width : 768px){*/
   .mouse_icon {
-    top: 0;
+    /*top: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    margin: auto;*/
+    bottom: 120px;
   }
 
   .b1_2_all {
@@ -5892,14 +5897,14 @@ img {
   }
 
   .use_scroll {
-    top: 0;
-    bottom: 0;
-    right: 0;
+    /*top: 0;*/
+    bottom: 80px;
+    /*right: 0;
     left: 0;
     margin: auto;
     height: fit-content;
     width: fit-content;
-    transform: unset;
+    transform: unset;*/
   }
 
   @keyframes bounce {

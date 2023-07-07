@@ -1074,24 +1074,25 @@ header{
 /*} 920*/
 /*@media only screen and (max-width : 768px){*/
 .mouse_icon {
-top: 0;
+/*top: 0;
 right: 0;
 left: 0;
-margin: auto;
+margin: auto;*/
+bottom: 120px;
 }
 .b1_2_all{
 bottom: 80px !important;
 font-size: 10px !important;
 }
 .use_scroll{
-top: 0;
-bottom: 0;
-right: 0;
+/*top: 0;*/
+bottom: 80px;
+/*right: 0;
 left: 0;
 margin: auto;
 height: fit-content;
 width: fit-content;
-transform: unset;
+transform: unset;*/
 }
 @keyframes bounce {
 0% { bottom: 110px; }

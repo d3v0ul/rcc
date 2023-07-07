@@ -361,16 +361,26 @@ $(".smi_close").click(function() {
 });
 
 
-//manager popup
-$(".manager_btn").click(function(e) {
-    $(".manager_popup").addClass("opened");
+//Прокрутка по якорям
+$('.ancLinks').bind("click", function(e) {
+    var anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+    }, 700);
     e.preventDefault();
-    $(".popup_content").addClass("opened");
-    $(".popup_thx").removeClass("opened");
 });
-$(".manager_close").click(function() {
-    $(".manager_popup").removeClass("opened");
-});
+
+
+//manager popup
+// $(".manager_btn").click(function(e) {
+//     $(".manager_popup").addClass("opened");
+//     e.preventDefault();
+//     $(".popup_content").addClass("opened");
+//     $(".popup_thx").removeClass("opened");
+// });
+// $(".manager_close").click(function() {
+//     $(".manager_popup").removeClass("opened");
+// });
 
 
 //thx
@@ -437,9 +447,11 @@ function parallaxScroll(){
 }
 
 
+
+
 $(window).scroll(function() {
     if(document.querySelector('.popular_news')){
-        var trigger = $('.popular_news').offset().top - 780;
+        var trigger = $('.popular_news').offset().top - 980;
     if ($(this).scrollTop() > trigger) {
         $(".news_left").addClass('static');
     } else {
