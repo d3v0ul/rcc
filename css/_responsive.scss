@@ -1078,7 +1078,7 @@ header{
 right: 0;
 left: 0;
 margin: auto;*/
-bottom: 120px;
+bottom: 50%;
 }
 .b1_2_all{
 bottom: 80px !important;
@@ -1086,7 +1086,7 @@ font-size: 10px !important;
 }
 .use_scroll{
 /*top: 0;*/
-bottom: 80px;
+bottom: 45%;
 /*right: 0;
 left: 0;
 margin: auto;
@@ -1095,9 +1095,9 @@ width: fit-content;
 transform: unset;*/
 }
 @keyframes bounce {
-0% { bottom: 110px; }
-50% {bottom: 50px;}
-100% { bottom: 110px; } 
+0% { bottom: 53%; }
+50% {bottom: 50%;}
+100% { bottom: 53%; } 
 }
 .vs_1{
 	display: none;
@@ -1129,7 +1129,7 @@ transform: unset;*/
 .ft_l{
 	transform: translate3d(-90%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-93%, -50%, 0) scale(0.8);
+		transform: translate3d(-93%, -50%, 0) scale(1);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1139,7 +1139,7 @@ transform: unset;*/
 .ft_r{
 	 transform: translate3d(-10%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-8%, -50%, 0) scale(0.8);
+		transform: translate3d(-8%, -50%, 0) scale(1);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1832,7 +1832,7 @@ transform: unset;*/
 	bottom: 130px;
 }
 .see_promo{
-	top: 128px;
+	top: 100px;
 }
 .logo{
 	max-width: 76px;
@@ -2534,7 +2534,7 @@ transform: unset;*/
 }
 .b1_2_content{
 	height: 150px;
-	bottom: 56%;
+	bottom: 52%;
 }
 .ch_top{
 	position: relative;
