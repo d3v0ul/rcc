@@ -1690,7 +1690,7 @@ footer{
 	}
 }
 .razdel{
-	width: 100vw;
+	width: 100%;
 	height: 1px;
 	background: #4A4A4A;
 	margin-top: 70px;
@@ -3636,7 +3636,6 @@ footer{
 .m_wrap_about{
 	background: url(../images/m_top_about_bg.jpg) center bottom no-repeat;
 	background-size: cover;
-	filter: blur(10px);
 	position: relative;
 	overflow: hidden;
 	padding: 150px 0 205px;	
