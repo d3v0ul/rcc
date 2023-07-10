@@ -295,7 +295,7 @@ img {
 	left: 15px;
 	bottom: 0;
 	transform: translateX(0);
-	height: calc(100vh - 120px);
+	height: calc(100vh - 126px);
 	&.static{
 		max-width: 340px;
 		position: static;
@@ -800,46 +800,7 @@ header{
 	height: 8px;
 	width: 8px;
 }
-.hl_menu{
-	display: none;
-	width: 100%;
-	position: absolute;
-	top: 50px;
-	left: 0;
-	float: none;
-	margin: 0;
-	>li{
-		display: block;
-		width: 50%;
-		border: 1px solid #474848;
-		float: left;
-		margin: 0;
-		transition: .3s;
-		&.hlm_events{
-			display: block;
-			float: none;
-			width: 100%;
-			border: none;
-			background: #E04141;
-		}
-		&:hover{
-			background: #E04141;
-			border: 1px solid #E04141;
-			>a{
-				color: #fff;
-			}
-		}
-		>a{
-			display: block;
-			width: 100%;
-			height: 60px;
-			font-size: 12px;
-			line-height: 60px;
-			text-align: center;
-			letter-spacing: 0.48px;
-		}
-	}
-}
+
 .nrt_content{
 	height: 48px;
 }
@@ -1178,10 +1139,19 @@ transform: unset;*/
 		float: none;
 	}
 }
+.nrs_line{
+	margin-top: 12px;
+}
+.nr_slider{
+	.owl-dots{
+		margin-top: 12px;
+	}
+}
 
 
 } /*1025*/
 @media only screen and (min-width : 767px){
+
 .m_col{
 		&.orange{		
 		background: none !important;
@@ -1247,6 +1217,60 @@ transform: unset;*/
 
 } /*+767*/
 @media only screen and (max-width : 767px){
+.h_events{
+	display: none;
+}
+.eit_btn{
+	display: block;
+}
+.hlm_events{
+	display: block !important;
+}
+.burger{
+	float: right;
+}
+.hl_menu{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	float: none;
+	margin: 0;
+	>li{
+		display: block;
+		width: 50%;
+		border: 1px solid #474848;
+		float: left;
+		margin: 0;
+		transition: .3s;
+		&.hlm_events{
+			display: block;
+			float: none;
+			width: 100%;
+			border: none;
+			background: #E04141;
+		}
+		&:hover{
+			background: #E04141;
+			border: 1px solid #E04141;
+			>a{
+				color: #fff;
+			}
+		}
+		>a{
+			display: block;
+			width: 100%;
+			height: 60px;
+			font-size: 12px;
+			line-height: 60px;
+			text-align: center;
+			letter-spacing: 0.48px;
+		}
+	}
+}
+
+
 .footer{
 	margin-top: 80px;
 }
@@ -1925,6 +1949,7 @@ transform: unset;*/
 	font-size: 10px;
 }
 .nr_head{
+	font-size: 46px;
 	text-align: center;
 }
 .nr_head_2{
@@ -2870,19 +2895,6 @@ transform: unset;*/
 	&.logo_2{
 		max-width: 200px;
 	}
-}
-.h_events{
-	display: none;
-}
-.eit_btn{
-	display: block;
-}
-.hlm_events{
-	display: block !important;
-}
-.burger{
-	float: right;
-	// margin: 0;
 }
 .e_time{
 	display: grid;

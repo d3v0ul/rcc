@@ -1199,12 +1199,23 @@ footer{
 /*news*/
 .news{
 	@extend %ct;
-	margin-top: 120px;
+	margin-top: 126px;
 }
 .news_left{
 	float: left;
 	max-width: 340px;
 	width: 100%;
+}
+@keyframes blink {
+  0% {
+    background: #58BB1C;
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: #58BB1C;
+  }
 }
 .nl_status{
 	font-size: 36px;
@@ -1223,6 +1234,8 @@ footer{
 		position: absolute;
 		top: 13px;
 		left: 0;
+		transition: .3s;
+		animation: blink 1s linear infinite;
 	}
 }
 .live_slider{
@@ -1357,7 +1370,7 @@ footer{
 	height: 2px;
 	background: #424242;;
 	position: relative;
-	margin: 12px 0 40px;
+	margin: 30px 0 40px;
 	overflow: hidden;
 	&:before{
 		display: block;
@@ -1370,6 +1383,7 @@ footer{
 }
 .nr_slider{
 	width: 100%;
+	margin-bottom: 40px;
 	.nr_top{
 		margin-bottom: 0;
 	}
@@ -1378,10 +1392,9 @@ footer{
 	}
 	.owl-dots{
 		display: grid;
-		display: none;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 0 4px;
-		margin-top: 12px;
+		margin-top: 30px;
 	}
 	.owl-dot{	
 		display: block;
