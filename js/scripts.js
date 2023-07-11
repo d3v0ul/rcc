@@ -497,15 +497,15 @@ $('.brands_slider').owlCarousel({
 });
 
 
-var pns = window.matchMedia('all and (min-width: 767px)');
+var pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');
 if (pns.matches) {
     $('.popular_news_slider').addClass('owl-carousel');
     $('.popular_news_slider').owlCarousel({
         center: false,
-        items: 3,
+        items: 2,
         loop: false,
-        margin: 15,
-        autoWidth: false,
+        margin: 16,
+        autoWidth: true,
         responsive: {
             0: {
                 items: 1,

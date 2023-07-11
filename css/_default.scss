@@ -126,13 +126,6 @@ body{
 	margin: 0 auto;
 	@extend .cl;
 }
-.news_body>.content{
-	max-width: unset;
-	padding: 0;
-}
-.popular_news {
-	padding: 0 0 0 7px;
-}
 .rating{
 	>.content{
 		padding: 0;
@@ -539,11 +532,11 @@ header{
 .h_events{
 	display: block;
 	float: right;
-	width: 140px;
-	height: 52px;
+	width: 144px;
+	height: 60px;
 	background: #E04141;
 	font-size: 14px;
-	line-height: 52px;
+	line-height: 60px;
 	text-transform: uppercase;
 	font-weight: 700;
 	text-align: center;
@@ -1257,7 +1250,7 @@ footer{
 		font-weight: 700;
 		letter-spacing: 0.56px;
 		font-size: 14px;
-		line-height: 120%;
+		line-height: 140%;
 	}
 	>div{
 		display: inline;
@@ -1265,13 +1258,13 @@ footer{
 		font-weight: 700;
 		letter-spacing: 0.56px;
 		font-size: 14px;
-		line-height: 120%;
+		line-height: 140%;
 	}
 	>a{
 		color: #E04141;
 		font-weight: 700;
 		font-size: 14px;
-		line-height: 120%;
+		line-height: 140%;
 	}
 }
 .nli_text{
@@ -1297,7 +1290,7 @@ footer{
 }
 .nr_main{
 	display: block;	
-	margin-bottom: 12px;
+	margin-bottom: 5px;
 	>a{
 		display: inline-block;
 		color: #E04141;
@@ -1305,6 +1298,7 @@ footer{
 		font-size: 14px;
 		line-height: 140%;
 		letter-spacing: 0.04em;
+		text-indent: 1px;
 		text-transform: uppercase;
 		&:hover{
 			color: #813D4A;
@@ -1318,8 +1312,9 @@ footer{
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	font-style: italic;
-	margin-bottom: 20px;
+	margin-bottom: 32px;
 	font-weight: 500;
+	text-indent: 3px;
 	>a{
 		display: inline-block;
 		font-size: 96px;
@@ -1394,7 +1389,7 @@ footer{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 0 4px;
-		margin-top: 30px;
+		margin-top: 28px;
 	}
 	.owl-dot{	
 		display: block;
@@ -1438,6 +1433,8 @@ footer{
 	text-align: center;
 	font-size: 18px;
 	line-height: 40px;
+	font-weight: 700;
+	letter-spacing: 0.56px;
 	padding: 0 15px;
 	background: #1D1D1D;
 	position: absolute;
@@ -1458,7 +1455,7 @@ footer{
 	width: 100%;
 	padding: 0 30px;
 	font-size: 32px;
-	line-height: 140%;
+	line-height: 112%;
 	position: absolute;
 	left: 0;
 	bottom: 70px;
@@ -1466,7 +1463,7 @@ footer{
 .nrt_date{
 	display: inline-block;
 	font-size: 18px;
-	line-height: 120%;
+	line-height: 140%;
 	position: absolute;
 	left: 30px;
 	bottom: 30px;
@@ -1623,6 +1620,7 @@ footer{
 	}
 	>img{
 		display: block;
+		width: 100%;
 		margin-bottom: 15px;
 		transition: .3s;
 	}
@@ -1712,9 +1710,6 @@ footer{
 	padding-top: 30px;
 	position: relative;
 }
-.popular_news{
-	@extend %ct;
-}
 .pn_head{
 	text-align: center;
 	text-transform: uppercase;
@@ -1726,10 +1721,18 @@ footer{
 	}
 }
 .popular_news_slider{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 16px;
+	>div{
+		&:last-child{
+			margin-right: 0;
+		}
+	}
 	width: 100%;
-	// .owl-item{
-	// 	width: 444px !important;
-	// }
+	/*.owl-item{
+	   width: 444px !important;
+	  }*/
 	.owl-nav, .owl-dots{
 		display: none !important;
 	}
