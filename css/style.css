@@ -178,8 +178,8 @@ body.noscroll {
 }
 
 .mfg_content, .mf_top, .ri_line, .content, .m_about, .m4, .p_404, .conf, .fighter, .fight_card, .event_inner_top, .events, .bi_content, .broadcasts, .news_socials, .news, .f_bot, .f_top, .b3, .b1_2, .header {
-  max-width: 1550px;
-  padding: 0 15px;
+  max-width: 1600px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -5083,9 +5083,10 @@ img {
 }
 /*+1025*/
 @media only screen and (max-width: 1025px) {
-  /*%ct{
-  	padding: 0 24px;
-  }*/
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content {
+    padding: 0 24px;
+  }
+
   body.one_page {
     overflow: auto;
   }
@@ -5321,8 +5322,8 @@ img {
   }
 
   .champs {
-    width: calc(100% + 30px);
-    transform: translateX(-15px);
+    width: calc(100% + 48px);
+    transform: translateX(-24px);
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -6138,9 +6139,10 @@ img {
 }
 /*+767*/
 @media only screen and (max-width: 767px) {
-  /*%ct{
-  	padding: 0 16px;
-  }*/
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content {
+    padding: 0 16px;
+  }
+
   .h_events, .eit_btn {
     display: none;
   }
@@ -6937,9 +6939,6 @@ img {
   .time_slider {
     margin-bottom: 30px;
   }
-  .time_slider > .owl-stage-outer {
-    padding-left: 16px !important;
-  }
 
   .broadcasts > .nr_head {
     letter-spacing: 7.36px;
@@ -7665,8 +7664,8 @@ img {
   }
 
   .nr_tags_slider {
-    width: calc(100% + 15px);
-    max-width: calc(100% + 15px) !important;
+    width: calc(100% + 16px);
+    max-width: calc(100% + 16px) !important;
   }
 
   .nc_head {
