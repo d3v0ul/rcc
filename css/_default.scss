@@ -135,7 +135,7 @@ header{
 	width: 100%;
 	height: 104px;	
 	background: rgba(29, 29, 29, 1);
-	padding-top: 25px;
+	padding-top: 30px;
 	position: fixed;
 	z-index: 5;
 	left: 0;
@@ -148,7 +148,6 @@ header{
 .header{
 	@extend %ct;
 	position: relative;
-	padding-top: 5px;
 }
 .top_block{
 	background: url(../images/top_bg.jpg) center top no-repeat;
@@ -238,7 +237,7 @@ header{
 	background: url(../images/h_choose.png) 0 0 no-repeat;
 	cursor: pointer;
 	float: left;
-	margin: 9px 0 0 30px;
+	margin: 10px 0 0 30px;
 	position: relative;
 	filter: brightness(5000%);
 	&:hover{
@@ -585,7 +584,7 @@ header{
 }
 .hr_menu{
 	float: right;
-	margin: 9px 40px 0 0;	
+	margin: 10px 40px 0 0;	
 	>li{
 		display: inline-block;
 		vertical-align: top;
@@ -1028,6 +1027,8 @@ footer{
 		>a{
 			font-size: 36px;
 			text-transform: uppercase;
+			letter-spacing: -0.72px; 
+			font-weight: 500;
 			transition: .3s;
 			&:hover{
 				color: #E04141;
@@ -1087,6 +1088,7 @@ footer{
 	padding: 0 20px;
 	font-size: 14px;
 	font-weight: 700;
+	letter-spacing: 0.56px; 
 	color: #fff;
 	text-transform: uppercase;
 	-webkit-appearance: none;
@@ -1099,6 +1101,7 @@ footer{
 	background: #ED4A44;
 	font-size: 14px;
 	font-weight: 700;
+	letter-spacing: 0.56px; 
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
@@ -1128,7 +1131,7 @@ footer{
 	}
 }
 .bs_content{
-	@include opa(2);
+	@include opa(5);
 }
 .f_bot{
 	@extend %ct;
@@ -1231,7 +1234,7 @@ footer{
 .nl_item{
 	margin-bottom: 24px;
 	padding-bottom: 24px;
-	border-bottom: 1px solid #444343;
+	border-bottom: 2px solid #444343;
 }
 .nli_head{
 	margin-bottom: 10px;	
@@ -1288,7 +1291,7 @@ footer{
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 140%;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.56px;
 		text-indent: 1px;
 		text-transform: uppercase;
 		&:hover{
@@ -1300,7 +1303,7 @@ footer{
 	font-size: 96px;
 	line-height: 110%;
 	font-family: $r;
-	letter-spacing: 0.16em;
+	letter-spacing: 15.36px;
 	text-transform: uppercase;
 	font-style: italic;
 	margin-bottom: 32px;
@@ -1424,7 +1427,6 @@ footer{
 	text-align: center;
 	font-size: 18px;
 	line-height: 40px;
-	font-weight: 700;
 	letter-spacing: 0.56px;
 	padding: 0 15px;
 	background: #1D1D1D;
@@ -1467,7 +1469,7 @@ footer{
 	}
 	>div{
 		display: inline-block;
-		margin-left: 2px;
+		margin-right: 4px;
 	}
 }
 .nrt_content{
@@ -1532,7 +1534,7 @@ footer{
 	display: inline-block;
 	vertical-align: top;
 	height: 52px;
-	margin: 0 5px 12px 0;
+	margin: 0 4px 12px 0;
 	background: #2B2B2B;
 	padding: 0 20px;
 	color: #4F4E4E;
@@ -1540,6 +1542,7 @@ footer{
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 52px;
+	letter-spacing: 0.56px;
 	transition: .3s;
 	&:hover{
 		color: #fff;
@@ -1681,6 +1684,7 @@ footer{
 			}
 		}
 		>a{
+			display: inline-block;
 			font-size: 24px;
 			line-height: 110%;
 			color: #6A6969;
@@ -2220,7 +2224,7 @@ footer{
 		float: right;
 		>div{
 			display: inline-block;
-			margin-left: 2px;
+			margin-right: 4px;
 		}
 	}
 }
