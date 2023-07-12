@@ -183,16 +183,7 @@ body.noscroll {
   margin: 0 auto;
 }
 
-.rating > .content {
-  padding: 0;
-}
-.rating > .content > * {
-  padding: 0 15px;
-}
-.rating > .content > .e_btns {
-  padding: 0;
-}
-.rating > .content .owl-stage-outer {
+.rating .owl-stage-outer {
   padding-left: 40px;
 }
 
@@ -1236,7 +1227,7 @@ footer.main_footer {
 
 .f_bot {
   position: relative;
-  padding: 30px 15px;
+  padding: 30px 40px;
 }
 
 .fb_menu {
@@ -2057,7 +2048,7 @@ footer.main_footer {
 }
 
 .broadcasts {
-  padding: 0 15px;
+  padding: 0 40px;
 }
 .broadcasts > .time_slider .owl-item:last-child {
   margin: 0 !important;

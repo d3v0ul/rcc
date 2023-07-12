@@ -127,18 +127,9 @@ body{
 	@extend .cl;
 }
 .rating{
-	>.content{
-		padding: 0;
-		>*{
-			padding: 0 15px;
-		}
-		>.e_btns{
-			padding: 0;
-		}
 		.owl-stage-outer{
 			padding-left: 40px;
 		}
-	}
 }
 header{
 	width: 100%;
@@ -1142,7 +1133,7 @@ footer{
 .f_bot{
 	@extend %ct;
 	position: relative;
-	padding: 30px 15px;
+	padding: 30px 40px;
 }
 .fb_menu{
 	float: left;
@@ -1939,7 +1930,7 @@ footer{
 	margin-top: 120px;
 }
 .broadcasts{
-	padding: 0 15px;
+	padding: 0 40px;
 	>.time_slider {
 		.owl-item:last-child{
 			margin: 0 !important;
