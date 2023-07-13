@@ -1411,7 +1411,7 @@ footer.main_footer {
   letter-spacing: 15.36px;
   text-transform: uppercase;
   font-style: italic;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
   font-weight: 500;
   text-indent: 3px;
 }
@@ -1798,7 +1798,7 @@ footer.main_footer {
 }
 .nr_listing > li {
   display: inline-block;
-  margin: 0 13px;
+  margin: 0 23px;
 }
 .nr_listing > li.current > a {
   color: #E04141;
@@ -1812,6 +1812,10 @@ footer.main_footer {
 }
 .nr_listing > li > a:hover {
   color: #fff;
+}
+.nr_listing > li.dots > a {
+  transform: translateY(-5px);
+  font-size: 30px;
 }
 
 .razdel {
@@ -5601,7 +5605,6 @@ img {
   }
 
   .live_slider {
-    border-bottom: 1px solid #444343;
     margin-bottom: 50px;
   }
 
@@ -5818,7 +5821,8 @@ img {
   }
 
   .nri_cat {
-    min-width: 120px;
+    height: 30px;
+    min-width: 136px;
     font-size: 12px;
   }
 
@@ -5836,7 +5840,7 @@ img {
   }
 
   .nrt_date {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .nr_head {
@@ -5878,7 +5882,8 @@ img {
   }
 
   .news_bot {
-    margin-top: 50px;
+    margin-top: 0px;
+    padding-top: 27px;
   }
 
   .e_twins > div > div {
@@ -5905,14 +5910,7 @@ img {
   }
 
   .use_scroll {
-    /*top: 0;*/
     bottom: 45%;
-    /*right: 0;
-    left: 0;
-    margin: auto;
-    height: fit-content;
-    width: fit-content;
-    transform: unset;*/
   }
 
   @keyframes bounce {
@@ -6018,13 +6016,14 @@ img {
 
   .news_socials {
     max-width: 610px;
-    padding: 60px 0 0;
+    padding: 50px 0 0;
   }
 
   .nc_head {
     font-weight: 500;
     font-size: 64px;
     letter-spacing: 10.24px;
+    margin-bottom: 20px;
   }
   .nc_head br.mob {
     display: block !important;
@@ -6045,7 +6044,7 @@ img {
 
   .nr_tag {
     height: 48px;
-    line-height: 48px;
+    line-height: 50px;
     font-size: 12px;
     letter-spacing: 0.48px;
   }
@@ -6055,6 +6054,7 @@ img {
     font-weight: 700;
     line-height: 140%;
     letter-spacing: 0.48px;
+    margin-right: 19px;
   }
   .nli_head > div {
     font-size: 12px;
@@ -6071,6 +6071,8 @@ img {
 
   .nrt_cat {
     font-size: 16px;
+    height: 38px;
+    line-height: 38px;
   }
 
   h1 {
@@ -6109,6 +6111,25 @@ img {
 
   .burger {
     margin-top: 7px;
+  }
+
+  .nr_head {
+    margin-bottom: 45px;
+  }
+
+  .nl_status {
+    font-size: 28px;
+    letter-spacing: -0.56px;
+  }
+
+  .nri_sort {
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.48px;
+  }
+
+  .razdel {
+    margin-top: 97px;
   }
 }
 /*1025*/
@@ -6173,6 +6194,28 @@ img {
     padding: 0 16px;
   }
 
+  .nli_head > span {
+    font-size: 12px;
+    letter-spacing: 0.56px;
+    margin-right: 4px;
+  }
+  .nli_head > div {
+    font-size: 12px;
+    letter-spacing: 0.56px;
+  }
+  .nli_head > a {
+    font-size: 12px;
+    letter-spacing: 0.56px;
+  }
+
+  .nl_item {
+    border-bottom: 1px solid #444343;
+  }
+
+  .razdel {
+    margin-top: 72px;
+  }
+
   .nr_listing {
     margin-top: 50px;
   }
@@ -6184,10 +6227,6 @@ img {
   }
   .nr_listing > li.dots {
     margin: 0 24px;
-  }
-  .nr_listing > li.dots > a {
-    transform: translateY(-5px);
-    font-size: 30px;
   }
 
   h1 {
@@ -6944,14 +6983,14 @@ img {
   }
 
   .nl_status {
-    padding-left: 20px;
+    padding-left: 16px;
     font-size: 20px;
     margin-bottom: 30px;
   }
   .nl_status:before {
     width: 8px;
     height: 8px;
-    top: 4px;
+    top: 7px;
   }
 
   .nli_text {
@@ -6997,6 +7036,7 @@ img {
 
   .nr_head {
     font-size: 46px;
+    letter-spacing: 7.36px;
     text-align: center;
   }
 
@@ -7693,7 +7733,7 @@ img {
   }
 
   .news {
-    margin-top: 134px;
+    margin-top: 124px;
   }
 
   .nr_head {
@@ -7705,7 +7745,7 @@ img {
   }
 
   .nr_slider {
-    margin-bottom: 42px;
+    margin-bottom: 39px;
   }
 
   .live_slider {
@@ -7729,10 +7769,6 @@ img {
     width: 100%;
   }
 
-  .news_bot {
-    margin-top: 6px;
-  }
-
   .nr_tags_slider {
     width: calc(100% + 16px);
     max-width: calc(100% + 16px) !important;
@@ -7741,7 +7777,7 @@ img {
   .nc_head {
     font-size: 46px;
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 9px;
   }
 
   .news_socials_wrap {

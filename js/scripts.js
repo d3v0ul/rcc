@@ -534,21 +534,10 @@ if (ts.matches) {
     $('.nr_tags_slider').addClass('owl-carousel');
     $('.nr_tags_slider').owlCarousel({
         center: false,
-        items: 8,
-        loop: true,
+        items: 4,
+        loop: false,
         margin: 8,
         autoWidth: true,
-        startPosition: 2,
-        items: 1,
-        // stagePadding: 80,
-        // rtl: true,
-        center: true,    
-        responsive: {
-            500:{
-                loop: false,
-                center: false,
-            }
-        }
     });
 } else {}
 

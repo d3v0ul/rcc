@@ -800,7 +800,6 @@ footer{
 	font-size: 16px;
 }
 .live_slider{
-	border-bottom: 1px solid #444343;
 	margin-bottom: 50px;
 }
 .nl_item{
@@ -1001,7 +1000,8 @@ header{
 	}
 }
 .nri_cat{
-	min-width: 120px;
+	height: 30px;
+	min-width: 136px;
 	font-size: 12px;
 }
 .nri_name{
@@ -1015,7 +1015,7 @@ header{
 	line-height: 112%;
 }
 .nrt_date{
-	font-size: 18px;
+	font-size: 16px;
 }
 .nr_head{
 	font-size: 64px;
@@ -1054,7 +1054,8 @@ header{
 	}
 }
 .news_bot{
-	margin-top: 50px;
+	margin-top: 0px;
+	padding-top: 27px;
 }
 .e_twins{
 	>div{
@@ -1082,14 +1083,7 @@ header{
 	font-size: 10px !important;
 }
 .use_scroll{
-/*top: 0;*/
-bottom: 45%;
-/*right: 0;
-left: 0;
-margin: auto;
-height: fit-content;
-width: fit-content;
-transform: unset;*/
+  bottom: 45%;
 }
 @keyframes bounce {
 0% { bottom: 53%; }
@@ -1178,12 +1172,13 @@ transform: unset;*/
 }
 .news_socials{
 	max-width: 610px;
-	padding: 60px 0 0;
+	padding: 50px 0 0;
 }
 .nc_head{	
 	font-weight: 500;
 	font-size: 64px; 
-	letter-spacing: 10.24px; 	
+	letter-spacing: 10.24px; 
+	margin-bottom: 20px;	
 	br{
 		&.mob{
 			display: block !important;
@@ -1211,7 +1206,7 @@ transform: unset;*/
 }
 .nr_tag{
 	height: 48px;
-	line-height: 48px;
+	line-height: 50px;
 	font-size: 12px;
 	letter-spacing: 0.48px;
 }
@@ -1221,6 +1216,7 @@ transform: unset;*/
 		font-weight: 700;
 		line-height: 140%;
 		letter-spacing: 0.48px;
+		margin-right: 19px;
 	}
 	>div{
 		font-size: 12px;
@@ -1238,6 +1234,8 @@ transform: unset;*/
 
 .nrt_cat{
 	font-size: 16px;
+	height: 38px;
+	line-height: 38px;
 }
 
 h1{
@@ -1275,6 +1273,22 @@ h1{
 .burger{
 	margin-top: 7px;
 }
+.nr_head{
+	margin-bottom: 45px;
+}
+.nl_status{
+	font-size: 28px;
+	letter-spacing: -0.56px; 
+}
+.nri_sort{
+	font-size: 12px;
+	line-height: 140%;
+	letter-spacing: 0.48px; 
+}
+.razdel{
+	margin-top: 97px;
+}
+
 
 } /*1025*/
 @media only screen and (min-width : 767px){ /*+767*/
@@ -1346,6 +1360,29 @@ h1{
 %ct{
 	padding: 0 16px;
 }
+
+.nli_head{
+	>span{
+		font-size: 12px;
+		letter-spacing: 0.56px; 
+		margin-right: 4px;
+	}
+	>div{
+		font-size: 12px;
+		letter-spacing: 0.56px; 
+	}
+	>a{
+		font-size: 12px;
+		letter-spacing: 0.56px; 
+	}
+}
+.nl_item{
+	border-bottom: 1px solid #444343;
+}
+.razdel{
+	margin-top: 72px;
+}
+
 .nr_listing{
 	margin-top: 50px;
 	>li{
@@ -1357,10 +1394,6 @@ h1{
 		}
 		&.dots{
 			margin: 0 24px;
-			>a{
-				transform: translateY(-5px);
-				font-size: 30px;
-			}
 		}
 	}
 }
@@ -2032,13 +2065,13 @@ header {
 	left: 15px;
 }
 .nl_status{
-	padding-left: 20px;
+	padding-left: 16px;
 	font-size: 20px;
 	margin-bottom: 30px;
 	&:before{
 		width: 8px;
 		height: 8px;
-		top: 4px;
+		top: 7px;
 	}
 }
 .nli_text{
@@ -2077,6 +2110,7 @@ header {
 }
 .nr_head{
 	font-size: 46px;
+	letter-spacing: 7.36px;
 	text-align: center;
 }
 .nr_head_2{
@@ -2719,7 +2753,7 @@ header {
 }
 
 .news{
-	margin-top: 134px;
+	margin-top: 124px;
 }
 .nr_head{
 	margin-bottom: 34px;
@@ -2730,7 +2764,7 @@ header {
 	}
 }
 .nr_slider{
-	margin-bottom: 42px;
+	margin-bottom: 39px;
 }
 .live_slider{
 	margin-bottom: 60px;
@@ -2753,9 +2787,6 @@ header {
 		width: 100%;
 	}
 }
-.news_bot{
-	margin-top: 6px;
-}
 
 .nr_tags_slider{
 	width: calc(100% + 16px);	
@@ -2764,7 +2795,7 @@ header {
 .nc_head{
 	font-size: 46px;
 	text-align: center;
-	margin-bottom: 14px;
+	margin-bottom: 9px;
 }
 
 .news_socials_wrap{
@@ -2971,7 +3002,7 @@ header {
 	}
 }
 .nr_head{
-	font-size: 46px;
+	font-size: 46px;	
 	>a{
 		font-size: 40px;
 	}
