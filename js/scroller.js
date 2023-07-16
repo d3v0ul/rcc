@@ -63,11 +63,21 @@ $(document).on('touchend', ()=>{
             $(".b1_2").addClass("resize");
             $(".ft_l, .ft_r").removeClass("resize_2");
             $(".b2_2_wrap").removeClass("visible");
+            $(".b1b_head>span:nth-child(3), .b1b_head>span:nth-child(1)").removeClass('slide_n_show');
+            $(".b1b_date").removeClass('slide_n_show_2');
+            $(".b1b_date>span").removeClass('slide_n_show_pos');
+            $('.b1b_all').removeClass('b1b_slideUp_mobile');
         }
         if (deltaY>0 && num === 3) {
             $(".b1_2").removeClass("resize");        
             $(".ft_l, .ft_r").addClass("resize_2");
             $(".b2_2_wrap").addClass("visible");
+            setTimeout(()=>{
+                $(".b1b_head>span:nth-child(3), .b1b_head>span:nth-child(1)").addClass('slide_n_show');
+                $(".b1b_date").addClass('slide_n_show_2');
+                $(".b1b_date>span").addClass('slide_n_show_pos');
+                $('.b1b_all').addClass('b1b_slideUp_mobile');
+            }, 800);
         }
     }
     deltaY = 0;
@@ -80,15 +90,6 @@ var deltaY = 0;
 
 function scroll(e) {
     var event  = e || window.event;
-    // console.log(event)
-    // console.log("event.deltaY "+event.deltaY);
-    // console.log("event.detail "+event.detail);
-    // console.log("wheelDelta "+event.wheelDelta);
-    // console.log("wheelDeltaY "+event.wheelDeltaY);
-    // console.log("scrolling is "+scrolling);
-    // console.log("номер блока: "+num);
-    // console.log(document.querySelectorAll('.screen').length)
-
     
     if(event.type != "touchmove") {
         if (pageYOffset <= ($(".stop-scroll").offset().top-1)){
@@ -176,15 +177,26 @@ function mainPageAnimation (event) {
         $(".ft_l, .ft_r").addClass("resize");
     }
     if ((event.deltaY < 0 || event.detail < 0 || event.wheelDelta > 0 || event.deltaY < 0) && num === 2) {
+        $(".ft_l, .ft_r").addClass("resize");
         $(".b1_2").addClass("resize");
         $(".ft_l, .ft_r").removeClass("resize_2");
         $(".b2_2_wrap").removeClass("visible");
+        $(".b1b_head>span:nth-child(3), .b1b_head>span:nth-child(1)").removeClass('slide_n_show');
+        $(".b1b_date").removeClass('slide_n_show_2');
+        $(".b1b_date>span").removeClass('slide_n_show_pos');
+        $('.b1b_all').removeClass('b1b_slideUp');
     }
     if ((event.deltaY > 0 || event.detail > 0 || event.wheelDelta < 0 || event.deltaY > 0) && num === 3) {
-        $(".b1_2").removeClass("resize");        
+        $(".b1_2").removeClass("resize");
+        $(".ft_l, .ft_r").removeClass("resize");
         $(".ft_l, .ft_r").addClass("resize_2");
         $(".b2_2_wrap").addClass("visible");
+        setTimeout(()=>{
+            $(".b1b_head>span:nth-child(3), .b1b_head>span:nth-child(1)").addClass('slide_n_show');
+            $(".b1b_date").addClass('slide_n_show_2');
+            $(".b1b_date>span").addClass('slide_n_show_pos');
+            $('.b1b_all').addClass('b1b_slideUp');
+        }, 1800);
     }
 }
 })
-

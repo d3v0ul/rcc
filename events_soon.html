@@ -17,9 +17,69 @@
 <![endif]-->
 </head>
 <body>
-<div class="burger_popup">
-	<img src="images/vert_slider_demo.png" alt="" class="vert_slider_demo">
-</div>
+	<div class="burger_popup">
+		<div class="burger-popup__slider swiper">
+			<div class="burger-popup__wrapper swiper-wrapper">
+
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_1r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_2r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_3r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_1r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_2r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_3r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_1r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_2r.svg" alt="image rcc">
+					</a>
+				</div>
+				<div class="burger-popup__slide swiper-slide">
+					<a href="" class="burger-popup__slide-image">
+						<img src="images/rs_3r.svg" alt="image rcc">
+					</a>
+				</div>
+
+			</div>
+			<div class="burger-popup__buttons">
+				<div class="burger-popup__buttton-next"></div>
+				<div class="burger-popup__buttton-prev"></div>
+			</div>
+			<div class="burger-popup__active-box"></div>
+			<div class="burger-popup__slide-text">
+				<p>на главную rcc</p>
+			</div>
+
+		</div>
+		<!-- <img src="images/vert_slider_demo.png" alt="" class="vert_slider_demo"> -->
+	</div>
 	<header class="h_main slide-menu">
 		<div class="header">
 			<a href="index.html" class="logo"><img src="images/logo.svg" alt=""></a>
@@ -63,7 +123,7 @@
 
 <div class="events">
 	<div class="nr_main"><a href="index.html">На главную</a></div>
-	<div class="nr_head">события</div>
+	<div class="nr_head sized">события</div>
 	<div class="e_btns">
 		<div class="e_time">
 			<a class="current" href="events.html">Планируемые</a>
@@ -79,9 +139,14 @@
 	<div class="events_soon"><span>Скоро</span><span>новые события осенью 2023</span></div>
 </div>
 
-
 <div class="news_socials_wrap">
-	<!-- <img src="images/news_social.jpg" alt="" class="nsw_img"> -->
+	<div class="paralax">
+		<img src="/images/ivana-cajina-rdZg6xmnpVM-unsplash.png" data-depth="0.2" data-limit-y="0" alt="" class="bg">
+		<div class="phone_wrapper">
+			<img src="/images/iPhone_14_Pro.svg" data-depth="0" alt="" class="iphone">
+		</div>
+		<img src="/images/image 16.png" data-depth="0.6" data-limit-y="0" alt="" class="reddots">
+	</div>		
 	<div class="news_socials">
 		<div class="nc_head">Следите <br class="mob"> за нами <br>в соцсетях</div>
 		<ul class="nc_list">
@@ -158,7 +223,7 @@
 	<div class="popup_content bp_content opened">		
 		<div class="bp_block">
 		<div class="bp_head">Для сми</div>
-		<div class="smi_contact">Мы свяжемся с вами  <br>в самое ближайшее время</div>		
+		<div class="smi_contact">Мы свяжемся с вами <br>в самое ближайшее время</div>		
 		<form action="#" class="smi_form">
 			<div class="sf_item">
 				<div class="sfi_label">Имя</div>
@@ -204,7 +269,7 @@
 	<div class="popup_content bp_content opened">		
 		<div class="bp_block">
 		<div class="bp_head">Связаться</div>
-		<div class="smi_contact">Мы свяжемся с вами  <br>в самое ближайшее время</div>		
+		<div class="smi_contact">Мы свяжемся с вами <br>в самое ближайшее время</div>		
 		<form action="#" class="smi_form">
 			<div class="sf_item">
 				<div class="sfi_label">Имя</div>
@@ -252,6 +317,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/mCustomScrollbar.min.js"></script>
 <script src="js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
 <script>
 //SmoothScroll
