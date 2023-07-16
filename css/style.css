@@ -2746,8 +2746,9 @@ footer.main_footer {
   color: #E04141;
   position: absolute;
   z-index: 4;
-  left: 15px;
+  left: 50%;
   top: 120px;
+  transform: translateX(-761px);
 }
 .eit_back:hover {
   text-decoration: underline;
@@ -5088,6 +5089,11 @@ img {
     font-size: 12px;
     line-height: 40px;
   }
+
+  .eit_back {
+    left: 40px;
+    transform: translateX(0);
+  }
 }
 /*1600*/
 @media only screen and (max-width: 1450px) {
@@ -5298,6 +5304,10 @@ img {
 @media only screen and (max-width: 1025px) {
   .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content {
     padding: 0 24px;
+  }
+
+  .eit_back {
+    left: 24px;
   }
 
   body.one_page {

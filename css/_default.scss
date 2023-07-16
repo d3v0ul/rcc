@@ -2623,8 +2623,9 @@ footer{
 	color: #E04141;
 	position: absolute;
 	z-index: 4;
-	left: 15px;
+	left: 50%;
 	top: 120px;
+	transform: translateX(-761px);
 	&:hover{
 		text-decoration: underline;
 	}

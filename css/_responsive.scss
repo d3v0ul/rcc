@@ -120,6 +120,10 @@ img {
 		line-height: 40px;
 	}
 }
+.eit_back{
+	left: 40px;
+	transform: translateX(0);
+}
 
 } /*1600*/
 @media only screen and (max-width : 1450px){
@@ -321,6 +325,9 @@ img {
 @media only screen and (max-width : 1025px){
 %ct{
 	padding: 0 24px;
+}
+.eit_back{
+	left: 24px;
 }
 body{
 	&.one_page{
@@ -1344,8 +1351,6 @@ h1{
 
 
 
-
-
 } /*1025*/
 @media only screen and (min-width : 767px){ /*+767*/
 .m_col{
@@ -1416,7 +1421,6 @@ h1{
 %ct{
 	padding: 0 16px;
 }
-
 .nli_head{
 	>span{
 		font-size: 12px;
