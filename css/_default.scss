@@ -212,6 +212,15 @@ header{
 	background: url(../images/top_bg_2.jpg) center top no-repeat;
 	background-size: cover;
 }
+.contur{
+	width: 100%;
+	height: 100vh;
+	background: url(../images/b2_bg.svg) center no-repeat;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+}
 .logo{
 	display: block;
 	max-width: 93px;
@@ -620,7 +629,7 @@ header{
 				color: #676666;
 			}
 			&:hover{
-				color: #7A7A7A;
+				@include opa(5);
 			}
 		}
 	}
@@ -653,7 +662,7 @@ header{
 				}
 			}
 			&:hover{
-				filter: brightness(60%);
+				@include opa(5);
 			}
 		}
 	}
@@ -922,6 +931,9 @@ header{
 		text-align: center;
 	}
 }
+.img-wrap{
+	overflow: hidden;
+}
 .ns_bot{
 	margin-top: 25px;
 	@extend .cl;
@@ -975,6 +987,7 @@ header{
 	background: #000 url(../images/b3_bg.jpg) center top no-repeat;
 	background-size: cover;
 	padding-top: 200px;
+	overflow: hidden;
 	position: relative;
 	// transition: all .5s;
 	&:after{
@@ -990,6 +1003,8 @@ header{
 }
 .b3{
 	@extend %ct;
+	position: relative;
+  z-index: 1;
 	max-width: 480px;
 	.c_head{
 		text-align: left;
@@ -1076,7 +1091,7 @@ footer{
 			color: #DFDDDD;
 			transition: .3s;
 			&:hover{
-				color: #E04141;
+				@include opa(5);
 			}
 		}
 	}
@@ -1095,7 +1110,7 @@ footer{
 			font-weight: 500;
 			transition: .3s;
 			&:hover{
-				color: #E04141;
+				@include opa(5);
 			}
 		}
 	}
@@ -1114,7 +1129,7 @@ footer{
 			color: #DFDDDD;
 			transition: .3s;
 			&:hover{
-				color: #E04141;
+				@include opa(5);
 			}
 		}
 	}
@@ -1218,11 +1233,12 @@ footer{
 			line-height: 120%;
 			text-transform: uppercase;
 			font-weight: 700;
-			color: #777777;
+			color: #ffffff;
+			@include opa(5);
 			letter-spacing: 0.04em;
 			transition: .3s;
 			&:hover{
-				color: #fff;
+				@include opa(10);
 			}
 		}
 	}
@@ -1238,12 +1254,13 @@ footer{
 	line-height: 120%;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #777777;
+	color: #fff;
+	@include opa(5);
 	letter-spacing: 0.04em;
 	transition: .3s;
 	margin: 2px 0 0 110px;
 	&:hover{
-		color: #fff;
+		@include opa(10);
 	}
 }
 
@@ -1806,43 +1823,7 @@ footer{
 		display: none !important;
 	}
 }
-.pns_content{
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	>div{
-		overflow: hidden;
-		margin-bottom: 20px;
-		>img{
-			transition: all .3s;
-		}
-	}
-	&.old{
-		>img{
-			filter: grayscale(100%);
-		}
-	}
-	&:hover{
-		>div{
-			>img{
-				// @include opa(7);
-				transform: scale(1.1);
-			}
-		}
-		
-		.pns_name{
-			color: #E04141;
-		}
-		.pns_date{
-			opacity: .4;
-		}
-	}
-	>img{
-		display: block;
-		margin-bottom: 20px;
-		transition: .3s;		
-	}
-}
+
 .pns_name{
 	display: block;
 	font-size: 24px;
@@ -1859,27 +1840,42 @@ footer{
 	color: #fff;
 	opacity: .2;
 }
-.news_socials_wrap{
-	height: 600px;
-	background: url(../images/ivana-cajina-rdZg6xmnpVM-unsplash.png) 50% no-repeat;
-	background-size: 150%;
-	margin-top: 140px;
-	position: relative;
-	overflow: hidden;
-	.reddots,
-	.iphone{
-		position: absolute;
-		width: 369px;
-		height: 750px;
-		left: 60.688%;
-		top: -45px;
-	}
-	.reddots{
-		width: 200vw;
-		left: 0;
-		top: -20%;
-		mix-blend-mode: exclusion;
-	}
+.news_socials_wrap {
+    height: 600px;
+    background: url(../images/MMA_Post_2_1.png) 50% no-repeat;
+    background-size: 150%;
+    margin-top: 140px;
+    position: relative;
+    overflow: hidden;
+    .phone_wrapper {
+        width: 100%;
+        height: 100%;
+        .iphone {
+            position: absolute;
+            left: 60.688%;
+            bottom: 58px;
+        }
+    }
+    .reddots {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        object-fit: cover;
+        mix-blend-mode: exclusion;
+    }
+}
+.paralax{
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    position: absolute !important;
+    .bg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
 }
 .nsw_img{
 	display: block;
@@ -1922,7 +1918,7 @@ footer{
 			color: #E04141;
 			transition: .3s;
 			&:hover{
-				color: #fff;		
+				@include opa(5);		
 			}
 		}
 	}
@@ -2322,6 +2318,15 @@ footer{
 .e_btns{
 	margin-top: 68px;
 	@extend .cl;
+	&.e_old{
+		.e_time{
+			float: right;
+		}
+		.nr_tags_slider{
+			float: left;
+			transform: translateX(0);
+		}
+	}
 	.nr_tags_slider{
 		max-width: 568px;
 		margin-top: 5px;
@@ -2377,32 +2382,39 @@ footer{
 	top: 0;
 }
 .eb_content{
+	display: block;
 	position: absolute;
 	width: 100%;
 	text-align: center;
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	>div{
+	>span{
 		text-transform: uppercase;
 		color: #fff;
 		font-weight: 500;
 	}
 }
 .eb_text_1{
+	display: block;
 	font-size: 14px;
+	line-height: 110%;
 	font-weight: 700;
 	letter-spacing: 0.04em;
 }
 .eb_text_2{
+	display: block;
 	font-size: 96px;
+	line-height: 110%;
 	font-family: $r;
 	font-style: italic;
 	letter-spacing: 0.16em;
 	margin: 40px 0;
 }
 .eb_text_3{
+	display: block;
 	font-size: 36px;
+	line-height: 110%;
 	letter-spacing: -0.02em;
 }
 .eb_btns{
@@ -2455,6 +2467,7 @@ footer{
 .e_twins{
 	margin-top: 14px;
 	>a{
+		display: block;
 		float: left;
 		width: calc(50% - 7px);
 		position: relative;
@@ -2503,14 +2516,6 @@ footer{
 				font-weight: 500;
 				margin-bottom: 15px;
 			}
-			/*>span{
-				display: inline-block;
-				font-size: 40px;
-				font-family: $r;
-				font-style: italic;
-				margin-bottom: 12px;
-				letter-spacing: 0.16em;
-			}*/
 		}
 	}
 }
@@ -4738,9 +4743,44 @@ transition: all 0.7s linear 0s;
   line-height: 110%;
   letter-spacing: -0.72px;
 }
-.pns_content > img {
-  margin-bottom: 24px;
+.pns_content{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	>div{
+		overflow: hidden;
+		margin-bottom: 20px;
+		>img{
+			display: block;
+			transition: all .3s;
+		}
+	}
+	&.old{
+		>img{
+			filter: grayscale(100%);
+		}
+	}
+	&:hover{
+		>div{
+			>img{
+				transform: scale(1.1);
+			}
+		}
+		
+		.pns_name{
+			color: #E04141;
+		}
+		.pns_date{
+			opacity: .4;
+		}
+	}
+	>img{
+		display: block;
+		margin-bottom: 20px;
+		transition: .3s;		
+	}
 }
+
 
 .pns_date  { 
   font-weight: 700; 
