@@ -585,7 +585,7 @@ header{
 	transition: .3s;
 	margin-top: -10px;
 	&:hover{
-		background: #2B2B2B;
+		background: #C93737;
 	}
 }
 .hlm_events{
@@ -1189,7 +1189,7 @@ footer{
 	-webkit-appearance: none;
 	border-radius: 0;
 	&:hover{
-		background: #2B2B2B;
+		background: #C93737;
 	}
 }
 .brands_slider{
@@ -1955,7 +1955,8 @@ footer{
 	margin-bottom: 40px;
 }
 #sync1 {
-	.owl-nav, .owl-dots{
+	z-index: 2;
+	.owl-dots{
 		display: none;
 	}
   .item {
@@ -1972,11 +1973,34 @@ footer{
     	}
     }
   }
+  .owl-prev, .owl-next{
+	  display: block;
+	  width: 17px;
+	  height: 20px;
+	  background: url(../images/f_dir.svg) center no-repeat !important;
+	  border: none;
+	  position: absolute;
+	  bottom: -50px;
+	  transition: .3s;
+	  &:hover{
+	  	@include opa(7);
+	  }
+	  >span{
+	    display: none !important;
+	  }
+	}
+	.owl-prev{
+		left: 25px;
+	}
+	.owl-next{
+		transform: rotate(180deg);
+		right: 25px;
+	}
 }
 
 #sync2 {
 	@extend .cl;
-	.owl-dots{
+	.owl-nav, .owl-dots{
 		display: none;
 	}
   .item {
@@ -2001,30 +2025,7 @@ footer{
   }
   .current .item{
     @include opa(10);
-  }
-  .owl-prev, .owl-next{
-	  display: block;
-	  width: 17px;
-	  height: 20px;
-	  background: url(../images/f_dir.png) center no-repeat !important;
-	  border: none;
-	  position: absolute;
-	  top: calc(50% - 10px);
-	  transition: .3s;
-	  &:hover{
-	  	@include opa(7);
-	  }
-	  >span{
-	    display: none !important;
-	  }
-	}
-	.owl-prev{
-		left: 25px;
-	}
-	.owl-next{
-		transform: rotate(180deg);
-		right: 25px;
-	}
+  }  
 }
 /*end of fight_slider*/
 
@@ -2597,7 +2598,8 @@ footer{
 	transform: translateX(-50%);
 	.bi_right{
 		float: right;
-		margin: 10px 140px 0 0;		
+		margin: 10px 140px 0 0;
+		transition: .3s;		
 		>span{
 			display: inline-block;
 			vertical-align: middle;
@@ -2639,9 +2641,12 @@ footer{
 	float: left;
 	font-size: 96px;
 	font-family: $r;
-	letter-spacing: 0.16em;
+	letter-spacing: 15.36px; 
 	font-style: italic;
 	text-transform: uppercase;
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
 }
 .eit_btn{
 	@extend .h_events;
@@ -4768,7 +4773,7 @@ transition: all 0.7s linear 0s;
 		}
 		
 		.pns_name{
-			color: #E04141;
+			@include opa(5);
 		}
 		.pns_date{
 			opacity: .4;
