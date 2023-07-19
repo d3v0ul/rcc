@@ -514,6 +514,17 @@ footer{
 	font-size: 16px;
 }
 .e_btns{
+	.nr_tags_slider{
+		margin-top: 20px;
+		float: none;
+		transform: translateX(0);
+		>div{
+			display: inline-block;
+			margin-right: 4px;
+		}
+	}
+}
+.e_btns{
 	@extend .cl;
 	&.e_old{
 		.e_time{
@@ -536,7 +547,7 @@ footer{
 	>a{
 		height: 50px;
 		line-height: 50px;
-		font-size: 10px;
+		font-size: 12px;
 	}
 }
 .events_old{
@@ -1043,11 +1054,6 @@ header{
 .nli_text{
 	font-size: 16px;
 }
-.nr_tags{
-	br{
-		display: none;
-	}
-}
 .nri_cat{
 	height: 30px;
 	min-width: 136px;
@@ -1532,6 +1538,12 @@ h1{
 .nr_listing{
 	margin-top: 50px;
 	>li{
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
 		>a{
 			font-size: 16px;
 		}
@@ -2958,6 +2970,12 @@ header {
 	}
 }
 .e_btns{
+	.nr_tags_slider{
+		transform: translateX(-16px);
+		>div{
+			height: 40px;
+		}
+	}
 	&.e_old{
 		.e_time{
 			transform: translateY(70px);
@@ -2965,6 +2983,14 @@ header {
 		.nr_tags_slider{
 			transform: translateY(-70px);
 		}
+	}
+}
+.nrt_content{
+	height: 40px;
+}
+.e_time{
+	>a{
+		font-size: 10px;
 	}
 }
 

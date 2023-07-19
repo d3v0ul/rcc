@@ -1712,6 +1712,7 @@ footer.main_footer {
 }
 
 .nr_tags {
+  max-width: 800px;
   margin-bottom: 30px;
 }
 .nr_tags.shared {
@@ -2845,8 +2846,12 @@ footer.main_footer {
 .fc_2x .fcc_vs:before {
   font-size: 16px;
 }
-.fc_2x .fcc_vs > div:nth-child(1) {
-  margin-right: 50px;
+.fc_2x .fcc_vs > div {
+  width: calc(50% - 30px);
+  margin: 0 25px;
+  /*&:nth-child(1){
+  	margin-right: 50px;
+  }*/
 }
 .fc_2x .fcc_name {
   font-size: 10px;
@@ -4977,19 +4982,13 @@ footer.main_footer {
 .pns_content > div > img {
   display: block;
   transition: all 0.3s;
+  filter: grayscale(100%);
 }
 .pns_content.old > img {
   filter: grayscale(100%);
 }
 .pns_content:hover > div > img {
   transform: scale(1.1);
-}
-.pns_content:hover .pns_name {
-  filter: alpha(Opacity=50);
-  opacity: 0.5;
-}
-.pns_content:hover .pns_date {
-  opacity: 0.4;
 }
 .pns_content > img {
   display: block;
@@ -5551,6 +5550,16 @@ img {
     font-size: 16px;
   }
 
+  .e_btns .nr_tags_slider {
+    margin-top: 20px;
+    float: none;
+    transform: translateX(0);
+  }
+  .e_btns .nr_tags_slider > div {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
   .e_btns.e_old .e_time {
     float: none;
   }
@@ -5571,7 +5580,7 @@ img {
   .e_time > a {
     height: 50px;
     line-height: 50px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .events_old {
@@ -6134,10 +6143,6 @@ img {
     font-size: 16px;
   }
 
-  .nr_tags br {
-    display: none;
-  }
-
   .nri_cat {
     height: 30px;
     min-width: 136px;
@@ -6637,6 +6642,12 @@ img {
 
   .nr_listing {
     margin-top: 50px;
+  }
+  .nr_listing > li:first-child {
+    margin-left: 0;
+  }
+  .nr_listing > li:last-child {
+    margin-right: 0;
   }
   .nr_listing > li > a {
     font-size: 16px;
@@ -8213,11 +8224,25 @@ img {
     font-size: 18px;
   }
 
+  .e_btns .nr_tags_slider {
+    transform: translateX(-16px);
+  }
+  .e_btns .nr_tags_slider > div {
+    height: 40px;
+  }
   .e_btns.e_old .e_time {
     transform: translateY(70px);
   }
   .e_btns.e_old .nr_tags_slider {
     transform: translateY(-70px);
+  }
+
+  .nrt_content {
+    height: 40px;
+  }
+
+  .e_time > a {
+    font-size: 10px;
   }
 
   .fc_block {
