@@ -443,7 +443,7 @@ footer{
 			display: block;
 		}
 		&.bi_left{
-			width: calc(100% - 220px);
+			width: calc(100% - 360px);
 			margin: 0 auto;
 		}
 		&.bi_right{
@@ -451,8 +451,8 @@ footer{
 			>span{
 				text-align: center;
 				>a{
-					width: 54px;
-					height: 54px;
+					width: 68px;
+					height: 68px;
 					margin: 0 5px !important;
 				}
 			}
@@ -470,6 +470,7 @@ footer{
 	display: block;
 	text-align: center;
 	font-size: 20px;
+	line-height: 124%;
 }
 .bi_center{
 	position: absolute;
@@ -477,6 +478,7 @@ footer{
 	right: 20px;
 	>span{
 		font-size: 20px;
+		line-height: 110%;
 		>span{
 			&:nth-child(1){
 				display: none;
@@ -1078,8 +1080,10 @@ header{
 }
 .nr_head{
 	font-size: 64px;
+	letter-spacing: 10.24px;
 	>a{
 		font-size: 64px;
+		letter-spacing: 10.24px;
 	}
 }
 .pns_name{
@@ -1356,9 +1360,11 @@ h1{
 .nr_slider .owl-dots {
     margin-top: 12px;
 }
-.bi_center > span {
-  font-size: 20px;
-  letter-spacing: -0.56px;
+.bi_center{  
+  >span{
+  	font-size: 20px;
+  	letter-spacing: -0.4px;
+  }
 }
 .nrt_name { 
   font-weight: 400;
@@ -1370,7 +1376,7 @@ h1{
   grid-gap: 32px 16px;
 }
 .nri_more {
-  margin: 60px auto 0;
+  margin: 100px auto 0;
 }
 .news_bot {
   padding-top: 32px;
@@ -1442,9 +1448,28 @@ h1{
 		line-height: 5.5vw;
 	}
 }
-
-
-
+.fb_menu{
+	>li{
+		>a{
+			font-size: 12px;
+		}
+	}
+}
+.f_right{
+	max-width: 260px;
+}
+.f_type{
+	margin-bottom: 68px;
+}
+.fb_conf{
+	font-size: 12px;
+}
+.ff_input{
+	padding: 0 17px;
+}
+.ts_content{
+	height: 54px;
+}
 
 
 } /*1025*/
@@ -2248,6 +2273,7 @@ header {
 	}
 }
 .ts_content{	
+	height: 46px;
 	>a{
 		height: 46px;
 		padding: 0 15px;	
@@ -2265,8 +2291,17 @@ header {
 }
 .bi_content{
 	>div{
+		&.bi_left{
+			width: 100%;
+		}
 		&.bi_right{
 			margin-top: 20px;
+			>span{
+				>a{
+					width: 54px;
+    			height: 54px;
+				}
+			}
 		}
 	}
 }
@@ -3097,7 +3132,9 @@ header {
 		}
 	}
 }
-
+.nri_more {
+  margin: 80px auto 0;
+}
 
 
 
