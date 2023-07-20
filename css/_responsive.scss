@@ -469,10 +469,11 @@ footer{
 	text-align: center;
 	font-size: 20px;
 	line-height: 124%;
+	padding-top: 5px;
 }
 .bi_center{
 	position: absolute;
-	top: 27px;
+	top: 24px;
 	right: 20px;
 	>span{
 		font-size: 28px;
@@ -1129,10 +1130,11 @@ header{
 .e_twins{
 	>a{
 		>span{
-			font-size: 20px;
+			font-size: 28px;
+			letter-spacing: -0.56px;
 			>span{
-				font-size: 26px;
-				margin-bottom: 11px;
+				font-size: 32px;
+				letter-spacing: 5.12px;
 			}
 		}
 	}
@@ -1231,7 +1233,7 @@ header{
 }
 .news_socials_wrap{
 	height: 350px;
-	margin-top: 80px;
+	margin-top: 100px;
 	.phone_wrapper{
 		.iphone {
 			width: 215px;
@@ -1473,6 +1475,25 @@ h1{
 
 .b_item{
 	padding: 25px 0;	
+}
+.eb_text_1{
+	font-size: 12px;
+	letter-spacing: 0.48px;
+}
+.eb_text_3{
+	font-size: 28px;
+	letter-spacing: -0.56px;
+}
+.eb_btns{
+	>a{
+		height: 50px;
+		font-size: 12px;
+		letter-spacing: 0.48px;
+	}
+}
+.eb_text_2{
+	font-size: 64px;
+	letter-spacing: 10.24px;
 }
 
 
@@ -1792,25 +1813,18 @@ header {
 	transform: translateY(0);
 }
 .eb_text_1{
-	font-size: 12px;
+	font-size: 10px;
+	letter-spacing: 0.4px;
 }
 .eb_text_2{
-	font-size: 64px;
-	margin: 20px 0;
+	font-size: 46px;
+	letter-spacing: 7.36px;
+	font-weight: 500;
+	margin: 15px 0;
 }
 .eb_text_3{
-	font-size: 28px;
-}
-.eb_btns{
-	width: 100%;
-	right: 0;
-	text-align: center;
-	>a{
-		height: 50px;
-		line-height: 50px;
-		font-size: 10px;
-		margin: 0 2px;
-	}
+	font-size: 20px;
+	letter-spacing: -0.4px;
 }
 .e_twins{
 	>a{
@@ -1819,8 +1833,11 @@ header {
 		margin-bottom: 15px;
 		>span{
 			font-size: 20px;
+			letter-spacing: -0.4px;
 			>span{
 				font-size: 26px;
+				letter-spacing: 4.16px;
+				line-height: 110%
 			}
 		}
 	}	
@@ -2324,6 +2341,7 @@ header {
 .bi_center{
 	position: static;
 	margin-left: 0;
+	margin-top: 4px;
 	>span{
 		margin: 0;
 		font-size: 20px;
@@ -2371,22 +2389,22 @@ header {
 .eb_content{
 	top: 24px;
 }
-.eb_text_1{
-	font-size: 10px;
-}
-.eb_text_2{
-	font-size: 46px;
-	margin: 15px 0;
-}
-.eb_text_3{
-	font-size: 20px;
-}
 .eb_btns{
+	width: 100%;
+	max-width: 296px;
+	right: 0;
+	text-align: center;
 	bottom: 10px;
 	padding: 0 15px;
+	left: 50%;
+	transform: translateX(-50%);
 	>a{
 		display: block;
 		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		font-size: 10px;
+		letter-spacing: 0.4px;
 		margin: 0 0 8px;
 		padding: 0 !important;
 		&:nth-child(2){
@@ -2930,6 +2948,7 @@ header {
 }
 .live_slider{
 	margin-bottom: 60px;
+	border-bottom: 2px solid #444343;
 }
 .nri_cat{
 	font-size: 10px;
@@ -2962,6 +2981,7 @@ header {
 
 .news_socials_wrap{
 	height: 464px;
+	margin-top: 80px;
 	background: url(../images/news_social_mob.jpg) center bottom no-repeat;
 	.phone_wrapper{
 		.iphone {
@@ -3022,7 +3042,7 @@ header {
 }
 .e_btns{
 	.nr_tags_slider{
-		transform: translateX(-16px);
+		/*transform: translateX(-16px);*/
 		>div{
 			height: 40px;
 		}
@@ -3383,14 +3403,19 @@ header {
 		max-width: 200px;
 	}
 }
-.e_time{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 10px;
+.e_time{	
+	display: block;
+	width: 330px;
+	margin: 0 auto;
 	>a{
-		width: auto;
+		display: block;
+		float: left;
+		width: calc(50% - 4px);
 		text-align: center;
-		margin-right: 0;
+		margin: 0;
+		&:nth-child(2){
+			float: right;
+		}
 	}
 }
 .e_btns{
@@ -3400,9 +3425,6 @@ header {
 			margin-right: 0 !important;
 		}
 	}
-}
-.eb_text_2{
-	font-weight: 500;
 }
 .h_choose{
 	left: auto;
