@@ -218,12 +218,7 @@ img {
 } /*1260*/
 @media only screen and (max-width : 1200px){
 
-.eo_name{
-	font-size: 24px;
-}
-.eo_date{
-	font-size: 16px;
-}
+
 .event_inner_top{
 	.bi_right{
 		margin: 0;
@@ -352,6 +347,12 @@ img {
 %ct{
 	padding: 0 24px;
 }
+.eo_name{
+	font-size: 24px;
+}
+.eo_date{
+	font-size: 16px;
+}
 .eit_back{
 	left: 24px;
 }
@@ -429,9 +430,6 @@ footer{
 	width: 100%;
 	max-width: 100%;
 }
-.b_item{
-	padding: 30px 15px;	
-}
 .bi_content{
 	>div{
 		display: block;
@@ -443,7 +441,7 @@ footer{
 			display: block;
 		}
 		&.bi_left{
-			width: calc(100% - 360px);
+			width: calc(100% - 380px);
 			margin: 0 auto;
 		}
 		&.bi_right{
@@ -477,11 +475,11 @@ footer{
 	top: 27px;
 	right: 20px;
 	>span{
-		font-size: 20px;
+		font-size: 28px;
 		line-height: 110%;
 		>span{
 			&:nth-child(1){
-				display: none;
+				display: none;				
 			}		
 			&:nth-child(2){
 				margin-left: 8px;
@@ -510,6 +508,12 @@ footer{
 	>span{
 		font-size: 20px;
 	}
+	&.opened{
+		&:after{
+			font-size: 20px;
+		}
+	}
+
 }
 .bp_tvs{
 	>a{
@@ -557,7 +561,7 @@ footer{
 	}
 }
 .events_old{
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 }
 .fc_table{
 	margin-bottom: 80px;
@@ -912,9 +916,11 @@ header{
 .nrt_content{
 	height: 48px;
 }
-.nr_main > a{
-	font-size: 12px;
+.nr_main{
+	>a{
+		font-size: 12px;
 	letter-spacing: 0.48px;
+	}
 }
 .rating > .content {
 	.owl-stage-outer{
@@ -1360,12 +1366,6 @@ h1{
 .nr_slider .owl-dots {
     margin-top: 12px;
 }
-.bi_center{  
-  >span{
-  	font-size: 20px;
-  	letter-spacing: -0.4px;
-  }
-}
 .nrt_name { 
   font-weight: 400;
 }
@@ -1469,6 +1469,10 @@ h1{
 }
 .ts_content{
 	height: 54px;
+}
+
+.b_item{
+	padding: 25px 0;	
 }
 
 
@@ -2152,6 +2156,7 @@ header {
 }
 .nr_main{
 	margin-top: -50px;
+	margin-bottom: 8px;
 }
 .left_margin{
 	margin-left: 0;
@@ -2321,6 +2326,8 @@ header {
 	margin-left: 0;
 	>span{
 		margin: 0;
+		font-size: 20px;
+		letter-spacing: -0.4px;  
 		>span{
 			display: inline-block;
 		}
@@ -2343,6 +2350,11 @@ header {
 .bp_text_all{
 	>span{
 		font-size: 16px;
+	}
+	&.opened{
+		&:after{
+			font-size: 16px;
+		}
 	}
 }
 .bp_tvs{
@@ -3143,8 +3155,8 @@ header {
 
 
 
-} /*767*/
-@media only screen and (max-width : 500px){
+
+/*@media only screen and (max-width : 500px){*/
 .skip_intro{
 	width: 100px;
 	height: 100px;	
@@ -3419,7 +3431,7 @@ header {
 
 
 
-} /*500*/
+} /*767*/
 @media only screen and (max-width : 400px){
 
 /*.sfi_img{

@@ -1,4 +1,4 @@
-﻿$d_font: 16px/110% 'Suisse Intl', Verdana;  
+$d_font: 16px/110% 'Suisse Intl', Verdana;  
 * { margin:0; padding:0; 	-webkit-box-sizing: border-box;	-moz-box-sizing: border-box;	box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 html, body {width: 100%; min-width: 320px; color: #ffffff; background: #1D1D1D; font:$d_font; cursor: default;}
 html {height: 100%; -webkit-text-size-adjust: 100%;}
@@ -1365,7 +1365,7 @@ footer{
 }
 .nr_main{
 	display: block;	
-	margin-bottom: 5px;
+	margin-bottom: 12px;
 	>a{
 		display: inline-block;
 		color: #E04141;
@@ -2044,7 +2044,6 @@ footer{
 	}
 }
 .time_slider{
-	height: 54px;
 	/*overflow: hidden;*/
 	margin-bottom: 60px;
 	.owl-nav, .owl-dots{
@@ -2136,11 +2135,13 @@ footer{
 	line-height: 124%;
 }
 .bi_type{
+	display: inline-block;
 	color: #E04141;
 	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 124%;
 	margin-right: 20px;
+	margin-bottom: 8px;
 }
 .bi_center{
 	>span{
@@ -2265,8 +2266,7 @@ footer{
 		-webkit-box-orient: vertical;
 	}
 }
-.bp_text_all{
-	text-align: right;
+.bp_text_all{	
 	>span{
 		display: inline-block;
 		font-size: 24px;
@@ -2318,6 +2318,7 @@ footer{
 .events{
 	@extend %ct;
 	margin-top: 120px;
+	overflow: hidden;
 	.nr_tags_slider{
 		margin-bottom: 0;
 	}
