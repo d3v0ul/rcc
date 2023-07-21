@@ -2251,6 +2251,9 @@ footer.main_footer {
 .bi_content > div.bi_right > span {
   text-align: right;
 }
+.bi_content > div.bi_center > span {
+  text-align: right;
+}
 .bi_content > div > span {
   display: table-cell;
   vertical-align: middle;
@@ -4923,10 +4926,6 @@ footer.main_footer {
   margin-top: 32px;
 }
 
-.bi_center > span {
-  letter-spacing: -0.72px;
-}
-
 .nli_head {
   margin-bottom: 12px;
 }
@@ -5212,6 +5211,13 @@ img {
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .bi_center > span {
+    font-size: 2.6vw;
+  }
+  .bi_center > span > span:last-child {
+    margin-left: 5vw;
   }
 }
 /*1350*/
@@ -6609,6 +6615,10 @@ img {
     font-size: 64px;
     letter-spacing: 10.24px;
   }
+
+  .eo_item > img {
+    width: 100%;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 767px) {
@@ -7548,6 +7558,7 @@ img {
     margin: 0;
     font-size: 20px;
     letter-spacing: -0.4px;
+    text-align: center !important;
   }
   .bi_center > span > span {
     display: inline-block;

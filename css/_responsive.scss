@@ -182,6 +182,21 @@ img {
 	left: 50%;
 	transform: translateX(-50%);
 }
+.bi_center{
+	>span{
+		font-size: 2.6vw;
+		>span{
+			&:last-child{
+				margin-left: 5vw;
+			}			
+		}
+	}
+}
+
+
+
+
+
 
 } /*1350*/
 @media only screen and (max-width : 1260px){
@@ -1495,6 +1510,11 @@ h1{
 	font-size: 64px;
 	letter-spacing: 10.24px;
 }
+.eo_item{
+	>img{
+		width: 100%;
+	}
+}
 
 
 } /*1025*/
@@ -2345,7 +2365,8 @@ header {
 	>span{
 		margin: 0;
 		font-size: 20px;
-		letter-spacing: -0.4px;  
+		letter-spacing: -0.4px;
+		text-align: center !important;
 		>span{
 			display: inline-block;
 		}

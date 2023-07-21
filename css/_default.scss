@@ -2131,6 +2131,11 @@ footer{
 				text-align: right;
 			}
 		}
+		&.bi_center{
+			>span{
+				text-align: right;
+			}
+		}
 		>span{
 			display: table-cell;
 			vertical-align: middle;
@@ -4721,9 +4726,6 @@ transition: all 0.7s linear 0s;
     margin-top: 32px;
 }
 
-.bi_center > span {
-    letter-spacing: -0.72px;
-}
 .nli_head {
     margin-bottom: 12px;
 }
