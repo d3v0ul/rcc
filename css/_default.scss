@@ -72,6 +72,9 @@ body{
 		overflow: hidden;
 	}
 }
+.owl-carousel .owl-item img{
+	display: block !important;
+}
 .mma_touch{
 	display: none;
 	background: url(../images/mma_touch.png) center bottom no-repeat;
@@ -195,7 +198,7 @@ header{
 		display: block;
 		height: 100%;
 		width: 100%;
-		object-fit: fill;
+		object-fit: cover;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -905,6 +908,19 @@ header{
 		display: none !important;
 	}
 }
+
+.red:hover{
+	.nsb_type, .nsb_name{
+		color: #1D1D1D !important;
+	}
+	&.burger:hover{
+		filter: brightness(0%) !important;
+	}
+	&.b2b_all:hover{
+		color: #000 !important;
+	}
+}
+
 .ns_content{
 	display: block;
 	transition: .3s;
@@ -915,13 +931,7 @@ header{
 			transform: scale(1.1);
 		}
 	}
-	&.red{
-		&:hover{
-		.nsb_type, .nsb_name{
-			color: #1D1D1D;
-		}
-	}
-	}
+	
 	&:hover{
 		.nsb_type, .nsb_name{
 			color: #E04141;
@@ -1034,9 +1044,9 @@ header{
 }
 footer{
 	background: #1D1D1D;
-	margin-top: 80px;
+	margin-top: 120px;
 	&.main_footer{
-		padding-top: 20vh;
+		/*padding-top: 20vh;*/
 	}
 }
 .f_top{
@@ -1907,9 +1917,9 @@ footer{
 	line-height: 110%;
 	font-weight: 500;
 	font-family: $r;
-	letter-spacing: 0.16em;
+	letter-spacing: 15.36px;
 	text-transform: uppercase;
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 	font-style: italic;
 	>br{
 		&.mob{
@@ -2252,7 +2262,7 @@ footer{
 }
 .bp_top{
 	background: #000;
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 	>img{
 		display: block;
 	}
@@ -2268,7 +2278,7 @@ footer{
 	font-style: italic;
 	letter-spacing: 15.36px;
 	text-transform: uppercase;
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 .bp_text{
 	font-size: 24px;
@@ -2305,11 +2315,11 @@ footer{
 	}
 }
 .bp_tvs{
-	margin: 60px 0 30px;
+	margin: 60px 0;
 	>a{
 		display: inline-block;
 		vertical-align: top;
-		margin: 0 48px 30px 0;
+		margin: 0 48px 32px 0;
 		font-size: 14px;
 		letter-spacing: 0.56px;
 	  line-height: 140%;	    
@@ -4809,10 +4819,6 @@ transition: all 0.7s linear 0s;
   letter-spacing: 0.56px;
   line-height: 140%;
 }
-.nc_head {
-  margin-bottom: 16px;
-  letter-spacing: 7.36px;
-}
 .nrt_name {   
   padding: 0 16px;
 } 
@@ -4828,7 +4834,4 @@ transition: all 0.7s linear 0s;
   line-height: 112%;
 }
 
-.f_top  {
-  margin-top: 30px;
-}
 /*end of side styles 16.07*/

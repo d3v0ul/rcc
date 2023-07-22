@@ -134,6 +134,10 @@ body.noscroll {
   overflow: hidden;
 }
 
+.owl-carousel .owl-item img {
+  display: block !important;
+}
+
 .mma_touch {
   display: none;
   background: url(../images/mma_touch.png) center bottom no-repeat;
@@ -257,7 +261,7 @@ header.h_main {
   display: block;
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -995,6 +999,16 @@ header.h_main {
   display: none !important;
 }
 
+.red:hover .nsb_type, .red:hover .nsb_name {
+  color: #1D1D1D !important;
+}
+.red:hover.burger:hover {
+  filter: brightness(0%) !important;
+}
+.red:hover.b2b_all:hover {
+  color: #000 !important;
+}
+
 .ns_content {
   display: block;
   transition: 0.3s;
@@ -1005,9 +1019,6 @@ header.h_main {
 }
 .ns_content .ns_img:hover {
   transform: scale(1.1);
-}
-.ns_content.red:hover .nsb_type, .ns_content.red:hover .nsb_name {
-  color: #1D1D1D;
 }
 .ns_content:hover .nsb_type, .ns_content:hover .nsb_name {
   color: #E04141;
@@ -1125,10 +1136,10 @@ header.h_main {
 
 footer {
   background: #1D1D1D;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 footer.main_footer {
-  padding-top: 20vh;
+  /*padding-top: 20vh;*/
 }
 
 .f_top {
@@ -2036,9 +2047,9 @@ footer.main_footer {
   line-height: 110%;
   font-weight: 500;
   font-family: "Druk Cyr";
-  letter-spacing: 0.16em;
+  letter-spacing: 15.36px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   font-style: italic;
 }
 .nc_head > br.mob {
@@ -2368,7 +2379,7 @@ footer.main_footer {
 
 .bp_top {
   background: #000;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .bp_top > img {
   display: block;
@@ -2386,7 +2397,7 @@ footer.main_footer {
   font-style: italic;
   letter-spacing: 15.36px;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 .bp_text {
@@ -2424,12 +2435,12 @@ footer.main_footer {
 }
 
 .bp_tvs {
-  margin: 60px 0 30px;
+  margin: 60px 0;
 }
 .bp_tvs > a {
   display: inline-block;
   vertical-align: top;
-  margin: 0 48px 30px 0;
+  margin: 0 48px 32px 0;
   font-size: 14px;
   letter-spacing: 0.56px;
   line-height: 140%;
@@ -5002,11 +5013,6 @@ footer.main_footer {
   line-height: 140%;
 }
 
-.nc_head {
-  margin-bottom: 16px;
-  letter-spacing: 7.36px;
-}
-
 .nrt_name {
   padding: 0 16px;
 }
@@ -5020,10 +5026,6 @@ footer.main_footer {
 .nr_text_1 {
   margin-bottom: 24px;
   line-height: 112%;
-}
-
-.f_top {
-  margin-top: 30px;
 }
 
 /*end of side styles 16.07*/
@@ -5398,6 +5400,9 @@ img {
     overflow: auto;
   }
 
+  footer {
+    margin-top: 100px;
+  }
   footer.main_footer {
     padding-top: 0;
   }
@@ -5541,7 +5546,8 @@ img {
 
   .bp_head, .ft_head, .cf_head {
     font-size: 64px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    letter-spacing: 10.24px;
   }
 
   .bp_text {
@@ -5554,9 +5560,9 @@ img {
   .bp_text_all.opened:after {
     font-size: 20px;
   }
-
-  .bp_tvs > a {
+  .bp_text_all > a {
     font-size: 12px;
+    letter-spacing: 0.48px;
   }
 
   .bp_bot {
@@ -6063,7 +6069,7 @@ img {
     bottom: -50px;
   }
 
-  .b1b_slideUp_mobile {
+  .b1b_slideUp {
     opacity: 1 !important;
     visibility: visible !important;
     bottom: 80px !important;
@@ -6363,7 +6369,7 @@ img {
     font-weight: 500;
     font-size: 64px;
     letter-spacing: 10.24px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .nc_head br.mob {
     display: block !important;
@@ -6805,7 +6811,7 @@ img {
     letter-spacing: 0.48px;
   }
 
-  .footer {
+  footer {
     margin-top: 80px;
   }
 
@@ -7575,7 +7581,8 @@ img {
 
   .bp_head, .ft_head, .cf_head {
     font-size: 46px;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
+    letter-spacing: 7.36px;
   }
 
   .bp_text {
@@ -7589,8 +7596,12 @@ img {
     font-size: 16px;
   }
 
+  .bp_tvs {
+    margin: 48px 0;
+  }
   .bp_tvs > a {
     font-size: 10px;
+    letter-spacing: 0.4px;
   }
 
   .bp_bot {
@@ -7633,7 +7644,7 @@ img {
   }
 
   .popup_content .bp_block {
-    padding: 0 20px 20px;
+    padding: 0 16px 40px;
   }
 
   .smi_contact {
@@ -8235,7 +8246,6 @@ img {
   .nc_head {
     font-size: 46px;
     text-align: center;
-    margin-bottom: 9px;
   }
 
   .news_socials_wrap {

@@ -93,6 +93,38 @@ if (document.querySelector("video")){
     });
 }
 
+var timing = 0;
+
+function timing_b2_2_wrap () {
+    var curTiming;
+    if (matchMedia("(max-width: 1025px").matches){
+        curTiming = 800;
+    } else (curTiming = 1800);
+    if (timing !== curTiming) {
+        document.querySelector('.b2_2_wrap').setAttribute('data-timing', curTiming);
+        timing = curTiming;
+    }
+}
+
+var newsowl;
+
+if (document.querySelector('.b2_2_wrap')){
+    timing_b2_2_wrap();
+    window.addEventListener('resize', timing_b2_2_wrap);
+}
+if(document.querySelector('.news_slider')){
+    newsowl = $('.news_slider');
+    newsowl.on('initialized.owl.carousel', ()=>{
+        setMaxSlide();
+    })
+    window.addEventListener('resize', setMaxSlide);
+}
+
+function setMaxSlide () {
+        let maxSlide = document.querySelectorAll('.news_slider .owl-item').length - (document.querySelectorAll('.news_slider .owl-item.active').length-1)
+        document.querySelector('.news_slider').setAttribute('data-maxSlide', maxSlide);
+        document.querySelector('.news_slider').setAttribute('data-w', Math.max($(document).innerWidth(), $(window).innerWidth()));
+}
 
 //fighter strikes animation
 $(function() {
@@ -335,20 +367,24 @@ if(document.querySelector('.popular_news')){
 
 
 
-
 //owl sliders
 if(document.querySelector('.news_slider')){
-
+    var newsSlider = $('.news_slider');
+    if ($('.ns_content').hasClass('red')){
+        $('.burger').addClass('red');
+        $('.b2b_all').addClass('red');
+    }
 // var ns = window.matchMedia('all and (min-width: 920px)');
 // if (ns.matches) {
-    $('.news_slider').addClass('owl-carousel');
-    $('.news_slider').owlCarousel({
+    newsSlider.addClass('owl-carousel');
+    newsSlider.owlCarousel({
         center: false,
         items: 4,
         loop: false,
         margin: 20,
         autoWidth: true,
-        smartSpeed: 2000
+        smartSpeed: 1000,
+        slideTransition: 'linear'
     });
 // } else {
 //     $('.news_slider').addClass('owl-carousel');
@@ -369,37 +405,50 @@ $('.brands_slider').owlCarousel({
     loop: true,
     margin: 50,
     autoWidth: true,
+    autoplay: true,
+    smartSpeed: 4000,
+    autoplayTimeout: 4000,
+    slideTransition: 'linear'
 });
 
-if(document.querySelector('.popular_news_slider')){
+var pnsSlider;
+var pns;
 
-var pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');
-if (pns.matches) {
-    $('.popular_news_slider').addClass('owl-carousel');
-    $('.popular_news_slider').owlCarousel({
-        center: false,
-        items: 2,
-        loop: false,
-        margin: 16,
-        autoWidth: true,
-        responsive: {
-            0: {
-                items: 1,
-                autoWidth: false,
-            },
-            500: {
-
+function pnsSwitcher () {
+    pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');  
+    console.log(pns.matches)    
+    if (pns.matches) {
+        pnsSlider.addClass('owl-carousel');
+        pnsSlider.owlCarousel({
+            center: false,
+            items: 2,
+            loop: false,
+            margin: 16,
+            autoWidth: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    autoWidth: false,
+                },
+                500: {
+    
+                }
             }
-        }
-    });
-} else {}
+        });
+    } else {
+        pnsSlider.removeClass('owl-carousel');
+        pnsSlider.trigger('destroy.owl.carousel');
+    }
+}
+
+if(document.querySelector('.popular_news_slider')){
+    pnsSlider = $('.popular_news_slider');
+    pnsSwitcher();
+    window.addEventListener('resize', pnsSwitcher);
 }
 
 if(document.querySelector('.paralax')){
-    new Parallax(document.querySelector('.paralax', {
-        'hoverOnly': 'true',
-        'scalarY': 0,
-    }));
+    var par = new Parallax(document.querySelector('.paralax'));
 }
 
 var owlquery = document.querySelector('.nr_slider');
@@ -422,9 +471,6 @@ if(owlquery) {
         items: 1,
         loop: true,
         autoWidth: false,
-        // autoplay: true,
-        autoplayTimeout: 4000,
-        // autoplayHoverPause: true
     });
     
     function nexOwl (param) {

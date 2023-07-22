@@ -377,6 +377,7 @@ body{
 	}	
 }
 footer{
+	margin-top: 100px;
 	&.main_footer{
 		padding-top: 0;
 	}
@@ -515,7 +516,8 @@ footer{
 }
 .bp_head{
 	font-size: 64px;
-	margin-bottom: 30px;
+	margin-bottom: 32px;
+	letter-spacing: 10.24px;
 }
 .bp_text{
 	font-size: 20px;
@@ -529,11 +531,9 @@ footer{
 			font-size: 20px;
 		}
 	}
-
-}
-.bp_tvs{
 	>a{
 		font-size: 12px;
+		letter-spacing: 0.48px;
 	}
 }
 .bp_bot{
@@ -999,7 +999,7 @@ header{
 		}
 	}	
 }
-.b1b_slideUp_mobile{
+.b1b_slideUp{
 	opacity: 1 !important;
 	visibility: visible !important;
 	bottom: 80px !important;
@@ -1265,7 +1265,7 @@ header{
 	font-weight: 500;
 	font-size: 64px; 
 	letter-spacing: 10.24px; 
-	margin-bottom: 20px;	
+	margin-bottom: 16px;	
 	br{
 		&.mob{
 			display: block !important;
@@ -1702,8 +1702,7 @@ header {
 	}
 }
 
-
-.footer{
+footer{
 	margin-top: 80px;
 }
 .f_left{
@@ -2381,7 +2380,8 @@ header {
 }
 .bp_head{
 	font-size: 46px;
-	margin-bottom: 25px;
+	margin-bottom: 32px;
+	letter-spacing: 7.36px;
 }
 .bp_text{
 	font-size: 16px;
@@ -2397,8 +2397,10 @@ header {
 	}
 }
 .bp_tvs{
+	margin: 48px 0;
 	>a{
 		font-size: 10px;
+		letter-spacing: 0.4px;
 	}
 }
 .bp_bot{
@@ -2440,7 +2442,7 @@ header {
 }
 .popup_content{
 	.bp_block{
-		padding: 0 20px 20px;
+		padding: 0 16px 40px;
 	}
 }
 .smi_contact{
@@ -2997,7 +2999,6 @@ header {
 .nc_head{
 	font-size: 46px;
 	text-align: center;
-	margin-bottom: 9px;
 }
 
 .news_socials_wrap{
