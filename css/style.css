@@ -5039,6 +5039,24 @@ img {
 }
 
 /* MEDIA QUERIES*/
+@media only screen and (min-width: 1024px) and (max-height: 900px) {
+  .ft_l > img, .ft_r > img {
+    width: 55vh;
+  }
+
+  .b1_2_names > a {
+    font-size: 10vh;
+  }
+
+  .ns_img {
+    width: 50vh;
+  }
+
+  .b2 {
+    transform: translateY(-56%);
+  }
+}
+/*900h*/
 @media only screen and (min-width: 1600px) {
   .fighter .mf_img {
     left: 50%;
@@ -5196,7 +5214,7 @@ img {
   }
 
   .ft_l.resize {
-    transform: translate3d(-70%, -50%, 0) scale(1);
+    transform: translate3d(-48%, -50%, 0) scale(1);
   }
 
   .b1_2_names {
