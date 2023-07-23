@@ -2261,10 +2261,20 @@ footer{
 	background: #2B2B2B !important;
 }
 .bp_top{
+	display: table;
+	width: 100%;
+	height: 300px;
 	background: #000;
 	margin-bottom: 32px;
-	>img{
-		display: block;
+	>span{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0 16px;
+		>img{
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 }
 .bp_block{
@@ -2702,57 +2712,7 @@ footer{
 		margin-left: 20px;
 	}
 }
-.fc_2x{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 15px;
-	margin-top: 15px;
-	.fight_card{
-		margin-top: 35px;
-	}
-	.fc_head{
-		font-size: 18px;
-		margin-bottom: 17px;
-	}
-	.fc_block{	
-		>img{
-			width: 235px;
-			height: 300px;
-		}
-	}
-	.fc_content{
-		top: 37px;
-	}
-	.fcc_head{
-		font-size: 43px;
-	}
-	.fcc_vs{
-		margin-top: 32px;
-		&:before{
-			font-size: 16px;
-		}
-		>div{
-			width: calc(50% - 30px);
-			margin: 0 25px;
-			/*&:nth-child(1){
-				margin-right: 50px;
-			}*/
-		}
-	}
-	.fcc_name{
-		font-size: 10px;
-		margin-bottom: 10px;
-		>span{
-			font-size: 20px;
-		}
-	}
-	.fcc_time{
-		font-size: 12px;
-	}
-	.fc_number{
-		bottom: 70px;
-	}
-}
+
 .fight_card{
 	@extend %ct;
 	margin-top: 70px;
@@ -2809,17 +2769,64 @@ footer{
 		color: #E04141;
 		position: absolute;
 		left: 50%;
-		top: 40%;
-		transform: translate3d(-50%, -50%, 0);
+		top: 50%;
+		transform: translate3d(-50%, -60%, 0);
 	}
 	>div{
-		display: inline-block;
-		vertical-align: top;
-		text-align: left;
-		&:nth-child(1){
-			text-align: right;
-			margin-right: 100px;
+		display: block;
+		text-align: center;
+		&:nth-child(2){
+			margin-top: 60px;
 		}
+	}
+}
+.fc_2x{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 15px;
+	margin-top: 15px;
+	.fight_card{
+		margin-top: 35px;
+	}
+	.fc_head{
+		font-size: 18px;
+		margin-bottom: 17px;
+	}
+	.fc_block{	
+		>img{
+			width: 235px;
+			height: 300px;
+		}
+	}
+	.fc_content{
+		top: 37px;
+	}
+	.fcc_head{
+		font-size: 43px;
+	}
+	.fcc_vs{
+		margin-top: 32px;
+		>div{
+			&:nth-child(2){
+				margin-top: 30px;
+			}
+		}
+		&:before{
+			font-size: 16px;
+		}
+	}
+	.fcc_name{
+		font-size: 10px;
+		margin-bottom: 10px;
+		>span{
+			font-size: 20px;
+		}
+	}
+	.fcc_time{
+		font-size: 12px;
+	}
+	.fc_number{
+		bottom: 70px;
 	}
 }
 .fcc_name{
@@ -2837,6 +2844,7 @@ footer{
 	}
 }
 .fcc_time{
+	display: none;
 	font-size: 24px;
 }
 .fc_number{
@@ -4835,3 +4843,10 @@ transition: all 0.7s linear 0s;
 }
 
 /*end of side styles 16.07*/
+
+/*smi page*/
+.smi_page{
+	@extend %ct;
+	margin-top: 120px;
+	max-width: 880px;
+}

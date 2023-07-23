@@ -67,7 +67,7 @@ a:hover {
   text-decoration: none;
 }
 
-.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_strikes:after, .mf_about:after, .eb_top:after, .mac_cols:after, .ch_top:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
+.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_strikes:after, .mf_about:after, .eb_top:after, .mac_cols:after, .ch_top:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .smi_page:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
   content: "";
   display: block;
   clear: both;
@@ -181,7 +181,7 @@ body.noscroll {
   background: #307DFF !important;
 }
 
-.mfg_content, .mf_top, .ri_line, .content, .m_about, .m4, .p_404, .conf, .fighter, .fight_card, .event_inner_top, .events, .bi_content, .broadcasts, .news_socials, .news, .f_bot, .f_top, .b3, .b1_2, .header {
+.smi_page, .mfg_content, .mf_top, .ri_line, .content, .m_about, .m4, .p_404, .conf, .fighter, .fight_card, .event_inner_top, .events, .bi_content, .broadcasts, .news_socials, .news, .f_bot, .f_top, .b3, .b1_2, .header {
   max-width: 1600px;
   padding: 0 40px;
   margin: 0 auto;
@@ -2378,11 +2378,21 @@ footer.main_footer {
 }
 
 .bp_top {
+  display: table;
+  width: 100%;
+  height: 300px;
   background: #000;
   margin-bottom: 32px;
 }
-.bp_top > img {
-  display: block;
+.bp_top > span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 16px;
+}
+.bp_top > span > img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .bp_block {
@@ -2837,56 +2847,6 @@ footer.main_footer {
   margin-left: 20px;
 }
 
-.fc_2x {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-  margin-top: 15px;
-}
-.fc_2x .fight_card {
-  margin-top: 35px;
-}
-.fc_2x .fc_head {
-  font-size: 18px;
-  margin-bottom: 17px;
-}
-.fc_2x .fc_block > img {
-  width: 235px;
-  height: 300px;
-}
-.fc_2x .fc_content {
-  top: 37px;
-}
-.fc_2x .fcc_head {
-  font-size: 43px;
-}
-.fc_2x .fcc_vs {
-  margin-top: 32px;
-}
-.fc_2x .fcc_vs:before {
-  font-size: 16px;
-}
-.fc_2x .fcc_vs > div {
-  width: calc(50% - 30px);
-  margin: 0 25px;
-  /*&:nth-child(1){
-  	margin-right: 50px;
-  }*/
-}
-.fc_2x .fcc_name {
-  font-size: 10px;
-  margin-bottom: 10px;
-}
-.fc_2x .fcc_name > span {
-  font-size: 20px;
-}
-.fc_2x .fcc_time {
-  font-size: 12px;
-}
-.fc_2x .fc_number {
-  bottom: 70px;
-}
-
 .fight_card {
   margin-top: 70px;
 }
@@ -2947,17 +2907,61 @@ footer.main_footer {
   color: #E04141;
   position: absolute;
   left: 50%;
-  top: 40%;
-  transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  transform: translate3d(-50%, -60%, 0);
 }
 .fcc_vs > div {
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
+  display: block;
+  text-align: center;
 }
-.fcc_vs > div:nth-child(1) {
-  text-align: right;
-  margin-right: 100px;
+.fcc_vs > div:nth-child(2) {
+  margin-top: 60px;
+}
+
+.fc_2x {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+.fc_2x .fight_card {
+  margin-top: 35px;
+}
+.fc_2x .fc_head {
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+.fc_2x .fc_block > img {
+  width: 235px;
+  height: 300px;
+}
+.fc_2x .fc_content {
+  top: 37px;
+}
+.fc_2x .fcc_head {
+  font-size: 43px;
+}
+.fc_2x .fcc_vs {
+  margin-top: 32px;
+}
+.fc_2x .fcc_vs > div:nth-child(2) {
+  margin-top: 30px;
+}
+.fc_2x .fcc_vs:before {
+  font-size: 16px;
+}
+.fc_2x .fcc_name {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.fc_2x .fcc_name > span {
+  font-size: 20px;
+}
+.fc_2x .fcc_time {
+  font-size: 12px;
+}
+.fc_2x .fc_number {
+  bottom: 70px;
 }
 
 .fcc_name {
@@ -2976,6 +2980,7 @@ footer.main_footer {
 }
 
 .fcc_time {
+  display: none;
   font-size: 24px;
 }
 
@@ -5029,6 +5034,12 @@ footer.main_footer {
 }
 
 /*end of side styles 16.07*/
+/*smi page*/
+.smi_page {
+  margin-top: 120px;
+  max-width: 880px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -5053,10 +5064,41 @@ img {
   }
 
   .b2 {
-    transform: translateY(-56%);
+    top: calc(50% - 50px);
+    transform: translateY(-50%);
   }
 }
 /*900h*/
+@media only screen and (min-width: 1024px) and (max-height: 700px) {
+  .b2 {
+    top: calc(50% - 100px);
+    transform: translateY(-50%);
+  }
+
+  .ns_content .c_head {
+    font-size: 12vh;
+  }
+
+  .nsb_name {
+    font-size: 2.5vh;
+  }
+}
+/*700h*/
+@media only screen and (min-width: 1900px) {
+  .news_slider .owl-item {
+    min-height: 820px !important;
+  }
+
+  .ns_content {
+    width: 640px;
+  }
+
+  .ns_img {
+    width: 100%;
+    max-width: 640px;
+  }
+}
+/*1900+*/
 @media only screen and (min-width: 1600px) {
   .fighter .mf_img {
     left: 50%;
@@ -5097,9 +5139,6 @@ img {
   .fcc_vs:before {
     font-size: 2vw;
   }
-  .fcc_vs > div:nth-child(1) {
-    margin-right: 6.6vw;
-  }
 
   .fcc_name {
     font-size: 1.3vw;
@@ -5125,7 +5164,7 @@ img {
     height: 17vw;
   }
   .fc_2x .fc_content {
-    top: 2.5vw;
+    top: 1.3vw;
   }
   .fc_2x .fcc_head {
     font-size: 3.1vw;
@@ -5135,9 +5174,6 @@ img {
   }
   .fc_2x .fcc_vs:before {
     font-size: 1vw;
-  }
-  .fc_2x .fcc_vs > div:nth-child(1) {
-    margin-right: 3.3vw;
   }
   .fc_2x .fcc_name {
     font-size: 0.65vw;
@@ -5241,6 +5277,16 @@ img {
   }
 }
 /*1350*/
+@media only screen and (max-width: 1300px) {
+  .news_socials {
+    padding-top: 104px;
+  }
+
+  .nc_head br.mob {
+    display: block !important;
+  }
+}
+/*1300*/
 @media only screen and (max-width: 1260px) {
   .f_type {
     left: 40%;
@@ -5350,10 +5396,6 @@ img {
     margin-top: 50px;
   }
 
-  .nc_head br.mob {
-    display: block !important;
-  }
-
   .mac_btn {
     transform: translateX(0);
   }
@@ -5398,7 +5440,7 @@ img {
 }
 /*+1026*/
 @media only screen and (max-width: 1025px) {
-  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content {
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .smi_page {
     padding: 0 24px;
   }
 
@@ -5433,6 +5475,9 @@ img {
     font-size: 24px;
     line-height: 112%;
     margin: 20px 0 40px;
+  }
+  .f_slogan > br {
+    display: block;
   }
 
   .f_type {
@@ -5535,7 +5580,7 @@ img {
 
   .bi_center {
     position: absolute;
-    top: 24px;
+    top: 27px;
     right: 20px;
   }
   .bi_center > span {
@@ -6564,9 +6609,6 @@ img {
   .fc_2x .fcc_vs:before {
     font-size: 2vw;
   }
-  .fc_2x .fcc_vs > div:nth-child(1) {
-    margin-right: 6.6vw;
-  }
   .fc_2x .fcc_name {
     font-size: 1.3vw;
     margin-bottom: 1.2vw;
@@ -6643,6 +6685,10 @@ img {
   .eo_item > img {
     width: 100%;
   }
+
+  .bp_block {
+    padding: 0 24px 40px;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 767px) {
@@ -6702,7 +6748,7 @@ img {
 }
 /*+767*/
 @media only screen and (max-width: 767px) {
-  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content {
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .smi_page {
     padding: 0 16px;
   }
 
@@ -6852,9 +6898,6 @@ img {
   .f_slogan {
     font-size: 18px;
     margin-bottom: 130px;
-  }
-  .f_slogan br {
-    display: block;
   }
 
   .f_type > li {
@@ -7047,8 +7090,9 @@ img {
   .eit_text {
     left: 50%;
     bottom: 50%;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, 10%, 0);
     font-size: 46px;
+    text-align: center;
   }
   .eit_text.old {
     position: absolute;
@@ -7433,6 +7477,10 @@ img {
   .nr_top {
     text-align: left;
   }
+  .nr_top > img {
+    height: auto !important;
+    width: 100%;
+  }
 
   .nrt_name {
     font-size: 16px;
@@ -7474,7 +7522,6 @@ img {
   .nr_tags.shared .nrt_share {
     display: block;
     position: static;
-    width: 100%;
     font-size: 10px;
   }
 
@@ -7661,7 +7708,7 @@ img {
     margin-right: 9px;
   }
 
-  .popup_content .bp_block {
+  .bp_block {
     padding: 0 16px 40px;
   }
 
@@ -8382,16 +8429,6 @@ img {
     margin-bottom: 20px;
   }
 
-  .fcc_vs {
-    margin-top: 11px !important;
-  }
-  .fcc_vs:before {
-    font-size: 14px !important;
-  }
-  .fcc_vs > div:nth-child(1) {
-    margin-right: 30px !important;
-  }
-
   .fcc_name {
     font-size: 10px !important;
     margin-bottom: 5px !important;
@@ -8748,15 +8785,46 @@ img {
   .pns_name {
     padding-right: 60px;
   }
+
+  .b_popup, .smi_popup, .manager_popup {
+    height: calc(100vh - 120px);
+  }
+
+  .fc_block {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .fcc_vs:before {
+    font-size: 24px;
+  }
+
+  .fc_2x .fc_number {
+    position: static;
+    margin: 0 auto;
+    transform: translateX(0);
+  }
 }
 /*767*/
+@media only screen and (max-width: 500px) {
+  .fc_block > img {
+    width: 100px !important;
+  }
+}
+/*500*/
 @media only screen and (max-width: 400px) {
-  /*.sfi_img{
-  	float: left;
-  	width: 80px;
-  	height: 80px;
-  	margin: 0 5px 5px 0;
-  }*/
+  .eit_btn {
+    max-width: 100%;
+    width: calc(100% - 32px);
+  }
+
+  .nr_tags.shared .nrt_share {
+    width: 100%;
+  }
+
+  .e_time {
+    width: 100%;
+  }
 }
 /*400*/
 @media only screen and (max-width: 350px) {
@@ -8764,5 +8832,6 @@ img {
     margin-left: 15px;
   }
 }
+/*350*/
 
 /*# sourceMappingURL=style.css.map */

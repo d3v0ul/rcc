@@ -215,45 +215,50 @@ if (document.querySelector(".nri_more")){
 if (document.querySelector(".nri_more")){
     $(".bi_channel").click(function(e) {
     $(".b_popup").removeClass("opened");
+    $("body").addClass('noscroll');
     e.preventDefault();
 });}
 
 if (document.querySelector(".bi_channel.udar")){
     $(".bi_channel.udar").click(function(e) {
     $(".b_popup.udar").addClass("opened");
+    $("body").addClass('noscroll');
     e.preventDefault();
 });}
 
 if (document.querySelector(".bi_channel.matchtv")){
     $(".bi_channel.matchtv").click(function(e) {
     $(".b_popup.matchtv").addClass("opened");
+    $("body").addClass('noscroll');
     e.preventDefault();
 });}
 
 if (document.querySelector(".bi_channel.rentv")){
     $(".bi_channel.rentv").click(function(e) {
     $(".b_popup.rentv").addClass("opened");
+    $("body").addClass('noscroll');
     e.preventDefault();
 });}
 
 if (document.querySelector(".bp_close")){
     $(".bp_close").click(function() {
     $(".b_popup").removeClass("opened");
+    $("body").removeClass('noscroll');
 });}
 
 
 //smi popup
-if (document.querySelector(".smi_btn")){
-$(".smi_btn").click(function(e) {
-    $(".smi_popup").addClass("opened");
-    e.preventDefault();
-    $(".popup_content").addClass("opened");
-    $(".popup_thx").removeClass("opened");
-});}
-if (document.querySelector(".smi_close")){
-    $(".smi_close").click(function() {
-    $(".smi_popup").removeClass("opened");
-});}
+// if (document.querySelector(".smi_btn")){
+// $(".smi_btn").click(function(e) {
+//     $(".smi_popup").addClass("opened");
+//     e.preventDefault();
+//     $(".popup_content").addClass("opened");
+//     $(".popup_thx").removeClass("opened");
+// });}
+// if (document.querySelector(".smi_close")){
+//     $(".smi_close").click(function() {
+//     $(".smi_popup").removeClass("opened");
+// });}
 
 //Прокрутка по якорям
 if (document.querySelector(".ancLinks")){

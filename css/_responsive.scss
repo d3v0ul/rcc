@@ -23,11 +23,42 @@ img {
 	width: 50vh;
 }
 .b2{
-	transform: translateY(-56%);
+	top: calc(50% - 50px);
+	transform: translateY(-50%);
 }
 
 
+
 } /*900h*/
+@media only screen and (min-width: 1024px) and (max-height: 700px){
+.b2{
+	top: calc(50% - 100px);
+	transform: translateY(-50%);
+}
+.ns_content .c_head {
+  font-size: 12vh;
+}
+.nsb_name{
+	font-size: 2.5vh;
+}
+
+} /*700h*/
+@media only screen and (min-width : 1900px){
+.news_slider{
+	.owl-item{
+		min-height: 820px !important;
+	}
+}
+.ns_content{
+	width: 640px;
+}
+.ns_img{
+	width: 100%;
+	max-width: 640px;
+}
+
+
+} /*1900+*/
 @media only screen and (min-width : 1600px){
 .fighter{
 	.mf_img{
@@ -71,11 +102,6 @@ img {
 	&:before{
 		font-size: 2vw;
 	}
-	>div{
-		&:nth-child(1){
-			margin-right: 6.6vw;
-		}
-	}
 }
 .fcc_name{
 	font-size: 1.3vw;
@@ -99,7 +125,7 @@ img {
 		}
 	}
 	.fc_content{
-		top: 2.5vw;
+		top: 1.3vw;
 	}
 	.fcc_head{
 		font-size: 3.1vw;
@@ -110,9 +136,7 @@ img {
 			font-size: 1vw;
 		}
 		>div{
-			&:nth-child(1){
-				margin-right: 3.3vw;
-			}
+			
 		}
 	}
 	.fcc_name{
@@ -220,6 +244,21 @@ img {
 
 
 } /*1350*/
+@media only screen and (max-width : 1300px){
+.news_socials{
+	padding-top: 104px;
+}
+.nc_head{
+	br{
+		&.mob{
+			display: block !important;
+		}
+	}
+}
+
+
+
+} /*1300*/
 @media only screen and (max-width : 1260px){
 .f_type{
 	left: 40%;
@@ -324,13 +363,6 @@ img {
 .mf_socials{
 	margin-top: 50px;
 }
-.nc_head{
-	br{
-		&.mob{
-			display: block !important;
-		}
-	}
-}
 .mac_btn{
 	transform: translateX(0);
 }
@@ -410,6 +442,9 @@ footer{
 	font-size: 24px;
 	line-height: 112%; 
 	margin: 20px 0 40px;
+	>br{
+		display: block;
+	}
 }
 .f_type{
 	position: static;
@@ -510,7 +545,7 @@ footer{
 }
 .bi_center{
 	position: absolute;
-	top: 24px;
+	top: 27px;
 	right: 20px;
 	>span{
 		font-size: 28px;
@@ -1457,9 +1492,7 @@ h1{
 			font-size: 2vw;
 		}
 		>div{
-			&:nth-child(1){
-				margin-right: 6.6vw;
-			}
+			
 		}
 	}
 	.fcc_name{
@@ -1536,7 +1569,9 @@ h1{
 		width: 100%;
 	}
 }
-
+.bp_block{
+	padding: 0 24px 40px;
+}
 
 } /*1025*/
 @media only screen and (min-width : 767px){ /*+767*/
@@ -1742,9 +1777,6 @@ footer{
 .f_slogan{
 	font-size: 18px;
 	margin-bottom: 130px;
-	br{
-		display: block;
-	}
 }
 .f_type{
 	>li{
@@ -1924,8 +1956,9 @@ footer{
 .eit_text{
 	left: 50%;
 	bottom: 50%;
-	transform: translate3d(-50%, 50%, 0);
+	transform: translate3d(-50%, 10%, 0);
 	font-size: 46px;
+	text-align: center;
 	&.old{
 		position: absolute;
 		float: none;
@@ -2252,6 +2285,10 @@ footer{
 }
 .nr_top{
 	text-align: left;
+	>img{
+		height: auto !important;
+		width: 100%;
+	}
 }
 .nrt_name{
 	font-size: 16px;
@@ -2286,7 +2323,6 @@ footer{
 		.nrt_share{
 			display: block;
 			position: static;
-			width: 100%;
 			font-size: 10px;
 		}
 	}
@@ -2461,10 +2497,8 @@ footer{
 		}		
 	}
 }
-.popup_content{
-	.bp_block{
-		padding: 0 16px 40px;
-	}
+.bp_block{
+	padding: 0 16px 40px;
 }
 .smi_contact{
 	font-size: 14px;
@@ -3138,17 +3172,6 @@ footer{
 	letter-spacing: 4.16px;
 	margin-bottom: 20px; 
 }
-.fcc_vs{
-	margin-top: 11px !important;
-	&:before{
-		font-size: 14px !important;
-	}
-	>div{
-		&:nth-child(1){
-			margin-right: 30px !important;
-		}
-	}
-}
 .fcc_name{
 	font-size: 10px !important;
 	margin-bottom: 5px !important;
@@ -3487,24 +3510,54 @@ footer{
 .pns_name{
 	padding-right: 60px;
 }
-
-
-
-
-
+.b_popup{
+	height: calc(100vh - 120px);
+}
+.fc_block{
+	height: auto;
+	padding-bottom: 40px;
+}
+.fcc_vs{
+	&:before{
+		font-size: 24px;
+	}
+}
+.fc_2x{
+	.fc_number{
+		position: static;
+		margin: 0 auto;
+		transform: translateX(0);
+	}
+}
 
 
 
 
 } /*767*/
+@media only screen and (max-width : 500px){
+.fc_block{
+	>img{
+		width: 100px !important;
+	}
+}
+
+} /*500*/
 @media only screen and (max-width : 400px){
 
-/*.sfi_img{
-	float: left;
-	width: 80px;
-	height: 80px;
-	margin: 0 5px 5px 0;
-}*/
+.eit_btn{
+	max-width: 100%;
+	width: calc(100% - 32px);
+}
+.nr_tags{
+	&.shared{
+		.nrt_share{
+			width: 100%;
+		}
+	}
+}
+.e_time{
+	width: 100%;
+}
 
 } /*400*/
 @media only screen and (max-width : 350px){
@@ -3512,4 +3565,5 @@ footer{
 	margin-left: 15px;
 }
 
-}
+
+} /*350*/
