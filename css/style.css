@@ -134,10 +134,6 @@ body.noscroll {
   overflow: hidden;
 }
 
-.owl-carousel .owl-item img {
-  display: block !important;
-}
-
 .mma_touch {
   display: none;
   background: url(../images/mma_touch.png) center bottom no-repeat;
