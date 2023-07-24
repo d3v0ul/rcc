@@ -197,12 +197,14 @@ function mainPageAnimation (event) {
     if ((event.deltaY < 0 || event.detail < 0 || event.wheelDelta > 0 || event.deltaY < 0) && num === 1) {
         b1_2.addClass("hidden");
         mouse_icon.show();
+        $(".use_scroll, .mouse_icon").show();
         ft_l.removeClass("resize");
-        ft_r.removeClass("resize");
+        ft_r.removeClass("resize"); 
     }
     if ((event.deltaY > 0 || event.detail > 0 || event.wheelDelta < 0 || event.deltaY > 0) && num === 2) {
         b1_2.removeClass("hidden");
-        mouse_icon.hide();
+        mouse_icon.hide();  
+        $(".use_scroll, .mouse_icon").hide();      
         ft_l.addClass("resize");
         ft_r.addClass("resize");
     }
