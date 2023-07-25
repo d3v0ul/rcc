@@ -420,7 +420,8 @@ var pnsSlider;
 var pns;
 
 function pnsSwitcher () {
-    pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');  
+    // pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)'); 
+    pns = window.matchMedia('all and (max-width: 1025px)');  
     console.log(pns.matches)    
     if (pns.matches) {
         pnsSlider.addClass('owl-carousel');

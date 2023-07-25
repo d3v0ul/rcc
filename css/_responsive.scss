@@ -3046,13 +3046,14 @@ footer{
 }
 
 
-.popular_news_slider{
+/*.popular_news_slider{
 	>div{		
 		margin-bottom: 30px;
 	}
-}
+}*/
 .pns_content{
 	width: 100%;
+	max-width: 328px;
 	img{
 		width: 100%;
 	}

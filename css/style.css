@@ -584,7 +584,8 @@ header.h_main {
 }
 
 .slide_n_show_pos {
-  top: 0 !important;
+  /*top:0 !important;*/
+  transform: translateY(0) !important;
 }
 
 .b1b_date {
@@ -613,7 +614,8 @@ header.h_main {
   font-weight: 500;
   letter-spacing: 0.16em;
   transition: top 1s;
-  top: -3vw;
+  /*top: -3vw;*/
+  transform: translateY(-3vw);
 }
 
 .b1b_all {
@@ -1149,12 +1151,15 @@ footer.main_footer {
 
 .f_left {
   float: left;
-  max-width: 340px;
+  max-width: 346px;
 }
 
 .f_logo {
   display: inline-block;
   max-width: 346px;
+}
+.f_logo > img {
+  display: block;
 }
 
 .f_slogan {
@@ -1961,7 +1966,7 @@ footer.main_footer {
     }*/
 }
 .popular_news_slider.gray .pns_content img {
-  filter: grayscale(100%);
+  /*filter: grayscale(100%);*/
 }
 .popular_news_slider > div:last-child {
   margin-right: 0;
@@ -2526,7 +2531,6 @@ footer.main_footer {
 
 .e_block {
   margin-top: 40px;
-  height: 600px;
   position: relative;
   overflow: hidden;
   /*&.eb_1{
@@ -2534,14 +2538,14 @@ footer.main_footer {
   }*/
 }
 
+.eb_link {
+  display: block;
+}
+
 .eb_img {
   display: block;
-  width: 100% !important;
+  width: 100%;
   max-width: 1520px;
-  height: 100% !important;
-  object-fit: cover !important;
-  position: relative !important;
-  top: 0;
 }
 
 .eb_content {
@@ -2640,29 +2644,33 @@ footer.main_footer {
   float: left;
   width: calc(50% - 7px);
   position: relative;
+  overflow: hidden;
+  /*&:after{
+  	display: none;
+  	content: '';
+  	width: 100%;
+  	height: 100%;
+  	background: #E04141;
+  	@include opa(2);
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  }*/
+  /*&:hover:after{
+  	display: block;		
+  }*/
 }
 .e_twins > a:nth-child(even) {
   float: right;
 }
-.e_twins > a:after {
-  display: none;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: #E04141;
-  filter: alpha(Opacity=20);
-  opacity: 0.2;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.e_twins > a:hover:after {
-  display: block;
+.e_twins > a:hover > img {
+  transform: scale(1.1);
 }
 .e_twins > a > img {
   display: block;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
 }
 .e_twins > a > span {
   display: inline-block;
@@ -8296,12 +8304,14 @@ img {
     letter-spacing: 0.4px;
   }
 
-  .popular_news_slider > div {
-    margin-bottom: 30px;
-  }
-
+  /*.popular_news_slider{
+  	>div{		
+  		margin-bottom: 30px;
+  	}
+  }*/
   .pns_content {
     width: 100%;
+    max-width: 328px;
   }
   .pns_content img {
     width: 100%;
