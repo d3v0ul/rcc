@@ -450,15 +450,15 @@ function pnsSwitcher () {
             loop: false,
             margin: 16,
             autoWidth: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    autoWidth: false,
-                },
-                500: {
+            // responsive: {
+            //     0: {
+            //         items: 1,
+            //         autoWidth: false,
+            //     },
+            //     500: {
     
-                }
-            }
+            //     }
+            // }
         });
     } else {
         pnsSlider.removeClass('owl-carousel');

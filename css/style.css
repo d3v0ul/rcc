@@ -8833,7 +8833,7 @@ img {
   }
 
   .pns_name {
-    padding-right: 60px;
+    padding-right: 0;
   }
 
   .b_popup, .smi_popup, .manager_popup {
