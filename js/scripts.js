@@ -247,6 +247,25 @@ if (document.querySelector(".bp_close")){
 });}
 
 
+//fighter fixed
+var fif = window.matchMedia('all and (min-width: 1200px)');
+if (fif.matches) {
+    var $element = $('footer');
+    let counter = 0;
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop() + $(window).height();
+        var offset = $element.offset().top
+        if (scroll > offset && counter == 0) {
+            $(".ft_left").addClass('footed');
+        } else{
+            $(".ft_left").removeClass('footed');
+        }
+    });
+} else {}
+
+    
+
+
 //smi popup
 // if (document.querySelector(".smi_btn")){
 // $(".smi_btn").click(function(e) {
@@ -313,7 +332,7 @@ new WOW().init();
 
 //phone mask
 $(function($){
-   $(".phone").mask("+7 (999) 999-9999");
+   $(".phone").mask("+ (9)(999) 999-9999");
 });
 
 

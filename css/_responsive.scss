@@ -157,26 +157,46 @@ img {
 	.fcc_time{
 		font-size: 0.75vw;
 	}
-	.fc_number{
-		bottom: 4.5vw;
-	}
-	.fc_number{
+	/*.fc_number{
 		width: 25px;
 		height: 25px;
 		line-height: 23px;
 		font-size: 14px;
+		bottom: 4.5vw;
 	}
 	.fc_weight{
 		width: 120px;
 		height: 40px;
 		font-size: 12px;
 		line-height: 40px;
+	}*/
+	.fc_number{
+		width: 2.75vw;
+		height: 2.75vw;
+		line-height: 2.75vw;
+		font-size: 1.5vw;
+		bottom: 4vw;
+	}
+	.fc_weight{
+		width: 9vw;
+		height: 3vw;
+		font-size: 0.8vw;
+		line-height: 3vw;
 	}
 }
 .eit_back{
 	left: 40px;
 	transform: translateX(0);
 }
+.eb_text_2{
+	font-size: 6vw;
+	margin: 2.5vw 0;
+}
+.ft_left{
+	left: 40px;
+	transform: translateX(0);
+}
+
 
 } /*1600*/
 @media only screen and (max-width : 1450px){
@@ -332,6 +352,8 @@ img {
 	float: none;
 	width: 100%;
 	margin-bottom: 30px;
+	position: static;
+	transform: translateX(0);
 }
 .ft_right{
 	width: 100%;

@@ -2765,9 +2765,10 @@ footer{
 .fcc_head{
 	font-size: 96px;
 	font-family: $r;
-	font-weight: 700;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: 15.36px;
 	font-style: italic;
-	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	color: #E04141;
 }
@@ -3337,11 +3338,21 @@ footer{
 .fighter{
 	@extend %ct;
 	margin: 120px auto 50px;
+	position: relative;
 }
 .ft_left{
 	display: block;
 	float: left;
 	width: 580px;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-760px);
+	top: 120px;
+	&.footed{
+		position: absolute;
+		bottom: 120px;
+		top: auto;
+	}
 }
 .ft_head{
 	@extend .bp_head;

@@ -2897,9 +2897,10 @@ footer.main_footer {
 .fcc_head {
   font-size: 96px;
   font-family: "Druk Cyr";
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 15.36px;
   font-style: italic;
-  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #E04141;
 }
@@ -3503,12 +3504,22 @@ footer.main_footer {
 /*fighter*/
 .fighter {
   margin: 120px auto 50px;
+  position: relative;
 }
 
 .ft_left {
   display: block;
   float: left;
   width: 580px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-760px);
+  top: 120px;
+}
+.ft_left.footed {
+  position: absolute;
+  bottom: 120px;
+  top: auto;
 }
 
 .ft_text {
@@ -5165,6 +5176,21 @@ img {
     bottom: 9vw;
   }
 
+  .fc_2x {
+    /*.fc_number{
+    	width: 25px;
+    	height: 25px;
+    	line-height: 23px;
+    	font-size: 14px;
+    	bottom: 4.5vw;
+    }
+    .fc_weight{
+    	width: 120px;
+    	height: 40px;
+    	font-size: 12px;
+    	line-height: 40px;
+    }*/
+  }
   .fc_2x .fc_block {
     padding-top: 10px;
   }
@@ -5195,22 +5221,30 @@ img {
     font-size: 0.75vw;
   }
   .fc_2x .fc_number {
-    bottom: 4.5vw;
-  }
-  .fc_2x .fc_number {
-    width: 25px;
-    height: 25px;
-    line-height: 23px;
-    font-size: 14px;
+    width: 2.75vw;
+    height: 2.75vw;
+    line-height: 2.75vw;
+    font-size: 1.5vw;
+    bottom: 4vw;
   }
   .fc_2x .fc_weight {
-    width: 120px;
-    height: 40px;
-    font-size: 12px;
-    line-height: 40px;
+    width: 9vw;
+    height: 3vw;
+    font-size: 0.8vw;
+    line-height: 3vw;
   }
 
   .eit_back {
+    left: 40px;
+    transform: translateX(0);
+  }
+
+  .eb_text_2 {
+    font-size: 6vw;
+    margin: 2.5vw 0;
+  }
+
+  .ft_left {
     left: 40px;
     transform: translateX(0);
   }
@@ -5355,6 +5389,8 @@ img {
     float: none;
     width: 100%;
     margin-bottom: 30px;
+    position: static;
+    transform: translateX(0);
   }
 
   .ft_right {
