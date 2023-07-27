@@ -7,6 +7,12 @@ img {
 	height: auto;
 }
 /* MEDIA QUERIES*/
+/*@media screen and (-webkit-min-device-pixel-ratio: 0) {
+select:focus, textarea:focus, input:focus {
+        font-size: 10px;
+    }
+}*/
+
 
 /*vertical medias*/
 @media only screen and (min-width: 1024px) and (max-height: 900px){
