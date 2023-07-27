@@ -197,6 +197,16 @@ img {
 	transform: translateX(0);
 }
 
+.bi_center{
+	>span{
+		>span{
+			&:last-child{
+				left: 37vw;
+			}			
+		}
+	}
+}
+
 
 } /*1600*/
 @media only screen and (max-width : 1450px){
@@ -260,7 +270,7 @@ img {
 		font-size: 2.6vw;
 		>span{
 			&:last-child{
-				margin-left: 5vw;
+				
 			}			
 		}
 	}
@@ -407,6 +417,9 @@ img {
 
 } /*1200*/
 @media only screen and (min-width : 1026px){
+.news{
+	position: relative;
+}
 .news_left{
 	position: fixed;
 	max-width: 360px;
@@ -414,9 +427,9 @@ img {
 	transform: translateX(0);
 	height: calc(100vh - 126px);
 	&.static{
-		max-width: 340px;
-		position: static;
+		position: absolute;
 		height: auto;
+		bottom: 126px;
 		transform: translateX(0);
 	}
 }
@@ -586,6 +599,8 @@ footer{
 			}		
 			&:nth-child(2){
 				margin-left: 8px;
+				position: static;
+				transform: translateY(0);
 			}		
 		}
 	}
@@ -3178,20 +3193,41 @@ footer{
 
 .fc_block{
 		width: 100%;
-		height: 328px;
-		padding-top: 10px;
+		height: 400px;
+		padding: 28px 0 0;
 		text-align: center;
+		overflow: hidden;
 		>img{
-			width: 140px !important;
+			width: 224px !important;
 			height: auto !important;
 			position: absolute;
 			bottom: 0;
-			left: 0;
+			left: -95px;
 			&:nth-child(2){
 				left: auto;
-				right: 0;
+				right: -95px;
 			}
 		}
+}
+.fcc_vs{
+	margin-top: 20px;
+	&:before{
+		font-size: 10px !important;
+	}
+}
+.fc_2x{
+	.fcc_vs{
+		margin-top: 37px;
+	}
+	.fc_number{
+		width: 24px;
+		height: 21px;
+		font-size: 16px;
+		line-height: 19px;
+		position: static;
+		margin: 50px auto 0;
+		transform: translateX(0);
+	}
 }
 .fc_content{
 		top: 25px !important;
@@ -3224,16 +3260,6 @@ footer{
 	font-weight: 700;
 	letter-spacing: 0.4px; 
 	padding: 0 5px;
-}
-.fc_2x{	
-	.fc_number{
-		width: 48px;
-		height: 48px;
-		line-height: 46px;
-		font-size: 16px;
-		bottom: auto;
-		top: 108px;
-	}
 }
 .rt_head{
 	text-align: center;
@@ -3547,33 +3573,18 @@ footer{
 .b_popup{
 	height: calc(100vh - 120px);
 }
-.fc_block{
-	height: auto;
-	padding-bottom: 40px;
-}
-.fcc_vs{
-	&:before{
-		font-size: 24px;
-	}
-}
-.fc_2x{
-	.fc_number{
-		position: static;
-		margin: 0 auto;
-		transform: translateX(0);
-	}
-}
+
 
 
 
 
 } /*767*/
 @media only screen and (max-width : 500px){
-.fc_block{
+/*.fc_block{
 	>img{
 		width: 100px !important;
 	}
-}
+}*/
 
 } /*500*/
 @media only screen and (max-width : 400px){

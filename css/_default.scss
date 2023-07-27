@@ -72,6 +72,19 @@ body{
 		overflow: hidden;
 	}
 }
+.mask{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	width: 100%;
+	height: 100vh;
+	background: rgba(43,43,43,0.5);
+	&.visible{
+		display: block;
+	}
+}
 .mma_touch{
 	display: none;
 	background: url(../images/mma_touch.png) center bottom no-repeat;
@@ -2181,9 +2194,14 @@ footer{
 		letter-spacing: -0.72px;
 		text-transform: uppercase;
 		margin-left: 68px;
+		position: relative;
 		>span{
 			&:last-child{
-				margin-left: 70px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 590px;
+				text-align: left;
 			}			
 		}
 	}
@@ -2208,7 +2226,7 @@ footer{
 	overflow: hidden;
 	height: calc(100vh - 85px);
 	position: fixed;
-	z-index: 6;
+	z-index: 7;
 	background: #1D1D1D;
 	left: 0;
 	bottom: 0;
@@ -2301,13 +2319,14 @@ footer{
 	font-size: 24px;
 	line-height: 120%;	
 	&.strings_3{
-		overflow: hidden;
+		/*overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
+		-webkit-box-orient: vertical;*/
 	}
 }
 .bp_text_all{	
+	display: none;
 	>span{
 		display: inline-block;
 		font-size: 24px;
@@ -2320,7 +2339,7 @@ footer{
 		>span{
 			display: none;
 		}
-		&:after{
+		/*&:after{
 			display: inline-block;
 			content: 'Скрыть';
 			cursor: pointer;
@@ -2328,7 +2347,7 @@ footer{
 			line-height: 120%;
 			color: #E04141;
 			margin-top: 7px;
-		}
+		}*/
 	}
 }
 .bp_tvs{
@@ -4821,26 +4840,29 @@ transition: all 0.7s linear 0s;
 	}
 	&.old{
 		>img{
-			filter: grayscale(100%);
+			/*filter: grayscale(100%);*/
 		}
 	}
 	&:hover{
-		>div{
-			>img{
+		img{
 				transform: scale(1.1);
 			}
-		}		
-		.pns_name{
-			
-		}
-		.pns_date{
-			
-		}
 	}
 	>img{
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 20px;		
 		transition: .3s;
+	}
+}
+.pns_img{
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+	>img{
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.3s;
 	}
 }
 

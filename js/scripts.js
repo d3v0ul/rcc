@@ -223,6 +223,7 @@ if (document.querySelector(".bi_channel.udar")){
     $(".bi_channel.udar").click(function(e) {
     $(".b_popup.udar").addClass("opened");
     $("body").addClass('noscroll');
+    $(".mask").addClass('visible');
     e.preventDefault();
 });}
 
@@ -230,6 +231,7 @@ if (document.querySelector(".bi_channel.matchtv")){
     $(".bi_channel.matchtv").click(function(e) {
     $(".b_popup.matchtv").addClass("opened");
     $("body").addClass('noscroll');
+    $(".mask").addClass('visible');
     e.preventDefault();
 });}
 
@@ -237,15 +239,33 @@ if (document.querySelector(".bi_channel.rentv")){
     $(".bi_channel.rentv").click(function(e) {
     $(".b_popup.rentv").addClass("opened");
     $("body").addClass('noscroll');
+    $(".mask").addClass('visible');
     e.preventDefault();
 });}
 
 if (document.querySelector(".bp_close")){
-    $(".bp_close").click(function() {
+    $(".bp_close, .mask").click(function() {
     $(".b_popup").removeClass("opened");
     $("body").removeClass('noscroll');
+    $(".mask").removeClass('visible');
 });}
 
+
+//news fixed
+var nif = window.matchMedia('all and (min-width: 1024px)');
+if (nif.matches) {
+    var $element = $('razdel');
+    let counter = 0;
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop() + $(window).height();
+        var offset = $element.offset().top
+        if (scroll > offset && counter == 0) {
+            $(".news_left").addClass('static');
+        } else{
+            $(".news_left").removeClass('static');
+        }
+    });
+} else {}
 
 //fighter fixed
 var fif = window.matchMedia('all and (min-width: 1200px)');
@@ -331,9 +351,9 @@ new WOW().init();
 
 
 //phone mask
-$(function($){
-   $(".phone").mask("+ (9)(999) 999-9999");
-});
+// $(function($){
+//    $(".phone").mask("+ (9)(999) 999-9999");
+// });
 
 
 //custom scrollbar
