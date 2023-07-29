@@ -2624,6 +2624,21 @@ footer{
 		margin: 0 15px 10px 0;
 	}
 }
+.radios{
+	width: 100%;
+	float: none;
+	border: 1px solid #2B2B2B;
+	padding: 15px 15px 5px;
+	>li{
+		margin: 0 15px 10px 0;
+		>label{
+			>span{
+			font-size: 10px;
+			text-transform: uppercase;			
+			}
+		}
+	}
+}
 .sfi_label{
 	width: 100px;
 	font-size: 14px;

@@ -3232,6 +3232,41 @@ footer{
 		}
 	}
 }
+/*radio style*/
+.radios{
+	float: left;
+	width: calc(100% - 230px);
+	max-width: 320px;
+	>li{
+		display: inline-block;
+		vertical-align: top;
+		margin: 3px 20px 12px 0;		
+		transition: .3s;
+		>input{
+			display:none !important;
+			&:checked + label{				
+				>span{
+					color: #E04141;
+				}
+			}
+		}
+		>label{
+			cursor: pointer;
+  		position: relative;
+			>span{
+				display: block;
+				color: #7F3030;
+				font-size: 14px;
+				font-weight: 700;
+				-moz-user-select: none;
+				-khtml-user-select: none;
+				user-select: none; 
+			}
+		}
+	}
+}
+/*end of radio style*/
+
 .sfi_label{
 	width: 180px;
 	float: left;
@@ -4895,3 +4930,4 @@ transition: all 0.7s linear 0s;
 	margin-top: 120px;
 	max-width: 880px;
 }
+

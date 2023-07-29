@@ -3395,6 +3395,39 @@ footer.main_footer {
   color: #E04141;
 }
 
+/*radio style*/
+.radios {
+  float: left;
+  width: calc(100% - 230px);
+  max-width: 320px;
+}
+.radios > li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 20px 12px 0;
+  transition: 0.3s;
+}
+.radios > li > input {
+  display: none !important;
+}
+.radios > li > input:checked + label > span {
+  color: #E04141;
+}
+.radios > li > label {
+  cursor: pointer;
+  position: relative;
+}
+.radios > li > label > span {
+  display: block;
+  color: #7F3030;
+  font-size: 14px;
+  font-weight: 700;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+/*end of radio style*/
 .sfi_label {
   width: 180px;
   float: left;
@@ -7875,6 +7908,20 @@ select:focus, textarea:focus, input:focus {
     font-size: 10px;
     text-transform: uppercase;
     margin: 0 15px 10px 0;
+  }
+
+  .radios {
+    width: 100%;
+    float: none;
+    border: 1px solid #2B2B2B;
+    padding: 15px 15px 5px;
+  }
+  .radios > li {
+    margin: 0 15px 10px 0;
+  }
+  .radios > li > label > span {
+    font-size: 10px;
+    text-transform: uppercase;
   }
 
   .sfi_label {
