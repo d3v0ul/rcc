@@ -48,6 +48,19 @@ select:focus, textarea:focus, input:focus {
 .nsb_name{
 	font-size: 2.5vh;
 }
+.m_logo{
+	width: 190vh;
+}
+.m_col{
+	img{
+	width: 65vh;
+	max-height: none;
+	}
+}
+.mt_names{
+	font-size: 8vh !important;
+	margin: 1.2vh 0;
+}
 
 } /*700h*/
 
@@ -99,6 +112,12 @@ select:focus, textarea:focus, input:focus {
 
 } /*+1600*/
 @media only screen and (max-width : 1600px){
+.mt_content{
+	left: 40px;
+	right: auto;
+	padding: 0;
+	transform: translateX(0);
+}
 .fc_block{
 	>img{
 		width: 27vw;
@@ -1645,9 +1664,6 @@ h1{
 	&.mc_1{
 		&:before, &:after{
 			display: none;
-		}
-		.mt_content{
-			padding-left: 10px;
 		}
 	}
 	&:before{
