@@ -265,10 +265,6 @@ $(document).ready(() => {
         $('.burger').removeClass('red');
         $('.b2b_all').removeClass('red');
       }
-
-      if (index === 3) {
-        toggleHeaderDark()
-      }
     },
     onLeave(index, nextIndex, direction) {
       leaveFromSection(index)
@@ -279,6 +275,10 @@ $(document).ready(() => {
       }
 
       if (index === 3 && nextIndex === 2) {
+        toggleHeaderDark()
+      }
+
+      if (index === 2 && nextIndex === 3) {
         toggleHeaderDark()
       }
     }

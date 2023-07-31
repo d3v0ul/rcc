@@ -157,6 +157,10 @@ header{
 	transition: all 1s;
 	&.h_main{
 		background: rgba(29, 29, 29, 0);
+
+		&.dark {
+			background: rgba(29, 29, 29, 0);
+		}
 	}
 }
 .header{
@@ -416,7 +420,7 @@ header{
 		bottom: -100vh;
 	}
 	.b1b_all{
-		bottom: -50px;
+		bottom: -45px;
 		/*transition: .2s;*/
 		opacity: 0;
 		visibility: hidden;
@@ -586,7 +590,7 @@ header{
 		height: 10px;
 		background: #E04141;
 		position: absolute;
-		top: -23px;
+		top: -17px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -843,9 +847,8 @@ header{
 	text-transform: uppercase;
 	font-weight: 700;
 	transition: .3s;
-	margin-top: 50px;
 	position: absolute;
-	bottom: 50px;
+	bottom: 35px;
 	left: 50%;
 	transform: translateX(-50%);
 	&:hover{
@@ -858,7 +861,7 @@ header{
 		height: 10px;
 		background: #E04141;
 		position: absolute;
-		top: -22px;
+		top: -17px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -879,7 +882,7 @@ header{
 		bottom: 40px;
 	}
 	&.gray{
-		background: url(../images/b2_bg_gray.svg) center 100px no-repeat;
+		background: url(../images/b2_bg.svg) center 100px no-repeat;
 		.b2b_all{
 			&:before{
 				background: #E04141;
@@ -943,6 +946,7 @@ header{
 	transition: .3s;
 	overflow: hidden;
 	.ns_img{
+		display: block !important;
 		transition: .8s;
 		&:hover{
 			transform: scale(1.1);
@@ -959,6 +963,7 @@ header{
 	}
 }
 .img-wrap{
+	display: block;
 	overflow: hidden;
 }
 .ns_bot{
