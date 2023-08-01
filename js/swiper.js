@@ -26,7 +26,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 		},
 		clikable: true,
 		setWrapperSize: true,
-	  autoHeight: true,
+	 	autoHeight: true,
 		// Default parameters
 
 		// Responsive breakpoints
@@ -55,14 +55,13 @@ if (document.querySelector('.burger-popup__slider') ) {
 	// Дополнение к coverflow
 		coverflowEffect: {
 			// Угол
-			rotate: 0,
+			rotate: -25,
 			// Наложение
-			stretch: 0,
+			stretch: 80,
 			//  Глубина удаления слайдов
 			depth: 600,
 			// Тень
 			slideShadows: false,
-			
 		},
 		// Управление колесом мыши
 		mousewheel: {
@@ -72,7 +71,6 @@ if (document.querySelector('.burger-popup__slider') ) {
 			// будет срабатывать прокрутка мышью.
 			//eventsTarget: ".image-slider"
 		},
-
 	});
 
 }

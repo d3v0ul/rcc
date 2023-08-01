@@ -3669,7 +3669,18 @@ footer{
 	}
 }*/
 
+.burger-popup__slider{
+	height: 220vmin !important;
+}
+
 } /*500*/
+
+@media only screen and (max-height : 600px) and (max-width: 767px) and (orientation: landscape){
+	.burger-popup__slider{
+		display: none;
+	}
+}
+
 @media only screen and (max-width : 400px){
 
 .eit_btn{
