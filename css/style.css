@@ -197,10 +197,6 @@ body.noscroll {
   margin: 0 auto;
 }
 
-.rating .owl-stage-outer {
-  padding-left: 40px;
-}
-
 header {
   width: 100%;
   height: 104px;
@@ -5196,14 +5192,11 @@ select:focus, textarea:focus, input:focus {
 }
 /*700h*/
 @media only screen and (min-width: 1024px) and (max-height: 400px) {
-  .ft_l {
-    transform: translate3d(-81%, -50%, 0) scale(0.3);
-  }
   .ft_l.resize {
     transform: translate3d(-18%, -50%, 0) scale(0.3);
   }
 
-  .ft_r.resize.resize {
+  .ft_r.resize {
     transform: translate3d(-18%, -50%, 0) scale(0.3);
   }
 
@@ -6272,7 +6265,7 @@ select:focus, textarea:focus, input:focus {
   }
 
   .rating > .content .owl-stage-outer {
-    padding-left: 24px;
+    /*padding-left: 24px;*/
   }
   .rating > .content > .fighters {
     padding: 0;
