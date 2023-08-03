@@ -34,15 +34,26 @@ if (document.querySelector('.burger-popup__slider') ) {
 			300: {
 				slidesPerView: 5,
 				spaceBetween: 20,
-				
+				effect: 'coverflow',
+				coverflowEffect: {
+					// Угол
+					rotate: -25,
+					// Наложение
+					stretch: 0,
+					//  Глубина удаления слайдов
+					depth: 600,
+					// Тень
+					slideShadows: false,
+				},
 			},
 			768: {
 				slidesPerView: 5,
-				spaceBetween: 38,
+				spaceBetween: 0,
+
 			},
 			992: {
 				slidesPerView: 5,
-				spaceBetween: 45,
+				spaceBetween: 0,
 			},
 		},
 		// autoplay: {
@@ -57,7 +68,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 			// Угол
 			rotate: -25,
 			// Наложение
-			stretch: 80,
+			stretch: 50,
 			//  Глубина удаления слайдов
 			depth: 600,
 			// Тень

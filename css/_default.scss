@@ -282,6 +282,24 @@ header{
 	background: url(../images/top_popup_bg.jpg) center no-repeat;
 	background-size: cover;
 }
+.bp_on_main{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 16.8px;
+	font-weight: 700;
+	color: #E04141;
+	text-transform: uppercase;
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 85px;
+	transition: .3s;
+	&:hover{
+		@include opa(5);		
+	}
+}
 .vert_slider_demo{
 	display: block;
 	width: 60vw;
@@ -2106,10 +2124,13 @@ footer{
 		letter-spacing: 0.56px;
 		text-transform: uppercase;
 		font-weight: 700;
-		opacity: .2;	
+		opacity: .2;
+		&.current{
+			background: #E04141;
+			opacity: 1;
+		}
 	}
-	&:hover{
-		background: #E04141;
+	&:hover{		
 		color: #fff;
 		>a{
 			opacity: 1;
@@ -4050,7 +4071,7 @@ footer{
 				display: inline-block;
 				vertical-align: middle;
 				border-radius: 50%;
-				background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+				background: rgba(0, 0, 0, 0.2);
 				>img{
 					display: block;
 					border-radius: 50%;
@@ -4134,6 +4155,7 @@ footer{
 }
 .mf_top{
 	@extend %ct;
+	height: 100%;
 	position: relative;
 }
 .mf_back{
@@ -4163,8 +4185,9 @@ footer{
 }
 .mf_name{
 	font-style: italic;
-	font-size: 96px;
-	letter-spacing: 0.16em;
+	font-size: 80px;
+	line-height: 110%; 
+	letter-spacing: 15.36px;
 	font-family: $r;
 	text-transform: uppercase;	
 }
@@ -4342,6 +4365,11 @@ footer{
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 60px 0;
 	padding-top: 70px;
+	&.no_border{
+		.mfs_item{
+			border-bottom: none;
+		}
+	}
 }
 .mfs_item{
 	border-bottom: 1px solid #333;
@@ -4595,14 +4623,14 @@ footer{
   min-width: 0px;
   min-height: 0px;
   width:100%;
-  height: 190vmin !important;
+  height: 190%;
   overflow: hidden;
   border-radius: 0 !important;
 }
 
 @media(max-width:991.98px){
   .burger-popup__slider {
-   height: 294vmin !important;
+   height: 150%;
   }
 }
 @media(max-width:767px){
@@ -4652,7 +4680,6 @@ transition: all 0.7s linear 0s;
   top:50%;
   transform:translateY(-50%);
   left:9%;
-  width:130px;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -4663,6 +4690,15 @@ transition: all 0.7s linear 0s;
 	letter-spacing: 0.56px;
   font-size: 14px;
   line-height: 1.3;
+  p{
+  	text-align: center;
+  	font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 140%;
+		letter-spacing: 0.56px;
+		text-transform: uppercase;
+  }
 }
 @media(min-width:1400px){
   .burger-popup__slide-text{
@@ -4673,7 +4709,6 @@ transition: all 0.7s linear 0s;
 @media(min-width:2000px){
   .burger-popup__slide-text{
     font-size: 30px;
-    width:220px;
   }
 }
 .burger-popup__active-box{
@@ -4683,8 +4718,8 @@ transition: all 0.7s linear 0s;
   transform:translate(-50%, -50%);
   left:50%;
   width:87%;
-  height: 16vw !important;
-//   border-radius: 15px;
+	max-height: 220px;
+	height: 16vw;
   background-color: #333;
 }
 
@@ -4712,20 +4747,13 @@ transition: all 0.7s linear 0s;
   }
   .burger-popup__buttton-prev,
   .burger-popup__buttton-next{
-    transform: scale(1.4);
+    
   }
 }
 @media(min-width:2000px){
   .burger-popup__buttons{
     height: 250px;
     gap:150px;
-  }
-  .burger-popup__buttton-prev,
-  .burger-popup__buttton-next{
-    transform: scale(1.7);
-  }
-  .burger-popup__buttton-next{
-  	transform: rotate(180deg) scale(1.7);
   }
 }
 .burger-popup__buttton-prev, .burger-popup__buttton-next {
@@ -4745,10 +4773,12 @@ transition: all 0.7s linear 0s;
   .burger-popup__buttton-next{
    transform: scale(0.8);
   }
+  .burger-popup__buttton-next{
+   transform: rotate(180deg) scale(0.8);
+  }
   .burger-popup__slide-text{
     font-size: 14px;
     left:7%;
-    width:100px;
     height: 100px;
   }
 }
@@ -4760,9 +4790,11 @@ transition: all 0.7s linear 0s;
   .burger-popup__buttton-next{
     transform: scale(0.7);
   }
+  .burger-popup__buttton-next{
+   transform: rotate(180deg) scale(0.7);
+  }
   .burger-popup__slide-text{
     font-size: 10px;
-    width:80px;
     height: 60px;
   }
   .burger-popup__active-box{
@@ -4798,10 +4830,6 @@ transition: all 0.7s linear 0s;
     height:15vw;
   }
 }
-.swiper {}
-.swiper-wrapper {}
-.swiper-slide{}
-
 .swiper-slide .burger-popup__slide-image img {
   filter:grayscale(100%);
   transition: filter 0.2s ease-in-out 0s;
