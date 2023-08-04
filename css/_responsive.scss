@@ -57,15 +57,39 @@ select:focus, textarea:focus, input:focus {
 	max-height: none;
 	}
 }
+
+} /*700h >1024*/
+@media only screen and (max-width: 1024px) and (max-height: 700px){
 .mt_names{
 	font-size: 8vh !important;
 	margin: 1.2vh 0;
 }
 
-} /*700h*/
+.b1_2_content{
+	height: 150px !important;
+	bottom: 52% !important;
+}
+.b1_2_top{	
+	>a{
+		font-size: 10px !important;
+	}
+}
+.b1_2_names{
+	margin: 15px 0 !important;
+	>a{
+		font-size: 46px !important;
+	}
+}
+.b1_2_cat{	
+	>a{
+		font-size: 20px !important;
+		font-weight: 400 !important;
+	}
+}
 
+} /*700h <1024*/
 @media only screen and (min-width: 1024px) and (max-height: 400px){
-/*.ft_l{
+.ft_l{
 	&.resize{
 		transform: translate3d(-18%, -50%, 0);
 	}
@@ -74,7 +98,7 @@ select:focus, textarea:focus, input:focus {
 	&.resize{		
     transform: translate3d(-18%, -50%, 0);
 	}
-}*/
+}
 .b1_2_names {
 	>a{
     font-size: 4vw;
@@ -1373,7 +1397,7 @@ header{
 .ft_l{
 	transform: translate3d(-90%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-93%, -50%, 0) scale(1);
+		transform: translate3d(-93%, -50%, 0);
 		opacity: 1;
 	}
 	&.resize_2{
