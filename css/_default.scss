@@ -401,6 +401,11 @@ header{
 			padding-top: 70px;
     }
 }
+.si_box_img{
+	display: block;
+	width: 100%;
+	margin: 109px 0;
+}
 .b1{
 	width: 100vw;
 	height: 100vh;
@@ -3657,7 +3662,7 @@ footer{
 	img{
 		display: block;
 		max-height: calc(100vh - 100px);
-		max-width: 515px;
+		/*max-width: 515px;*/
 		position: absolute;
 		filter: grayscale(100%);
 		bottom: 0;
@@ -3973,6 +3978,9 @@ footer{
 	font-size: 32px;
 	color: #E04141;
 	margin: 364px 0 69px;
+	&.mact_ai{
+		margin-top: 0;
+	}
 }
 .mac_cols{
 	@extend .cl;

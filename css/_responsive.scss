@@ -88,7 +88,7 @@ select:focus, textarea:focus, input:focus {
 }
 
 } /*700h <1024*/
-@media only screen and (min-width: 1024px) and (max-height: 400px){
+@media only screen and (max-width: 1024px) and (max-height: 400px){
 .ft_l{
 	&.resize{
 		transform: translate3d(-18%, -50%, 0);
@@ -1722,11 +1722,14 @@ h1{
 .burger-popup__slide-text, .burger-popup__buttons{
 	display: none;
 }
+.si_box_img{
+	margin: 10vw 0;
+}
 
 
 } /*1025*/
 @media only screen and (min-width : 767px){ /*+767*/
-.hr_menu{
+/*.hr_menu{
 	>li{
 		>a{
 		font-size: 10px;
@@ -1737,7 +1740,7 @@ h1{
 		text-transform: uppercase;
 		}
 	}
-}
+}*/
 .m_col{
 		&.orange{		
 		background: none !important;
