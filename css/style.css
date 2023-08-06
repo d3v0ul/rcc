@@ -2126,6 +2126,14 @@ footer.main_footer {
   margin-bottom: 40px;
 }
 
+.nr_text_cols.one > div {
+  float: none;
+  width: 100%;
+  text-align: justify;
+}
+.nr_text_cols.one > div:nth-child(1) {
+  padding-right: 0;
+}
 .nr_text_cols > div {
   float: left;
   width: 50%;
@@ -3961,14 +3969,17 @@ footer.main_footer {
 }
 .champs.mma .champ:hover .ch_img:after {
   background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 150%);
+  mix-blend-mode: screen;
   z-index: 2;
 }
 .champs.boxing .champ:hover .ch_img:after {
   background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 150%);
+  mix-blend-mode: screen;
   z-index: 2;
 }
 .champs.fairfight .champ:hover .ch_img:after {
   background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
+  mix-blend-mode: screen;
   z-index: 2;
 }
 
@@ -4021,6 +4032,7 @@ footer.main_footer {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  margin-right: 10px;
 }
 .cht_place.silver {
   background: linear-gradient(225deg, #94989D 0%, #C2C9CB 100%);
@@ -4033,7 +4045,6 @@ footer.main_footer {
 .cht_weight {
   color: #DFDDDD;
   opacity: 0.2;
-  margin-left: 10px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -4596,16 +4607,17 @@ footer.main_footer {
 .mfst_item {
   width: 50%;
   float: left;
+  margin-bottom: 40px;
 }
 
-.circular-progress, .circular-progress2 {
+.circular-progress, .circular-progress2, .circular-progress3, .circular-progress4, .circular-progress5, .circular-progress6 {
   float: left;
   position: relative;
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
-.circular-progress:before, .circular-progress2:before {
+.circular-progress:before, .circular-progress2:before, .circular-progress3:before, .circular-progress4:before, .circular-progress5:before, .circular-progress6:before {
   display: block;
   content: "";
   position: absolute;
@@ -4617,7 +4629,7 @@ footer.main_footer {
   background-color: #1D1D1D;
 }
 
-.progress-value, .progress-value2 {
+.progress-value, .progress-value2, .progress-value3, .progress-value4, .progress-value5, .progress-value6 {
   display: inline-block;
   font-size: 40px;
   font-family: "Druk Cyr";
@@ -4631,8 +4643,9 @@ footer.main_footer {
 }
 
 .mfst_text {
-  float: left;
-  margin: 15px 0 0 30px;
+  float: right;
+  width: calc(100% - 230px);
+  margin-top: 15px;
 }
 
 .mfst_label {
@@ -4654,7 +4667,7 @@ footer.main_footer {
 
 .mfst_right {
   float: right;
-  max-width: 440px;
+  max-width: 430px;
 }
 .mfst_right .mfst_item {
   width: 100%;
@@ -5505,12 +5518,14 @@ select:focus, textarea:focus, input:focus {
     max-width: 66.6%;
   }
 
-  .circular-progress, .circular-progress2 {
+  .circular-progress, .circular-progress2, .circular-progress3, .circular-progress4, .circular-progress5, .circular-progress6 {
     float: none;
   }
 
   .mfst_text {
+    width: 100%;
     margin: 60px 0 0 0;
+    float: left;
   }
 
   .mfst_right {
@@ -6252,12 +6267,12 @@ select:focus, textarea:focus, input:focus {
     font-size: 5vw;
   }
 
-  .circular-progress, .circular-progress2 {
+  .circular-progress, .circular-progress2, .circular-progress3, .circular-progress4, .circular-progress5, .circular-progress6 {
     width: 138px;
     height: 138px;
   }
 
-  .progress-value, .progress-value2 {
+  .progress-value, .progress-value2, .progress-value3, .progress-value4, .progress-value5, .progress-value6 {
     font-size: 32px;
   }
 
@@ -7785,7 +7800,7 @@ select:focus, textarea:focus, input:focus {
     padding-left: 0;
   }
 
-  .progress-value, .progress-value2 {
+  .progress-value, .progress-value2, .progress-value3, .progress-value4, .progress-value5, .progress-value6 {
     font-size: 26px;
   }
 
@@ -8511,7 +8526,7 @@ select:focus, textarea:focus, input:focus {
     margin-bottom: 25px;
   }
 
-  .circular-progress, .circular-progress2 {
+  .circular-progress, .circular-progress2, .circular-progress3, .circular-progress4, .circular-progress5, .circular-progress6 {
     margin: 0 auto;
   }
 

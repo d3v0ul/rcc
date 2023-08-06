@@ -299,7 +299,9 @@ select:focus, textarea:focus, input:focus {
 	float: none;
 }
 .mfst_text{
+	width: 100%;
 	margin: 60px 0 0 0;
+	float: left;
 }
 .mfst_right{
 	max-width: 33.3%;

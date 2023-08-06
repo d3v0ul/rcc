@@ -1997,6 +1997,16 @@ footer{
 }
 .nr_text_cols{
 	@extend .cl;	
+	&.one{
+		>div{
+			float: none;
+			width: 100%;
+			text-align: justify;
+			&:nth-child(1){
+				padding-right: 0;
+			}
+		}
+	}
 	>div{
 		float: left;
 		width: 50%;
@@ -3784,6 +3794,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #E92121 150%);
+						mix-blend-mode: screen;
 						z-index: 2;
 					}
 				}				
@@ -3796,6 +3807,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #D58060 150%);
+						mix-blend-mode: screen;
 						z-index: 2;
 					}
 				}				
@@ -3808,6 +3820,7 @@ footer{
 				.ch_img{
 					&:after{
 						background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #509EEA 150%);
+						mix-blend-mode: screen;
 						z-index: 2;
 					}
 				}				
@@ -3862,6 +3875,7 @@ footer{
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-fill-color: transparent;
+	margin-right: 10px;
 	&.silver{
 		background: linear-gradient(225deg, #94989D 0%, #C2C9CB 100%);
 		-webkit-background-clip: text;
@@ -3873,7 +3887,6 @@ footer{
 .cht_weight{
 	color: #DFDDDD;
 	opacity: .2;
-	margin-left: 10px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -4418,6 +4431,7 @@ footer{
 .mfst_item{
 	width: 50%;
 	float: left;
+	margin-bottom: 40px;
 }
 .circular-progress{
 	float: left;
@@ -4437,7 +4451,7 @@ footer{
     background-color: #1D1D1D;
   }
 }
-.circular-progress2{
+.circular-progress2,.circular-progress3, .circular-progress4, .circular-progress5, .circular-progress6{
 	@extend .circular-progress;
 }
 .progress-value{
@@ -4452,12 +4466,13 @@ footer{
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
-.progress-value2{
+.progress-value2, .progress-value3, .progress-value4, .progress-value5, .progress-value6{
 	@extend .progress-value;
 }
 .mfst_text{
-	float: left;
-	margin: 15px 0 0 30px;
+	float: right;
+	width: calc(100% - 230px);
+	margin-top: 15px;
 }
 .mfst_label{
 	font-weight: 700;
@@ -4477,7 +4492,7 @@ footer{
 .mfst_right{
 	@extend .cl;
 	float: right;
-	max-width: 440px;
+	max-width: 430px;
 	.mfst_item{		
 		width: 100%;
 	}
