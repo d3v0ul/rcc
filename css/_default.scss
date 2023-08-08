@@ -97,7 +97,7 @@ body{
 }
 .boxing{
 	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .ts_content>a:hover, 
-	.cp_1{
+	.cp_1_1{
 		background: $orange;
 	}	
 	.cht_stats, .mac_text, .f_contacts>a, .ebt_all, .mf_back,
@@ -116,7 +116,7 @@ body{
 }
 .fairfight{
 	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .ts_content>a:hover, 
-	.cp_1{
+	.cp_1_1{
 		background: $blue;
 	}	
 	.cht_stats, .mac_text, .f_contacts>a, .ebt_all, .mf_back,
@@ -411,6 +411,16 @@ header{
   left: 50%;
   top: 150px;
   transform: translateX(-50%);
+  &.blue{
+  	&:before, &:after{
+  		background: #307DFF;
+  	}
+  }
+  &.golden{
+  	&:before, &:after{
+  		background: #D58060
+  	}
+  }
   &:before{
   	display: block;
   	content: '';
@@ -677,7 +687,7 @@ header{
 	transition: .3s;
 	margin-top: -10px;
 	&:hover{
-		background: #C93737;
+		background: #C93737 !important;
 	}
 }
 .hlm_events{
@@ -1529,6 +1539,9 @@ footer{
 	text-align: left;
 	margin: 80px 0;
 }
+.reduced{
+	max-width: 880px;
+}
 .nr_img{
 	display: block;
 	margin-bottom: 40px;
@@ -1735,6 +1748,11 @@ footer{
 	line-height: 52px;
 	letter-spacing: 0.56px;
 	transition: .3s;
+	&.current{
+		background: #E04141;
+		opacity: 1;
+		color: #fff;
+	}
 	&:hover{
 		color: #fff;
 		/*background: #E04141;*/
@@ -1770,10 +1788,8 @@ footer{
 }
 .nri_search{
 	display: block;
-	float: right;
 	max-width: 130px;
 	width: 100%;
-	text-align: right;
 	background: none;
 	font-size: 14px;
 	line-height: 18px;
@@ -2187,7 +2203,6 @@ footer{
 		border-radius: 2px;
 		font-size: 14px;
 		/*letter-spacing: 0.56px;*/
-		font-family: serif;
 		text-transform: uppercase;
 		font-weight: 700;
 		opacity: .2;
@@ -4282,7 +4297,8 @@ footer{
 			margin-right: 8px;
 		}
 		>span{
-			color: #808080;
+			color: #fff;
+			opacity: 0.4;
 		}
 		&.star{
 			background: #2B2B2B;
@@ -4354,6 +4370,9 @@ footer{
 		font-size: 18px;
 		position: relative;
 		transition: .3s;
+		&.left{
+			transform: translateX(-24px);
+		}
 		&:hover{
 			color: #E04141;		
 		}
@@ -4571,14 +4590,14 @@ footer{
 		transition: 2s;
 	}
 }
-.cp_1{
+.cp_1_1{
 	background: #E04141;
 	left: 0;
 	&.fill{
 		height: 220px;
 	}
 }
-.cp_2{
+.cp_1_2{
 	background: #2B2B2B;
 	right: 0;
 	&.fill{
@@ -4605,6 +4624,12 @@ footer{
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #E04141;
+	&.blue{
+		color: #307DFF;
+	}
+	&.gold{
+		color: #D58060;
+	}
 	&:hover{
 		text-decoration: underline;		
 	}

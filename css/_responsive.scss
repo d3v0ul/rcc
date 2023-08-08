@@ -363,6 +363,14 @@ select:focus, textarea:focus, input:focus {
 
 
 } /*1350*/
+@media only screen and (max-width : 1330px){
+.hr_menu{
+	&.hide_1330{
+		display: none;
+	}
+}
+
+} /*1330*/
 @media only screen and (max-width : 1300px){
 .news_socials{
 	padding-top: 104px;
@@ -1490,6 +1498,9 @@ header{
 }
 .hl_menu{
 	>li{
+		&:nth-child(3), &:nth-child(4){
+			display: none;
+		}
 		>a{
 			font-size: 12px;
 			letter-spacing: 0.48px;
@@ -1897,6 +1908,9 @@ header {
 		float: left;
 		margin: 0;
 		transition: .3s;
+		&:nth-child(3), &:nth-child(4){
+			display: block;
+		}
 		&.hlm_events{
 			display: block;
 			float: none;
@@ -2352,10 +2366,13 @@ footer{
 	}
 	>a{
 		font-size: 16px;
+		&.left{
+			transform: translateX(0);
+		}
 		&:before{
 		width: 10px;
 		height: 10px;
-		top: 4px;
+		top: 4px;		
 	}
 	}	
 }

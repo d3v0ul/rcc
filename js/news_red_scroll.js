@@ -42,10 +42,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         newsowl.trigger('to.owl.carousel', curSlide);    
     }
     newsowl.on('change.owl.carousel', ()=>{
-        console.log(curSlide)
         setTimeout(()=>{
             curSlide = $('.news_slider .owl-item.active').index();
-            console.log("после события "+curSlide)
         }, 1000)
     });
 })
