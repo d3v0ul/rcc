@@ -356,7 +356,10 @@ select:focus, textarea:focus, input:focus {
 		}
 	}
 }
-
+.eb_img{
+	min-height: 520px;
+	object-fit: cover;
+}
 
 
 
@@ -716,6 +719,7 @@ footer{
 }
 .b_popup{
 	width: 100%;
+	height: calc(100vh - 96px);
 }
 .bp_close{
 	top: 20px;
@@ -1372,6 +1376,7 @@ header{
 	bottom: 48px;
 	font-size: 12px;
 	line-height: 140%;
+	letter-spacing: 0.48px;
 	}
 
 .mouse_icon {
@@ -1738,6 +1743,18 @@ h1{
 .si_box_img{
 	margin: 10vw 0;
 }
+.b1_2_cat{	
+	>a{
+		letter-spacing: -0.56px;
+	}
+}
+.fighter {
+    margin: 130px auto 0;
+}
+.ft_head {
+    margin-bottom: 40px;
+}
+
 
 
 } /*1025*/
@@ -1886,6 +1903,7 @@ header {
 }
 .eit_btn{
 	display: block;
+	letter-spacing: 0.48px;
 }
 .hlm_events{
 	display: block !important;
@@ -2009,7 +2027,7 @@ footer{
 }
 .f_bot{
 	max-width: 340px;
-	padding: 60px 16px 33px;
+	padding: 60px 16px;
 }
 .fb_menu{
 	float: none;
@@ -2047,7 +2065,7 @@ footer{
 	}
 }
 .e_block{
-	margin-top: 40px;
+	margin-top: 32px;
 	height: 414px;
 	position: relative;
 	/*&.eb_1{
@@ -2058,6 +2076,7 @@ footer{
 	width: 800px;
 	max-width: 800px;
 	height: 414px;
+	min-height: auto;
 }
 .eb_content{
 	top: 40px;
@@ -2096,6 +2115,7 @@ footer{
 .events_old{
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 8px;
+	margin-top: 32px;
 }
 .event_inner_top{
 	bottom: 0;
@@ -2222,6 +2242,7 @@ footer{
 	>a{
 		font-size: 20px;
 		font-weight: 400;
+		letter-spacing: -0.4px;
 	}
 }
 .m_head{
@@ -2453,6 +2474,8 @@ footer{
 }
 .b1_2_all{
 	bottom: 130px;
+	letter-spacing: 0.4px;
+  font-size: 10px;
 }
 .see_promo{
 	top: 100px;
@@ -3477,6 +3500,7 @@ footer{
 		font-size: 20px;
 		&:nth-child(1){
 			font-size: 10px;
+			letter-spacing: 0.48px;
 		}
 	}
 }
@@ -3724,11 +3748,21 @@ footer{
 	padding-right: 0;
 }
 .b_popup{
-	height: calc(100vh - 120px);
+	height: calc(100vh - 74px);
 }
-
-
-
+#sync1 .owl-prev, #sync1 .owl-next {
+    bottom: -4.4vh;
+}
+.nr_tags{
+	&.shared{
+		.nrt_share{
+			margin-top: 12px;
+		}
+	}
+}
+.fighter {
+    margin: 114px auto 0;
+}
 
 
 } /*767*/

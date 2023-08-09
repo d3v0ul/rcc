@@ -5,6 +5,7 @@ $(()=>{
             var target_block = $(".mf_strikes"); // Ищем блок при прокрутке до которого начнется анимация (+400 верхний отступ)
         // var target_block = $(".screen1");
         var blockStatus = true;
+        var colorPaint = '#E04141';
         $(window).scroll(function() {
             var scrollEvent = ($(window).scrollTop() > (target_block.position().top +400 - $(window).height()));
             if (scrollEvent && blockStatus) {
@@ -23,6 +24,15 @@ $(()=>{
                         $(".n2").html(Math.ceil(val));
                     }
                 });
+
+                //цвет заливки баров
+                if (document.querySelector('body').getAttribute('class') == 'boxing'){
+                    colorPaint = '#D58060';
+                }
+                if (document.querySelector('body').getAttribute('class') == 'fairfight') {
+                    colorPaint = '#307DFF';
+                }
+
                 // круговые прогресбары
     
                 let circularProgress = document.querySelector(".circular-progress"),
@@ -37,7 +47,7 @@ $(()=>{
     
                     progressValue.textContent = `${progressStartValue} %`
 
-                    circularProgress.style.background = `conic-gradient(#E04141 ${progressStartValue * 3.6}deg, #2B2B2B 0deg)`
+                    circularProgress.style.background = `conic-gradient(${colorPaint} ${progressStartValue * 3.6}deg, #2B2B2B 0deg)`
     
                     if(progressStartValue == progressEndValue){
                         clearInterval(progress);
@@ -56,7 +66,7 @@ $(()=>{
                         progressStartValue2++;
         
                         progressValue2.textContent = `${progressStartValue2} %`
-                        circularProgress2.style.background = `conic-gradient(#E04141 ${progressStartValue2 * 3.6}deg, #2B2B2B 0deg)`
+                        circularProgress2.style.background = `conic-gradient(${colorPaint} ${progressStartValue2 * 3.6}deg, #2B2B2B 0deg)`
         
                         if(progressStartValue2 == progressEndValue2){
                             clearInterval(progress2);
@@ -77,7 +87,7 @@ $(()=>{
                         progressStartValue3++;
                         
                         progressValue3.textContent = `${progressStartValue3} %`
-                        circularProgress3.style.background = `conic-gradient(#E04141 ${progressStartValue3 * 3.6}deg, #2B2B2B 0deg)`
+                        circularProgress3.style.background = `conic-gradient(${colorPaint} ${progressStartValue3 * 3.6}deg, #2B2B2B 0deg)`
         
                         if(progressStartValue3 == progressEndValue3){
                             clearInterval(progress3);
@@ -97,7 +107,7 @@ $(()=>{
                         progressStartValue4++;
         
                         progressValue4.textContent = `${progressStartValue4} %`
-                        circularProgress4.style.background = `conic-gradient(#E04141 ${progressStartValue4 * 3.6}deg, #2B2B2B 0deg)`
+                        circularProgress4.style.background = `conic-gradient(${colorPaint} ${progressStartValue4 * 3.6}deg, #2B2B2B 0deg)`
         
                         if(progressStartValue4 == progressEndValue4){
                             clearInterval(progress4);
@@ -117,7 +127,7 @@ $(()=>{
                         progressStartValue5++;
         
                         progressValue5.textContent = `${progressStartValue5} %`
-                        circularProgress5.style.background = `conic-gradient(#E04141 ${progressStartValue5 * 3.6}deg, #2B2B2B 0deg)`
+                        circularProgress5.style.background = `conic-gradient(${colorPaint} ${progressStartValue5 * 3.6}deg, #2B2B2B 0deg)`
         
                         if(progressStartValue5 == progressEndValue5){
                             clearInterval(progress5);
@@ -137,7 +147,7 @@ $(()=>{
                         progressStartValue6++;
         
                         progressValue6.textContent = `${progressStartValue6} %`
-                        circularProgress6.style.background = `conic-gradient(#E04141 ${progressStartValue6 * 3.6}deg, #2B2B2B 0deg)`
+                        circularProgress6.style.background = `conic-gradient(${colorPaint} ${progressStartValue6 * 3.6}deg, #2B2B2B 0deg)`
         
                         if(progressStartValue6 == progressEndValue6){
                             clearInterval(progress6);

@@ -565,7 +565,7 @@ header.h_main.dark {
   bottom: -100vh;
 }
 .b2_2_wrap .b1b_all {
-  bottom: -45px;
+  bottom: -80px;
   /*transition: .2s;*/
   opacity: 0;
   visibility: hidden;
@@ -1737,6 +1737,17 @@ footer.main_footer {
 }
 .nr_top a {
   display: block;
+  position: relative;
+}
+.nr_top a:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .nr_top img {
   display: block;
@@ -1939,18 +1950,33 @@ footer.main_footer {
   position: relative;
   text-align: left;
 }
-.nr_item:hover > img {
+.nr_item:hover img {
   filter: alpha(Opacity=70);
   opacity: 0.7;
 }
 .nr_item:hover .nri_name {
   color: #E04141;
 }
-.nr_item > img {
+.nr_item img {
   display: block;
   width: 100%;
   margin-bottom: 15px;
   transition: 0.3s;
+}
+
+.nri_img {
+  display: block;
+  position: relative;
+}
+.nri_img:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .nri_cat {
@@ -2438,7 +2464,7 @@ footer.main_footer {
 .b_popup, .smi_popup, .manager_popup {
   width: 50%;
   overflow: hidden;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 104px);
   position: fixed;
   z-index: 7;
   background: #1D1D1D;
@@ -2466,7 +2492,7 @@ footer.main_footer {
   background-size: 100%;
   position: absolute;
   z-index: 3;
-  top: 120px;
+  top: 40px;
   right: -45px;
   transition: 0.3s;
 }
@@ -2742,6 +2768,11 @@ footer.main_footer {
   transition: 0.3s;
   position: relative;
 }
+.eb_btns > a:nth-child(1):hover {
+  background: #C93737;
+  filter: alpha(Opacity=100);
+  opacity: 1;
+}
 .eb_btns > a:hover {
   filter: alpha(Opacity=70);
   opacity: 0.7;
@@ -2771,12 +2802,12 @@ footer.main_footer {
 }
 
 .e_twins {
-  margin-top: 14px;
+  margin-top: 16px;
 }
 .e_twins > a {
   display: block;
   float: left;
-  width: calc(50% - 7px);
+  width: calc(50% - 8px);
   position: relative;
   overflow: hidden;
   /*&:after{
@@ -5647,6 +5678,10 @@ select:focus, textarea:focus, input:focus {
   .bi_center > span {
     font-size: 2.6vw;
   }
+  .eb_img {
+    min-height: 520px;
+    object-fit: cover;
+  }
 }
 /*1350*/
 @media only screen and (max-width: 1330px) {
@@ -6004,6 +6039,7 @@ select:focus, textarea:focus, input:focus {
 
   .b_popup, .smi_popup, .manager_popup {
     width: 100%;
+    height: calc(100vh - 96px);
   }
 
   .bp_close, .smi_close, .manager_close {
@@ -6717,6 +6753,7 @@ select:focus, textarea:focus, input:focus {
     bottom: 48px;
     font-size: 12px;
     line-height: 140%;
+    letter-spacing: 0.48px;
   }
 
   .mouse_icon {
@@ -7111,6 +7148,18 @@ select:focus, textarea:focus, input:focus {
   .si_box_img {
     margin: 10vw 0;
   }
+
+  .b1_2_cat > a {
+    letter-spacing: -0.56px;
+  }
+
+  .fighter {
+    margin: 130px auto 0;
+  }
+
+  .ft_head {
+    margin-bottom: 40px;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 767px) {
@@ -7255,6 +7304,7 @@ select:focus, textarea:focus, input:focus {
 
   .eit_btn {
     display: block;
+    letter-spacing: 0.48px;
   }
 
   .hlm_events {
@@ -7388,7 +7438,7 @@ select:focus, textarea:focus, input:focus {
 
   .f_bot {
     max-width: 340px;
-    padding: 60px 16px 33px;
+    padding: 60px 16px;
   }
 
   .fb_menu {
@@ -7430,7 +7480,7 @@ select:focus, textarea:focus, input:focus {
   }
 
   .e_block {
-    margin-top: 40px;
+    margin-top: 32px;
     height: 414px;
     position: relative;
     /*&.eb_1{
@@ -7442,6 +7492,7 @@ select:focus, textarea:focus, input:focus {
     width: 800px;
     max-width: 800px;
     height: 414px;
+    min-height: auto;
   }
 
   .eb_content {
@@ -7484,6 +7535,7 @@ select:focus, textarea:focus, input:focus {
   .events_old {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
+    margin-top: 32px;
   }
 
   .event_inner_top {
@@ -7619,6 +7671,7 @@ select:focus, textarea:focus, input:focus {
   .b1_2_cat > a {
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: -0.4px;
   }
 
   .m_head {
@@ -7897,6 +7950,8 @@ select:focus, textarea:focus, input:focus {
 
   .b1_2_all {
     bottom: 130px;
+    letter-spacing: 0.4px;
+    font-size: 10px;
   }
 
   .see_promo {
@@ -8989,6 +9044,7 @@ select:focus, textarea:focus, input:focus {
   }
   .b1b_head > span:nth-child(1) {
     font-size: 10px;
+    letter-spacing: 0.48px;
   }
 
   .b1b_date {
@@ -9257,7 +9313,19 @@ select:focus, textarea:focus, input:focus {
   }
 
   .b_popup, .smi_popup, .manager_popup {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 74px);
+  }
+
+  #sync1 .owl-prev, #sync1 .owl-next {
+    bottom: -4.4vh;
+  }
+
+  .nr_tags.shared .nrt_share {
+    margin-top: 12px;
+  }
+
+  .fighter {
+    margin: 114px auto 0;
   }
 }
 /*767*/

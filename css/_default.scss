@@ -498,7 +498,7 @@ header{
 		bottom: -100vh;
 	}
 	.b1b_all{
-		bottom: -45px;
+		bottom: -80px;
 		/*transition: .2s;*/
 		opacity: 0;
 		visibility: hidden;
@@ -1617,6 +1617,17 @@ footer{
 	margin-bottom: 40px;
 	a{
 		display: block;
+		position: relative;
+		&:after{
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
 	}
 	img{
 		display: block;
@@ -1812,18 +1823,32 @@ footer{
 	position: relative;
 	text-align: left;
 	&:hover{
-		>img{
+		img{
 			@include opa(7);
 		}
 		.nri_name{
 			color: #E04141;
 		}
 	}
-	>img{
+	img{
 		display: block;
 		width: 100%;
 		margin-bottom: 15px;
 		transition: .3s;
+	}
+}
+.nri_img{
+	display: block;
+	position: relative;
+	&:after{
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 }
 .nri_cat{
@@ -2326,7 +2351,7 @@ footer{
 .b_popup{	
 	width: 50%;
 	overflow: hidden;
-	height: calc(100vh - 85px);
+	height: calc(100vh - 104px);
 	position: fixed;
 	z-index: 7;
 	background: #1D1D1D;
@@ -2357,7 +2382,7 @@ footer{
 	background-size: 100%;
 	position: absolute;
 	z-index: 3;
-	top: 120px;
+	top: 40px;
 	right: -45px;
 	transition: .3s;
 	&:hover{
@@ -2614,6 +2639,10 @@ footer{
 		text-transform: uppercase;
 		transition: .3s;
 		position: relative;
+		&:nth-child(1):hover{
+			background: #C93737;
+			@include opa(10);
+		}
 		&:hover{
 			@include opa(7);		
 		}
@@ -2643,11 +2672,11 @@ footer{
 	}
 }
 .e_twins{
-	margin-top: 14px;
+	margin-top: 16px;
 	>a{
 		display: block;
 		float: left;
-		width: calc(50% - 7px);
+		width: calc(50% - 8px);
 		position: relative;
 		overflow: hidden;
 		&:after{
