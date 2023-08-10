@@ -72,6 +72,9 @@ body{
 		overflow: hidden;
 	}
 }
+h3,h4{
+	font-weight: normal;
+}
 .mask{
 	display: none;
 	position: fixed;
@@ -586,7 +589,8 @@ header{
 			display: inline-block;
 			margin-bottom: 14px;
 			font-size: 14px;
-			line-height: 110%;
+			letter-spacing: 0.56px;
+    	line-height: 140%;
 			color: #E04141;
 			font-weight: 700;
 			opacity: 0;
@@ -597,6 +601,7 @@ header{
     	top: 0;
 	    /*top: 6vw;*/
 	    transform: translateY(6vw);
+	    letter-spacing: -0.72px;
 			visibility: hidden;
 			opacity: 0;
 			transition: 1s;
@@ -635,20 +640,20 @@ header{
 	>span{
 		position: relative;
 		display: block;
-		margin-bottom: 16px;
 		font-size: 40px;
 		font-family: $r;
 		font-style: italic;
 		font-weight: 500;
-		letter-spacing: .16em;
+		line-height: 120%;
+    letter-spacing: 6.4px;
+    margin-bottom: 8px;
 		transition: top 1s;
-		/*top: -3vw;*/
 		transform: translateY(-3vw);
 	}
 }
 .b1b_all{
 	display: inline-block;
-	font-size: 14px;
+	font-size: 10px;
 	line-height: 120%;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -915,12 +920,14 @@ header{
 	>a{
 		font-size: 36px;
 		font-weight: 500;
+		letter-spacing: -0.72px;
 	}
 }
 .b1_2_all{
 	font-family: 'Suisse Intl';
 	display: inline-block;
-	font-size: 14px;
+	letter-spacing: 0.4px;
+  font-size: 10px;
 	line-height: 140%;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -1029,8 +1036,7 @@ header{
 		&:hover{
 			transform: scale(1.1);
 		}
-	}
-	
+	}	
 	&:hover{
 		.nsb_type, .nsb_name{
 			color: #E04141;
@@ -1077,7 +1083,7 @@ header{
 	position: relative;
 	margin-top: 30px;	
 	&:hover{
-		color: #E04141;
+		@include opa(5);
 	}
 	&:before{
 		display: block;
@@ -2877,6 +2883,7 @@ footer{
 	@extend .h_events;
 	height: 60px;
 	line-height: 60px;
+	letter-spacing: 0.56px;
 	width: 100%;
 	max-width: 197px;
 	margin-top: 25px;
@@ -3184,6 +3191,8 @@ footer{
 		&:nth-child(2){
 			color: #E04141;
 			font-size: 14px;
+			line-height: 140%;
+    	letter-spacing: 0.56px;
 			font-weight: 700;
 			text-transform: uppercase;
 		}
@@ -3545,7 +3554,7 @@ footer{
 /*fighter*/
 .fighter{
 	@extend %ct;
-	margin: 120px auto 50px;
+	margin: 164px auto 0px;
 	position: relative;
 }
 .ft_left{
@@ -3564,6 +3573,7 @@ footer{
 }
 .ft_head{
 	@extend .bp_head;
+	margin-bottom: 60px;
 }
 .ft_text{
 	font-size: 32px;
@@ -4121,7 +4131,7 @@ footer{
 	text-transform: uppercase;
 	transition: .3s;
 	&:hover{
-		@include opa(7);		
+		background: #C93737;		
 	}
 }
 
@@ -5145,3 +5155,92 @@ transition: all 0.7s linear 0s;
 	max-width: 880px;
 }
 
+.fairfight{
+	.h_events, .ff_submit, .eb_btns>a:first-child, .mac_btn{
+		&:hover{
+			background: #2d66c7 !important;
+		}
+	}
+	.ns_content{
+		&:hover{
+			.nsb_type, .nsb_name{
+				color: #2d66c7 !important;
+			}
+		}
+	}
+	.burger{
+		&.opened{
+			background: url(../images/cross_24_ff.svg) 0 0 no-repeat;
+			background-size: cover;
+			filter: brightness(100%);
+		}
+	}
+	.h_choose{
+		border-top: 2px solid #307DFF;
+		color: #307DFF;
+	}
+}
+.boxing{
+	.h_events, .ff_submit, .eb_btns>a:first-child, .mac_btn{
+		&:hover{
+			background: #b46a4e !important;
+		}		
+	}
+	.ns_content{
+		&:hover{
+			.nsb_type, .nsb_name{
+				color: #b46a4e !important;
+			}
+		}
+	}
+	.burger{
+		&.opened{
+			background: url(../images/cross_24_box.svg) 0 0 no-repeat;
+			background-size: cover;
+			filter: brightness(100%);
+		}
+	}
+	.h_choose{
+		border-top: 2px solid #D58060;
+		color: #D58060;
+	}
+}
+.nr_search{
+	display: block;
+	width: 100%;
+	max-width: 751px;
+	height: 52px;
+	background: #2B2B2B;
+	padding: 0 24px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 52px;
+	color: #fff;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	margin-bottom: 40px;
+}
+.not_found{
+	text-align: center;
+	padding: 150px 0 250px;
+	>span{
+		font-family: $r;
+		font-size: 96px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: 110%;
+		color: #E04141;
+		letter-spacing: 15.36px;
+		text-transform: uppercase;
+		>span{
+			display: block;
+			text-align: center;
+			font-family: Suisse Intl;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			letter-spacing: 0.56px;
+		}
+	}
+}

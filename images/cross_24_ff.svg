@@ -1,0 +1,20 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="30" height="30" fill="#D6D6D6"/>
+<g id="1600">
+<path d="M-4117 -838C-4117 -860.091 -4099.09 -878 -4077 -878H3341V16848H-4077C-4099.09 16848 -4117 16830.1 -4117 16808V-838Z" fill="#1D1D1D" fill-opacity="0.85"/>
+<g id="1600_2">
+<g id="Property 1=header_open_fairfight" clip-path="url(#clip0_754_14763)">
+<rect width="1600" height="104" transform="translate(-319 -37)" fill="#1D1D1D"/>
+<g id="1600/header">
+<path id="Vector 66" d="M3 3L27 27M27 3L3 27" stroke="#307DFF" stroke-width="6"/>
+</g>
+</g>
+<rect x="-338.5" y="-384.5" width="1639" height="635" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_754_14763">
+<rect width="1600" height="104" fill="white" transform="translate(-319 -37)"/>
+</clipPath>
+</defs>
+</svg>

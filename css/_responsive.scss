@@ -158,6 +158,11 @@ select:focus, textarea:focus, input:focus {
 		transform: translate3d(20%, -50%, 0) scale(1);
 	}
 }
+.m_col{
+	img{
+		
+	}
+}
 
 
 } /*+1600*/
@@ -399,7 +404,9 @@ select:focus, textarea:focus, input:focus {
 	font-size: 60px;
 	margin-bottom: 20px;
 }
-
+.bir_broadcast{
+	display: none;
+}
 
 } /*1300*/
 @media only screen and (max-width : 1260px){
@@ -517,7 +524,9 @@ select:focus, textarea:focus, input:focus {
 		display: none;
 	}
 }
-
+.bir_broadcast{
+	display: inline-block;
+}
 
 
 } /*1200*/
@@ -1754,7 +1763,21 @@ h1{
 .ft_head {
     margin-bottom: 40px;
 }
+.not_found{
+	padding: 100px 0 130px;
+	>span{
+		font-size: 64px;
+		letter-spacing: 10.24px;
+		>span{
+			font-size: 12px;
+			letter-spacing: 0.48px; 
+		}
+	}
+}
 
+.only_desk{
+	display: none !important;
+}
 
 
 } /*1025*/
@@ -1809,6 +1832,7 @@ h1{
 	&.blue{		
 		&:after{
 			background: url(../images/flame_top_blue.png) left bottom no-repeat;
+			mix-blend-mode: screen;
 		}
 	}		
 	&:after{
@@ -1822,7 +1846,7 @@ h1{
 		z-index: 5;
 		left: 0;
 		bottom: 0;
-		transition: 1s;
+		transition: 0.8s;
 		&.mc_1{
 			&:after{
 				display: none;
@@ -3762,6 +3786,20 @@ footer{
 }
 .fighter {
     margin: 114px auto 0;
+}
+.ft_head {
+    margin-bottom: 40px;
+}
+.not_found{
+	padding: 100px 0 130px;
+	>span{
+		font-size: 40px;
+		letter-spacing: 6.4px;
+		>span{
+			font-size: 10px;
+			letter-spacing: 0.4px; 
+		}
+	}
 }
 
 

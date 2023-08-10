@@ -134,6 +134,10 @@ body.noscroll {
   overflow: hidden;
 }
 
+h3, h4 {
+  font-weight: normal;
+}
+
 .mask {
   display: none;
   position: fixed;
@@ -650,7 +654,8 @@ header.h_main.dark {
   display: inline-block;
   margin-bottom: 14px;
   font-size: 14px;
-  line-height: 110%;
+  letter-spacing: 0.56px;
+  line-height: 140%;
   color: #E04141;
   font-weight: 700;
   opacity: 0;
@@ -661,6 +666,7 @@ header.h_main.dark {
   top: 0;
   /*top: 6vw;*/
   transform: translateY(6vw);
+  letter-spacing: -0.72px;
   visibility: hidden;
   opacity: 0;
   transition: 1s;
@@ -702,20 +708,20 @@ header.h_main.dark {
 .b1b_date > span {
   position: relative;
   display: block;
-  margin-bottom: 16px;
   font-size: 40px;
   font-family: "Druk Cyr";
   font-style: italic;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  line-height: 120%;
+  letter-spacing: 6.4px;
+  margin-bottom: 8px;
   transition: top 1s;
-  /*top: -3vw;*/
   transform: translateY(-3vw);
 }
 
 .b1b_all {
   display: inline-block;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 120%;
   text-transform: uppercase;
   font-weight: 700;
@@ -1002,12 +1008,14 @@ header.h_main.dark {
 .b1_2_cat > a {
   font-size: 36px;
   font-weight: 500;
+  letter-spacing: -0.72px;
 }
 
 .b1_2_all {
   font-family: "Suisse Intl";
   display: inline-block;
-  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-size: 10px;
   line-height: 140%;
   text-transform: uppercase;
   font-weight: 700;
@@ -1165,7 +1173,8 @@ header.h_main.dark {
   margin-top: 30px;
 }
 .b2b_all:hover {
-  color: #E04141;
+  filter: alpha(Opacity=50);
+  opacity: 0.5;
 }
 .b2b_all:before {
   display: block;
@@ -3009,6 +3018,7 @@ footer.main_footer {
 .eit_btn {
   height: 60px;
   line-height: 60px;
+  letter-spacing: 0.56px;
   width: 100%;
   max-width: 197px;
   margin-top: 25px;
@@ -3332,6 +3342,8 @@ footer.main_footer {
 .rt_line > div:nth-child(2) {
   color: #E04141;
   font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.56px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -3712,7 +3724,7 @@ footer.main_footer {
 
 /*fighter*/
 .fighter {
-  margin: 120px auto 50px;
+  margin: 164px auto 0px;
   position: relative;
 }
 
@@ -3729,6 +3741,10 @@ footer.main_footer {
   position: absolute;
   bottom: 120px;
   top: auto;
+}
+
+.ft_head {
+  margin-bottom: 60px;
 }
 
 .ft_text {
@@ -4286,8 +4302,7 @@ footer.main_footer {
   transition: 0.3s;
 }
 .mac_btn:hover {
-  filter: alpha(Opacity=70);
-  opacity: 0.7;
+  background: #C93737;
 }
 
 /*rating fighters*/
@@ -5340,6 +5355,79 @@ footer.main_footer {
   max-width: 880px;
 }
 
+.fairfight .h_events:hover, .fairfight .eit_btn:hover, .fairfight .ff_submit:hover, .fairfight .eb_btns > a:first-child:hover, .fairfight .mac_btn:hover {
+  background: #2d66c7 !important;
+}
+.fairfight .ns_content:hover .nsb_type, .fairfight .ns_content:hover .nsb_name {
+  color: #2d66c7 !important;
+}
+.fairfight .burger.opened {
+  background: url(../images/cross_24_ff.svg) 0 0 no-repeat;
+  background-size: cover;
+  filter: brightness(100%);
+}
+.fairfight .h_choose {
+  border-top: 2px solid #307DFF;
+  color: #307DFF;
+}
+
+.boxing .h_events:hover, .boxing .eit_btn:hover, .boxing .ff_submit:hover, .boxing .eb_btns > a:first-child:hover, .boxing .mac_btn:hover {
+  background: #b46a4e !important;
+}
+.boxing .ns_content:hover .nsb_type, .boxing .ns_content:hover .nsb_name {
+  color: #b46a4e !important;
+}
+.boxing .burger.opened {
+  background: url(../images/cross_24_box.svg) 0 0 no-repeat;
+  background-size: cover;
+  filter: brightness(100%);
+}
+.boxing .h_choose {
+  border-top: 2px solid #D58060;
+  color: #D58060;
+}
+
+.nr_search {
+  display: block;
+  width: 100%;
+  max-width: 751px;
+  height: 52px;
+  background: #2B2B2B;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #fff;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.not_found {
+  text-align: center;
+  padding: 150px 0 250px;
+}
+.not_found > span {
+  font-family: "Druk Cyr";
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 110%;
+  color: #E04141;
+  letter-spacing: 15.36px;
+  text-transform: uppercase;
+}
+.not_found > span > span {
+  display: block;
+  text-align: center;
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.56px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -5715,6 +5803,10 @@ select:focus, textarea:focus, input:focus {
     font-size: 60px;
     margin-bottom: 20px;
   }
+
+  .bir_broadcast {
+    display: none;
+  }
 }
 /*1300*/
 @media only screen and (max-width: 1260px) {
@@ -5835,6 +5927,10 @@ select:focus, textarea:focus, input:focus {
 
   .hr_menu.pda {
     display: none;
+  }
+
+  .bir_broadcast {
+    display: inline-block;
   }
 }
 /*1200*/
@@ -7160,6 +7256,22 @@ select:focus, textarea:focus, input:focus {
   .ft_head {
     margin-bottom: 40px;
   }
+
+  .not_found {
+    padding: 100px 0 130px;
+  }
+  .not_found > span {
+    font-size: 64px;
+    letter-spacing: 10.24px;
+  }
+  .not_found > span > span {
+    font-size: 12px;
+    letter-spacing: 0.48px;
+  }
+
+  .only_desk {
+    display: none !important;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 767px) {
@@ -7208,6 +7320,7 @@ select:focus, textarea:focus, input:focus {
   }
   .m_col.blue:after {
     background: url(../images/flame_top_blue.png) left bottom no-repeat;
+    mix-blend-mode: screen;
   }
   .m_col:after {
     display: block;
@@ -7220,7 +7333,7 @@ select:focus, textarea:focus, input:focus {
     z-index: 5;
     left: 0;
     bottom: 0;
-    transition: 1s;
+    transition: 0.8s;
   }
   .m_col:after.mc_1:after {
     display: none;
@@ -9326,6 +9439,22 @@ select:focus, textarea:focus, input:focus {
 
   .fighter {
     margin: 114px auto 0;
+  }
+
+  .ft_head {
+    margin-bottom: 40px;
+  }
+
+  .not_found {
+    padding: 100px 0 130px;
+  }
+  .not_found > span {
+    font-size: 40px;
+    letter-spacing: 6.4px;
+  }
+  .not_found > span > span {
+    font-size: 10px;
+    letter-spacing: 0.4px;
   }
 }
 /*767*/
