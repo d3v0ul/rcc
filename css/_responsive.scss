@@ -86,6 +86,46 @@ select:focus, textarea:focus, input:focus {
 		font-weight: 400 !important;
 	}
 }
+.ft_l, .ft_r{
+	width: 25vw !important;
+}
+.b1b_date{
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+}
+.b1b_head{
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+}
+.b1b_head{
+	>span{
+		font-size: 21px !important;
+		margin-bottom: 0 !important;
+	}
+}
+
+.b3_wrap{
+	padding-top: 80px !important;
+}
+.b3{
+	max-width: 100%;
+}
+.b3_text{
+	font-size: 16px;
+	line-height: 120%;
+	margin: 10px 0 30px !important;
+}
+.b3_bot{
+	font-size: 24px;
+	&:before{
+		top: 9px;
+		width: 17px;
+		height: 17px;
+		background-size: cover;
+	}
+}
+
+
 
 } /*700h <1024*/
 @media only screen and (max-width: 1024px) and (max-height: 400px){
@@ -124,16 +164,6 @@ select:focus, textarea:focus, input:focus {
 .ns_img{
 	width: 100%;
 }
-.m_col{
-	img{
-		max-width: 720px;
-	}
-}
-
-
-
-
-
 } /*+2000*/
 @media only screen and (min-width : 1600px){
 .fighter{
@@ -330,7 +360,7 @@ select:focus, textarea:focus, input:focus {
 	}
 }
 .ft_l, .ft_r{
-	width: 60vw !important;
+	/*width: 60vw !important;*/
 }
 .ft_l{
 	&.resize{
@@ -728,6 +758,8 @@ footer{
 }
 .b_popup{
 	width: 100%;
+	height: -moz-calc(100vh - 96px);
+	height: -webkit-calc(100vh - 96px);
 	height: calc(100vh - 96px);
 }
 .bp_close{
@@ -1218,7 +1250,7 @@ header{
 			/*left: 0 !important;*/
 		}
 		.b1b_all{
-			/*bottom: -50px;*/
+			bottom: -50px;
 			transform: translateX(-50%);
 		}
 	}	
@@ -1778,6 +1810,9 @@ h1{
 .only_desk{
 	display: none !important;
 }
+.ch_all{
+	font-size: 10px;
+}
 
 
 } /*1025*/
@@ -1799,12 +1834,14 @@ h1{
 		background: none !important;
 		&:before{
 			background: url(../images/flame_orange.png) left bottom no-repeat;
+			mix-blend-mode: screen;
 		}
 	}
 	&.blue{		
 		background: none !important;
 		&:before{
 			background: url(../images/flame_blue.png) left bottom no-repeat;
+			mix-blend-mode: screen;
 		}
 	}
 	&.mc_1{
@@ -1823,10 +1860,12 @@ h1{
 		left: 0;
 		bottom: 0;
 		transition: 1s;		
+		mix-blend-mode: screen;
 	}
 	&.orange{		
 		&:after{
 			background: url(../images/flame_top_orange.png) left bottom no-repeat;
+			mix-blend-mode: screen;
 		}
 	}
 	&.blue{		
@@ -1844,9 +1883,10 @@ h1{
 		background: url(../images/flame_top.png) left bottom no-repeat;
 		position: absolute;
 		z-index: 5;
-		left: 0;
+		left: 0; 
 		bottom: 0;
 		transition: 0.8s;
+		mix-blend-mode: screen;
 		&.mc_1{
 			&:after{
 				display: none;
@@ -1959,6 +1999,9 @@ header {
 			width: 100%;
 			border: none;
 			background: #E04141;
+			>a{
+				font-size: 12px;
+			}
 		}
 		&:hover{
 			background: #E04141;
@@ -1971,7 +2014,7 @@ header {
 			display: block;
 			width: 100%;
 			height: 60px;
-			font-size: 12px;
+			font-size: 10px;
 			line-height: 60px;
 			text-align: center;
 			letter-spacing: 0.48px;
@@ -3772,6 +3815,8 @@ footer{
 	padding-right: 0;
 }
 .b_popup{
+	height: -moz-calc(100vh - 74px);
+	height: -webkit-calc(100vh - 74px);
 	height: calc(100vh - 74px);
 }
 #sync1 .owl-prev, #sync1 .owl-next {
@@ -3801,6 +3846,10 @@ footer{
 		}
 	}
 }
+.bp_on_main{
+	bottom: 140px;
+}
+
 
 
 } /*767*/

@@ -144,6 +144,14 @@ if (document.querySelector(".nri_more")){
     });
 }
 
+//mask on resize
+function maskOnResise () {
+    if (!matchMedia('(max-width: 1025px').matches && $('.b_popup').hasClass('opened'))
+    {
+    $(".mask").addClass('visible');
+    } else {$(".mask").removeClass('visible');}
+}
+
 //bp popup
 if (document.querySelector(".nri_more")){
     $(".bi_channel").click(function(e) {
@@ -156,8 +164,9 @@ if (document.querySelector(".bi_channel.udar")){
     $(".bi_channel.udar").click(function(e) {
     $(".b_popup.udar").addClass("opened");
     $("body").addClass('noscroll');
-    $(".mask").addClass('visible');
+    maskOnResise();
     e.preventDefault();
+    window.addEventListener('resize', maskOnResise);
 });}
 
 if (document.querySelector(".bi_channel.matchtv")){
@@ -165,7 +174,9 @@ if (document.querySelector(".bi_channel.matchtv")){
     $(".b_popup.matchtv").addClass("opened");
     $("body").addClass('noscroll');
     $(".mask").addClass('visible');
+    maskOnResise();
     e.preventDefault();
+    window.addEventListener('resize', maskOnResise);
 });}
 
 if (document.querySelector(".bi_channel.rentv")){
@@ -173,7 +184,9 @@ if (document.querySelector(".bi_channel.rentv")){
     $(".b_popup.rentv").addClass("opened");
     $("body").addClass('noscroll');
     $(".mask").addClass('visible');
+    maskOnResise();
     e.preventDefault();
+    window.addEventListener('resize', maskOnResise);
 });}
 
 if (document.querySelector(".bp_close")){
@@ -396,7 +409,6 @@ var pns;
 function pnsSwitcher () {
     // pns = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)'); 
     pns = window.matchMedia('all and (max-width: 1025px)');  
-    console.log(pns.matches)    
     if (pns.matches) {
         pnsSlider.addClass('owl-carousel');
         pnsSlider.owlCarousel({
@@ -477,26 +489,33 @@ if(owlquery) {
     }
 }
 
-if(document.querySelector('.nr_tags_slider')){
-
-var ts = window.matchMedia('all and (max-width: 1025px)');
-if (ts.matches) {
-    $('.nr_tags_slider').addClass('owl-carousel');
-    $('.nr_tags_slider').owlCarousel({
-        center: false,
-        items: 8,
-        margin: 8,
-        autoWidth: true,
-        items: 1,
-        rtl: false,
-        responsive: {
-            500:{
-                loop: false,
-                center: false,
+function nrTagsSlider () {
+    var ts = window.matchMedia('all and (max-width: 1025px)');
+    if (ts.matches) {
+        $('.nr_tags_slider').addClass('owl-carousel');
+        $('.nr_tags_slider').owlCarousel({
+            center: false,
+            items: 8,
+            margin: 8,
+            autoWidth: true,
+            items: 1,
+            rtl: false,
+            responsive: {
+                500:{
+                    loop: false,
+                    center: false,
+                }
             }
-        }
-    });
-} else {}
+        });
+    } else {
+        $('.nr_tags_slider').trigger('destroy.owl.carousel');
+        $('.nr_tags_slider').removeClass('owl-carousel');
+    }
+}
+
+if(document.querySelector('.nr_tags_slider')){
+    nrTagsSlider();
+    window.addEventListener('resize', nrTagsSlider);
 }
 
 if(document.querySelector('.time_slider')){
@@ -512,21 +531,31 @@ $('.time_slider').owlCarousel({
     });
 }
 
+function liveSlider (ls) {
+    var ls = window.matchMedia('all and (max-width: 1025px)');
+    if (ls.matches) {
+        $('.live_slider').addClass('owl-carousel');
+        $('.live_slider').owlCarousel({
+            center: false,
+            items: 1,
+            loop: false,
+            autoWidth: false,
+            autoHeight: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+        });
+    } else {
+        $('.live_slider').trigger('destroy.owl.carousel');
+        $('.live_slider').removeClass('owl-carousel');
+}
+
+}
+
 if(document.querySelector('.live_slider')){
 
-var ls = window.matchMedia('all and (max-width: 1025px)');
-if (ls.matches) {
-    $('.live_slider').addClass('owl-carousel');
-    $('.live_slider').owlCarousel({
-        center: false,
-        items: 1,
-        loop: false,
-        autoWidth: false,
-        autoHeight: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-    });
-} else {}
+
+    liveSlider();
+window.addEventListener('resize', liveSlider);
 }
 
 //fight slider (synced)
