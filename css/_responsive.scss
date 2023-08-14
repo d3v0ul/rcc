@@ -1212,10 +1212,13 @@ header{
 	text-align: center;
 	>li{
 		margin-right: 15vw;
-	}	
-	>a{
-		font-size: 12px;
-	}
+		>a{
+			font-size: 10px;
+		}
+	}		
+}
+.bp_on_main{
+	font-size: 10px;
 }
 .top_block{
 	height: auto;
@@ -1811,7 +1814,9 @@ h1{
 	display: none !important;
 }
 .ch_all{
-	font-size: 10px;
+	>a{
+		font-size: 10px;
+	}
 }
 
 
