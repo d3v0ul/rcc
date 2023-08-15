@@ -3022,6 +3022,8 @@ footer{
 	margin-bottom: 30px;
 }
 .champs{
+	width: calc(100% + 32px);
+	transform: translateX(-16px);
 	grid-template-columns: repeat(2, 1fr);
 }
 .champ{
@@ -3685,9 +3687,13 @@ footer{
 	}
 }
 .nri_search{
+	width: 70px;
 	font-size: 10px;
-	width: calc(100% - 200px);
-	max-width: 100%;
+	&:after{
+		width: 24px;
+		height: 24px;
+		background-size: cover;
+	}
 }
 .nr_text_1{
 	font-size: 18px;

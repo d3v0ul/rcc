@@ -49,6 +49,13 @@ $(".burger").click(function() {
     });
 });
 
+//search popup
+$(".nri_search, .nris_close").click(function() {
+    $(".nri_search").toggleClass('hidden');
+    $(".nri_search_popup").toggleClass('opened');
+});
+
+
 //events_mousemove
 // $(".b1_block").mousemove(function(e) {
 //   var x = e.offsetX;
