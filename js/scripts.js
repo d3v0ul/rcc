@@ -36,6 +36,12 @@ if (document.querySelector('body.black')){
     }, 1000)
 }
 
+
+//mobile 100vh calculation js:
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
 //burger popup
 $(".burger").click(function() {
     $(".burger_popup").slideToggle(0);

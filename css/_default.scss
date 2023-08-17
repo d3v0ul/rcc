@@ -2328,6 +2328,7 @@ footer{
 		&.current{
 			background: #E04141;
 			opacity: 1;
+			border-radius: 4px;
 		}
 	}
 	&:hover{		
@@ -3743,6 +3744,7 @@ footer{
 }
 .cf_head{
 	@extend .bp_head;
+	margin-bottom: 60px;
 	>span,
 	>.defis{
 		display: none;
