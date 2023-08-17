@@ -690,6 +690,9 @@ footer{
 .news_left{
 	float: none;
 	max-width: 100% !important;
+	&.only_desk{
+		display: none;
+	}
 }
 .news_right{
 	float: none;
@@ -1253,6 +1256,7 @@ header{
 			/*left: 0 !important;*/
 		}
 		.b1b_all{
+			font-size: 12px;
 			bottom: -50px;
 			transform: translateX(-50%);
 		}
@@ -1428,7 +1432,6 @@ header{
 }
 .b1_2_all{
 	bottom: 80px !important;
-	font-size: 10px !important;
 }
 .use_scroll{
   bottom: 45%;
@@ -1456,7 +1459,7 @@ header{
 .ft_l{
 	transform: translate3d(-90%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-93%, -50%, 0);
+		transform: translate3d(-71%, -50%, 0) scale(0.9);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1466,7 +1469,7 @@ header{
 .ft_r{
 	 transform: translate3d(-10%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-8%, -50%, 0) scale(1);
+		transform: translate3d(-17%, -50%, 0) scale(0.9);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1616,9 +1619,11 @@ h1{
 }
 .ff_input{
 	font-size: 12px;
+	height: 50px;
 	letter-spacing: 0.48px;
 }
 .ff_submit{
+	height: 50px;
 	font-size: 12px;
 	letter-spacing: 0.48px;
 }
@@ -1810,9 +1815,7 @@ h1{
 	}
 }
 
-.only_desk{
-	display: none !important;
-}
+
 .ch_all{
 	>a{
 		font-size: 10px;
@@ -2093,6 +2096,7 @@ footer{
 	letter-spacing: 0.4px; 
 }
 .brands_slider{
+	padding: 10px 0;
 	.owl-item{
 		min-height: 50px !important;
 	}
@@ -2123,7 +2127,7 @@ footer{
 	font-size: 10px;
 	position: absolute;
 	left: 16px;
-	bottom: 105px;
+	bottom: 134px;
 	margin: 0;
 }
 .f_socials{
@@ -3462,7 +3466,7 @@ footer{
 .fcc_vs{
 	margin-top: 20px;
 	&:before{
-		font-size: 10px !important;
+		font-size: 24px !important;
 	}
 }
 .fc_2x{
@@ -3487,18 +3491,20 @@ footer{
 		transform: translateX(0);
 	}
 .fcc_head{
-	font-size: 26px;
+	font-size: 9vw;
 	font-weight: 500;
 	letter-spacing: 4.16px;
 	margin-bottom: 20px; 
+	padding-top: 10px;
 }
+
 .fcc_name{
-	font-size: 10px !important;
-	margin-bottom: 5px !important;
-	>span{
-		font-size: 26px !important;
+		font-size: 5vw !important;
+		margin-bottom: 4vw !important;
+		>span{
+			font-size: 7vw !important;
+		}
 	}
-}
 .fcc_time{
 	font-size: 10px !important;
 }

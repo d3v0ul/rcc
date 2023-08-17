@@ -1107,7 +1107,7 @@ header{
 .b3_wrap{
 	/*min-height: 900px;*/
 	height: 100vh;
-	background: #000 url(../images/b3_bg.jpg) center top no-repeat;
+	background: #000 url(../images/b3_bg.jpg) center no-repeat;
 	background-size: cover;
 	padding-top: 200px;
 	overflow: hidden;
@@ -1136,7 +1136,7 @@ header{
 .b3_text{
 	font-size: 18px;
 	line-height: 140%;
-	margin: 50px 0 180px;
+	margin: 50px 0 125px;
 }
 .b3_bot{
 	display: inline-block;
@@ -1588,9 +1588,11 @@ footer{
 .nr_slider{
 	width: 100%;
 	margin-bottom: 40px;
-	--btnWidth: 0;
 	.nr_top{
 		margin-bottom: 0;
+		img{
+			display: block;
+		}
 	}
 	.owl-nav{
 		display: none !important;
@@ -1720,7 +1722,7 @@ footer{
 	&.nrtc_4{
 		width: 130px;
 	}
-	&:hover{
+	&:hover, &.current{
 		background: none;
 	}
 	>span{
@@ -1853,6 +1855,7 @@ footer{
 	background: #2b2b2b;
 	position: relative;
 	padding: 0 105px 0 23px;
+	margin-bottom: 53px;
 	&.opened{
 		display: block;
 	}
@@ -1867,7 +1870,7 @@ footer{
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.56px;
-	color: #585854;
+	color: #fff;
 	text-transform: uppercase;
 }
 .nris_close{
@@ -3142,6 +3145,7 @@ footer{
 	bottom: 140px;
 }
 .fc_weight{
+	display: none;
 	width: 160px;
 	height: 50px;
 	line-height: 50px;
@@ -3657,6 +3661,11 @@ footer{
 		position: absolute;
 		bottom: 120px;
 		top: auto;
+	}
+	&.static{
+		position: absolute !important;
+		bottom: auto !important;
+		top: 0 !important;
 	}
 }
 .ft_head{
@@ -4428,11 +4437,7 @@ footer{
 			color: #fff;
 			opacity: 0.4;
 		}
-		&.star{
-			background: var(--gold, linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%));
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+		&.star{			
 			border: 2px solid #BC7F23;
 			line-height: 48px;
 			>img{
@@ -4442,7 +4447,11 @@ footer{
 				margin-right: 8px;
 			}
 			>span{
-				color: #BC7F23;
+				background: linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				opacity: 1;
 			}
 		}
 		&.golden{
