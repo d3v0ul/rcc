@@ -722,6 +722,9 @@ header{
 	float: left;
 	margin: 10px 0 0 60px;
     height: 24px;
+	&.show_hl_menu{
+		display: block !important;
+	}
 	>li{
 		display: inline-block;
 		vertical-align: top;
@@ -1556,6 +1559,7 @@ footer{
 }
 .reduced{
 	max-width: 880px;
+	margin-bottom: 60px !important;
 }
 .nr_img{
 	display: block;
@@ -3361,7 +3365,7 @@ footer{
 		background: none;
 		border: 1px solid #2B2B2B;
 		height: auto;
-		padding: 12px 15px 15px;
+		padding: 12px 15px 30px;
 	}
 }
 .sfi_top{
@@ -3380,6 +3384,7 @@ footer{
 	font-size: 14px;
 	font-weight: 700;
 	color: #E04141;
+	letter-spacing: 0.56px;
 	text-transform: uppercase;
 	position: absolute;
 	right: 15px;
@@ -3514,6 +3519,7 @@ footer{
 				color: #7F3030;
 				font-size: 14px;
 				font-weight: 700;
+				letter-spacing: 0.56px; 
 				-moz-user-select: none;
 				-khtml-user-select: none;
 				user-select: none; 
@@ -3539,6 +3545,7 @@ footer{
 	background: none;
 	font-size: 14px;
 	font-weight: 700;
+	letter-spacing: 0.56px; 
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -3554,6 +3561,7 @@ footer{
 	@extend .sfi_input;
 	height: 160px;
 	line-height: 120%;
+	letter-spacing: 0.56px;
 	padding: 25px 0 10px;
 }
 .sf_files{
@@ -3636,6 +3644,7 @@ footer{
 	color: #fff;
 	font-size: 14px;
 	font-weight: 700;
+	letter-spacing: 0.56px;
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: .3s;
@@ -3711,6 +3720,7 @@ footer{
 		  color: #fff;
 		  font-size: 14px;
 		  line-height: 32px;
+		  letter-spacing: 0.56px; 
 		  font-weight: 700; 
 		  white-space: nowrap;
 		  text-overflow: ellipsis;
@@ -4736,7 +4746,7 @@ footer{
 	background: #E04141;
 	left: 0;
 	&.fill{
-		height: 220px;
+		height: 100%;
 	}
 }
 .cp_1_2{
@@ -4967,6 +4977,7 @@ transition: all 0.7s linear 0s;
   transform:translate(-50%, -50%);
   left:50%;
   width:87%;
+  border-radius: 8px;
 	max-height: 220px;
 	height: 16vw;
   background-color: #333;
@@ -4980,7 +4991,7 @@ transition: all 0.7s linear 0s;
   right:10%;
   width:30px;
   height: 100px;
-  display: flex;
+  display: grid;
   gap:40px;
   justify-content: center;
   align-items: center;
@@ -5356,4 +5367,34 @@ transition: all 0.7s linear 0s;
 			letter-spacing: 0.56px;
 		}
 	}
+}
+
+/*contacts*/
+.ct_items{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 0 16px;
+}
+.ct_item{
+	min-height: 385px;
+	border-top: 1px solid #E04141;
+	padding-top: 15px;
+}
+.cti_text_1{
+	font-size: 14px;
+	line-height: 140%;
+	color: #fff;
+	opacity: 0.4; 
+}
+.cti_text_2{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 124%;
+	color: #fff;
+	margin-top: 40px;
+}
+.cti_text_3{
+	font-size: 18px;
+	line-height: 140%;
+	margin-top: 16px;
 }
