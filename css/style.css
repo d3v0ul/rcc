@@ -5791,6 +5791,10 @@ select:focus, textarea:focus, input:focus {
   .ft_r.resize {
     transform: translate3d(20%, -50%, 0) scale(1);
   }
+
+  .eo_name {
+    font-size: 40px !important;
+  }
 }
 /*+1600*/
 @media only screen and (max-width: 1600px) {
@@ -6197,6 +6201,10 @@ select:focus, textarea:focus, input:focus {
   }
   .event_inner_top .bi_right:hover > span > a {
     margin-left: 2px;
+  }
+
+  .eo_name {
+    font-size: 2.5vw;
   }
 }
 /*+1026*/
@@ -7214,8 +7222,17 @@ select:focus, textarea:focus, input:focus {
     letter-spacing: 0.48px;
   }
 
-  .hl_menu > li:nth-child(4) {
+  .hl_menu > li {
     display: none;
+    /*&:nth-child(4){
+    	display: none;
+    }*/
+  }
+  .hl_menu > li:nth-child(2) {
+    display: inline-block;
+  }
+  .hl_menu > li:nth-child(3) {
+    display: inline-block;
   }
   .hl_menu > li > a {
     font-size: 12px;
@@ -7690,15 +7707,15 @@ select:focus, textarea:focus, input:focus {
     margin: 0;
   }
   .hl_menu > li {
-    display: block;
+    display: block !important;
     width: 50%;
     border: 1px solid #474848;
     float: left;
     margin: 0;
     transition: 0.3s;
-  }
-  .hl_menu > li:nth-child(3), .hl_menu > li:nth-child(4) {
-    display: block;
+    /*&:nth-child(3), &:nth-child(4){
+    	display: block;
+    }*/
   }
   .hl_menu > li.hlm_events {
     display: block;
@@ -9790,6 +9807,13 @@ select:focus, textarea:focus, input:focus {
   }
 }
 /*500*/
+@media only screen and (max-width: 600px) {
+  .mfst_item {
+    float: none;
+    width: 100%;
+  }
+}
+/*600*/
 @media only screen and (max-height: 600px) and (max-width: 767px) and (orientation: landscape) {
   .burger-popup__slider {
     display: none;
