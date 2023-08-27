@@ -47,7 +47,7 @@ $(".burger").click(function() {
     $(".burger_popup").slideToggle(0);
     // $(".h_choose").slideToggle(0);
     $(this).toggleClass('opened');
-    $("body").toggleClass('noscroll');
+    // $("body").toggleClass('noscroll');
     $(".hl_menu, .hr_menu").slideToggle(0, function() {
         if ($(this).css('display') === 'none') {
             $(this).removeAttr('style');

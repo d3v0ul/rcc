@@ -204,11 +204,6 @@ select:focus, textarea:focus, input:focus {
 		transform: translate3d(20%, -50%, 0) scale(1);
 	}
 }
-.m_col{
-	img{
-		
-	}
-}
 .eo_name{
 	font-size: 40px !important;
 }
@@ -345,7 +340,7 @@ select:focus, textarea:focus, input:focus {
 .mt_names{
 	font-size: 5vw;
 }
-.mfst_left{
+/*.mfst_left{
 	max-width: 66.6%;
 }
 .circular-progress{
@@ -358,7 +353,7 @@ select:focus, textarea:focus, input:focus {
 }
 .mfst_right{
 	max-width: 33.3%;
-}
+}*/
 .column_progress{
 	float: none;
 }
@@ -699,6 +694,7 @@ footer{
 	>li{
 		>a{
 			font-size: 12px;
+			letter-spacing: 0.48px;
 		}
 	}
 }
@@ -1242,7 +1238,7 @@ header{
 	>li{
 		margin-right: 15vw;
 		>a{
-			font-size: 10px;
+			font-size: 12px;
 		}
 	}		
 }
@@ -1271,6 +1267,7 @@ header{
 	&.visible{
 		.b1b_all{
 			font-size: 12px;
+			letter-spacing: 0.48px;
 			bottom: -10px;
 			transform: translateX(-50%);
 		}
@@ -1323,7 +1320,17 @@ header{
 	top: 0;
 	left: 15px;
 	transform: translateY(20px);
+		>span{
+			&:nth-child(1){
+				font-size: 12px;
+				letter-spacing: 0.48px;
+			}
+			&:nth-child(3){
+				font-size: 28px;
+				letter-spacing: -0.56px;
+			}		
 }
+	}
 .b1b_date{
 	left: auto;
 	bottom: auto;
@@ -1332,6 +1339,7 @@ header{
 	font-size: 12px;
 	span{
 		font-size: 32px;
+		letter-spacing: 5.12px;
 	}
 }
 .c_head{
@@ -1352,7 +1360,17 @@ header{
 	max-width: 350px;
 }
 .b3_text{
+	font-size: 16px;
 	margin-bottom: 50px;
+	
+}
+.b3_bot {
+	font-size: 28px;
+	letter-spacing: -0.56px;
+	&:before{
+		top: 9px;
+		right: -33px;
+	}
 }
 .nr_items{
 	grid-template-columns: repeat(2, 1fr);
@@ -1472,7 +1490,7 @@ header{
 .ft_l{
 	transform: translate3d(-90%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-71%, -50%, 0) scale(0.9);
+		transform: translate3d(-75%, -50%, 0) scale(0.7);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1482,7 +1500,7 @@ header{
 .ft_r{
 	 transform: translate3d(-10%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-17%, -50%, 0) scale(0.9);
+		transform: translate3d(-17%, -50%, 0) scale(0.7);
 		opacity: 1;
 	}
 	&.resize_2{
@@ -1520,7 +1538,30 @@ header{
 	height: 50px;
 	line-height: 50px;
 	margin-top: -5px;
+	font-size: 12px;
+	letter-spacing: 0.48px;
 }
+
+.h_choose {
+	width: 134px;
+	font-size: 12px;
+	left: 93px;
+	letter-spacing: 0.48px;
+}
+
+.b1_2_top{	
+	>a{
+		font-size: 12px;
+	}
+}
+
+.b1_2_names{	
+	>a{
+		letter-spacing: 10.24px;
+		font-size: 8.33vw;
+	}
+}
+
 .eit_btn{
 	margin-top: 19px;
 }
@@ -1757,6 +1798,7 @@ h1{
 	>li{
 		>a{
 			font-size: 12px;
+			line-height: 140%;
 		}
 	}
 }
@@ -1815,6 +1857,7 @@ h1{
 .b1_2_cat{	
 	>a{
 		letter-spacing: -0.56px;
+		font-size: 3.65vw;
 	}
 }
 .fighter {
@@ -2061,7 +2104,7 @@ header {
 			font-size: 10px;
 			line-height: 60px;
 			text-align: center;
-			letter-spacing: 0.48px;
+			letter-spacing: 0.4px;
 		}
 	}
 }
@@ -2091,6 +2134,7 @@ footer{
 		margin-bottom: 20px;
 		>a{
 			font-size: 20px;
+			letter-spacing: -0.4px;
 		}
 	}
 }
@@ -2120,6 +2164,7 @@ footer{
 		margin: 0 15px;
 		>a{
 			font-size: 10px;
+			letter-spacing: 0.4px;
 		}
 	}
 }
@@ -2348,6 +2393,7 @@ footer{
 	margin: 15px 0;
 	>a{
 		font-size: 46px;
+		letter-spacing: 7.36px;
 	}
 }
 .b1_2_cat{	
@@ -3118,7 +3164,7 @@ footer{
 	border: none !important;
 	overflow: visible;
 	>.mc_bg{
-		background: unset;
+		/*background: unset;*/
 	}	
 	img{
 		position: static;
@@ -3138,7 +3184,7 @@ footer{
 		width: 100%;
 		position: absolute;
 		left: 0;
-		top: 540px;
+		top: 540px;		
 		>a{
 			display: block;
 			position: absolute;
@@ -3159,7 +3205,6 @@ footer{
 		>a{
 			display: block;
 			position: absolute;
-			// top: 0;
 			bottom: 0;
 			left: 50%;
 			transform: translateX(-30px);
@@ -3169,10 +3214,11 @@ footer{
 		}
 	}
 	&.mc_2, &mc_3{
-		&:hover, &:active{
+		&:before, &:after{
+		}
+		&:hover, &:active{			
 			&:before, &:after{
-					/*@include opa(10);*/
-					transform: unset;
+					@include opa(10);
 				}
 		}
 	}
@@ -3621,15 +3667,29 @@ footer{
 		font-size: 20px;
 		&:nth-child(1){
 			font-size: 10px;
-			letter-spacing: 0.48px;
+			letter-spacing: 0.4px;
 		}
+		&:nth-child(3){
+			font-size: 20px;
+			letter-spacing: -0.4px;
+		}	
 	}
 }
 .b1b_date{
 	font-size: 10px;
 	>span{
 		font-size: 26px;
+		letter-spacing: 4.16px;
+		line-height: 110%;
 	}
+}
+.b2_2_wrap{
+	&.visible{
+		.b1b_all{
+			font-size: 10px;
+			letter-spacing: 0.4px;
+		}
+	}	
 }
 .b1b_all, .b2b_all{
 	font-size: 10px;
@@ -3712,10 +3772,12 @@ footer{
 	}
 }
 .b3_text{
+	font-size: 14px;
 	line-height: 140%;
 }
 .b3_bot{
 	font-size: 20px;
+	letter-spacing: -0.4px;
 	&:before{
 		width: 15px;
 		height: 15px;
@@ -3861,7 +3923,7 @@ footer{
 
 .m_col{
 	&.mc_2, &.mc_3{
-		top: auto;
+		top: 0;
 		bottom: 40px;
 	}
 }
@@ -3901,7 +3963,17 @@ footer{
 	}
 }
 .bp_on_main{
+	letter-spacing: 0.4px;
 	bottom: 140px;
+}
+
+.hr_menu{
+	>li{
+		>a{
+			font-size: 10px;
+			letter-spacing: 0.4px;
+		}
+	}		
 }
 
 .ft_l{

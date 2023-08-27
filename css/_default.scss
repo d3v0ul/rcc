@@ -312,6 +312,7 @@ header{
 	font-size: 12px;
 	line-height: 16.8px;
 	font-weight: 700;
+	letter-spacing: 0.48px;
 	color: #E04141;
 	text-transform: uppercase;
 	position: absolute;
@@ -349,7 +350,7 @@ header{
 	color: #E04141;
 	font-weight: 700;
 	position: absolute;
-	left: 76px;
+	left: 100px;
 	top: 60px;
 	transition: .3s;
 	&:hover{
@@ -693,6 +694,7 @@ header{
 	background: #E04141;
 	font-size: 14px;
 	line-height: 60px;
+	letter-spacing: 0.56px;
 	text-transform: uppercase;
 	font-weight: 700;
 	text-align: center;
@@ -765,6 +767,7 @@ header{
 			font-size: 14px;
 			line-height: 120%;
 			font-weight: 700;
+			letter-spacing: 0.56px;
 			text-transform: uppercase;
 			transition: .3s;			
 			&.rcc_shop{				
@@ -911,6 +914,7 @@ header{
 	>a{
 		font-size: 14px;
 		font-weight: 700;
+		line-height: 140%;
 		letter-spacing: 0.04em;
 	}
 }
@@ -1089,6 +1093,7 @@ header{
 	line-height: 120%;
 	text-transform: uppercase;
 	font-weight: 700;
+	letter-spacing: 0.4px;
 	transition: .3s;
 	position: relative;
 	margin-top: 30px;	
@@ -1145,6 +1150,7 @@ header{
 	display: inline-block;
 	font-size: 36px;
 	line-height: 140%;
+	letter-spacing: -0.72px;
 	text-transform: uppercase;
 	position: relative;
 	&:before{
@@ -1257,6 +1263,8 @@ footer{
 			font-weight: 700;
 			color: #DFDDDD;
 			transition: .3s;
+			line-height: 140%;
+			letter-spacing: 0.56px;
 			&:hover{
 				@include opa(5);
 			}
@@ -1271,9 +1279,9 @@ footer{
 .f_contacts{
 	>a{
 		display: inline-block;
-		color: #F24E45;
+		color: #E04141;
 		font-size: 32px;
-		line-height: 120%;
+		line-height: 112%;
 	}
 }
 .f_address{
@@ -1306,7 +1314,7 @@ footer{
 	display: block;
 	width: 100%;
 	height: 60px;
-	background: #ED4A44;
+	background: #E04141;
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.56px; 
@@ -1417,6 +1425,7 @@ footer{
 .nl_status{
 	font-size: 36px;
 	font-weight: 500;	
+	letter-spacing: -0.72px;
 	text-transform: uppercase;
 	padding-left: 36px;
 	position: relative;
@@ -1981,7 +1990,8 @@ footer{
 .nri_date{
 	display: block;
 	font-size: 14px;
-	line-height: 120%;
+	line-height: 140%;
+	letter-spacing: 0.56px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #444343;
@@ -2464,6 +2474,7 @@ footer{
 	&.opened{		
 		transform: translateX(0);
 		overflow: visible;
+		top:74px;
 	}
 }
 .smi_popup , .manager_popup{
@@ -3931,6 +3942,7 @@ footer{
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(180deg, rgba(204, 26, 26, 0.4) 0%, rgba(204, 26, 26, 0.1) 6.25%, #CC1A1A 100%);
+	mix-blend-mode: normal;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -4085,14 +4097,24 @@ footer{
 }
 .cht_place{
 	font-weight: 700;
-	background: linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	text-fill-color: transparent;
+	color: #DFDDDD;
 	margin-right: 10px;
+	&.gold{
+		background: linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
 	&.silver{
 		background: linear-gradient(225deg, #94989D 0%, #C2C9CB 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
+	&.bronze{
+		background: linear-gradient(225deg, #A36551 0%, #C8837F 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -4651,7 +4673,8 @@ footer{
 .mfst_left{
 	@extend .cl;
 	float: left;
-	max-width: 980px;
+	/*max-width: 980px;*/
+	max-width: 66.6%;
 	width: 100%;
 }
 .mfst_head{
@@ -4703,7 +4726,10 @@ footer{
 	float: right;
 	width: calc(100% - 230px);
 	margin-top: 15px;
+	padding-right: 10px;
 }
+
+
 .mfst_label{
 	font-weight: 700;
 	font-size: 14px;
@@ -4721,8 +4747,9 @@ footer{
 }
 .mfst_right{
 	@extend .cl;
-	float: right;
-	max-width: 430px;
+	float: left;
+	/*max-width: 430px;*/
+	max-width: 33.3%;
 	.mfst_item{		
 		width: 100%;
 	}
@@ -4977,6 +5004,7 @@ transition: all 0.7s linear 0s;
   transform:translate(-50%, -50%);
   left:50%;
   width:87%;
+  max-width: 1520px;
   border-radius: 8px;
 	max-height: 220px;
 	height: 16vw;
@@ -4990,9 +5018,10 @@ transition: all 0.7s linear 0s;
   transform:translateY(-50%);
   right:10%;
   width:30px;
-  height: 100px;
+  height: 150px;
   display: grid;
-  gap:40px;
+  height: 150px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -5013,7 +5042,7 @@ transition: all 0.7s linear 0s;
 @media(min-width:2000px){
   .burger-popup__buttons{
     height: 250px;
-    gap:150px;
+    gap:110px;
   }
 }
 .burger-popup__buttton-prev, .burger-popup__buttton-next {

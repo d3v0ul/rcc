@@ -5,7 +5,7 @@ $(document).ready(() => {
   const focusToSection = () => {
     const section = $('#pagepiling > .section.active')
     section.attr("tabindex", "1")
-    section.trigger("focus")
+    //section.trigger("focus")
   }
 
   const leaveFromSection = (index) => {
