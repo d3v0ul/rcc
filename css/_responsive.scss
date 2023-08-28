@@ -450,6 +450,11 @@ select:focus, textarea:focus, input:focus {
 .bir_broadcast{
 	display: none;
 }
+.mf_socials{
+	&.long_5{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 
 } /*1300*/
 @media only screen and (max-width : 1260px){
@@ -1900,7 +1905,17 @@ h1{
 .cti_text_3{
 	font-size: 16px;
 }
-
+.mf_stats{
+	&:before{
+		top: 161px;
+	}
+	&:after{
+		top: 313px;
+	}
+}
+.mf_strikes{
+	margin-top: 40px;
+}
 
 } /*1025*/
 @media only screen and (min-width : 767px){ /*+767*/
@@ -3225,7 +3240,7 @@ footer{
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			transition: .9s;
+			transition: .9s;			
 		}
 		&:hover, &:active{			
 			&:before, &:after{
@@ -3235,15 +3250,18 @@ footer{
 	}
 	&.orange{		
 		&:before{
+			mix-blend-mode: screen;
 			background: url(../images/flame_orange_mob.png) left bottom no-repeat !important;
 		}
 	}
 	&.blue{		
 		&:before{
+			mix-blend-mode: screen;
 			background: url(../images/flame_blue_mob.png) left bottom no-repeat !important;
 		}
 	}
 	&:before{
+		mix-blend-mode: screen;
 		background: url(../images/flame_mob.png) left bottom no-repeat;
 	}	
 }

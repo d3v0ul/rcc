@@ -67,7 +67,7 @@ a:hover {
   text-decoration: none;
 }
 
-.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_strikes:after, .mf_about:after, .eb_top:after, .mac_cols:after, .ch_top:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .smi_page:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
+.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_about:after, .eb_top:after, .mac_cols:after, .ch_top:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .smi_page:after, .mf_strikes:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
   content: "";
   display: block;
   clear: both;
@@ -195,7 +195,7 @@ h3, h4 {
   background: #307DFF !important;
 }
 
-.smi_page, .mfg_content, .mf_top, .ri_line, .content, .m_about, .m4, .p_404, .conf, .fighter, .fight_card, .event_inner_top, .events, .bi_content, .broadcasts, .news_socials, .news, .f_bot, .f_top, .b3, .b1_2, .header {
+.smi_page, .mf_strikes, .mfg_content, .mf_top, .ri_line, .content, .m_about, .m4, .p_404, .conf, .fighter, .fight_card, .event_inner_top, .events, .bi_content, .broadcasts, .news_socials, .news, .f_bot, .f_top, .b3, .b1_2, .header {
   max-width: 1600px;
   padding: 0 40px;
   margin: 0 auto;
@@ -291,6 +291,16 @@ header.h_main.dark {
   overflow: hidden;
   /*background: url(../images/top_bg_2.jpg) center top no-repeat;*/
   background-size: cover;
+}
+.tb_2:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .tb_2_img {
@@ -789,7 +799,7 @@ header.h_main.dark {
 
 .hl_menu {
   float: left;
-  margin: 10px 0 0 60px;
+  margin: 12px 0 0 60px;
   height: 24px;
 }
 .hl_menu.show_hl_menu {
@@ -824,7 +834,7 @@ header.h_main.dark {
 
 .hr_menu {
   float: right;
-  margin: 10px 40px 0 0;
+  margin: 12px 40px 0 0;
 }
 .hr_menu > li {
   display: inline-block;
@@ -2076,8 +2086,7 @@ footer.main_footer {
   text-align: left;
 }
 .nr_item:hover img {
-  filter: alpha(Opacity=70);
-  opacity: 0.7;
+  /*@include opa(7);*/
 }
 .nr_item:hover .nri_name {
   color: #E04141;
@@ -2416,6 +2425,9 @@ footer.main_footer {
 
 #sync2 .owl-nav, #sync2 .owl-dots {
   display: none;
+}
+#sync2 .owl-item {
+  max-width: 141px;
 }
 #sync2 .item {
   display: table;
@@ -3078,6 +3090,7 @@ footer.main_footer {
 .event_inner_top {
   width: 100%;
   position: absolute;
+  z-index: 1;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -4136,7 +4149,7 @@ footer.main_footer {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, rgba(204, 26, 26, 0.4) 0%, rgba(204, 26, 26, 0.1) 6.25%, #CC1A1A 100%);
-  mix-blend-mode: normal;
+  mix-blend-mode: screen;
   position: absolute;
   left: 0;
   top: 0;
@@ -4734,6 +4747,9 @@ footer.main_footer {
   max-width: 350px;
   grid-template-columns: repeat(3, 1fr);
 }
+.mf_socials.long_5 {
+  grid-template-columns: repeat(5, 1fr);
+}
 .mf_socials > a {
   display: inline-block;
   vertical-align: top;
@@ -4832,13 +4848,36 @@ footer.main_footer {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 60px 0;
   padding-top: 70px;
+  position: relative;
+}
+.mf_stats:before {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 172px;
+}
+.mf_stats:after {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 335px;
 }
 .mf_stats.no_border .mfs_item {
   border-bottom: none;
 }
 
 .mfs_item {
-  border-bottom: 1px solid #333;
+  /*border-bottom: 1px solid #333;*/
   padding-bottom: 30px;
 }
 
@@ -4860,6 +4899,10 @@ footer.main_footer {
   text-transform: uppercase;
   margin-top: 10px;
   padding-right: 20px;
+}
+
+.mf_strikes_wrap {
+  overflow: hidden;
 }
 
 .mf_strikes {
@@ -4928,6 +4971,7 @@ footer.main_footer {
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
+  white-space: nowrap;
   text-transform: uppercase;
   color: #E04141;
 }
@@ -6055,6 +6099,10 @@ select:focus, textarea:focus, input:focus {
   .bir_broadcast {
     display: none;
   }
+
+  .mf_socials.long_5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*1300*/
 @media only screen and (max-width: 1260px) {
@@ -6232,7 +6280,7 @@ select:focus, textarea:focus, input:focus {
 }
 /*+1026*/
 @media only screen and (max-width: 1025px) {
-  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .smi_page {
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .mf_strikes, .smi_page {
     padding: 0 24px;
   }
 
@@ -7600,6 +7648,17 @@ select:focus, textarea:focus, input:focus {
   .cti_text_3 {
     font-size: 16px;
   }
+
+  .mf_stats:before {
+    top: 161px;
+  }
+  .mf_stats:after {
+    top: 313px;
+  }
+
+  .mf_strikes {
+    margin-top: 40px;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 767px) {
@@ -7674,7 +7733,7 @@ select:focus, textarea:focus, input:focus {
 }
 /*+767*/
 @media only screen and (max-width: 767px) {
-  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .smi_page {
+  .header, .b1_2, .b3, .f_top, .f_bot, .news, .news_socials, .broadcasts, .bi_content, .events, .event_inner_top, .fight_card, .fighter, .conf, .p_404, .m4, .m_about, .content, .ri_line, .mf_top, .mfg_content, .mf_strikes, .smi_page {
     padding: 0 16px;
   }
 
@@ -9058,12 +9117,15 @@ select:focus, textarea:focus, input:focus {
     transform: translate3d(0, 0, 0);
   }
   .m_col.orange:before {
+    mix-blend-mode: screen;
     background: url(../images/flame_orange_mob.png) left bottom no-repeat !important;
   }
   .m_col.blue:before {
+    mix-blend-mode: screen;
     background: url(../images/flame_blue_mob.png) left bottom no-repeat !important;
   }
   .m_col:before {
+    mix-blend-mode: screen;
     background: url(../images/flame_mob.png) left bottom no-repeat;
   }
 
