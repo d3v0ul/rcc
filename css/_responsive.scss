@@ -668,7 +668,7 @@ footer{
 }
 .f_type{
 	position: static;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 	>li{
 		>a{
 			font-size: 28px;
@@ -2145,6 +2145,12 @@ header {
 		}
 	}
 }
+.bs_content{
+	img{
+		max-width: 70px;
+		width: 100%;
+	}
+}
 
 footer{
 	margin-top: 80px;
@@ -2164,9 +2170,10 @@ footer{
 }
 .f_slogan{
 	font-size: 18px;
-	margin-bottom: 130px;
+	margin-bottom: 122px;
 }
 .f_type{
+	margin-bottom: 50px;
 	>li{
 		margin-bottom: 20px;
 		>a{
@@ -2181,7 +2188,7 @@ footer{
 	}
 }
 .f_address{
-	margin-top: 36px;
+	margin: 23px 0 48px;
 	font-size: 14px;
 	>br{
 		display: none;
@@ -2195,7 +2202,7 @@ footer{
 	left: 0;
 	width: 100%;
 	height: 40px;
-	top: 210px;
+	top: 205px;
 	>li{
 		display: inline-block;
 		margin: 0 15px;
@@ -2207,16 +2214,18 @@ footer{
 }
 .ff_input{
 	font-size: 10px;
+	padding-top: 1px;
 	letter-spacing: 0.4px; 
 }
 .ff_submit{
 	font-size: 10px;
+	padding-top: 1px;
 	letter-spacing: 0.4px; 
 }
 .brands_slider{
-	padding: 10px 0;
+	padding: 0;
 	.owl-item{
-		min-height: 50px !important;
+		min-height: 48px !important;
 	}
 }
 .f_bot{
@@ -2227,7 +2236,7 @@ footer{
 	float: none;
 	margin: 0 auto;
 	>li{
-		margin-bottom: 67px;
+		margin-bottom: 46px;
 		&:last-child{
 			margin-bottom: 25px;
 		}
@@ -2245,7 +2254,7 @@ footer{
 	font-size: 10px;
 	position: absolute;
 	left: 16px;
-	bottom: 134px;
+	bottom: 126px;
 	margin: 0;
 }
 .f_socials{
@@ -2564,7 +2573,7 @@ footer{
 }
 .f_socials{	
 	position: absolute;
-	top: 840px;
+	top: 753px;
 	left: 50%;
 	margin: 0;
 	grid-gap: 30px 35px;
@@ -3790,6 +3799,10 @@ footer{
 	.c_head{
 		margin-bottom: 20px;
 	}
+	&.gray{
+		background-position-y: center;
+		background-size: 1000px;
+	}
 }
 .b3_wrap{
 	&:after{
@@ -4069,8 +4082,12 @@ footer{
 	font-size: 14px;
 	margin-top: 12px;
 }
-
-
+.ch_all{
+	margin-top: 49px;
+}
+.events{
+	margin-top: 73px;
+}
 
 
 } /*767*/
