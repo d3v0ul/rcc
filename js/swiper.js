@@ -8,7 +8,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 		speed: 900,
 		slidesPerView: 5,
 		touchRatio: 0.7,
-		spaceBetween: 50,
+		// spaceBetween: 25,
 		loop: true,
 		initialSlide:2,
 		centeredSlides: true,
@@ -39,7 +39,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 					// Угол
 					rotate: -25,
 					// Наложение
-					stretch: 0,
+					// stretch: 0,
 					//  Глубина удаления слайдов
 					depth: 600,
 					// Тень
@@ -73,6 +73,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 			depth: 600,
 			// Тень
 			slideShadows: false,
+			// stretch: 150,
 		},
 		// Управление колесом мыши
 		mousewheel: {

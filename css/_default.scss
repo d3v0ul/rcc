@@ -2487,7 +2487,10 @@ footer{
 	&.opened{		
 		transform: translateX(0);
 		overflow: visible;
-		top:74px;
+		/*top:74px;*/
+	}
+	.bp_head{
+		display: none;
 	}
 }
 .smi_popup , .manager_popup{
@@ -3036,7 +3039,7 @@ footer{
 .fc_head{
 	font-size: 36px;
 	text-transform: uppercase;
-	margin-bottom: 35px;
+	margin-top: 40px;
 }
 .fc_block{
 	@extend .cl;
@@ -3190,7 +3193,7 @@ footer{
 	bottom: 0;
 }
 .fc_table{
-	margin: 80px 0 140px;
+	margin: 20px 0 140px;
 	border-top: 1px solid #4A4A4A;
 }
 .fc_line{
@@ -4476,7 +4479,7 @@ footer{
 		line-height: 52px;
 		text-transform: uppercase;
 		font-weight: 700;
-		margin: 0 6px 6px 0;
+		margin: 0 6px 8px 0;
 		>i{
 			font-style: normal;
 			margin-right: 8px;
@@ -5009,7 +5012,7 @@ transition: all 0.7s linear 0s;
   z-index:5;
   top:50%;
   transform:translateY(-50%);
-  left:9%;
+  left:3%;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -5035,6 +5038,7 @@ transition: all 0.7s linear 0s;
     font-size: 18px;
     left:8%;
   }
+
 }
 @media(min-width:2000px){
   .burger-popup__slide-text{
@@ -5051,8 +5055,10 @@ transition: all 0.7s linear 0s;
   max-width: 1520px;
   border-radius: 8px;
 	max-height: 220px;
-	height: 16vw;
+	height: 18vmin;
+	min-height: 150px;
   background-color: #333;
+  transition: height .2s;
 }
 
 .burger-popup__buttons {
@@ -5060,9 +5066,9 @@ transition: all 0.7s linear 0s;
   z-index:5;
   top:50%;
   transform:translateY(-50%);
-  right:10%;
+  right:3%;
   width:30px;
-  height: 150px;
+  height: 130px;
   display: grid;
   height: 150px;
   gap: 10px;
@@ -5077,15 +5083,12 @@ transition: all 0.7s linear 0s;
   }
   .burger-popup__active-box{
     width: 98%;
-  }
-  .burger-popup__buttton-prev,
-  .burger-popup__buttton-next{
-    
-  }
+	min-height: 200px;
+  }  
 }
 @media(min-width:2000px){
   .burger-popup__buttons{
-    height: 250px;
+    height: 130px;
     gap:110px;
   }
 }

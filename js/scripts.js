@@ -563,6 +563,37 @@ function liveSlider (ls) {
 }
 
 }
+function translateTagSlider () {
+    let slider = document.querySelector('.nr_tags_slider .owl-stage');
+    if(slider.clientWidth > document.documentElement.clientWidth){
+        document.querySelector('.nr_tags_slider').setAttribute('style', 'transform: translateX(-16px); width: 100vw; overflow: unset');
+        document.querySelector('.nr_tags_slider .owl-stage-outer').setAttribute('style', 'overflow: unset');
+    } else {
+        document.querySelector('.nr_tags_slider').removeAttribute('style');
+        document.querySelector('.nr_tags_slider .owl-stage-outer').removeAttribute('style');
+    }
+}
+if(document.querySelector('.nr_tags_slider')){
+    translateTagSlider();
+    window.addEventListener('resize', translateTagSlider)
+}
+
+function translateTimeSlider () {
+    let slider = document.querySelector('.time_slider .owl-stage');
+    var hqq = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');
+    if(slider.clientWidth > document.documentElement.clientWidth){
+        if(hqq.matches){
+        document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-24px); width: 100vw; overflow: unset');}
+        else{
+            document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-16px); width: 100vw; overflow: unset');}
+    } else {
+        document.querySelector('.time_slider').removeAttribute('style');
+    }
+}
+if(document.querySelector('.time_slider')){
+    translateTimeSlider();
+    window.addEventListener('resize', translateTimeSlider)
+}
 
 if(document.querySelector('.live_slider')){
 
