@@ -48,11 +48,17 @@ $(".burger").click(function() {
     // $(".h_choose").slideToggle(0);
     $(this).toggleClass('opened');
     // $("body").toggleClass('noscroll');
-    $(".hl_menu, .hr_menu").slideToggle(0, function() {
+    $(".hr_menu").slideToggle(0, function() {
         if ($(this).css('display') === 'none') {
             $(this).removeAttr('style');
         }
     });
+    if($(this).hasClass('opened')){
+        $('.hl_menu').css('display', 'block');
+    } else {
+        $('.hl_menu').css('display', 'none');
+    }
+    activeBoxHeight();
 });
 
 //search popup
@@ -737,3 +743,20 @@ $(window).on('load', ()=>{
     
 //     /* выплывание шапки*/
 // });
+
+
+if(document.querySelector('.burger-popup__active-box')){
+    window.addEventListener('resize', activeBoxHeight)
+}
+
+function activeBoxHeight () {
+	let box = document.querySelector('.burger-popup__active-box');
+	let slideimgH;
+    setTimeout(() => {
+        slideimgH = document.querySelector('.swiper-slide-active>.burger-popup__slide-image>img').clientHeight;
+        slideimgH = slideimgH * 1.7;
+        box.setAttribute("style", "height: "+slideimgH+"px !important");
+
+    }, 50);
+	// box.setAttribute
+}

@@ -2749,6 +2749,22 @@ footer{
 	line-height: 110%;
 	letter-spacing: -0.72px;
 }
+.eb_text_4{
+	display: block;
+	font-family: $r;
+	font-size: 40px;
+	line-height: 120%;
+	letter-spacing: 6.4px;
+	text-transform: uppercase; 
+}
+.eb_text_5{
+	display: block;
+	font-size: 36px;
+	line-height: 110%;
+	letter-spacing: -0.72px;
+	text-transform: uppercase; 
+	margin-top: 12px;
+}
 .eb_btns{
 	position: absolute;
 	right: 40px;
@@ -5056,7 +5072,7 @@ transition: all 0.7s linear 0s;
   border-radius: 8px;
 	max-height: 220px;
 	height: 18vmin;
-	min-height: 150px;
+	// min-height: 150px;
   background-color: #333;
   transition: height .2s;
 }
@@ -5103,7 +5119,7 @@ transition: all 0.7s linear 0s;
 
 @media(max-width:991.98px){
   .burger-popup__active-box{
-    height:18vw;
+    height:18vmin;
   }
   .burger-popup__buttton-prev,
   .burger-popup__buttton-next{

@@ -39,7 +39,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 					// Угол
 					rotate: -25,
 					// Наложение
-					// stretch: 0,
+					stretch: 0,
 					//  Глубина удаления слайдов
 					depth: 600,
 					// Тень
@@ -49,11 +49,18 @@ if (document.querySelector('.burger-popup__slider') ) {
 			768: {
 				slidesPerView: 5,
 				spaceBetween: 0,
-
+				effect: 'coverflow',
+				coverflowEffect: {
+					stretch: 0,
+				}
 			},
 			992: {
 				slidesPerView: 5,
 				spaceBetween: 0,
+				effect: 'coverflow',
+				coverflowEffect: {
+					stretch: 110
+				}
 			},
 		},
 		// autoplay: {
@@ -68,7 +75,7 @@ if (document.querySelector('.burger-popup__slider') ) {
 			// Угол
 			rotate: -25,
 			// Наложение
-			stretch: 50,
+			// stretch: 50,
 			//  Глубина удаления слайдов
 			depth: 600,
 			// Тень
@@ -86,5 +93,3 @@ if (document.querySelector('.burger-popup__slider') ) {
 	});
 
 }
-
-
