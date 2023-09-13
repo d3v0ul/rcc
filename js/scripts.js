@@ -62,10 +62,10 @@ $(".burger").click(function() {
 });
 
 //search popup
-$(".nri_search, .nris_close").click(function() {
-    $(".nri_search").toggleClass('hidden');
-    $(".nri_search_popup").toggleClass('opened');
-});
+// $(".nri_search, .nris_close").click(function() {
+//     $(".nri_search").toggleClass('hidden');
+//     $(".nri_search_popup").toggleClass('opened');
+// });
 
 
 //events_mousemove
