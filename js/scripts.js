@@ -56,7 +56,7 @@ $(".burger").click(function() {
     if($(this).hasClass('opened')){
         $('.hl_menu').css('display', 'block');
     } else {
-        $('.hl_menu').css('display', 'none');
+        // $('.hl_menu').css('display', 'none');
     }
     activeBoxHeight();
 });

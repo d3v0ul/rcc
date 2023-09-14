@@ -1601,8 +1601,16 @@ footer{
 	color: #E04141;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
-	text-align: left;
+	text-align: center;
 	margin: 80px 0;
+	>span{
+		display: block;
+		color: #555;
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: none;
+		line-height: 140%;
+	}
 }
 .reduced{
 	max-width: 880px;
@@ -2667,7 +2675,7 @@ footer{
 	}
 }
 .e_btns{
-	margin-top: 68px;
+	margin: 68px 0 40px;
 	@extend .cl;
 	&.e_old{
 		.e_time{
@@ -2716,9 +2724,9 @@ footer{
 	}
 }
 .e_block{
-	margin-top: 40px;
 	position: relative;
 	overflow: hidden;
+	margin-top: 16px;
 	/*&.eb_1{
 		background: url(../images/eb_1.jpg) center no-repeat;
 	}*/
@@ -3122,6 +3130,7 @@ footer{
 	color: #E04141;
 }
 .fcc_vs{
+	@extend .cl;
 	position: relative;
 	margin-top: 65px;
 	&:before{
@@ -5096,6 +5105,7 @@ transition: all 0.7s linear 0s;
   }
 
 }
+
 @media(min-width:2000px){
   .burger-popup__slide-text{
     font-size: 30px;
@@ -5124,18 +5134,18 @@ transition: all 0.7s linear 0s;
   transform:translateY(-50%);
   right:3%;
   width:30px;
-  height: 130px;
+  height: 110px;
+  gap: 30px;
   display: grid;
   height: 150px;
-  gap: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 @media(min-width:1400px){
   .burger-popup__buttons{
-    height: 200px;
-    gap:110px;
+    height: 110px;
+    gap: 30px;
   }
   .burger-popup__active-box{
     width: 98%;
@@ -5144,8 +5154,8 @@ transition: all 0.7s linear 0s;
 }
 @media(min-width:2000px){
   .burger-popup__buttons{
-    height: 130px;
-    gap:110px;
+    height: 110px;
+    gap: 10px;
   }
 }
 .burger-popup__buttton-prev, .burger-popup__buttton-next {
