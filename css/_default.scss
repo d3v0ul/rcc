@@ -3129,6 +3129,22 @@ footer{
 	text-transform: uppercase;
 	color: #E04141;
 }
+.fcc_weight{
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 140%;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	margin-top: 59px;
+}
+.fcc_names{
+	font-family: $dc;
+	font-size: 96px;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: 15.36px;
+	text-transform: uppercase; 
+}
 .fcc_vs{
 	@extend .cl;
 	position: relative;
@@ -3293,8 +3309,9 @@ footer{
 		text-transform: uppercase;
 	}
 	>span{
-		display: inline-block;
-		vertical-align: middle;
+		/*display: inline-block;
+		vertical-align: middle;*/
+		display: none;
 		width: 36px;
 		height: 36px;
 		border: 1px solid #4A4A4A;
