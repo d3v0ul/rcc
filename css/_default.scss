@@ -1179,7 +1179,7 @@ footer{
 	margin-top: 140px;
 	&.main_footer{
 		/*padding-top: 20vh;*/
-	}
+	}	
 }
 .f_top{
 	@extend %ct;
@@ -2743,12 +2743,20 @@ footer{
 		left: 0;
 		top: 0;
 		position: absolute;
-	}
+	}	
 }
+.zoom{
+	&:hover{
+		img{
+			transform: scale(1.1);
+		}		
+	}
+}	
 .eb_img{
 	display: block;
 	width: 100%;
-	max-width: 1520px;
+	max-width: 1520px;	
+	transition: .3s;
 }
 .eb_content{
 	display: block;
@@ -5491,7 +5499,6 @@ transition: all 0.7s linear 0s;
 .nr_search{
 	display: block;
 	width: 100%;
-	max-width: 751px;
 	height: 52px;
 	background: #2B2B2B;
 	padding: 0 24px;
