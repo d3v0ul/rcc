@@ -420,7 +420,9 @@ header{
   		display: none !important;
   	}
   	.si_box{
-  		display: none;
+  		>span{
+  			display: none;
+  		}
   	}
   }
   &.blue{
@@ -2734,6 +2736,7 @@ footer{
 .eb_link{
 	display: block;
 	position: relative;
+	overflow: hidden;
 	&:after{
 		display: block;
 		content: '';

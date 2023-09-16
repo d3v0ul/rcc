@@ -1298,6 +1298,7 @@ header{
 }
 .b1{
 	position: static;
+	padding-top: 90px;
   &.x2{
 		.b1_block{
 			height: calc(50% - 35px);
@@ -2195,8 +2196,7 @@ h1{
 			letter-spacing: 0.4px;
 		}
 	}
-	}	
-	
+	}		
 }
 
 
@@ -2550,6 +2550,18 @@ footer{
 	max-width: 800px;
 	height: 450px;
 	min-height: auto;
+	&.ebi_2{
+		height: auto;
+		width: auto;		
+	}
+}
+.eb_text_4{
+	font-size: 26px;
+	letter-spacing: 4.16px;
+}
+.eb_text_5{
+	font-size: 20px;
+	margin-top: 30px;
 }
 .eb_content{
 	top: 40px;

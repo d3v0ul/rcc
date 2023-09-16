@@ -349,12 +349,22 @@ new WOW().init();
 // });
 
 
-//custom scrollbar
-$('.bp_content, .nl_scroll').mCustomScrollbar({
+//custom scrollbars
+$('.bp_content').mCustomScrollbar({
     mouseWheel:{
         scrollAmount:'300%' /* <<< speed percent */
     }
 });
+
+var hq = window.matchMedia('all and (min-width: 767px)');
+if (hq.matches) {
+    $('.nl_scroll').mCustomScrollbar({
+    mouseWheel:{
+        scrollAmount:'300%' /* <<< speed percent */
+    }
+});
+} else {}
+
 
 
 //touch bottob bg for mobiles
@@ -582,7 +592,7 @@ function liveSlider (ls) {
         $('.live_slider').owlCarousel({
             center: false,
             items: 1,
-            loop: false,
+            loop: true,
             autoWidth: false,
             autoHeight: true,
             autoplay: true,
