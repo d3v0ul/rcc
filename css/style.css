@@ -9243,7 +9243,7 @@ select:focus, textarea:focus, input:focus {
   .sfi_label {
     width: 100px;
     font-size: 14px;
-    line-height: 40px;
+    /*line-height: 40px;*/
     padding-left: 10px;
   }
 
@@ -9271,7 +9271,9 @@ select:focus, textarea:focus, input:focus {
   }
 
   .smi_area {
-    padding: 15px 0 10px;
+    height: 160px;
+    padding-bottom: 10px;
+    padding-right: 15px;
     margin-bottom: 20px;
   }
 
@@ -10408,6 +10410,10 @@ select:focus, textarea:focus, input:focus {
 
   .e_time {
     width: 100%;
+  }
+
+  .pns_content {
+    max-width: 270px;
   }
 }
 /*400*/

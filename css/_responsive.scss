@@ -3308,7 +3308,7 @@ footer{
 .sfi_label{
 	width: 100px;
 	font-size: 14px;
-	line-height: 40px;
+	/*line-height: 40px;*/
 	padding-left: 10px;
 }
 .sf_inputs{
@@ -3335,7 +3335,9 @@ footer{
 	font-size: 10px;
 }
 .smi_area{
-	padding: 15px 0 10px;
+	height: 160px;
+	padding-bottom: 10px;
+	padding-right: 15px;
 	margin-bottom: 20px;
 }
 .sf_files{
@@ -4403,6 +4405,9 @@ footer{
 }
 .e_time{
 	width: 100%;
+}
+.pns_content{
+	max-width: 270px;
 }
 
 } /*400*/
