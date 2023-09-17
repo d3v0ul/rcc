@@ -3477,7 +3477,7 @@ footer.main_footer {
 .fc_center > span {
   /*display: inline-block;
   vertical-align: middle;*/
-  display: none;
+  display: none !important;
   width: 36px;
   height: 36px;
   border: 1px solid #4A4A4A;
@@ -5262,7 +5262,7 @@ footer.main_footer {
 }
 @media (max-width: 767px) {
   .burger-popup__slider {
-    height: 120vw;
+    height: 100%;
   }
 }
 .burger-popup__slide {
@@ -6608,7 +6608,6 @@ select:focus, textarea:focus, input:focus {
   .e_btns .nr_tags_slider {
     margin-top: 20px;
     float: none;
-    transform: translateX(0);
   }
   .e_btns .nr_tags_slider > div {
     display: inline-block;
@@ -6698,6 +6697,10 @@ select:focus, textarea:focus, input:focus {
   }
   .pn_head_2 br {
     display: block;
+  }
+
+  .fc_head {
+    font-size: 28px;
   }
 
   .pn_all {
@@ -8004,7 +8007,7 @@ select:focus, textarea:focus, input:focus {
   .hl_menu.opened {
     width: 100%;
     position: absolute;
-    top: 50px;
+    top: 63px;
     left: 0;
     float: none;
     margin: 0;
@@ -8038,6 +8041,10 @@ select:focus, textarea:focus, input:focus {
     line-height: 60px;
     text-align: center;
     letter-spacing: 0.4px;
+  }
+
+  .mobile_hide {
+    display: none;
   }
 }
 /*1025*/
@@ -8206,7 +8213,7 @@ select:focus, textarea:focus, input:focus {
     display: none;
     width: 100%;
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 0;
     float: none;
     margin: 0;
@@ -9676,7 +9683,6 @@ select:focus, textarea:focus, input:focus {
 
   .nr_tags_slider {
     width: calc(100% + 16px);
-    max-width: calc(100% + 16px) !important;
   }
 
   .nc_head {
@@ -10286,6 +10292,9 @@ select:focus, textarea:focus, input:focus {
   .events {
     margin-top: 73px;
   }
+  .events.events_top {
+    margin-top: 120px;
+  }
 
   .mf_strikes {
     position: relative;
@@ -10354,6 +10363,10 @@ select:focus, textarea:focus, input:focus {
 
   .m_top {
     height: calc(100vh - 20px);
+  }
+
+  .fc_head {
+    font-size: 20px;
   }
 }
 /*767*/

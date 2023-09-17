@@ -853,7 +853,6 @@ footer{
 	.nr_tags_slider{
 		margin-top: 20px;
 		float: none;
-		transform: translateX(0);
 		>div{
 			display: inline-block;
 			margin-right: 4px;
@@ -943,6 +942,9 @@ footer{
 	br{
 		display: block;
 	}
+}
+.fc_head{
+	font-size: 28px;
 }
 .pn_all{
 	font-size: 12px;
@@ -2160,7 +2162,7 @@ h1{
 	&.opened{
 	width: 100%;
 	position: absolute;
-	top: 50px;
+	top: 63px;
 	left: 0;
 	float: none;
 	margin: 0;
@@ -2198,7 +2200,9 @@ h1{
 	}
 	}		
 }
-
+.mobile_hide{
+	display: none;
+}
 
 
 
@@ -2374,7 +2378,7 @@ header {
 	display: none;
 	width: 100%;
 	position: absolute;
-	top: 50px;
+	top: 60px;
 	left: 0;
 	float: none;
 	margin: 0;
@@ -3696,7 +3700,6 @@ footer{
 
 .nr_tags_slider{
 	width: calc(100% + 16px);	
-	max-width: calc(100% + 16px) !important;
 }
 .nc_head{
 	font-size: 46px;
@@ -4280,6 +4283,9 @@ footer{
 }
 .events{
 	margin-top: 73px;
+	&.events_top{
+		margin-top: 120px;
+	}
 }
 .mf_strikes{
 	position: relative;
@@ -4343,6 +4349,9 @@ footer{
 }
 .m_top{
 	height: calc(100vh - 20px);
+}
+.fc_head{
+	font-size: 20px;
 }
 
 

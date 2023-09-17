@@ -2672,7 +2672,8 @@ footer{
 /*events*/
 .events{
 	@extend %ct;
-	margin-top: 120px;	.nr_tags_slider{
+	margin-top: 120px;
+	.nr_tags_slider{
 		margin-bottom: 0;
 	}
 }
@@ -3322,7 +3323,7 @@ footer{
 	>span{
 		/*display: inline-block;
 		vertical-align: middle;*/
-		display: none;
+		display: none !important;
 		width: 36px;
 		height: 36px;
 		border: 1px solid #4A4A4A;
@@ -5061,7 +5062,7 @@ footer{
 }
 @media(max-width:767px){
   .burger-popup__slider {
-    height:120vw;
+    height:100%;
    }
 }
 .burger-popup__wrapper {}

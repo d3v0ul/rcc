@@ -46,12 +46,18 @@ if (document.querySelector('.burger-popup__slider') ) {
 					slideShadows: false,
 				},
 			},
+			501: {
+				effect: 'coverflow',
+				coverflowEffect: {
+					stretch: 50,
+				}
+			},
 			768: {
 				slidesPerView: 5,
 				spaceBetween: 0,
 				effect: 'coverflow',
 				coverflowEffect: {
-					stretch: 0,
+					stretch: 90,
 				}
 			},
 			992: {
