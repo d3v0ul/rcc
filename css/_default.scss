@@ -118,10 +118,22 @@ h3,h4{
 	}	
 }
 .fairfight{
-	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .ts_content>a:hover, 
-	.cp_1_1{
+	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .cp_1_1{
 		background: $blue;
 	}	
+	.ts_content{
+		&.current{
+				background: $blue !important;
+				>a{
+					opacity: 10;
+				}
+			}
+		&:hover{
+			>a{				
+				color: #fff;
+			}
+		}
+	}
 	.cht_stats, .mac_text, .f_contacts>a, .ebt_all, .mf_back,
 	 .mfi_head, .mf_about>span, .mfs_head, .mfst_label, .nr_main>a, 
 	 .ri_line>span:nth-child(4){
@@ -1147,7 +1159,7 @@ header{
 .b3{
 	@extend %ct;
 	position: relative;
-  z-index: 1;
+  	z-index: 1;
 	max-width: 480px;
 	.c_head{
 		text-align: left;
@@ -1165,6 +1177,10 @@ header{
 	letter-spacing: -0.72px;
 	text-transform: uppercase;
 	position: relative;
+	transition: .3s;
+	&:hover{
+		@include opa(5);		
+	}
 	&:before{
 		display: block;
 		content: '';
@@ -1980,7 +1996,7 @@ footer{
 	text-align: left;
 	&:hover{
 		img{
-			/*@include opa(7);*/
+			transform: scale(1.1);
 		}
 		.nri_name{
 			color: #E04141;
@@ -1989,13 +2005,17 @@ footer{
 	img{
 		display: block;
 		width: 100%;
-		margin-bottom: 15px;
 		transition: .3s;
 	}
 }
 .nri_img{
 	display: block;
 	position: relative;
+	overflow: hidden;
+	margin-bottom: 15px;
+	>img{
+		display: block;
+	}
 	&:after{
 		display: block;
 		content: '';
@@ -2296,8 +2316,8 @@ footer{
   }
   .owl-prev, .owl-next{
 	  display: block;
-	  width: 17px;
-	  height: 20px;
+	  width: 30px;
+	  height: 30px;
 	  background: url(../images/f_dir.svg) center no-repeat !important;
 	  border: none;
 	  position: absolute;
@@ -2367,7 +2387,8 @@ footer{
 	}
 }
 .time_slider{
-	/*overflow: hidden;*/
+	overflow: hidden;
+	max-height: 56px;
 	margin-bottom: 60px;
 	.owl-nav, .owl-dots{
 		display: none !important;
@@ -4808,7 +4829,7 @@ footer{
 }
 .mf_strikes{
 	@extend %ct;
-	padding: 100px 0 0;
+	padding-top: 100px;
 }
 .mfst_left{
 	@extend .cl;
@@ -5568,4 +5589,8 @@ transition: all 0.7s linear 0s;
 	font-size: 18px;
 	line-height: 140%;
 	margin-top: 16px;
+}
+
+.section-no-transform {
+	transform: none !important;
 }

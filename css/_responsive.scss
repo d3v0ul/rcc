@@ -380,7 +380,7 @@ select:focus, textarea:focus, input:focus {
 }
 .ft_l{
 	&.resize{
-		transform: translate3d(-48%, -50%, 0) scale(1);
+		transform: translate3d(-100%, -50%, 0) scale(1);
 	}
 }
 .b1_2_names{	
@@ -411,8 +411,13 @@ select:focus, textarea:focus, input:focus {
 	min-height: 520px;
 	object-fit: cover;
 }
-
-
+.circular-progress{
+	width: 15vw;
+	height: 15vw;
+}
+.mfst_text {
+  width: calc(100% - 17vw);
+}
 
 
 
@@ -2029,6 +2034,7 @@ h1{
 	overflow: visible;
 	>.mc_bg{
 		z-index: 1;
+		opacity: 0.4;
 		/*background: unset;*/
 	}	
 	img{

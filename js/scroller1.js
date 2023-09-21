@@ -74,9 +74,6 @@ $(document).ready(() => {
         section.addEventListener('touchmove', (event) => {
           setTouchScrollingEventsOfScrollableSections(event, section)
         })
-        section.addEventListener('touchend', (event) => {
-          event.preventDefault()
-        });
       }
     })
   }
@@ -238,6 +235,14 @@ $(document).ready(() => {
     mainSection.addEventListener('DOMMouseScroll', setMainScreenWheelEvents)
   }
 
+  const b3 = `
+    <div class="b3">
+      <div class="c_head">Shop</div>
+      <div class="b3_text">Современная спортивная одежда, которая вдохновлена ценностями RCC. Ничего лишнего, только стиль и качественные образы для мужчин, девушек и детей. С 2018 года RCC Wear разрабатывает и производит повседневную одежду и экипировку для профессиональных бойцов ММА, боксеров и кикбоксеров, производит одежду любительских команд Академии единоборств РМК.</div>
+      <a href="" class="b3_bot">RCC WEAR</a>
+    </div>
+  `
+
   $('#pagepiling').pagepiling({
     sectionSelector: '.section',
     verticalCentered: false,
@@ -281,6 +286,9 @@ $(document).ready(() => {
       if (index === 2 && nextIndex === 3) {
         toggleHeaderDark()
       }
+
+      $('.section')[nextIndex - 1].classList.add('section-no-transform')
+      $('.section')[index - 1].classList.remove('section-no-transform')
     }
   });
 });
