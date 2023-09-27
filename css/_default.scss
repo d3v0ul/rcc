@@ -1197,7 +1197,7 @@ footer{
 	margin-top: 140px;
 	&.main_footer{
 		/*padding-top: 20vh;*/
-	}	
+	}
 }
 .f_top{
 	@extend %ct;
@@ -1390,8 +1390,9 @@ footer{
 		margin-right: 20px;
 		&:nth-child(4){
 			position: absolute;
-			right: 0;
+			right: 40px;
 			top: 31px;
+			margin-right: 0;
 		}
 		>a{
 			font-size: 14px;
@@ -4814,6 +4815,9 @@ footer{
 	text-transform: uppercase;
 	color: #E04141;
 	padding-right: 20px;
+	br{
+		display: none;
+	}
 }
 .mfs_digit{
 	font-style: italic;
@@ -4828,7 +4832,7 @@ footer{
 	overflow: hidden;
 }
 .mf_strikes{
-	@extend %ct;
+	@extend .cl;
 	padding-top: 100px;
 }
 .mfst_left{
@@ -4899,6 +4903,9 @@ footer{
 	white-space: nowrap;
 	text-transform: uppercase;
 	color: #E04141;
+	br{
+		display: block;
+	}
 }
 .mfst_count{
 	margin-top: 8px;
