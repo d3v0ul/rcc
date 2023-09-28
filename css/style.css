@@ -2957,6 +2957,7 @@ footer.main_footer {
 .eb_text_4 {
   display: block;
   font-family: "Druk Cyr";
+  font-style: italic;
   font-size: 40px;
   line-height: 120%;
   letter-spacing: 6.4px;
