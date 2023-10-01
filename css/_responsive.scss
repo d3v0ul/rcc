@@ -1620,7 +1620,7 @@ header{
 .h_choose {
 	width: 134px;
 	font-size: 12px;
-	left: 93px;
+	left: 93px !important;
 	letter-spacing: 0.48px;
 }
 
@@ -4231,7 +4231,7 @@ footer{
 	}
 }
 .h_choose{
-	left: auto;
+	left: auto !important;
 	top: 60px;
 	right: 15px;
 }
