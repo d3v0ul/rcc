@@ -647,7 +647,7 @@ header{
 	visibility: visible !important;
 	opacity: 1 !important;
 	/*top:0 !important;*/
-	transform: translateY(0) !important;
+	// transform: translateY(0) !important;
 }
 .slide_n_show_2{
 	visibility: visible !important;
@@ -655,7 +655,7 @@ header{
 }
 .slide_n_show_pos{
 	/*top:0 !important;*/
-	transform: translateY(0) !important;
+	// transform: translateY(0) !important;
 }
 .b1b_date{
 	display: inline-block;
@@ -683,7 +683,6 @@ header{
     letter-spacing: 6.4px;
     margin-bottom: 8px;
 		transition: top 1s;
-		transform: translateY(-3vw);
 	}
 }
 .b1b_all{
@@ -731,6 +730,11 @@ header{
 		background: #C93737 !important;
 	}
 }
+
+.pp-easing{
+	transition: all .8s ease-in !important;
+}
+
 .hlm_events{
 	display: none !important;
 	float: none;
@@ -1055,6 +1059,10 @@ header{
 	.owl-nav, .owl-dots{
 		display: none !important;
 	}
+}
+
+.fast_translate{
+	transition: all .05s !important;
 }
 
 .red:hover{
@@ -1693,6 +1701,9 @@ footer{
 		background: #424242;
 		border: none;
 		position: relative;
+		&.prev-nr_slider_dot::after{
+			width: 100%;
+		}
 		&:after{
 			display: block;
 			content: '';
@@ -2331,7 +2342,7 @@ footer{
 	  background: url(../images/f_dir.svg) center no-repeat !important;
 	  border: none;
 	  position: absolute;
-	  bottom: -50px;
+	//   bottom: -50px;
 	  transition: .3s;
 	  &:hover{
 	  	@include opa(7);
@@ -4541,7 +4552,7 @@ footer{
 	cursor: pointer;
 	transition: .3s;
 	&:hover{
-		@include opa(7);		
+		background: #E04141;
 	}
 }
 
@@ -5514,6 +5525,11 @@ transition: all 0.7s linear 0s;
 			background: #307DFF;
 		}
 	}
+	.fr_more{
+		&:hover{
+			background: #307DFF;
+		}
+	}
 }
 .boxing{
 	.h_events, .ff_submit, .eb_btns>a:first-child, .mac_btn{
@@ -5547,6 +5563,11 @@ transition: all 0.7s linear 0s;
 	}
 	.nri_more{
 		border: 1px solid #D58060;
+		&:hover{
+			background: #D58060;
+		}
+	}
+	.fr_more{
 		&:hover{
 			background: #D58060;
 		}

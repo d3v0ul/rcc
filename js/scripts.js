@@ -165,9 +165,9 @@ if(document.querySelector('.news_slider')){
 }
 
 function setMaxSlide () {
-        let maxSlide = document.querySelectorAll('.news_slider .owl-item').length - (document.querySelectorAll('.news_slider .owl-item.active').length-1)
-        document.querySelector('.news_slider').setAttribute('data-maxSlide', maxSlide);
-        document.querySelector('.news_slider').setAttribute('data-w', Math.max($(document).innerWidth(), $(window).innerWidth()));
+    let maxSlide = document.querySelectorAll('.news_slider .owl-item').length - (document.querySelectorAll('.news_slider .owl-item.active').length-1)
+    document.querySelector('.news_slider').setAttribute('data-maxSlide', maxSlide);
+    document.querySelector('.news_slider').setAttribute('data-w', $('.news_slider .owl-stage-outer').width());
 }
 
 var i = 0;
@@ -502,12 +502,10 @@ if(owlquery) {
     var owl = $('.nr_slider');
     var owlTimer;
     var dotw = 0;
+    var dotactive;
     
         owl.on('changed.owl.carousel', (e)=>{
         dotw = 0;
-        if(owlTimer != undefined){
-            return;
-        }
         owlChanger();
     });
     
@@ -517,10 +515,28 @@ if(owlquery) {
         items: 1,
         loop: true,
         autoWidth: false,
+        slideTransition: 'ease-in-out',
+        smartSpeed: 600,
     });
-    
-    function nexOwl (param) {
+
+    var dots = Array.from(document.querySelectorAll('.nr_slider .owl-dot'));
+    dotactive = dots[0];
+
+    for(i=0; i<dots.length; i++){
+        dots[i].setAttribute('data-index', i);
+    }
+
+    function nextOwl (param) {
         owl.trigger(param);
+        dotactive = document.querySelector('.nr_slider .owl-dots .active')
+        console.log(dotactive)
+        for(i=0; i<dots.length; i++){
+            if(dots[i].getAttribute('data-index') < dotactive.getAttribute('data-index')){
+                dots[i].classList.add('prev-nr_slider_dot');
+            } else {
+                dots[i].classList.remove('prev-nr_slider_dot')
+            }
+        }
     }
     
     owl.on('mousemove', ()=>{
@@ -538,7 +554,7 @@ if(owlquery) {
         owlTimer = setInterval(() => {
             dotw += 1;
             owlquery.style.setProperty('--btnWidth', dotw+"%");
-            if (dotw == 100) {dotw = 0; setTimeout(nexOwl, 40, 'next.owl.carousel'); }
+            if (dotw == 100) {dotw = 0; setTimeout(nextOwl, 40, 'next.owl.carousel'); }
         }, 40);
     }
 }
@@ -658,6 +674,8 @@ if (hqq.matches) {
     var slidesPerPage = 8;
 }
 
+var sync1_btns;
+
 sync1.owlCarousel({
     items: 1,
     slideSpeed: 2000,
@@ -666,11 +684,18 @@ sync1.owlCarousel({
     dots: true,
     loop: true,
     responsiveRefreshRate: 200,
-}).on('changed.owl.carousel', syncPosition);
+}).on('changed.owl.carousel', ()=>{
+    syncPosition;
+    if(sync1_btns){
+        sync1_setheight(sync1_btns);
+    }
+});
 
 sync2
     .on('initialized.owl.carousel', function() {
         sync2.find(".owl-item").eq(0).addClass("current");
+        sync1_btns = document.querySelectorAll('#sync1 .owl-nav>button');
+        sync1_setheight(sync1_btns);
     })
     .owlCarousel({
         items: slidesPerPage,
@@ -681,6 +706,13 @@ sync2
         slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
         responsiveRefreshRate: 100
     }).on('changed.owl.carousel', syncPosition2);
+
+function sync1_setheight (sync1_btns) {
+    var sync2h = sync2.height();
+    sync1_btns.forEach(btn =>{
+        btn.setAttribute('style', 'width: '+sync2h+'px; height: '+sync2h+'px; top:unset; bottom:unset; background-size: 50% !important;');
+    });
+}
 
 function syncPosition(el) {
     //if you set loop to false, you have to restore this next line
@@ -745,6 +777,7 @@ function animateHeader () {
 $(window).on('load', ()=>{
     $('.zoomed').addClass('unzoomed');
     /* выплывание шапки*/
+
     if(sessionStorage.getItem('visited') != 1){    
         animateHeader();
         sessionStorage.setItem('visited', 1);
@@ -792,10 +825,11 @@ function activeBoxHeight () {
 	let box = document.querySelector('.burger-popup__active-box');
 	let slideimgH;
     setTimeout(() => {
-        slideimgH = document.querySelector('.swiper-slide-active>.burger-popup__slide-image>img').clientHeight;
-        slideimgH = slideimgH * 1.7;
-        box.setAttribute("style", "height: "+slideimgH+"px !important");
-
+        if(document.querySelector('.swiper-slide-active>.burger-popup__slide-image>img')){
+            slideimgH = document.querySelector('.swiper-slide-active>.burger-popup__slide-image>img').clientHeight;
+            slideimgH = slideimgH * 1.7;
+            box.setAttribute("style", "height: "+slideimgH+"px !important");
+        }
     }, 50);
 	// box.setAttribute
 }

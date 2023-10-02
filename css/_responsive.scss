@@ -71,8 +71,8 @@ footer{
 } /*700h >1024*/
 @media only screen and (max-width: 1024px) and (max-height: 700px){
 .mt_names{
-	font-size: 8vh !important;
-	margin: 1.2vh 0;
+	font-size: 5.3vh !important;
+	/*margin: 1.2vh 0;*/
 }
 
 .b1_2_content{
@@ -157,6 +157,24 @@ footer{
 
 } /*400h*/
 
+@media only screen and (max-width: 767px) and (max-height: 700px){
+.m_logo{
+	margin-bottom: 0 !important;
+}
+.mt_RCC{
+	font-size: 20px !important;
+}
+.mt_text{
+	font-size: 9px !important;
+}
+.m_col{
+	img{
+		width: 200px !important;
+	}
+}
+
+
+} /*<767w <700h */
 /*end of vertical medias*/
 
 @media only screen and (min-width : 2000px){
@@ -1498,7 +1516,6 @@ header{
 }
 #sync1{
 	.owl-prev, .owl-next{
-		transform: scale(0.7);
 		transform-origin: center; 
 	}
 	.owl-prev{
@@ -1506,7 +1523,7 @@ header{
 	}
 	.owl-next{
 		right: 5px;
-		transform: scale(0.7) rotate(180deg);
+		transform: rotate(180deg);
 	}
 }
 .news_bot{
@@ -2060,7 +2077,7 @@ h1{
 	}	
 	img{
 		position: static;
-		width: 400px;
+		width: 411px;
 		height: auto;
 		margin-bottom: -40px
 	}
@@ -4004,13 +4021,15 @@ footer{
 .b1b_all, .b2b_all{
 	font-size: 10px;
 }
-.b2_wrap .b2b_all{
-	position: absolute;
-	z-index: 1;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 80px;
-	margin-top: 0;
+.b2_wrap {	
+	.b2b_all{
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		margin-top: 0;
+	}
 }
 /*owl настройки на events*/
 .nr_main > a{
