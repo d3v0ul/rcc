@@ -43,8 +43,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 //burger popup
-var hq = window.matchMedia('all and (max-width: 767px)');
-if (hq.matches) {
+// var hq = window.matchMedia('all and (max-width: 767px)');
+// if (hq.matches) {
     $(".burger").click(function() {
     $(".burger_popup").slideToggle(0);
     // $(".h_choose").slideToggle(0);
@@ -62,25 +62,25 @@ if (hq.matches) {
     }
     activeBoxHeight();
 });
-} else {
-    $(".burger").click(function() {
-    $(".burger_popup").slideToggle(0);
-    // $(".h_choose").slideToggle(0);
-    $(this).toggleClass('opened');
-    // $("body").toggleClass('noscroll');
-    $(".hr_menu").slideToggle(0, function() {
-        if ($(this).css('display') === 'none') {
-            $(this).removeAttr('style');
-        }
-    });
-    if($(this).hasClass('opened')){
-        $('.hl_menu').addClass("opened");
-    } else {
-        $('.hl_menu').removeClass("opened");
-    }
-    activeBoxHeight();
-});
-}
+// } else {
+//     $(".burger").click(function() {
+//     $(".burger_popup").slideToggle(0);
+//     // $(".h_choose").slideToggle(0);
+//     $(this).toggleClass('opened');
+//     // $("body").toggleClass('noscroll');
+//     $(".hr_menu").slideToggle(0, function() {
+//         if ($(this).css('display') === 'none') {
+//             $(this).removeAttr('style');
+//         }
+//     });
+//     if($(this).hasClass('opened')){
+//         $('.hl_menu').addClass("opened");
+//     } else {
+//         $('.hl_menu').removeClass("opened");
+//     }
+//     activeBoxHeight();
+// });
+// }
 
 
 
@@ -444,6 +444,7 @@ if(document.querySelector('.news_slider')){
 // }
 }
 
+setTimeout(function() {
 $('.brands_slider').addClass('owl-carousel');
 $('.brands_slider').owlCarousel({
     center: false,
@@ -456,6 +457,9 @@ $('.brands_slider').owlCarousel({
     autoplayTimeout: 4000,
     slideTransition: 'linear'
 });
+
+}, 3000);
+
 
 var pnsSlider;
 var pns;
@@ -637,15 +641,22 @@ if(document.querySelector('.nr_tags_slider')){
 
 function translateTimeSlider () {
     let slider = document.querySelector('.time_slider .owl-stage');
+    var p1 = '16px';
+    var p2 = '24px';
     var hqq = window.matchMedia('all and (max-width: 1025px) and (min-width: 767px)');
-    if(slider.clientWidth > document.documentElement.clientWidth){
-        if(hqq.matches){
-        document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-24px); width: 100vw;');
-        document.querySelector('.time_slider .owl-stage-outer').setAttribute('style', 'padding-left: 24px');
-    }
-        else{
-            document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-16px); width: 100vw; ');}
-            document.querySelector('.time_slider .owl-stage-outer').setAttribute('style', 'padding-left: 16px');
+    var hqq2 = window.matchMedia('all and (max-width: 1025px)');
+    if (hqq2.matches){
+        if(slider.clientWidth > document.documentElement.clientWidth){
+            if(hqq.matches){
+            document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-'+p2+'); width: 100vw;');
+            document.querySelector('.time_slider .owl-stage-outer').setAttribute('style', 'padding-left: '+p2);
+        } else {
+                document.querySelector('.time_slider').setAttribute('style', 'transform: translateX(-'+p1+'); width: 100vw; ');}
+                document.querySelector('.time_slider .owl-stage-outer').setAttribute('style', 'padding-left: '+p1);
+        } else {
+            document.querySelector('.time_slider').removeAttribute('style');
+            document.querySelector('.time_slider .owl-stage-outer').removeAttribute('style');
+        }
     } else {
         document.querySelector('.time_slider').removeAttribute('style');
         document.querySelector('.time_slider .owl-stage-outer').removeAttribute('style');
@@ -710,7 +721,7 @@ sync2
 function sync1_setheight (sync1_btns) {
     var sync2h = sync2.height();
     sync1_btns.forEach(btn =>{
-        btn.setAttribute('style', 'width: '+sync2h+'px; height: '+sync2h+'px; top:unset; bottom:unset; background-size: 50% !important;');
+        btn.setAttribute('style', 'width: '+sync2h+'px; height: '+sync2h+'px; top:unset; bottom:unset;');
     });
 }
 
