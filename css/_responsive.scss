@@ -2427,6 +2427,13 @@ header {
 .burger{
 	float: right;
 	margin-top: 11px;
+	&:hover{
+		filter: brightness(5000%);
+	}
+
+	&.opened{
+		filter: brightness(100%);
+	}
 }
 .hl_menu{
 	display: none;

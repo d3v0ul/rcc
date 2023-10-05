@@ -99,10 +99,16 @@ h3,h4{
 	left: 0;
 }
 .boxing{
-	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .ts_content>a:hover, 
-	.cp_1_1{
+	.h_events, .eb_btns>a, .ff_submit, .mac_btn, .cp_1_1{
 		background: $orange;
-	}	
+	}
+	.ts_content>a:hover{
+		opacity: 10;
+	}
+	.ts_content>a.active{
+		background: $orange;
+		opacity: 10;
+	}
 	.cht_stats, .mac_text, .f_contacts>a, .ebt_all, .mf_back,
 	 .mfi_head, .mf_about>span, .mfs_head, .mfst_label, .nr_main>a, 
 	 .ri_line>span:nth-child(4){
@@ -284,7 +290,7 @@ header{
 		max-width: 250px;
 	}
 	&.logo_3{
-		max-width: 180px;
+		max-width: 223px;
 	}
 	&.logo_4{
 		max-width: 186px;
@@ -1040,7 +1046,7 @@ header{
 .news_slider{
 	text-align: left;
 	overflow: hidden;
-	max-height: 580px;
+/*	max-height: 580px;  - режет слайдер */
 	.c_head{
 		text-align: left;
 		letter-spacing: 0.16em;
@@ -1181,7 +1187,7 @@ header{
 .b3_text{
 	font-size: 18px;
 	line-height: 140%;
-	margin: 50px 0 125px;
+	margin: 50px 0 50px;
 }
 .b3_bot{
 	display: inline-block;
@@ -2352,11 +2358,11 @@ footer{
 	  }
 	}
 	.owl-prev{
-		left: 25px;
+		left: 0;
 	}
 	.owl-next{
 		transform: rotate(180deg);
-		right: 25px;
+		right: 0;
 	}
 }
 
@@ -4242,6 +4248,9 @@ footer{
 	font-weight: 700;
 	color: #DFDDDD;
 	margin-right: 10px;
+	>img{
+		max-width: 16px;
+	}
 	&.gold{
 		background: linear-gradient(225deg, #BC7F23 0%, #C8B87F 100%);
 		-webkit-background-clip: text;
@@ -4340,7 +4349,7 @@ footer{
 			height: 10px;
 			background: #E04141;
 			position: absolute;
-			top: -15px;
+			top: -18px;
 			left: 50%;
 			transform: translateX(-50%);
 		}
@@ -4786,7 +4795,7 @@ footer{
 	>div{
 		float: right;
 		font-size: 32px;
-		max-width: 1000px;
+		max-width: 1018px;
 		width: calc(100% - 100px);
 	}
 }
@@ -5227,7 +5236,8 @@ transition: all 0.7s linear 0s;
   }
   .burger-popup__active-box{
     width: 98%;
-	min-height: 200px;
+	min-height: 20vh;
+/*	min-height: 200px; - выставили vh для телика */
   }  
 }
 @media(min-width:2000px){
