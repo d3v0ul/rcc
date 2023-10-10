@@ -4998,7 +4998,7 @@ footer.main_footer {
 .mf_stats:before {
   display: block;
   content: "";
-  width: 100vw;
+  width: 100%;
   height: 1px;
   background: #333;
   position: absolute;
@@ -5009,7 +5009,7 @@ footer.main_footer {
 .mf_stats:after {
   display: block;
   content: "";
-  width: 100vw;
+  width: 100%;
   height: 1px;
   background: #333;
   position: absolute;
