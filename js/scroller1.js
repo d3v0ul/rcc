@@ -273,17 +273,18 @@ $(document).ready(() => {
     },
     onLeave(index, nextIndex, direction) {
       leaveFromSection(index)
+      console.log("index: "+index+" ni "+nextIndex)
 
       if (index === 2 && nextIndex === 1) {
         lockScrolling()
         toggleHeaderDark()
       }
 
-      if (index === 3 && nextIndex === 2) {
+      if(index === 3 && nextIndex === 4){
         toggleHeaderDark()
       }
 
-      if (index === 2 && nextIndex === 3) {
+      if(index === 4 && nextIndex === 3){
         toggleHeaderDark()
       }
 

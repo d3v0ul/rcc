@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         var maxtr = parseInt(newsowl.attr('data-w')) - $('.news_slider .owl-stage').width();
         //parseInt(newsowl.attr('data-w'))  - parseInt($('.news-slider .owl-stage').width()) - 50;
         offsetx -= k * x;
-        console.log(maxtr)
         if(offsetx > 0) {offsetx = 0}
         if(offsetx < maxtr) {offsetx = maxtr}
         newsowl.find('.owl-stage').css('transform', 'matrix(1,0,0,1,'+offsetx+',0');

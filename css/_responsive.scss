@@ -96,14 +96,14 @@ footer{
 		font-weight: 400 !important;
 	}
 }
-.b1b_date{
-	top: 50% !important;
-	transform: translateY(-50%) !important;
-}
-.b1b_head{
-	top: 50% !important;
-	transform: translateY(-50%) !important;
-}
+// .b1b_date{
+// 	top: 50% !important;
+// 	transform: translateY(-50%) !important;
+// }
+// .b1b_head{
+// 	top: 50% !important;
+// 	transform: translateY(-50%) !important;
+// }
 .b1b_head{
 	>span{
 		margin-bottom: 0 !important;
@@ -486,8 +486,8 @@ footer{
   width: calc(100% - 300px);
 }
 .nr_head{
-	font-size: 60px;
-	margin-bottom: 20px;
+	font-size: 64px;
+	letter-spacing: 10.24px;
 }
 .bir_broadcast{
 	display: none;
@@ -1293,8 +1293,8 @@ header{
 }
 .b2_wrap{
 	background: #E04141 url(../images/b2_bg.svg) 0% no-repeat;
-    background-position-y: 55%;
-    background-size: 130vh;
+  background-position-y: 55%;
+  background-size: 130vh;
 }
 .b2b_all:before{
 	height: 8px;
@@ -1409,10 +1409,8 @@ header{
 	}
 }
 .b1b_head{
-	/*top: 20px;*/
-	top: 0;
 	left: 15px;
-	transform: translateY(20px);
+	transform: translateY(16px);
 		>span{
 			&:nth-child(1){
 				font-size: 12px;
@@ -1443,7 +1441,7 @@ header{
 	/*margin-top: 70px;*/
 	position: absolute;
 	top: 50%;
-	transform: translateY(-45%);
+	transform: translateY(-50%);
 	.owl-item{
 		min-height: 500px !important;
 		margin-right: 16px !important;
@@ -3729,7 +3727,7 @@ footer{
 	margin-top: 124px;
 }
 .nr_head{
-	margin-bottom: 34px;
+	margin-bottom: 48px;
 	&.sized{
 		margin-bottom: 32px;
 	}
@@ -4011,6 +4009,7 @@ footer{
 }
 .b1b_date{
 	font-size: 10px;
+	top: 16px;
 	>span{
 		font-size: 26px;
 		letter-spacing: 4.16px;
@@ -4034,7 +4033,7 @@ footer{
 		z-index: 1;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 0;
+		bottom: 70px;
 		margin-top: 0;
 	}
 }
@@ -4078,7 +4077,9 @@ footer{
 .b3_wrap{
 	&:after{
 		background: url(../images/b2_bg.svg) left 180px no-repeat;
-		background-size: 920px;
+		background-size: 140vh;
+		background-position-y: 57%;
+		background-position-x: 30%;
 	}
 }
 .c_head{
@@ -4098,12 +4099,13 @@ footer{
 }
 .nsb_type{
 	width: 40px;
-	font-size: 6px;
+	font-size: 7px;
 }
 .nsb_name{
+	float: right;
 	font-size: 14px;
 	line-height: 20px;
-	width: calc(100% - 40px);
+	width: calc(100% - 45px);
 	br{
 		display: none;
 	}
@@ -4373,6 +4375,7 @@ footer{
 }
 .nav{
 	text-align: center;
+	margin-bottom: 8px;
 	>li{
 		font-size: 10px;
 		letter-spacing: 0.4px;  
