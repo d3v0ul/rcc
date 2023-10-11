@@ -441,6 +441,12 @@ if(document.querySelector('.news_slider')){
 // }
 }
 
+$('.brands_slider').on('initialized.owl.carousel', ()=>{
+    setTimeout(() => {
+        $('.main_footer').addClass('loaded');
+    }, 1000);
+});
+
 $('.brands_slider').addClass('owl-carousel');
 $('.brands_slider').owlCarousel({
     center: false,
@@ -505,6 +511,8 @@ if(owlquery) {
         dotw = 0;
         owlChanger();
     });
+
+    owl.on('translate.owl.carousel', changeDots);
     
     owl.addClass('owl-carousel');
     owl.owlCarousel({
@@ -525,14 +533,6 @@ if(owlquery) {
 
     function nextOwl (param) {
         owl.trigger(param);
-        dotactive = document.querySelector('.nr_slider .owl-dots .active')
-        for(i=0; i<dots.length; i++){
-            if(dots[i].getAttribute('data-index') < dotactive.getAttribute('data-index')){
-                dots[i].classList.add('prev-nr_slider_dot');
-            } else {
-                dots[i].classList.remove('prev-nr_slider_dot')
-            }
-        }
     }
     
     owl.on('mousemove', ()=>{
@@ -552,6 +552,18 @@ if(owlquery) {
             owlquery.style.setProperty('--btnWidth', dotw+"%");
             if (dotw == 100) {dotw = 0; setTimeout(nextOwl, 40, 'next.owl.carousel'); }
         }, 40);
+    }
+
+    //окрашивание полосок под слайдером на странице нвостей
+    function changeDots () {
+        dotactive = document.querySelector('.nr_slider .owl-dots .active')
+        for(i=0; i<dots.length; i++){
+            if(dots[i].getAttribute('data-index') < dotactive.getAttribute('data-index')){
+                dots[i].classList.add('prev-nr_slider_dot');
+            } else {
+                dots[i].classList.remove('prev-nr_slider_dot')
+            }
+        }
     }
 }
 

@@ -31,6 +31,21 @@ if (document.querySelector('.burger-popup__slider') ) {
 
 		// Responsive breakpoints
 		breakpoints: {
+			100: {
+				slidesPerView: 5,
+				spaceBetween: 10,
+				effect: 'coverflow',
+				coverflowEffect: {
+					// Угол
+					rotate: -25,
+					// Наложение
+					stretch: 0,
+					//  Глубина удаления слайдов
+					depth: 600,
+					// Тень
+					slideShadows: false,
+				},
+			},
 			300: {
 				slidesPerView: 5,
 				spaceBetween: 20,

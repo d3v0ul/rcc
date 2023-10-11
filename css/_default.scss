@@ -1069,7 +1069,7 @@ header{
 }
 
 .fast_translate{
-	transition: all .05s !important;
+	transition: all 50ms linear !important;
 }
 
 .red:hover{
@@ -1218,6 +1218,11 @@ footer{
 	margin-top: 140px;
 	&.main_footer{
 		/*padding-top: 20vh;*/
+		opacity: 0;
+		overflow: hidden;
+		&.loaded{
+			opacity: 1;
+		}
 	}
 }
 .f_top{
@@ -1302,7 +1307,7 @@ footer{
 .f_menu{
 	position: absolute;
 	left: 50%;
-	bottom: -10px;
+	top: 280px;
 	>li{
 		display: block;
 		margin-bottom: 18px;
@@ -1553,7 +1558,7 @@ footer{
 	}
 }
 .nav{
-	margin-bottom: 12px;
+	margin-bottom: 40px;
 	>li{
 		display: inline-block;
 		vertical-align: top;

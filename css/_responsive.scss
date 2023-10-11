@@ -1578,23 +1578,25 @@ header{
 	width: 83vw;
 }
 .ft_l{
-	transform: translate3d(-90%, -50%, 0) scale(0.5);
+	transform: translate3d(-40%, -50%, 0) scale(0.5);
 	&.resize{
-		transform: translate3d(-75%, -50%, 0) scale(0.7);
-		opacity: 1;
+		transform: translate3d(-60%, -50%, 0) scale(0.7);
+    opacity: 1;
 	}
 	&.resize_2{
-		transform: translate3d(-190%, -50%, 0) scale(4);
+		transform: translate3d(-70%, -50%, 0) scale(4);
+		opacity: 0;
 	}
 }
 .ft_r{
-	 transform: translate3d(-10%, -50%, 0) scale(0.5);
+	transform: translate3d(-40%, -50%, 0) scale(0.5);
 	&.resize{
 		transform: translate3d(-17%, -50%, 0) scale(0.7);
-		opacity: 1;
+    	opacity: 1;
 	}
 	&.resize_2{
 		transform: translate3d(90%, -50%, 0) scale(4);
+		opacity: 0;
 	}
 }
 .mfv_name{
@@ -2245,7 +2247,28 @@ h1{
 .mobile_hide{
 	display: none;
 }
-
+.ft_l {
+    transform: translate3d(-40%, -50%, 0) scale(0.5);
+}
+.ft_r {
+    transform: translate3d(-40%, -50%, 0) scale(0.5);
+}
+.ft_l.resize {
+    transform: translate3d(-60%, -50%, 0) scale(0.7);
+    opacity: 1;
+}
+.ft_r.resize {
+    transform: translate3d(-17%, -50%, 0) scale(0.7);
+    opacity: 1;
+}
+.ft_r.resize_2 {
+    transform: translate3d(90%, -50%, 0) scale(4);
+    opacity: 0;
+}
+.ft_l.resize_2 {
+    transform: translate3d(-70%, -50%, 0) scale(4);
+    opacity: 0;
+}
 
 
 } /*1025*/
@@ -2330,6 +2353,9 @@ h1{
 @media only screen and (max-width : 767px){
 %ct{
 	padding: 0 16px;
+}
+.burger-popup__slide-image img{
+	width: fit-content;
 }
 .burger-popup__active-box{
 	border-radius: 3px;
@@ -3725,6 +3751,12 @@ footer{
 
 .news{
 	margin-top: 124px;
+	&.news_detail{
+		margin-top: 80px;
+	}
+}
+.low-margin-top{
+	margin-top: 80px !important;
 }
 .nr_head{
 	margin-bottom: 48px;
@@ -4318,13 +4350,21 @@ footer{
 }
 
 .ft_l{
+	transform: translate3d(-55%, -50%, 0) scale(0.5);
 	&.resize{
 		transform: translate3d(-78%, -50%, 0) scale(0.7);
 	}
+	&.resize_2{
+		opacity: 0;
+	}
 }
 .ft_r{
+	transform: translate3d(-40%, -50%, 0) scale(0.5);
 	&.resize{
 		transform: translate3d(-25%, -50%, 0) scale(0.7);
+	}
+	&.resize_2{
+		opacity: 0;
 	}
 }
 .b1{
@@ -4374,8 +4414,8 @@ footer{
 	}
 }
 .nav{
-	text-align: center;
-	margin-bottom: 8px;
+	// text-align: center;
+	margin-bottom: 48px;
 	>li{
 		font-size: 10px;
 		letter-spacing: 0.4px;  
