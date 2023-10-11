@@ -356,6 +356,20 @@ $('.bp_content').mCustomScrollbar({
 });
 
 var hq = window.matchMedia('all and (min-width: 767px)');
+/*Замена картинки для мобильной версии*/
+var curImg, settedImg;
+hq.matches ? curImg='images/b3_bg.jpg' : curImg = 'images/mob_bg_shop.png';
+settedImg = curImg;
+document.querySelector('.paralax .bg').setAttribute('src', settedImg);
+window.addEventListener('resize', ()=>{
+    hq.matches ? curImg='images/b3_bg.jpg' : curImg = 'images/mob_bg_shop.png';
+    if(curImg != settedImg){
+        settedImg = curImg;
+        document.querySelector('.paralax .bg').setAttribute('src', settedImg);
+    }
+});
+//конец замены картинки
+
 if (hq.matches) {
     $('.nl_scroll').mCustomScrollbar({
     mouseWheel:{

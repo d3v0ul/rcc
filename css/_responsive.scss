@@ -4109,9 +4109,9 @@ footer{
 .b3_wrap{
 	&:after{
 		background: url(../images/b2_bg.svg) left 180px no-repeat;
-		background-size: 140vh;
-		background-position-y: 57%;
-		background-position-x: 30%;
+		background-size: 230vh;
+		background-position-y: 70%;
+		background-position-x: 28%;
 	}
 }
 .c_head{
@@ -4308,8 +4308,12 @@ footer{
 	height: -webkit-calc(100vh - 74px);
 	height: calc(100vh - 74px);
 }
-#sync1 .owl-prev, #sync1 .owl-next {
-    bottom: -4.4vh;
+#sync1 .owl-prev {
+    // bottom: -4.4vh;
+	transform: scale(.7);
+}
+#sync1 .owl-next{
+	transform: rotate(180deg) scale(0.7);
 }
 .nr_tags{
 	&.shared{
