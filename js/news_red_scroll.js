@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const LIMIT_RIGHT = .75;
     var offsetx = 0;
     const step = 4;
+    var side = 0;
     var k = 1;
+    var time;
+    var done = false;
     var maxSlideElem = document.querySelector('.news_slider');
     document.querySelector('.b2_wrap').addEventListener('mousemove', (e)=>{
         e = e || window.event;
@@ -21,68 +24,41 @@ document.addEventListener('DOMContentLoaded', ()=>{
             offsetx = tr[4]
         }
         if (position <= LIMIT_LEFT) {
-            // if(moveCycleB == undefined){
-            //     clearInterval(moveCycleF); moveCycleF = undefined;
-            //     translateOwlStage(-1);
-            //     moveCycleB = setInterval(translateOwlStage, timing, (-1));
-            // }
+            side = 1;
             if (position < 0.1){position = 0.1}
-            k = step / position;
-            if(moveCycleB != undefined) {return}
-            moveCycleB = setInterval(lightTranslate, timing, -1)
+            requestAnimationFrame(lightTranslate);
         } if (position >= LIMIT_RIGHT) {
-            // if(moveCycleF == undefined){
-            //     clearInterval(moveCycleB); moveCycleB = undefined;
-            //     translateOwlStage(1);
-            //     moveCycleF = setInterval(translateOwlStage, timing, 1);
-            // }
+            side = -1;
             if (position > 0.9){position = 0.9}
-            k = step / (1-position);
-            if(moveCycleB != undefined) {return}
-            moveCycleB = setInterval(lightTranslate, timing, 1)
+            requestAnimationFrame(lightTranslate);
         } if(position >= LIMIT_LEFT && position <= LIMIT_RIGHT) {
+            done = true;
+            side = 0;
             clearInterval(moveCycleB); moveCycleB = undefined;
             newsowl.find('.owl-stage').removeClass('fast_translate');
-            // clearInterval(moveCycleF); moveCycleF = undefined;
         }
     });
     
     document.addEventListener('touchstart', ()=>{
+        done = false;
         clearInterval(moveCycleB); moveCycleB = undefined;
-        clearInterval(moveCycleF); moveCycleF = undefined;
     })
 
-    function lightTranslate (x) {
-        var maxtr = parseInt(newsowl.attr('data-w')) - $('.news_slider .owl-stage').width();
-        //parseInt(newsowl.attr('data-w'))  - parseInt($('.news-slider .owl-stage').width()) - 50;
-        offsetx -= k * x;
-        if(offsetx > 0) {offsetx = 0}
-        if(offsetx < maxtr) {offsetx = maxtr}
-        newsowl.find('.owl-stage').css('transform', 'matrix(1,0,0,1,'+offsetx+',0');
-        newsowl.find('.owl-stage').addClass('fast_translate');
-        // console.log(newsowl.find('.owl-stage').css('transform'));
-        // console.log(k)
+    function lightTranslate (timestamp) {
+        time = time ? time : timestamp;
+        if(!done){
+            requestAnimationFrame(lightTranslate);
+        }
+        if(timestamp - time >= 50) {
+            k = side>0 ? step / position : step / (1-position);
+            time = timestamp;
+            var maxtr = parseInt(newsowl.attr('data-w')) - $('.news_slider .owl-stage').width();
+            offsetx = parseInt(offsetx) + (parseInt(k) * parseInt(side));
+            if(offsetx >= 0) {offsetx = 0;}
+            if(offsetx < maxtr) {offsetx = maxtr;}
+            done = offsetx >= 0 || offsetx <= maxtr ? true : false;
+            newsowl.find('.owl-stage').css('transform', 'matrix(1,0,0,1,'+offsetx+',0');
+            newsowl.find('.owl-stage').addClass('fast_translate');
+        }
     }
-
-    function translateOwlStage (x) {
-        // curSlide = parseInt(curSlide) + parseInt(x);
-        // if(curSlide<0){curSlide=0}
-        // if(curSlide>maxSlideElem.getAttribute('data-maxSlide')){curSlide=maxSlideElem.getAttribute('data-maxSlide')}
-        // console.log(newsowl.find('.owl-stage').css('transform', 'matrix(1,0,0,1,150,0'));
-        // setInterval (
-        //     ()=>{
-        //         offsetx -= x;
-        //         newsowl.find('.owl-stage').css('transform', 'matrix(1,0,0,1,'+offsetx+',0')
-        //     }, 100);
-        // newsowl.trigger('to.owl.carousel', curSlide);    
-    }
-    newsowl.on('translated.owl.carousel', ()=>{
-        // setTimeout(()=>{
-        //     curSlide = $('.news_slider .owl-item.active').index();
-        // }, 1000)
-    });
-
-    newsowl.on('translated.owl.carousel', ()=>{
-        // console.log(newsowl.find('.owl-stage').css('transform'));
-    })
-})
+});

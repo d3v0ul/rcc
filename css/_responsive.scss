@@ -18,21 +18,21 @@ select:focus, textarea:focus, input:focus {
 @media only screen and (min-width: 1024px) and (max-height: 900px){
 .ft_l, .ft_r{
 	>img{
-		width: 55vh;
+		width: 55dvh;
 	}
 }
 .b1_2_names{
 	>a{
-		font-size: 10vh;
+		font-size: 10dvh;
 	}
 }
 .ns_img{
-	width: 50vh;
+	width: 50dvh;
 }
-.b2{
-	top: calc(50% - 50px);
-	transform: translateY(-50%);
-}
+// .b2{
+// 	top: calc(50% - 50px);
+// 	transform: translateY(-50%);
+// }
 
 
 
@@ -43,17 +43,17 @@ select:focus, textarea:focus, input:focus {
 	transform: translateY(-50%);
 }
 .ns_content .c_head {
-  font-size: 12vh;
+  font-size: 12dvh;
 }
 .nsb_name{
-	font-size: 2.5vh;
+	font-size: 2.5dvh;
 }
 .m_logo{
-	width: 190vh;
+	width: 190dvh;
 }
 .m_col{
 	img{
-	width: 65vh;
+	width: 65dvh;
 	max-height: none;
 	}
 }
@@ -71,7 +71,7 @@ footer{
 } /*700h >1024*/
 @media only screen and (max-width: 1024px) and (max-height: 700px){
 .mt_names{
-	font-size: 5.3vh !important;
+	font-size: 5.3dvh !important;
 	/*margin: 1.2vh 0;*/
 }
 
@@ -190,7 +190,8 @@ footer{
 	width: 100%;
 }
 .b2_wrap{
-	background-size: 1900px !important;
+	background-size: 115%;
+    background-position: 65%;
 }
 .contur{
 	.fat{
@@ -199,7 +200,8 @@ footer{
 }
 .b3_wrap{
 	&:after{
-		background-size: cover;
+		background-size: 115%;
+    	background-position: 65%;
 	}
 }
 
@@ -264,7 +266,7 @@ footer{
 	top: 5vw;
 }
 .fcc_head{
-	font-size: 6.2vw;
+	/*font-size: 6.2vw;*/
 }
 .fcc_names{
 	font-size: 6.2vw;
@@ -396,7 +398,7 @@ footer{
 }
 #sync1{
 	.owl-prev, .owl-next{
-		bottom: -6vh;
+		bottom: -6dvh;
 	}
 }
 
@@ -643,6 +645,9 @@ footer{
 .bir_broadcast{
 	display: inline-block;
 }
+.fc_weight{
+	bottom: 30px;
+}
 
 
 } /*1200*/
@@ -655,7 +660,7 @@ footer{
 	max-width: 360px;
 	bottom: 0;
 	transform: translateX(0);
-	height: calc(100vh - 126px);
+	height: calc(100dvh - 126px);
 	&.static{
 		position: absolute;
 		height: auto;
@@ -664,7 +669,7 @@ footer{
 	}
 }
 .nl_scroll{
-	height: calc(100vh - 120px);
+	height: calc(100dvh - 120px);
 }
 .live_slider{
 	padding-right: 20px;
@@ -767,6 +772,12 @@ footer{
 		}
 	}
 }
+.b3_wrap{
+	&::after{
+		background-position: 32% 65%;
+		background-size: 270%;
+	}
+}
 .f_address{
 	font-size: 16px;
 	margin-bottom: 78px;
@@ -852,9 +863,9 @@ footer{
 }
 .b_popup{
 	width: 100%;
-	height: -moz-calc(100vh - 96px);
-	height: -webkit-calc(100vh - 96px);
-	height: calc(100vh - 96px);
+	height: -moz-calc(100dvh - 96px);
+	height: -webkit-calc(100dvh - 96px);
+	height: calc(100dvh - 96px);
 }
 .bp_close{
 	top: 20px;
@@ -937,10 +948,7 @@ footer{
 	font-size: 14px;
 }
 .fc_weight{
-	width: 120px;
-	height: 40px;
-	font-size: 12px;
-	line-height: 40px;
+	display: none;
 }
 .fc_2x{
 	.fc_number{
@@ -1124,6 +1132,11 @@ footer{
 	font-size: 64px;
 	letter-spacing: 10.24px; 
 }
+.mf_nick{
+	font-size: 12px;
+	letter-spacing: 0.48px; 
+	margin-bottom: 20px;
+}
 .mf_tags{
 	margin-bottom: 140px;
 	>div{
@@ -1291,11 +1304,14 @@ header{
 	font-size: 12px;
 	letter-spacing: .04em;
 }
-.b2_wrap{
-	background: #E04141 url(../images/b2_bg.svg) 0% no-repeat;
-  background-position-y: 55%;
-  background-size: 130vh;
-}
+// .b2_wrap{
+// 	background-position: center 65%;
+//     background-size: 170%;
+// 	&.gray{
+// 		background-position: center 65%;
+//     	background-size: 170%;
+// 	}
+// }
 .b2b_all:before{
 	height: 8px;
 	width: 8px;
@@ -1356,7 +1372,7 @@ header{
 }
 .b2_2_wrap{
 	position: relative;
-	height: 100vh;
+	height: 100dvh;
 	&.visible{
 		.b1b_all{
 			font-size: 12px;
@@ -1442,6 +1458,9 @@ header{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	.owl-stage-outer {
+		padding-left: 24px;
+	}
 	.owl-item{
 		min-height: 500px !important;
 		margin-right: 16px !important;
@@ -1843,9 +1862,6 @@ h1{
 .fcc_vs{
 	margin-top: 20px;
 }
-.fcc_head{
-	font-size: 64px;
-}
 .fcc_name{
 		font-size: 12px;
 		margin-bottom: 0;
@@ -2175,6 +2191,7 @@ h1{
 }
 .fcc_head{
 	letter-spacing: 10.24px; 
+	margin-bottom: 40px;
 }
 .fcc_weight{
 	font-size: 12px;
@@ -2182,6 +2199,9 @@ h1{
 .fcc_names{
 	font-size: 4.4vw;
 	letter-spacing: 7.68px; 
+	>span{
+		font-size: 16px;
+	}
 }
 .nri_search_popup{
 	height: 48px;
@@ -2697,7 +2717,7 @@ footer{
 }
 .event_inner_top{
 	bottom: 0;
-	height: 100vh;
+	height: 100dvh;
 	.bi_right{
 		display: block;
 		float: none;
@@ -2955,6 +2975,11 @@ footer{
 	margin: 10px 0 15px;
 	letter-spacing: 7.36px;
 	font-size: 46px;
+}
+.mf_nick{
+	font-size: 10px;
+	letter-spacing: 0.4px; 
+	margin-bottom: 12px;
 }
 .mf_tags{
 	position: static;
@@ -4090,26 +4115,28 @@ footer{
 }
 /*owl настройки на news*/
 .b2_wrap{
-	height: 70vh;
+	height: 100dvh;
 	padding-left: 0;	
-	background: #EE4B4A url(../images/b2_bg.svg) 9% no-repeat;
-  background-size: 130vh;
-  background-position-y: 57%;
+// 	background: #EE4B4A url(../images/b2_bg.svg) 9% no-repeat;
+  background-size: 130dvh;
+//   background-position-y: 57%;
   &.b2w_main{
-  	height: 100vh;
+	background-size: 230vmin;
+    // background-position-y: 70%;
+    // background-position-x: 28%;
   }
 	.c_head{
 		margin-bottom: 20px;
 	}
 	&.gray{
-		background-position-y: center;
-		background-size: 1000px;
+		background-size: 130dvh;
+		background-position-y: 57%;
 	}
 }
 .b3_wrap{
 	&:after{
 		background: url(../images/b2_bg.svg) left 180px no-repeat;
-		background-size: 230vh;
+		background-size: 230dvh;
 		background-position-y: 70%;
 		background-position-x: 28%;
 	}
@@ -4118,6 +4145,9 @@ footer{
 	font-size: 46px;
 }
 .news_slider{
+	.owl-stage-outer {
+		padding-left: 16px;
+	}
 	.owl-item{
 		min-height: 300px !important;
 		margin-right: 8px !important;
@@ -4304,9 +4334,9 @@ footer{
 	padding-right: 0;
 }
 .b_popup{
-	height: -moz-calc(100vh - 74px);
-	height: -webkit-calc(100vh - 74px);
-	height: calc(100vh - 74px);
+	height: -moz-calc(100dvh - 74px);
+	height: -webkit-calc(100dvh - 74px);
+	height: calc(100dvh - 74px);
 }
 #sync1 .owl-prev {
     // bottom: -4.4vh;
@@ -4465,7 +4495,7 @@ footer{
 	font-size: 10px;
 }
 .m_top{
-	height: calc(100vh - 20px);
+	height: calc(100dvh - 20px);
 }
 .fc_head{
 	font-size: 20px;
@@ -4482,10 +4512,14 @@ footer{
 
 .burger-popup__slider{
 	height: 100vmin !important;
-	top: 60vh;
+	top: 60dvh;
 }
 .burger-popup__active-box{
 	max-height: 56px;
+}
+.eit_btn{
+	max-width: 100%;
+	width: calc(100% - 32px);
 }
 
 } /*500*/
@@ -4508,10 +4542,7 @@ footer{
 
 @media only screen and (max-width : 400px){
 
-.eit_btn{
-	max-width: 100%;
-	width: calc(100% - 32px);
-}
+
 .nr_tags{
 	&.shared{
 		.nrt_share{

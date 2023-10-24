@@ -82,7 +82,7 @@ h3,h4{
 	top: 0;
 	z-index: 6;
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 	background: rgba(43,43,43,0.5);
 	&.visible{
 		display: block;
@@ -189,7 +189,7 @@ header{
 .top_block{
 	background: url(../images/top_bg.jpg) center top no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: 100dvh;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -214,7 +214,7 @@ header{
 	transform: scale(1);
   }
   .screen {
-	height: 100vh;
+	height: 100dvh;
   }
   .screen_hide {
 	display: none;
@@ -242,7 +242,7 @@ header{
 	display: none;
 }
 .tb_2{
-	height: 100vh;
+	height: 100dvh;
 	position: relative;
 	overflow: hidden;
 	/*background: url(../images/top_bg_2.jpg) center top no-repeat;*/
@@ -268,7 +268,7 @@ header{
 }
 .contur{
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 	background: url(../images/b2_bg.svg) center no-repeat;	
 	position: absolute;
 	left: 50%;
@@ -329,7 +329,7 @@ header{
 .burger_popup{
 	display: none;
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: fixed;
 	z-index: 4;
 	top: 0;
@@ -512,7 +512,7 @@ header{
 }
 .b1{
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -536,10 +536,10 @@ header{
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	.b1_block{
-		bottom: -100vh;
+		bottom: -100dvh;
 	}
 	.b1b_all{
 		bottom: -40px;
@@ -550,7 +550,7 @@ header{
 	}
 	&.visible{
 		.b1_block{
-			transform: translateY(-100vh);
+			transform: translateY(-100dvh);
 		}
 		.b1_block {
 			img{
@@ -569,7 +569,7 @@ header{
 .b1_block{
 	display: block;
 	width: 33.3vw;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	position: absolute;
 	z-index: 1;
@@ -620,7 +620,7 @@ header{
 	position: absolute;
 	left: 0;
 	top: 0;
-	transform: translateY(20vh);
+	transform: translateY(20dvh);
 	>span{
 		font-size: 36px;
 		line-height: 110%;
@@ -672,7 +672,7 @@ header{
 	padding: 0 2.5vw;
 	position: absolute;
 	left: 0;
-	bottom: 20vh;
+	bottom: 20dvh;
 	transition: all 1s;
 	color: #DFDDDD;
 	font-weight: 700;
@@ -701,7 +701,7 @@ header{
 	z-index: 1;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 4vh;
+	bottom: 4dvh;
 	transition: .3s;
 	&:hover{
 		color: #E04141;
@@ -868,7 +868,7 @@ header{
 
 .b1_2_wrap{
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: relative;
 	overflow: hidden;
 }
@@ -877,7 +877,7 @@ header{
 	position: relative;
 	z-index: 1;
 	max-width: 1430px;
-	height: 100vh;
+	height: 100dvh;
 	padding-top: 95px;
 	transition: 1s;
 	transform: translateY(-31%);
@@ -1005,9 +1005,10 @@ header{
 
 .b2_wrap{
 	max-width: 100%;
-	height: 100vh;
-	background: #E04141 url(../images/b2_bg.svg) center no-repeat;
-	padding: 15vh 0 40px 0;
+	height: 100dvh;
+	background: #E04141 url(../images/b2_bg.svg) 40% center no-repeat;
+	background-size: 210vmin;
+	padding: 15dvh 0 40px 0;
 	text-align: center;
 	position: relative;
 	overflow-x: hidden;
@@ -1019,7 +1020,8 @@ header{
 		bottom: 40px;
 	}
 	&.gray{
-		background: url(../images/b2_bg.svg) center 100px no-repeat;
+		background: url(../images/b2_bg.svg) center no-repeat;
+    	background-size: 120%;
 		.b2b_all{
 			&:before{
 				background: #E04141;
@@ -1053,7 +1055,7 @@ header{
 		letter-spacing: 0.16em;
 	}
 	.owl-stage-outer {
-		padding-left: 2.08vw;
+		padding-left: 40px;
 	}
 	.owl-item{
 		display: table;
@@ -1158,7 +1160,7 @@ header{
 }
 .b3_wrap{
 	/*min-height: 900px;*/
-	height: 100vh;
+	height: 100dvh;
 	background: #000 url(../images/b3_bg.jpg) center no-repeat;
 	background-size: cover;
 	padding-top: 200px;
@@ -1170,11 +1172,11 @@ header{
 		content: '';
 		width: 100%;
 		height: 100%;
-		background: url(../images/b2_bg.svg) center 170px no-repeat;
+		background: url(../images/b2_bg.svg) center 65% no-repeat;
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-size: 174vh;
+		background-size: 115%;
 	}
 }
 .b3{
@@ -1387,6 +1389,7 @@ footer{
 	margin-top: 40px;
 	border-top: 1px solid #333333;
 	border-bottom: 1px solid #333333;
+	z-index: 0;
 	.owl-item{
 		display: table;
 		min-height: 85px !important;
@@ -1963,6 +1966,9 @@ footer{
 	padding: 0 23px;
 	margin-bottom: 53px;
 	transition: .3s;
+	&.nm{
+		margin-bottom: 0;
+	}
 	&:hover{
 		background: rgba(255, 255, 255, 0.20);		
 	}
@@ -1982,6 +1988,46 @@ footer{
 	letter-spacing: 0.56px;
 	color: #fff;
 	text-transform: uppercase;
+	caret-color: #E04141;
+}
+.nri_search_results{
+	background: rgba(255, 255, 255, 0.10);
+	position: relative;
+	padding: 30px 23px 20px;
+	margin-bottom: 53px;
+}
+.nrisr_line{
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	color: #fff;
+	opacity: 0.4; 
+	margin-bottom: 16px;
+	>span{
+		margin-right: 24px;
+	}
+}
+.nrisr_btn{
+	display: block;
+	width: 182px;
+	height: 60px;
+	margin: 32px auto 0;
+	background: #E04141;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 60px;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	transition: .3s;
+	cursor: pointer;
+	&:hover{
+		@include opa(7);		
+	}
 }
 .nris_close{
 	display: none;
@@ -2568,9 +2614,9 @@ footer{
 .b_popup{	
 	width: 50%;
 	overflow: hidden;
-	height: -moz-calc(100vh - 104px);
-	height: -webkit-calc(100vh - 104px);
-	height: calc(100vh - 104px);
+	height: -moz-calc(100dvh - 104px);
+	height: -webkit-calc(100dvh - 104px);
+	height: calc(100dvh - 104px);
 	position: fixed;
 	z-index: 7;
 	background: #1D1D1D;
@@ -2616,7 +2662,7 @@ footer{
 	@extend .bp_close;
 }
 .bp_content{
-	height: calc(100vh - 85px);
+	height: calc(100dvh - 85px);
 }
 .mCSB_scrollTools{
 	width: 4px;
@@ -3115,7 +3161,7 @@ footer{
 }
 .eit_text{
 	float: left;
-	font-size: 96px;
+	font-size: 64px;
 	font-family: $r;
 	letter-spacing: 15.36px; 
 	font-style: italic;
@@ -3188,22 +3234,14 @@ footer{
 	text-align: center;
 }
 .fcc_head{
-	font-size: 96px;
 	font-family: $r;
-	font-weight: 500;
-	line-height: 110%;
-	letter-spacing: 15.36px;
+	font-size: 40px;
 	font-style: italic;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: 6.4px; 
 	text-transform: uppercase;
 	color: #E04141;
-}
-.fcc_weight{
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 140%;
-	letter-spacing: 0.56px;
-	text-transform: uppercase; 
-	margin-top: 59px;
 }
 .fcc_names{
 	font-family: $dc;
@@ -3212,6 +3250,12 @@ footer{
 	line-height: 110%;
 	letter-spacing: 15.36px;
 	text-transform: uppercase; 
+	>span{
+		display: block;
+		font-size: 35px;
+		line-height: 120%;
+		color: #E04141;
+	}
 }
 .fcc_vs{
 	@extend .cl;
@@ -3316,19 +3360,18 @@ footer{
 	bottom: 140px;
 }
 .fc_weight{
-	display: none;
-	width: 160px;
-	height: 50px;
-	line-height: 50px;
+	display: inline-block;
 	font-size: 14px;
-	color: #000;
-	background: #FCFCFC;
-	text-transform: uppercase;
-	text-align: center;
+	font-weight: 700;
+	line-height: 48px;
+	padding: 0 12px;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	border: 1px solid #fff;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 0;
+	bottom: 50px;
 }
 .fc_table{
 	margin: 20px 0 140px;
@@ -4022,13 +4065,13 @@ footer{
 .m_top_wrap{
 	background: url(../images/m_top_bg.jpg) center no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: 100dvh;
 	position: relative;
 	overflow: hidden;
 }
 .m_top{
 	@extend .cl;
-	height: 100vh;
+	height: 100dvh;
 	padding-top: 140px;
 	position: relative;
 	&.flame{
@@ -4044,7 +4087,7 @@ footer{
 }
 .m_col{
 	width: 33.3vw;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	position: absolute;
 	left: 0;
@@ -4057,7 +4100,7 @@ footer{
 		filter: grayscale(100%);
 		bottom: 0;
 		right: 0;
-		max-width: 70vh;
+		max-width: 70dvh;
 		object-fit: cover;
 	}
 	&.mc_2, &.mc_3{		
@@ -4143,7 +4186,7 @@ footer{
 	text-transform: uppercase;
 }
 .m3_wrap{
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	position: relative;
 }
@@ -4618,6 +4661,14 @@ footer{
 	letter-spacing: 15.36px;
 	font-family: $r;
 	text-transform: uppercase;	
+}
+.mf_nick{
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 140%;
+	letter-spacing: 0.56px;
+	text-transform: uppercase; 
+	margin: 8px 0 40px;
 }
 .mf_tags{
 	margin: 15px 0 65px;
@@ -5095,7 +5146,7 @@ footer{
 .burger_popup {
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -5243,7 +5294,7 @@ transition: all 0.7s linear 0s;
   }
   .burger-popup__active-box{
     width: 98%;
-	min-height: 20vh;
+	min-height: 20dvh;
 /*	min-height: 200px; - выставили vh для телика */
   }  
 }

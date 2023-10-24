@@ -273,7 +273,6 @@ $(document).ready(() => {
     },
     onLeave(index, nextIndex, direction) {
       leaveFromSection(index)
-      console.log("index: "+index+" ni "+nextIndex)
 
       if (index === 2 && nextIndex === 1) {
         lockScrolling()
