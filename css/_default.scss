@@ -4487,6 +4487,40 @@ footer{
 .content{
 	@extend %ct;
 }
+.vacant_place{	
+	border-top: 1px solid gold;
+	.content{
+		>div{
+			height: 140px;
+			position: relative;
+		}
+	}
+}
+.vp_star{
+	width: 28px;
+	height: 26px;
+	background: url(../images/star_28x26.svg) center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+.vp_text{
+	font-family: $r;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: 6.4px;
+	text-transform: uppercase; 
+	color: #fff;
+	opacity: 0.2; 
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
 .rating_items{
 	margin-bottom: 160px;
 }

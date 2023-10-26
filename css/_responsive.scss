@@ -2291,7 +2291,10 @@ h1{
     transform: translate3d(-70%, -50%, 0) scale(4);
     opacity: 0;
 }
-
+.vp_text{
+	font-size: 32px;
+	letter-spacing: 5.12px; 
+}
 
 } /*1025*/
 @media only screen and (min-width : 1025px){ /*+1025*/
@@ -4502,7 +4505,10 @@ footer{
 .fc_head{
 	font-size: 20px;
 }
-
+.vp_star{
+	width: 17px;
+	height: 15px;
+}
 
 } /*767*/
 @media only screen and (max-width : 500px){

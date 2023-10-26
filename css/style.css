@@ -4669,6 +4669,41 @@ footer.main_footer.loaded {
   margin-top: 130px;
 }
 
+.vacant_place {
+  border-top: 1px solid gold;
+}
+.vacant_place .content > div {
+  height: 140px;
+  position: relative;
+}
+
+.vp_star {
+  width: 28px;
+  height: 26px;
+  background: url(../images/star_28x26.svg) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.vp_text {
+  font-family: "Druk Cyr";
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 6.4px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
 .rating_items {
   margin-bottom: 160px;
 }
@@ -8256,6 +8291,11 @@ select:focus, textarea:focus, input:focus {
     transform: translate3d(-70%, -50%, 0) scale(4);
     opacity: 0;
   }
+
+  .vp_text {
+    font-size: 32px;
+    letter-spacing: 5.12px;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 1025px) {
@@ -10633,6 +10673,11 @@ select:focus, textarea:focus, input:focus {
 
   .fc_head {
     font-size: 20px;
+  }
+
+  .vp_star {
+    width: 17px;
+    height: 15px;
   }
 }
 /*767*/
