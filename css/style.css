@@ -7302,6 +7302,8 @@ select:focus, textarea:focus, input:focus {
     opacity: 1 !important;
     visibility: visible !important;
     /*bottom: 80px !important;*/
+    transform: translateX(-50%) translateY(0px) !important;
+    bottom: 10px !important;
   }
 
   .b1_block {
@@ -7500,7 +7502,7 @@ select:focus, textarea:focus, input:focus {
   }
 
   .b1_2_all {
-    bottom: 80px !important;
+    bottom: 10px !important;
   }
 
   .use_scroll {
@@ -10589,11 +10591,11 @@ select:focus, textarea:focus, input:focus {
   }
 
   .m_col img {
-    width: 212px;
+    width: 334px;
     margin-bottom: 0;
   }
   .m_col.mc_2 > a {
-    transform: translateX(-180px);
+    transform: translateX(-274px);
   }
 
   .fcc_head {

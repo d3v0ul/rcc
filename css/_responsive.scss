@@ -1386,6 +1386,8 @@ header{
 	opacity: 1 !important;
 	visibility: visible !important;
 	/*bottom: 80px !important;*/
+	transform: translateX(-50%) translateY(00px) !important;
+	bottom: 10px !important;
 }
 .b1_block{
 	display: block;
@@ -1571,7 +1573,7 @@ header{
 	bottom: 50%;
 }
 .b1_2_all{
-	bottom: 80px !important;
+	bottom: 10px !important;
 }
 .use_scroll{
   bottom: 45%;
@@ -4462,12 +4464,12 @@ footer{
 }
 .m_col{
 	img{
-		width: 212px;
+		width: 334px;
 		margin-bottom: 0;
 	}
 	&.mc_2{
 		>a{
-			transform: translateX(-180px);
+			transform: translateX(-274px);
 		}
 	}
 }
