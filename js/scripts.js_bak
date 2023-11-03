@@ -641,12 +641,11 @@ $(() => {
     });
   }
 
-  //live новости
   function liveSlider(ls) {
-    var ls = window.matchMedia("all and (max-width: 1025px)"); //Выбор ширины экрана для перехода на слайдер
-    if (ls.matches) { //Проверка соответствия установленной ширины текущей ширине экрана
-      $(".live_slider").addClass("owl-carousel"); 
-      $(".live_slider").owlCarousel({ //инициализируем слайдер если прошли проверку
+    var ls = window.matchMedia("all and (max-width: 1025px)");
+    if (ls.matches) {
+      $(".live_slider").addClass("owl-carousel");
+      $(".live_slider").owlCarousel({
         center: false,
         items: 1,
         loop: true,
@@ -655,12 +654,11 @@ $(() => {
         autoplay: true,
         autoplayTimeout: 5000,
       });
-    } else { // если проверку не проходит и слайдер живой - уничтожаем его
+    } else {
       $(".live_slider").trigger("destroy.owl.carousel");
       $(".live_slider").removeClass("owl-carousel");
     }
   }
-
   function translateTagSlider() {
     let slider = document.querySelector(".nr_tags_slider .owl-stage");
     if (slider.clientWidth > document.documentElement.clientWidth) {
@@ -680,8 +678,7 @@ $(() => {
         .removeAttribute("style");
     }
   }
-
-  if (document.querySelector(".nr_tags_slider .owl-stage")) {
+  if (document.querySelector(".nr_tags_slider")) {
     translateTagSlider();
     window.addEventListener("resize", translateTagSlider);
   }
@@ -735,9 +732,9 @@ $(() => {
     window.addEventListener("resize", translateTimeSlider);
   }
 
-  if (document.querySelector(".live_slider")) { // проеряем наличие элемента на странице
-    liveSlider(); // запускаем функцию (см строку 465)
-    window.addEventListener("resize", liveSlider); // чекаем изменение ширины экрана чтобы динамически работал слайдер
+  if (document.querySelector(".live_slider")) {
+    liveSlider();
+    window.addEventListener("resize", liveSlider);
   }
 
   //fight slider (synced)
