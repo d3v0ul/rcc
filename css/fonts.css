@@ -1,50 +1,52 @@
 @font-face {
-    font-family: 'Suisse Intl';
-    src: url('../fonts/SuisseIntl-Regular.eot');
-    src: url('../fonts/SuisseIntl-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/SuisseIntl-Regular.woff2') format('woff2'),
-        url('../fonts/SuisseIntl-Regular.woff') format('woff'),
-        url('../fonts/SuisseIntl-Regular.ttf') format('truetype'),
-        url('../fonts/SuisseIntl-Regular.svg#SuisseIntl-Regular') format('svg');
+    font-family: "Suisse Intl";
+    src: url("../fonts/SuisseIntl-Regular.eot");
+    src: url("../fonts/SuisseIntl-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/SuisseIntl-Regular.woff2") format("woff2"),
+        url("../fonts/SuisseIntl-Regular.woff") format("woff"),
+        url("../fonts/SuisseIntl-Regular.ttf") format("truetype"),
+        url("../fonts/SuisseIntl-Regular.svg#SuisseIntl-Regular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Suisse Intl';
-    src: url('../fonts/SuisseIntl-Bold.eot');
-    src: url('../fonts/SuisseIntl-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/SuisseIntl-Bold.woff2') format('woff2'),
-        url('../fonts/SuisseIntl-Bold.woff') format('woff'),
-        url('../fonts/SuisseIntl-Bold.ttf') format('truetype'),
-        url('../fonts/SuisseIntl-Bold.svg#SuisseIntl-Bold') format('svg');
+    font-family: "Suisse Intl";
+    src: url("../fonts/SuisseIntl-Bold.eot");
+    src: url("../fonts/SuisseIntl-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/SuisseIntl-Bold.woff2") format("woff2"),
+        url("../fonts/SuisseIntl-Bold.woff") format("woff"),
+        url("../fonts/SuisseIntl-Bold.ttf") format("truetype"),
+        url("../fonts/SuisseIntl-Bold.svg#SuisseIntl-Bold") format("svg");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'a_RubricaXtCn';
-    src: url('../fonts/ARubricaXtCn.eot');
-    src: url('../fonts/ARubricaXtCn.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ARubricaXtCn.woff2') format('woff2'),
-        url('../fonts/ARubricaXtCn.woff') format('woff'),
-        url('../fonts/ARubricaXtCn.ttf') format('truetype'),
-        url('../fonts/ARubricaXtCn.svg#ARubricaXtCn') format('svg');
+    font-family: "a_RubricaXtCn";
+    src: url("../fonts/ARubricaXtCn.eot");
+    src: url("../fonts/ARubricaXtCn.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/ARubricaXtCn.woff2") format("woff2"),
+        url("../fonts/ARubricaXtCn.woff") format("woff"),
+        url("../fonts/ARubricaXtCn.ttf") format("truetype"),
+        url("../fonts/ARubricaXtCn.svg#ARubricaXtCn") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'a_RubricaXtCn';
-    src: url('../fonts/ARubricaXtCnItalic.eot');
-    src: url('../fonts/ARubricaXtCnItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ARubricaXtCnItalic.woff2') format('woff2'),
-        url('../fonts/ARubricaXtCnItalic.woff') format('woff'),
-        url('../fonts/ARubricaXtCnItalic.ttf') format('truetype'),
-        url('../fonts/ARubricaXtCnItalic.svg#ARubricaXtCnItalic') format('svg');
+    font-family: "a_RubricaXtCn";
+    src: url("../fonts/ARubricaXtCnItalic.eot");
+    src: url("../fonts/ARubricaXtCnItalic.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/ARubricaXtCnItalic.woff2") format("woff2"),
+        url("../fonts/ARubricaXtCnItalic.woff") format("woff"),
+        url("../fonts/ARubricaXtCnItalic.ttf") format("truetype"),
+        url("../fonts/ARubricaXtCnItalic.svg#ARubricaXtCnItalic") format("svg");
     font-weight: normal;
     font-style: italic;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Druk Cyr';
     src: url('../fonts/DrukCyr-MediumItalic.eot');
     src: local('Druk Cyr Medium Italic'), local('DrukCyr-MediumItalic'),
@@ -54,4 +56,12 @@
         url('../fonts/DrukCyr-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
+} */
+@font-face {
+    font-family: "Druk Cyr";
+    font-display: swap;
+    src: url("../fonts/DrukCyr-MediumItalic.woff2") format("woff2"),
+        url("../fonts/DrukCyr-MediumItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
