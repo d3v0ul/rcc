@@ -3590,6 +3590,15 @@ select:focus, textarea:focus, input:focus {
 	.rating_items {
 		margin-bottom: 80px;
 	}
+	.vacant_place{
+		.ri_line{
+			span:nth-child(1){
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}		
+		}
+	}
 	.ri_line {
 		display: block;
 		height: auto;
@@ -3603,7 +3612,8 @@ select:focus, textarea:focus, input:focus {
 				font-size: 20px;
 				position: absolute;
 				left: 15px;
-				top: 40px;
+				top: 50%;
+				transform: translateY(-50%);
 				> img {
 					width: 16px;
 				}
@@ -3611,7 +3621,8 @@ select:focus, textarea:focus, input:focus {
 			&:nth-child(2) {
 				position: absolute;
 				left: 50px;
-				top: 20px;
+				top: 50%;
+				transform: translateY(-50%);
 				width: 54px;
 				min-width: auto;
 				> img {
@@ -4467,6 +4478,15 @@ select:focus, textarea:focus, input:focus {
 		width: 17px;
 		height: 15px;
 	}
+
+
+
+
+
+
+
+
+
 } /*767*/
 @media only screen and (max-width: 500px) {
 	/*.fc_block{

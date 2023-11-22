@@ -9958,6 +9958,12 @@ footer.bot_fix .f_form {
     margin-bottom: 80px;
   }
 
+  .vacant_place .ri_line span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .ri_line {
     display: block;
     height: auto;
@@ -9973,7 +9979,8 @@ footer.bot_fix .f_form {
     font-size: 20px;
     position: absolute;
     left: 15px;
-    top: 40px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .ri_line > span:nth-child(1) > img {
     width: 16px;
@@ -9981,7 +9988,8 @@ footer.bot_fix .f_form {
   .ri_line > span:nth-child(2) {
     position: absolute;
     left: 50px;
-    top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 54px;
     min-width: auto;
   }
