@@ -356,6 +356,11 @@ $(() => {
     //    $(".phone").mask("+ (9)(999) 999-9999");
     // });
 
+    //hide loading
+    setTimeout(function() {
+        $(".e_btns").addClass("visible");
+    }, 100);
+
     //custom scrollbars
     $(".bp_content").mCustomScrollbar({
         mouseWheel: {

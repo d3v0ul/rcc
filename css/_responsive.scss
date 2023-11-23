@@ -2310,6 +2310,9 @@ select:focus, textarea:focus, input:focus {
 		font-size: 32px;
 		letter-spacing: 5.12px;
 	}
+.time_slider{
+	max-height: 54px;
+}
 } /*1025*/
 @media only screen and (min-width: 1025px) {
 	/*+1025*/
@@ -3172,6 +3175,7 @@ select:focus, textarea:focus, input:focus {
 		margin-bottom: 20px;
 	}
 	.time_slider {
+		max-height: 46px;
 		margin-bottom: 30px;
 	}
 	.broadcasts {

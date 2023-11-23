@@ -3008,6 +3008,10 @@ footer {
 }
 .e_btns {
 	margin: 68px 0 40px;
+	opacity: 0;
+	&.visible{
+		opacity: 10;
+	}
 	@extend .cl;
 	&.e_old {
 		.e_time {
@@ -6077,6 +6081,3 @@ footer {
 	margin-top: 16px;
 }
 
-.section-no-transform {
-	transform: none !important;
-}

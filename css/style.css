@@ -3057,6 +3057,10 @@ footer.main_footer.loaded {
 
 .e_btns {
   margin: 68px 0 40px;
+  opacity: 0;
+}
+.e_btns.visible {
+  opacity: 10;
 }
 .e_btns.e_old .e_time {
   float: right;
@@ -6155,10 +6159,6 @@ footer.main_footer.loaded {
   margin-top: 16px;
 }
 
-.section-no-transform {
-  transform: none !important;
-}
-
 article,
 aside,
 details,
@@ -8568,6 +8568,10 @@ footer.bot_fix .f_form {
     font-size: 32px;
     letter-spacing: 5.12px;
   }
+
+  .time_slider {
+    max-height: 54px;
+  }
 }
 /*1025*/
 @media only screen and (min-width: 1025px) {
@@ -9505,6 +9509,7 @@ footer.bot_fix .f_form {
   }
 
   .time_slider {
+    max-height: 46px;
     margin-bottom: 30px;
   }
 
