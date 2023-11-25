@@ -3356,6 +3356,7 @@ footer.main_footer.loaded {
   height: 100%;
   background: #e04141;
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 0;
 }
@@ -3372,7 +3373,7 @@ footer.main_footer.loaded {
   letter-spacing: 0.56px;
   text-transform: uppercase;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   bottom: 24px;
 }
@@ -3800,7 +3801,7 @@ footer.main_footer.loaded {
 }
 
 .results_table {
-  margin-top: 70px;
+  margin-top: 32px;
   margin-bottom: 100px;
 }
 
@@ -4712,7 +4713,7 @@ footer.main_footer.loaded {
 
 .ch_img {
   display: block;
-  margin: 30px 0;
+  margin: 24px 0;
   background: url(../images/ch_bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
@@ -4742,7 +4743,7 @@ footer.main_footer.loaded {
   color: #fff;
   font-family: "Druk Cyr";
   letter-spacing: 0.16em;
-  margin-top: 12px;
+  margin-top: 6px;
   text-transform: uppercase;
 }
 
@@ -5722,7 +5723,6 @@ footer.main_footer.loaded {
   height: 110px;
   gap: 30px;
   display: grid;
-  height: 150px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -7209,11 +7209,12 @@ footer.bot_fix .f_form {
   }
 
   .ch_img {
-    margin: 10px 0;
+    margin: 15px 0;
   }
 
   .ch_name {
     font-size: 30px;
+    margin-top: 4px;
   }
 
   .ch_nick {
@@ -7221,7 +7222,7 @@ footer.bot_fix .f_form {
   }
 
   .ch_bot {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 12px;
   }
 
@@ -8571,6 +8572,10 @@ footer.bot_fix .f_form {
 
   .time_slider {
     max-height: 54px;
+  }
+
+  .m_head {
+    font-size: 64px;
   }
 }
 /*1025*/

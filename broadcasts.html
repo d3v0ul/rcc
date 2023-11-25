@@ -23,13 +23,13 @@
         />
         <link
             rel="stylesheet"
-            type="text/css"
-            media="all"
-            href="css/style.css"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
         />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+            type="text/css"
+            media="all"
+            href="css/style.css"
         />
         <link
             rel="stylesheet"
@@ -94,17 +94,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="burger-popup__buttons">
-                    <div class="burger-popup__buttton-next"></div>
-                    <div class="burger-popup__buttton-prev"></div>
-                </div>
-                <div class="burger-popup__active-box"></div>
-                <div class="burger-popup__slide-text">
-                    <p>
-                        ВЫБЕРИ
-                        <br />
-                        СВОЮ ЛИГУ
-                    </p>
+
+                <div class="burger-popup__active-box">
+                    <div class="burger-popup__slide-text">
+                        <p>
+                            ВЫБЕРИ
+                            <br />
+                            СВОЮ ЛИГУ
+                        </p>
+                    </div>
+                    <div class="burger-popup__buttons">
+                        <div class="burger-popup__buttton-next"></div>
+                        <div class="burger-popup__buttton-prev"></div>
+                    </div>
                 </div>
             </div>
             <!-- <img src="images/vert_slider_demo.png" alt="" class="vert_slider_demo"> -->
@@ -126,7 +128,7 @@
                 <a href="events.html" class="h_events">cобытия</a>
                 <ul class="hr_menu">
                     <li>
-                        <a class="manager_btn ancLinks" href="#contacts">
+                        <a href="contacts.html">
                             Контакты
                         </a>
                     </li>
@@ -727,7 +729,7 @@
                         <a class="smi_btn" href="smi.html">Акредитация сми</a>
                     </li>
                     <li><a href="fighter.html">Бойцам</a></li>
-                    <li><a class="manager_btn" href="">Менеджерам</a></li>
+                    <li><a href="manager.html">Менеджерам</a></li>
                     <li>
                         <a href="index.html">
                             Russian Cagefighting Championship | RCC
@@ -740,169 +742,7 @@
             </div>
         </footer>
 
-        <div class="smi_popup">
-            <div class="smi_close"></div>
-            <div class="popup_content bp_content opened">
-                <div class="bp_block">
-                    <div class="bp_head">Для сми</div>
-                    <div class="smi_contact">
-                        Мы свяжемся с вами
-                        <br />
-                        в самое ближайшее время
-                    </div>
-                    <form action="#" class="smi_form">
-                        <div class="sf_item">
-                            <div class="sfi_label">Имя</div>
-                            <input
-                                class="sfi_input"
-                                type="text"
-                                placeholder="Константин Константинопольский"
-                            />
-                        </div>
-                        <div class="sf_item">
-                            <div class="sfi_label">Телефон</div>
-                            <input
-                                class="sfi_input phone"
-                                name="tel"
-                                type="tel"
-                                placeholder="+7 000 000‒00‒00"
-                                pattern="+7 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-                            />
-                        </div>
-                        <div class="sf_item">
-                            <div class="sfi_label">E-mail</div>
-                            <input
-                                class="sfi_input"
-                                type="email"
-                                placeholder="mail@mail.com"
-                            />
-                        </div>
-                        <div class="sf_item area">
-                            <div class="sfi_label">Подробнее</div>
-                            <textarea
-                                class="smi_area"
-                                cols="30"
-                                rows="10"
-                                placeholder="Ссылка на блог, информация о издании и прочее"
-                            ></textarea>
-                        </div>
-                        <div class="sf_files">
-                            <a href="" class="sf_file">Прикрепить файл</a>
-                            <div class="sf_file_add">
-                                Отчёты—2021.docx
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="sf_bot">
-                            <label class="niceCheck">
-                                <input type="checkbox" name="ch1" />
-                                <span>
-                                    Я даю согласие на обработку моих
-                                    <br />
-                                    <span>персональных данных</span>
-                                </span>
-                            </label>
-                            <input
-                                type="submit"
-                                class="sf_submit"
-                                value="Отправить"
-                            />
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="popup_thx">
-                <div class="bp_block">
-                    <div class="bp_head">Запрос отправлен</div>
-                    <div class="smi_text">
-                        Скоро наши менеджеры свяжутся с вами
-                    </div>
-                    <div class="smi_text_2">Хорошо!</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="manager_popup">
-            <div class="manager_close"></div>
-            <div class="popup_content bp_content opened">
-                <div class="bp_block">
-                    <div class="bp_head">Связаться</div>
-                    <div class="smi_contact">
-                        Мы свяжемся с вами
-                        <br />
-                        в самое ближайшее время
-                    </div>
-                    <form action="#" class="smi_form">
-                        <div class="sf_item">
-                            <div class="sfi_label">Имя</div>
-                            <input
-                                class="sfi_input"
-                                type="text"
-                                placeholder="Константин Константинопольский"
-                            />
-                        </div>
-                        <div class="sf_item">
-                            <div class="sfi_label">Телефон</div>
-                            <input
-                                class="sfi_input phone"
-                                name="tel"
-                                type="tel"
-                                placeholder="+7 000 000‒00‒00"
-                                pattern="+7 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-                            />
-                        </div>
-                        <div class="sf_item">
-                            <div class="sfi_label">E-mail</div>
-                            <input
-                                class="sfi_input"
-                                type="email"
-                                placeholder="mail@mail.com"
-                            />
-                        </div>
-                        <div class="sf_item area">
-                            <div class="sfi_label">Подробнее</div>
-                            <textarea
-                                class="smi_area"
-                                cols="30"
-                                rows="10"
-                                placeholder="Ссылка на блог, информация о издании и прочее"
-                            ></textarea>
-                        </div>
-                        <div class="sf_files">
-                            <a href="" class="sf_file">Прикрепить файл</a>
-                            <div class="sf_file_add">
-                                Отчёты—2021.docx
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="sf_bot">
-                            <label class="niceCheck">
-                                <input type="checkbox" name="ch1" />
-                                <span>
-                                    Я даю согласие на обработку моих
-                                    <br />
-                                    <span>персональных данных</span>
-                                </span>
-                            </label>
-                            <input
-                                type="submit"
-                                class="sf_submit"
-                                value="Отправить"
-                            />
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="popup_thx">
-                <div class="bp_block">
-                    <div class="bp_head">Запрос отправлен</div>
-                    <div class="smi_text">
-                        Скоро наши менеджеры свяжутся с вами
-                    </div>
-                    <div class="smi_text_2">Хорошо!</div>
-                </div>
-            </div>
-        </div>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/wow.min.js"></script>
