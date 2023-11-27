@@ -672,6 +672,16 @@ header {
 	&.x1 {
 		.b1_block {
 			width: 100vw;
+			.b1b_head{
+				text-align: center;
+				left: 50%;
+				transform: translate3d(-50%, 20vh, 0);
+			}
+			.b1b_date{
+				text-align: center;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 	}
 }
@@ -4849,6 +4859,12 @@ footer {
 }
 .rating_items {
 	margin-bottom: 160px;
+}
+.vacant_place{
+	&:nth-child(1) {
+		border-top: 1px solid #bd862f;
+		border-bottom: 1px solid #bd862f;
+	}
 }
 .r_item {
 	display: block;
