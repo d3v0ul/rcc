@@ -3973,6 +3973,10 @@ footer {
 		@include opa(7);
 	}
 }
+.field_error{
+	color: #e04141 !important;
+	border: 1px solid #e04141;
+}
 .sfi_error {
 	width: 100%;
 	height: 100%;
@@ -4061,6 +4065,7 @@ footer {
 	display: block;
 	float: right;
 	width: calc(100% - 200px);
+	padding-left: 10px;
 	height: 60px;
 	background: none;
 	font-size: 14px;

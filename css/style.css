@@ -4041,6 +4041,11 @@ footer.main_footer.loaded {
   opacity: 0.7;
 }
 
+.field_error {
+  color: #e04141 !important;
+  border: 1px solid #e04141;
+}
+
 .sfi_error {
   width: 100%;
   height: 100%;
@@ -4131,6 +4136,7 @@ footer.main_footer.loaded {
   display: block;
   float: right;
   width: calc(100% - 200px);
+  padding-left: 10px;
   height: 60px;
   background: none;
   font-size: 14px;
@@ -7587,7 +7593,7 @@ footer.bot_fix .f_form {
     padding-top: 90px;
   }
   .b1.x2 .b1_block {
-    height: calc(50% - 35px);
+    height: calc(50%);
   }
   .b1.x1 .b1_block {
     height: calc(100% - 69px);
