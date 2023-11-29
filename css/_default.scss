@@ -1745,10 +1745,16 @@ footer {
 		margin-bottom: 25px;
 		color: #dfdddd;
 		text-align: left;
+		max-width: 880px;
+		margin-bottom: 60px !important;
 		&.red {
 			color: #e04141;
 		}
 	}
+}
+.reduced {
+	max-width: 880px;
+	margin-bottom: 60px !important;
 }
 .nav {
 	margin-bottom: 40px;
@@ -1848,10 +1854,6 @@ footer {
 		text-transform: none;
 		line-height: 140%;
 	}
-}
-.reduced {
-	max-width: 880px;
-	margin-bottom: 60px !important;
 }
 .nr_img {
 	display: block;

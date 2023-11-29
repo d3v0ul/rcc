@@ -1770,9 +1770,16 @@ footer.main_footer.loaded {
   margin-bottom: 25px;
   color: #dfdddd;
   text-align: left;
+  max-width: 880px;
+  margin-bottom: 60px !important;
 }
 .news_right p.red {
   color: #e04141;
+}
+
+.reduced {
+  max-width: 880px;
+  margin-bottom: 60px !important;
 }
 
 .nav {
@@ -1875,11 +1882,6 @@ footer.main_footer.loaded {
   font-weight: 500;
   text-transform: none;
   line-height: 140%;
-}
-
-.reduced {
-  max-width: 880px;
-  margin-bottom: 60px !important;
 }
 
 .nr_img {
