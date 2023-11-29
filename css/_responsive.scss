@@ -78,6 +78,11 @@ select:focus, textarea:focus, input:focus {
 			}
 		}
 	}
+
+
+
+
+
 } /*700h >1024*/
 @media only screen and (max-width: 1024px) and (max-height: 700px) {
 	.mt_names {
@@ -390,7 +395,7 @@ select:focus, textarea:focus, input:focus {
 	.mfst_label {
 		white-space: unset;
 	}
-	#sync1 {
+	#sync1, #sync2_1 {
 		.owl-prev,
 		.owl-next {
 			bottom: -6vh;
@@ -407,6 +412,7 @@ select:focus, textarea:focus, input:focus {
 	.ft_l,
 	.ft_r {
 		/* width: 60vw !important; */
+		width: 40vw;
 	}
 	.ft_l {
 		&.resize {
@@ -535,6 +541,9 @@ select:focus, textarea:focus, input:focus {
 	}
 	.cti_text_2 {
 		font-size: 24px;
+		a{
+			font-size: 24px;
+		}
 	}
 } /*1260*/
 @media only screen and (max-width: 1200px) {
@@ -1358,7 +1367,7 @@ select:focus, textarea:focus, input:focus {
 		}
 		&.x1 {
 			.b1_block {
-				height: calc(100% - 69px);
+				height: 100%;
 			}
 		}
 	}
@@ -1422,10 +1431,11 @@ select:focus, textarea:focus, input:focus {
 		left: 15px;
 		transform: translateY(16px);
 		.x1 & {
-			left: 50%;
+			transform: translate3d(-50%, 35vh, 0) !important;
+			/*left: 50%;
 			top: 30vh;
 			transform: translate(-50%, 0);
-			text-align: center;
+			text-align: center;*/
 		}
 		> span {
 			&:nth-child(1) {
@@ -1446,7 +1456,7 @@ select:focus, textarea:focus, input:focus {
 		font-size: 12px;
 		.x1 & {
 			left: 50%;
-			top: 40vh;
+			top: 50vh;
 			transform: translate(-50%, 0);
 			text-align: center;
 		}
@@ -1536,7 +1546,7 @@ select:focus, textarea:focus, input:focus {
 			padding-right: 0 !important;
 		}
 	}
-	#sync1 {
+	#sync1, #sync2_1 {
 		.owl-prev,
 		.owl-next {
 			transform-origin: center;
@@ -2035,6 +2045,9 @@ select:focus, textarea:focus, input:focus {
 	.cti_text_2 {
 		font-size: 20px;
 		margin-top: 32px;
+		a{
+			font-size: 20px;
+		}
 	}
 	.cti_text_3 {
 		font-size: 16px;
@@ -2316,6 +2329,11 @@ select:focus, textarea:focus, input:focus {
 }
 .m_head{
 	font-size: 64px;
+}
+.e_btns{
+	.nr_tags_slider{
+		transform: translateX(0);
+	}
 }
 
 } /*1025*/
@@ -4321,11 +4339,11 @@ select:focus, textarea:focus, input:focus {
 		height: -webkit-calc(100vh - 74px);
 		height: calc(100vh - 74px);
 	}
-	#sync1 .owl-prev {
+	#sync1 .owl-prev, #sync2_1 .owl-prev {
 		// bottom: -4.4vh;
 		transform: scale(0.7);
 	}
-	#sync1 .owl-next {
+	#sync1 .owl-next, #sync2_1 .owl-next {
 		transform: rotate(180deg) scale(0.7);
 	}
 	.nr_tags {
@@ -4402,6 +4420,9 @@ select:focus, textarea:focus, input:focus {
 	.cti_text_2 {
 		font-size: 18px;
 		margin-top: 27px;
+		a{
+			font-size: 18px;
+		}
 	}
 	.cti_text_3 {
 		font-size: 14px;

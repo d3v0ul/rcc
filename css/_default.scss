@@ -1227,7 +1227,7 @@ header {
 		min-height: 580px !important;
 		> div {
 			display: table-cell;
-			vertical-align: bottom;
+			vertical-align: middle;
 		}
 	}
 	.owl-nav,
@@ -2607,7 +2607,7 @@ footer {
 	width: 100%;
 	margin-bottom: 40px;
 }
-#sync1 {
+#sync1, #sync2_1 {
 	z-index: 2;
 	.owl-dots {
 		display: none;
@@ -2652,7 +2652,7 @@ footer {
 	}
 }
 
-#sync2 {
+#sync2, #sync2_2 {
 	@extend .cl;
 	.owl-nav,
 	.owl-dots {
@@ -4673,6 +4673,7 @@ footer {
 }
 .ch_nick {
 	display: block;
+	min-height: 16px;
 	font-weight: 700;
 	font-size: 14px;
 	letter-spacing: 0.04em;
@@ -6094,6 +6095,11 @@ footer {
 	line-height: 120%;
 	color: #fff;
 	margin-top: 20px;
+	a{
+		font-size: 32px;
+		line-height: 120%;
+		color: #fff;
+	}
 }
 .cti_text_3 {
 	font-size: 18px;
