@@ -2240,8 +2240,12 @@ footer {
 	color: #fff;
 	opacity: 0.4;
 	margin-bottom: 16px;
+	position: relative;
+	padding-left: 80px;
 	> span {
-		margin-right: 24px;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 }
 .nrisr_btn {
@@ -2855,7 +2859,7 @@ footer {
 	height: -webkit-calc(100vh - 104px);
 	height: calc(100vh - 104px);
 	position: fixed;
-	z-index: 7;
+	z-index: 17;
 	background: #1d1d1d;
 	left: 0;
 	bottom: 0;
@@ -5158,12 +5162,12 @@ footer {
 		&:hover {
 			color: #e04141;
 		}
-		&:nth-child(3) {
+		&.red {
 			&:before {
 				background: #f44848;
 			}
 		}
-		&:nth-child(4) {
+		&.multi {
 			&:before {
 				background: linear-gradient(225deg, #f58529 15%, #dd2a7b 48.81%, #515bd4 85%);
 			}

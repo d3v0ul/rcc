@@ -2285,9 +2285,13 @@ footer.main_footer.loaded {
   color: #fff;
   opacity: 0.4;
   margin-bottom: 16px;
+  position: relative;
+  padding-left: 80px;
 }
 .nrisr_line > span {
-  margin-right: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .nrisr_btn {
@@ -2897,7 +2901,7 @@ footer.main_footer.loaded {
   height: -webkit-calc(100vh - 104px);
   height: calc(100vh - 104px);
   position: fixed;
-  z-index: 7;
+  z-index: 17;
   background: #1d1d1d;
   left: 0;
   bottom: 0;
@@ -5242,10 +5246,10 @@ footer.main_footer.loaded {
 .mf_socials > a:hover {
   color: #e04141;
 }
-.mf_socials > a:nth-child(3):before {
+.mf_socials > a.red:before {
   background: #f44848;
 }
-.mf_socials > a:nth-child(4):before {
+.mf_socials > a.multi:before {
   background: linear-gradient(225deg, #f58529 15%, #dd2a7b 48.81%, #515bd4 85%);
 }
 .mf_socials > a:before {
@@ -10773,9 +10777,9 @@ footer.bot_fix .f_form {
 
   .b_popup, .smi_popup,
 .manager_popup {
-    height: -moz-calc(100vh - 74px);
-    height: -webkit-calc(100vh - 74px);
-    height: calc(100vh - 74px);
+    height: -moz-calc(100dvh - 74px);
+    height: -webkit-calc(100dvh - 74px);
+    height: calc(100dvh - 74px);
   }
 
   #sync1 .owl-prev, #sync2_1 .owl-prev {
@@ -10960,6 +10964,17 @@ footer.bot_fix .f_form {
   .vp_star {
     width: 17px;
     height: 15px;
+  }
+
+  .nrisr_line {
+    font-size: 10px;
+    padding-left: 60px;
+  }
+
+  .nrisr_btn {
+    font-size: 10px;
+    line-height: 40px;
+    height: 40px;
   }
 }
 /*767*/
