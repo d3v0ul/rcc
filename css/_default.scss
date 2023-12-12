@@ -2242,6 +2242,15 @@ footer {
 	margin-bottom: 16px;
 	position: relative;
 	padding-left: 80px;
+	>a{
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 140%;
+		letter-spacing: 0.56px;
+		text-transform: uppercase;
+		color: #fff;
+	}
 	> span {
 		position: absolute;
 		left: 0;
@@ -5165,6 +5174,11 @@ footer {
 		&.red {
 			&:before {
 				background: #f44848;
+			}
+		}
+		&.black {
+			&:before {
+				background: #2c2c2c;
 			}
 		}
 		&.multi {

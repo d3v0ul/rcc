@@ -4349,7 +4349,9 @@ select:focus, textarea:focus, input:focus {
 	.nr_tags {
 		&.shared {
 			.nrt_share {
-				margin-top: 12px;
+				height: 40px;
+				line-height: 40px;
+				/*margin-top: 12px;*/
 			}
 		}
 	}
@@ -4511,6 +4513,9 @@ select:focus, textarea:focus, input:focus {
 .nrisr_line{
 	font-size: 10px;
 	padding-left: 60px;
+	>a{
+		font-size: 10px;
+	}
 }
 .nrisr_btn{
 	font-size: 10px;
@@ -4852,6 +4857,12 @@ select:focus, textarea:focus, input:focus {
 		&.shared {
 			.nrt_share {
 				width: 100%;
+				&.right{
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 168px;
+				}
 			}
 		}
 	}

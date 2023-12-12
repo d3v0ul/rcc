@@ -2288,6 +2288,15 @@ footer.main_footer.loaded {
   position: relative;
   padding-left: 80px;
 }
+.nrisr_line > a {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  color: #fff;
+}
 .nrisr_line > span {
   position: absolute;
   left: 0;
@@ -5248,6 +5257,9 @@ footer.main_footer.loaded {
 }
 .mf_socials > a.red:before {
   background: #f44848;
+}
+.mf_socials > a.black:before {
+  background: #2c2c2c;
 }
 .mf_socials > a.multi:before {
   background: linear-gradient(225deg, #f58529 15%, #dd2a7b 48.81%, #515bd4 85%);
@@ -10791,7 +10803,9 @@ footer.bot_fix .f_form {
   }
 
   .nr_tags.shared .nrt_share {
-    margin-top: 12px;
+    height: 40px;
+    line-height: 40px;
+    /*margin-top: 12px;*/
   }
 
   .fighter {
@@ -10969,6 +10983,9 @@ footer.bot_fix .f_form {
   .nrisr_line {
     font-size: 10px;
     padding-left: 60px;
+  }
+  .nrisr_line > a {
+    font-size: 10px;
   }
 
   .nrisr_btn {
@@ -11307,6 +11324,12 @@ footer.bot_fix .f_form {
 @media only screen and (max-width: 500px) {
   .nr_tags.shared .nrt_share {
     width: 100%;
+  }
+  .nr_tags.shared .nrt_share.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 168px;
   }
 }
 @media only screen and (max-width: 1025px) and (min-height: 767px) {
