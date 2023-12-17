@@ -672,12 +672,12 @@ header {
 	&.x1 {
 		.b1_block {
 			width: 100vw;
-			.b1b_head{
+			.b1b_head {
 				text-align: center;
 				left: 50%;
 				transform: translate3d(-50%, 20vh, 0);
 			}
-			.b1b_date{
+			.b1b_date {
 				text-align: center;
 				left: 50%;
 				transform: translateX(-50%);
@@ -1227,7 +1227,7 @@ header {
 		min-height: 580px !important;
 		> div {
 			display: table-cell;
-			vertical-align: middle;
+			vertical-align: bottom;
 		}
 	}
 	.owl-nav,
@@ -1274,7 +1274,7 @@ header {
 		text-align: center;
 	}
 }
-.ns_content{
+.ns_content {
 	max-width: 400px;
 }
 .img-wrap {
@@ -1286,17 +1286,16 @@ header {
 	height: 100px;
 	@extend .cl;
 }
-.ns_img_block{
+.ns_img_block {
 	display: block;
 	position: relative;
 	overflow: hidden;
-	.nri_cat{
+	.nri_cat {
 		display: block;
 		text-transform: uppercase;
 		z-index: 13;
 	}
-	.ns_img{
-
+	.ns_img {
 	}
 }
 .nsb_type {
@@ -2242,7 +2241,7 @@ footer {
 	margin-bottom: 16px;
 	position: relative;
 	padding-left: 80px;
-	>a{
+	> a {
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 700;
@@ -2622,7 +2621,8 @@ footer {
 	width: 100%;
 	margin-bottom: 40px;
 }
-#sync1, #sync2_1 {
+#sync1,
+#sync2_1 {
 	z-index: 2;
 	.owl-dots {
 		display: none;
@@ -2667,7 +2667,8 @@ footer {
 	}
 }
 
-#sync2, #sync2_2 {
+#sync2,
+#sync2_2 {
 	@extend .cl;
 	.owl-nav,
 	.owl-dots {
@@ -3034,7 +3035,7 @@ footer {
 .e_btns {
 	margin: 68px 0 40px;
 	opacity: 0;
-	&.visible{
+	&.visible {
 		opacity: 10;
 	}
 	@extend .cl;
@@ -3988,7 +3989,7 @@ footer {
 		@include opa(7);
 	}
 }
-.field_error{
+.field_error {
 	color: #e04141 !important;
 	border: 1px solid #e04141;
 }
@@ -4881,7 +4882,7 @@ footer {
 .rating_items {
 	margin-bottom: 160px;
 }
-.vacant_place{
+.vacant_place {
 	&:nth-child(1) {
 		border-top: 1px solid #bd862f;
 		border-bottom: 1px solid #bd862f;
@@ -5497,10 +5498,14 @@ footer {
 	vertical-align: top;
 	position: relative;
 	transition: 0.3s;
+	height: 275px;
 	&:hover {
 		@include opa(7);
 	}
 	> img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
 		display: block;
 	}
 }
@@ -6115,7 +6120,7 @@ footer {
 	line-height: 120%;
 	color: #fff;
 	margin-top: 20px;
-	a{
+	a {
 		font-size: 32px;
 		line-height: 120%;
 		color: #fff;
@@ -6126,4 +6131,3 @@ footer {
 	line-height: 140%;
 	margin-top: 16px;
 }
-

@@ -14,8 +14,12 @@ $(document).ready(() => {
     };
 
     const lockScrolling = () => {
+        // if ($(".b2_2_wrap")[0].classList.contains("visible")) {
+        // return;
+        // } else {
         $.fn.pagepiling.setAllowScrolling(false);
         $.fn.pagepiling.setKeyboardScrolling(false);
+        // }
     };
 
     const allowScrolling = () => {
@@ -157,7 +161,9 @@ $(document).ready(() => {
     let isScrolling = false;
     let startTouchY = 0;
     let step = 0;
-
+    if (!document.querySelector(".b1_2")) {
+        step = 1;
+    }
     const controlSteps = (isDown, isUp) => {
         if (step === 0) {
             if (isDown) {
@@ -166,7 +172,9 @@ $(document).ready(() => {
             }
         } else if (step === 1) {
             if (isUp) {
-                step = 0;
+                if (document.querySelector(".b1_2")) {
+                    step = 0;
+                }
                 initMainScreen();
             }
             if (isDown) {

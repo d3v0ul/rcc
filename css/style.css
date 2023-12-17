@@ -108,7 +108,8 @@ a:hover {
   text-decoration: none;
 }
 
-.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_strikes:after, .mf_about:after, .eb_top:after, .mac_cols:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fcc_vs:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after, #sync2_2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .smi_page:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
+.cl:after, .mfn_top:after, .column_progress:after, .mfst_right:after, .mfst_left:after, .mf_strikes:after, .mf_about:after, .eb_top:after, .mac_cols:after, .m_top:after, .sf_bot:after, .sfi_imgs:after, .sfi_top:after, .sf_item:after, .pn_top:after, .fc_line:after, .fcc_vs:after, .fc_block:after, .e_time:after, .e_btns:after, .b_item:after, #sync2:after,
+#sync2_2:after, .nr_text_cols:after, .nr_items_top:after, .f_socials:after, .ns_bot:after, .smi_page:after, .mfg_content:after, .mf_top:after, .ri_line:after, .content:after, .m_about:after, .m4:after, .p_404:after, .conf:after, .fighter:after, .fight_card:after, .event_inner_top:after, .events:after, .bi_content:after, .broadcasts:after, .news_socials:after, .news:after, .f_bot:after, .f_top:after, .b3:after, .b1_2:after, .header:after {
   content: "";
   display: block;
   clear: both;
@@ -1227,7 +1228,7 @@ header.h_main.dark {
 }
 .news_slider .owl-item > div {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 .news_slider .owl-nav,
 .news_slider .owl-dots {
@@ -2670,28 +2671,34 @@ footer.main_footer.loaded {
   margin-bottom: 40px;
 }
 
-#sync1, #sync2_1 {
+#sync1,
+#sync2_1 {
   z-index: 2;
 }
-#sync1 .owl-dots, #sync2_1 .owl-dots {
+#sync1 .owl-dots,
+#sync2_1 .owl-dots {
   display: none;
 }
-#sync1 .item, #sync2_1 .item {
+#sync1 .item,
+#sync2_1 .item {
   display: table;
   width: 100%;
   /*height: 430px; */
 }
-#sync1 .item > span, #sync2_1 .item > span {
+#sync1 .item > span,
+#sync2_1 .item > span {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-#sync1 .item > span > img, #sync2_1 .item > span > img {
+#sync1 .item > span > img,
+#sync2_1 .item > span > img {
   display: inline-block;
   vertical-align: middle;
 }
 #sync1 .owl-prev,
-#sync1 .owl-next, #sync2_1 .owl-prev,
+#sync1 .owl-next,
+#sync2_1 .owl-prev,
 #sync2_1 .owl-next {
   display: block;
   width: 30px;
@@ -2702,33 +2709,40 @@ footer.main_footer.loaded {
   transition: 0.3s;
 }
 #sync1 .owl-prev:hover,
-#sync1 .owl-next:hover, #sync2_1 .owl-prev:hover,
+#sync1 .owl-next:hover,
+#sync2_1 .owl-prev:hover,
 #sync2_1 .owl-next:hover {
   filter: alpha(Opacity=70);
   opacity: 0.7;
 }
 #sync1 .owl-prev > span,
-#sync1 .owl-next > span, #sync2_1 .owl-prev > span,
+#sync1 .owl-next > span,
+#sync2_1 .owl-prev > span,
 #sync2_1 .owl-next > span {
   display: none !important;
 }
-#sync1 .owl-prev, #sync2_1 .owl-prev {
+#sync1 .owl-prev,
+#sync2_1 .owl-prev {
   left: 0;
 }
-#sync1 .owl-next, #sync2_1 .owl-next {
+#sync1 .owl-next,
+#sync2_1 .owl-next {
   transform: rotate(180deg);
   right: 0;
 }
 
 #sync2 .owl-nav,
-#sync2 .owl-dots, #sync2_2 .owl-nav,
+#sync2 .owl-dots,
+#sync2_2 .owl-nav,
 #sync2_2 .owl-dots {
   display: none;
 }
-#sync2 .owl-item, #sync2_2 .owl-item {
+#sync2 .owl-item,
+#sync2_2 .owl-item {
   max-width: 141px;
 }
-#sync2 .item, #sync2_2 .item {
+#sync2 .item,
+#sync2_2 .item {
   display: table;
   float: left;
   width: 100%;
@@ -2737,20 +2751,24 @@ footer.main_footer.loaded {
   cursor: pointer;
   transition: 0.3s;
 }
-#sync2 .item:hover, #sync2_2 .item:hover {
+#sync2 .item:hover,
+#sync2_2 .item:hover {
   filter: alpha(Opacity=40);
   opacity: 0.4;
 }
-#sync2 .item > span, #sync2_2 .item > span {
+#sync2 .item > span,
+#sync2_2 .item > span {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-#sync2 .item > span > img, #sync2_2 .item > span > img {
+#sync2 .item > span > img,
+#sync2_2 .item > span > img {
   display: inline-block;
   vertical-align: middle;
 }
-#sync2 .current .item, #sync2_2 .current .item {
+#sync2 .current .item,
+#sync2_2 .current .item {
   filter: alpha(Opacity=100);
   opacity: 1;
 }
@@ -5584,12 +5602,16 @@ footer.main_footer.loaded {
   vertical-align: top;
   position: relative;
   transition: 0.3s;
+  height: 275px;
 }
 .mfv_video:hover {
   filter: alpha(Opacity=70);
   opacity: 0.7;
 }
 .mfv_video > img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
   display: block;
 }
 
@@ -6590,7 +6612,8 @@ footer.bot_fix .f_form {
   }
 
   #sync1 .owl-prev,
-#sync1 .owl-next, #sync2_1 .owl-prev,
+#sync1 .owl-next,
+#sync2_1 .owl-prev,
 #sync2_1 .owl-next {
     bottom: -6vh;
   }
@@ -6607,11 +6630,13 @@ footer.bot_fix .f_form {
   .ft_l,
 .ft_r {
     /* width: 60vw !important; */
-    width: 40vw;
+    /*width: 40vw;*/
   }
 
-  .ft_l.resize {
-    transform: translate3d(-100%, -50%, 0) scale(1);
+  .ft_l {
+    /*&.resize {
+    	transform: translate3d(-100%, -50%, 0) scale(1);
+    }*/
   }
 
   .b1_2_names {
@@ -7617,10 +7642,6 @@ footer.bot_fix .f_form {
     font-size: 10px;
   }
 
-  .top_block {
-    height: auto;
-  }
-
   .b1 {
     position: static;
     padding-top: 90px;
@@ -7824,14 +7845,17 @@ footer.bot_fix .f_form {
   }
 
   #sync1 .owl-prev,
-#sync1 .owl-next, #sync2_1 .owl-prev,
+#sync1 .owl-next,
+#sync2_1 .owl-prev,
 #sync2_1 .owl-next {
     transform-origin: center;
   }
-  #sync1 .owl-prev, #sync2_1 .owl-prev {
+  #sync1 .owl-prev,
+#sync2_1 .owl-prev {
     left: 5px;
   }
-  #sync1 .owl-next, #sync2_1 .owl-next {
+  #sync1 .owl-next,
+#sync2_1 .owl-next {
     right: 5px;
     transform: rotate(180deg);
   }
@@ -10794,11 +10818,13 @@ footer.bot_fix .f_form {
     height: calc(100dvh - 74px);
   }
 
-  #sync1 .owl-prev, #sync2_1 .owl-prev {
+  #sync1 .owl-prev,
+#sync2_1 .owl-prev {
     transform: scale(0.7);
   }
 
-  #sync1 .owl-next, #sync2_1 .owl-next {
+  #sync1 .owl-next,
+#sync2_1 .owl-next {
     transform: rotate(180deg) scale(0.7);
   }
 
