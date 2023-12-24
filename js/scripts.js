@@ -250,39 +250,51 @@ $(() => {
     }
 
     //news fixed
-    var nif = window.matchMedia("all and (min-width: 1024px)");
-    if (nif.matches) {
-        if (document.querySelector(".razdel")) {
-            var $element = $(".razdel");
-            let counter = 0;
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop() + $(window).height();
-                var offset = $element.offset().top;
-                if (scroll > offset && counter == 0) {
-                    $(".news_left").addClass("static");
-                } else {
-                    $(".news_left").removeClass("static");
-                }
-            });
-        }
-    } else {
-    }
+    // var nif = window.matchMedia("all and (min-width: 1024px)");
+    // if (nif.matches) {
+    //     if (document.querySelector(".razdel")) {
+    //         var $element = $(".razdel");
+    //         let counter = 0;
+    //         $(window).scroll(function () {
+    //             var scroll = $(window).scrollTop() + $(window).height();
+    //             var offset = $element.offset().top;
+    //             if (scroll > offset && counter == 0) {
+    //                 $(".news_left").addClass("static");
+    //             } else {
+    //                 $(".news_left").removeClass("static");
+    //             }
+    //         });
+    //     }
+    // } else {
+    // }
 
-    //fighter fixed
-    // var fif = window.matchMedia('all and (min-width: 1200px)');
-    // if (fif.matches) {
-    //     var $element = $('footer');
-    //     let counter = 0;
-    //     $(window).scroll(function() {
-    //         var scroll = $(window).scrollTop() + $(window).height();
-    //         var offset = $element.offset().top
-    //         if (scroll > offset && counter == 0) {
-    //             // $(".ft_left").addClass('footed');
-    //         } else{
-    //             // $(".ft_left").removeClass('footed');
+    // if (document.querySelector(".popular_news")) {
+    //     $(window).scroll(function () {
+    //         var trigger = $(".popular_news").offset().top;
+    //         if ($(this).scrollTop() + $(window).height() > trigger) {
+    //             $(".news_left").addClass("static");
+    //         } else {
+    //             $(".news_left").removeClass("static");
     //         }
     //     });
-    // } else {}
+    // }
+
+
+    //fighter fixed
+    var fif = window.matchMedia('all and (min-width: 1200px)');
+    if (fif.matches) {
+        var $element = $('footer');
+        let counter = 0;
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop() + $(window).height();
+            var offset = $element.offset().top
+            if (scroll > offset && counter == 0) {
+                // $(".ft_left").addClass('footed');
+            } else{
+                // $(".ft_left").removeClass('footed');
+            }
+        });
+    } else {}
 
     //smi popup
     // if (document.querySelector(".smi_btn")){
@@ -433,17 +445,7 @@ $(() => {
 
     // console.log(isNewsPage());
 
-    if (document.querySelector(".popular_news")) {
-        $(window).scroll(function () {
-            var trigger = $(".popular_news").offset().top;
-            if ($(this).scrollTop() + $(window).height() > trigger) {
-                $(".news_left").addClass("static");
-            } else {
-                $(".news_left").removeClass("static");
-            }
-        });
-    }
-
+    
     //owl sliders
     if (document.querySelector(".news_slider")) {
         var newsSlider = $(".news_slider");
@@ -835,12 +837,6 @@ $(() => {
         var onscreen = sync2.find(".owl-item.active").length - 1;
         var start = sync2.find(".owl-item.active").first().index();
         var end = sync2.find(".owl-item.active").last().index();
-        // if (current > end) {
-        //     sync2.data("owl.carousel").to(current, 100, true);
-        // }
-        // if (current < start) {
-        //     sync2.data("owl.carousel").to(current - onscreen, 100, true);
-        // }
     }
 
     function syncPosition2(el) {
@@ -857,6 +853,8 @@ $(() => {
         sync1.data("owl.carousel").to(number, 300, true);
     });
 });
+
+
 
 
 
@@ -884,7 +882,7 @@ $(() => {
             responsiveRefreshRate: 200,
         })
         .on("changed.owl.carousel", (elem) => {
-            syncPosition(elem, this._current);
+            syncPositionB(elem, this._current);
             if (sync1b_btns) {
                 sync1b_setheight(sync1b_btns);
             }
@@ -905,7 +903,7 @@ $(() => {
             slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
             responsiveRefreshRate: 100,
         })
-        .on("changed.owl.carousel", syncPosition2);
+        .on("changed.owl.carousel", syncPosition2B);
 
     function sync1b_setheight(sync1b_btns) {
         var sync2bh = sync2b.height();
@@ -921,11 +919,7 @@ $(() => {
         });
     }
 
-    function syncPosition(el, current) {
-        //if you set loop to false, you have to restore this next line
-        // var current = el.item.index;
-
-        //if you disable loop you have to comment this block
+    function syncPositionB(el, current) {
         var count = el.item.count - 1;
         var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
         if (current < 0) {
@@ -945,15 +939,9 @@ $(() => {
         var onscreen = sync2b.find(".owl-item.active").length - 1;
         var start = sync2b.find(".owl-item.active").first().index();
         var end = sync2b.find(".owl-item.active").last().index();
-        // if (current > end) {
-        //     sync2b.data("owl.carousel").to(current, 100, true);
-        // }
-        // if (current < start) {
-        //     sync2b.data("owl.carousel").to(current - onscreen, 100, true);
-        // }
     }
 
-    function syncPosition2(el) {
+    function syncPosition2B(el) {
         console.log(213);
         if (syncedSecondary) {
             var number = el.item.index;
@@ -967,6 +955,209 @@ $(() => {
         sync1b.data("owl.carousel").to(number, 300, true);
     });
 
+
+//sync3 fight slider (synced) 
+    var sync1с = $("#sync3_1");
+    var sync2с = $("#sync3_2");
+    var syncedSecondary = true;
+    var hqq3 = window.matchMedia("all and (max-width: 767px)");
+    if (hqq3.matches) {
+        var slidesPerPage = 4;
+    } else {
+        var slidesPerPage = 8;
+    }
+
+    var sync1b_btns;
+
+    sync1с
+        .owlCarousel({
+            items: 1,
+            slideSpeed: 2000,
+            nav: true,
+            autoplay: false,
+            dots: true,
+            loop: true,
+            responsiveRefreshRate: 200,
+        })
+        .on("changed.owl.carousel", (elem) => {
+            syncPositionC(elem, this._current);
+            if (sync1с_btns) {
+                sync1с_setheight(sync1с_btns);
+            }
+        });
+
+    sync2с
+        .on("initialized.owl.carousel", function () {
+            sync2с.find(".owl-item").eq(0).addClass("current");
+            sync1с_btns = document.querySelectorAll("#sync3_1 .owl-nav>button");
+            sync1с_setheight(sync1с_btns);
+        })
+        .owlCarousel({
+            items: slidesPerPage,
+            dots: true,
+            nav: false,
+            smartSpeed: 200,
+            slideSpeed: 500,
+            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate: 100,
+        })
+        .on("changed.owl.carousel", syncPosition2C);
+
+    function sync1с_setheight(sync1с_btns) {
+        var sync2сh = sync2с.height();
+        sync1с_btns.forEach((btn) => {
+            btn.setAttribute(
+                "style",
+                "width: " +
+                    sync2сh +
+                    "px; height: " +
+                    sync2сh +
+                    "px; top:unset; bottom:unset;"
+            );
+        });
+    }
+
+    function syncPositionC(el, current) {
+        //if you set loop to false, you have to restore this next line
+        // var current = el.item.index;
+
+        //if you disable loop you have to comment this block
+        var count = el.item.count - 1;
+        var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+        if (current < 0) {
+            current = count;
+        }
+        if (current > count) {
+            current = 0;
+        }
+
+        //end block
+
+        sync2с
+            .find(".owl-item")
+            .removeClass("current")
+            .eq(current)
+            .addClass("current");
+        var onscreen = sync2с.find(".owl-item.active").length - 1;
+        var start = sync2с.find(".owl-item.active").first().index();
+        var end = sync2с.find(".owl-item.active").last().index();
+    }
+
+    function syncPosition2C(el) {
+        console.log(213);
+        if (syncedSecondary) {
+            var number = el.item.index;
+            sync1с.data("owl.carousel").to(number, 100, true);
+        }
+    }
+
+    sync2с.on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var number = $(this).index();
+        sync1с.data("owl.carousel").to(number, 300, true);
+    });
+
+
+//sync4 fight slider (synced) 
+    var sync1d = $("#sync4_1");
+    var sync2d = $("#sync4_2");
+    var syncedSecondary = true;
+    var hqq4 = window.matchMedia("all and (max-width: 767px)");
+    if (hqq4.matches) {
+        var slidesPerPage = 4;
+    } else {
+        var slidesPerPage = 8;
+    }
+
+    var sync1d_btns;
+
+    sync1d
+        .owlCarousel({
+            items: 1,
+            slideSpeed: 2000,
+            nav: true,
+            autoplay: false,
+            dots: true,
+            loop: true,
+            responsiveRefreshRate: 200,
+        })
+        .on("changed.owl.carousel", (elem) => {
+            syncPositionD(elem, this._current);
+            if (sync1d_btns) {
+                sync1d_setheight(sync1d_btns);
+            }
+        });
+
+    sync2d
+        .on("initialized.owl.carousel", function () {
+            sync2d.find(".owl-item").eq(0).addClass("current");
+            sync1d_btns = document.querySelectorAll("#sync2_1 .owl-nav>button");
+            sync1d_setheight(sync1d_btns);
+        })
+        .owlCarousel({
+            items: slidesPerPage,
+            dots: true,
+            nav: false,
+            smartSpeed: 200,
+            slideSpeed: 500,
+            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate: 100,
+        })
+        .on("changed.owl.carousel", syncPosition2D);
+
+    function sync1d_setheight(sync1d_btns) {
+        var sync2dh = sync2d.height();
+        sync1d_btns.forEach((btn) => {
+            btn.setAttribute(
+                "style",
+                "width: " +
+                    sync2dh +
+                    "px; height: " +
+                    sync2dh +
+                    "px; top:unset; bottom:unset;"
+            );
+        });
+    }
+
+    function syncPositionD(el, current) {
+        //if you set loop to false, you have to restore this next line
+        // var current = el.item.index;
+
+        //if you disable loop you have to comment this block
+        var count = el.item.count - 1;
+        var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+        if (current < 0) {
+            current = count;
+        }
+        if (current > count) {
+            current = 0;
+        }
+
+        //end block
+
+        sync2d
+            .find(".owl-item")
+            .removeClass("current")
+            .eq(current)
+            .addClass("current");
+        var onscreen = sync2d.find(".owl-item.active").length - 1;
+        var start = sync2d.find(".owl-item.active").first().index();
+        var end = sync2d.find(".owl-item.active").last().index();
+    }
+
+    function syncPosition2D(el) {
+        console.log(213);
+        if (syncedSecondary) {
+            var number = el.item.index;
+            sync1d.data("owl.carousel").to(number, 100, true);
+        }
+    }
+
+    sync2d.on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var number = $(this).index();
+        sync1d.data("owl.carousel").to(number, 300, true);
+    });
 
 
 

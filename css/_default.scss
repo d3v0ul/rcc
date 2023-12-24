@@ -2240,7 +2240,7 @@ footer {
 	opacity: 0.4;
 	margin-bottom: 16px;
 	position: relative;
-	padding-left: 80px;
+	padding-left: 100px;
 	> a {
 		font-size: 14px;
 		font-style: normal;
@@ -2622,7 +2622,9 @@ footer {
 	margin-bottom: 40px;
 }
 #sync1,
-#sync2_1 {
+#sync2_1,
+#sync3_1,
+#sync4_1 {
 	z-index: 2;
 	.owl-dots {
 		display: none;
@@ -2668,7 +2670,9 @@ footer {
 }
 
 #sync2,
-#sync2_2 {
+#sync2_2,
+#sync3_2,
+#sync4_2 {
 	@extend .cl;
 	.owl-nav,
 	.owl-dots {
@@ -4999,7 +5003,8 @@ footer {
 	display: block;
 	width: 120px;
 	height: 120px;
-	margin: 140px auto 230px;
+	/*margin: 140px auto 230px;*/
+	margin: 140px auto 0;
 	border: 1px solid #e04141;
 	text-align: center;
 	line-height: 118px;
