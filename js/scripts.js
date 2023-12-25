@@ -309,6 +309,12 @@ $(() => {
     //     $(".smi_popup").removeClass("opened");
     // });}
 
+    //thx_block
+    $(".thx_b_btn").click(function () {
+        $(".smi_form").hide();
+        $(".thx_block").show();
+    });
+
     //Прокрутка по якорям
     if (document.querySelector(".ancLinks")) {
         $(".ancLinks").bind("click", function (e) {
@@ -675,22 +681,24 @@ $(() => {
         }
     }
     function translateTagSlider() {
-        let slider = document.querySelector(".nr_tags_slider .owl-stage");
-        if (slider.clientWidth > document.documentElement.clientWidth) {
-            document
-                .querySelector(".nr_tags_slider")
-                .setAttribute(
-                    "style",
-                    "transform: translateX(-16px); width: calc(100% + 32px);"
-                );
-            document
-                .querySelector(".nr_tags_slider .owl-stage-outer")
-                .setAttribute("style", "padding-left: 16px; margin: 0");
-        } else {
-            document.querySelector(".nr_tags_slider").removeAttribute("style");
-            document
-                .querySelector(".nr_tags_slider .owl-stage-outer")
-                .removeAttribute("style");
+        if(document.querySelector(".nr_tags_slider .owl-stage")){
+            let slider = document.querySelector(".nr_tags_slider .owl-stage");
+            if (slider.clientWidth > document.documentElement.clientWidth) {
+                document
+                    .querySelector(".nr_tags_slider")
+                    .setAttribute(
+                        "style",
+                        "transform: translateX(-16px); width: calc(100% + 32px);"
+                    );
+                document
+                    .querySelector(".nr_tags_slider .owl-stage-outer")
+                    .setAttribute("style", "padding-left: 16px; margin: 0");
+            } else {
+                document.querySelector(".nr_tags_slider").removeAttribute("style");
+                document
+                    .querySelector(".nr_tags_slider .owl-stage-outer")
+                    .removeAttribute("style");
+            }
         }
     }
     if (document.querySelector(".nr_tags_slider")) {

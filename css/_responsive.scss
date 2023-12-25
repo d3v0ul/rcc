@@ -966,6 +966,9 @@ select:focus, textarea:focus, input:focus {
 	.fc_left {
 		> span {
 			font-size: 18px;
+			>a{
+				font-size: 18px;
+			}
 		}
 	}
 	.fc_center {
@@ -4262,6 +4265,9 @@ select:focus, textarea:focus, input:focus {
 			display: block;
 			text-align: center;
 			font-size: 18px;
+			>a{
+				font-size: 18px;
+			}
 		}
 	}
 	.fc_center {

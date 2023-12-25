@@ -693,6 +693,7 @@ header {
 	height: 100dvh;
 	overflow: hidden;
 	.b1_block {
+		transform: translateY(0);
 		bottom: -100vh;
 	}
 	.b1b_all {
@@ -750,19 +751,19 @@ header {
 		filter: brightness(50%);
 	}
 	&.b1b_1 {
-		transition: 1.4s;
+		transition: transform 1.4s;
 	}
 	&.b1b_2 {
 		/*background: url(../images/b1i_2.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 33.35vw;
-		transition: 1.6s;
+		transition: transform 1.6s;
 	}
 	&.b1b_3 {
 		/*background: url(../images/b1i_3.jpg) 0 0 no-repeat;
 		background-size: cover;*/
 		left: 66.7vw;
-		transition: 1.8s;
+		transition: transform 1.8s;
 		.b1b_all {
 			display: none;
 		}
@@ -2211,6 +2212,9 @@ footer {
 	color: #fff;
 	text-transform: uppercase;
 	caret-color: #e04141;
+	&.no-result{
+		color: #F2A000;
+	}
 }
 .nri_search_results {
 	position: absolute;
@@ -3856,6 +3860,9 @@ footer {
 		display: block;
 	}
 }
+.thx_block{
+	display: none;
+}
 .smi_text {
 	font-size: 32px;
 	margin: 40px 0 48px;
@@ -4107,7 +4114,8 @@ footer {
 	height: 160px;
 	line-height: 120%;
 	letter-spacing: 0.56px;
-	padding: 25px 0 10px;
+	padding-top: 25px;
+	padding-bottom: 10px;
 }
 .sf_files {
 	margin-top: 24px;
@@ -5612,7 +5620,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
+	width: 75%;
 	height: 100%;
 	border-radius: 15px;
 	margin: 0 20px;
