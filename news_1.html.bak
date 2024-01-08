@@ -165,7 +165,6 @@
 		<!-- <div class="nr_head">новости</div> -->
 		<div class="nr_top">
 			<img src="images/nrt_2.jpg" alt="">
-			<span class="darkener"></span>
 			<div class="nrt_cat">MMA</div>
 			<h1 class="nrt_name">«Я просто хочу драться с лучшими» <br> - Чжан Пеймиан нацелен на титул чемпиона</h1>
 			<div class="nrt_date">21 декабря 2022 </div>
@@ -177,138 +176,159 @@
 		</div>
 
 		<div class="fight_slider">
-			<div class="swiper lfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-			</div>
-			<div class="swiper sfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-				<button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-				<button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">›</span></button>
-			</div>
+		  <div id="sync1" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		  </div>
+		  <div id="sync2" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		  </div>
 		</div>
 
 		<div class="fight_slider">
-			<div class="swiper lfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-			</div>
-			<div class="swiper sfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-				<button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-				<button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">›</span></button>
-			</div>
+		  <div id="sync2_1" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		  </div>
+		  <div id="sync2_2" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		  </div>
 		</div>
 
 		<div class="fight_slider">
-			<div class="swiper lfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-			</div>
-			<div class="swiper sfs">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_7.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_8.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_9.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_10.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_1.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_2.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_3.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_4.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_5.jpg" alt=""></span></div>
-					<div class="swiper-slide"><span><img src="images/fs_6.jpg" alt=""></span></div>
-				</div>
-				<button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-				<button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">›</span></button>
-			</div>
+		  <div id="sync3_1" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		  </div>
+		  <div id="sync3_2" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		  </div>
+		</div>
+
+		<div class="fight_slider">
+		  <div id="sync4_1" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_1.jpg" alt=""></span></div>
+		  </div>
+		  <div id="sync4_2" class="owl-carousel">
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_1.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_2.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_3.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_4.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_5.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_6.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_7.jpg" alt=""></span></div>
+		      <div class="item"><span><img src="images/fs_small_8.jpg" alt=""></span></div>
+		  </div>
 		</div>
 
 		<div class="nr_tags shared">
@@ -435,13 +455,13 @@
 
 <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/mCustomScrollbar.min.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
 </body>
 </html>

@@ -187,7 +187,8 @@ select:focus, textarea:focus, input:focus {
 		}
 	}
 	.ns_content {
-		width: 640px;
+		width: 27.5vw;
+		max-width: unset;
 	}
 	.ns_img {
 		width: 100%;
@@ -406,16 +407,6 @@ select:focus, textarea:focus, input:focus {
 		br {
 			display: none;
 		}
-	}
-	.ft_l,
-	.ft_r {
-		/* width: 60vw !important; */
-		/*width: 40vw;*/
-	}
-	.ft_l {
-		/*&.resize {
-			transform: translate3d(-100%, -50%, 0) scale(1);
-		}*/
 	}
 	.b1_2_names {
 		margin: 3vw 0;
@@ -761,8 +752,8 @@ select:focus, textarea:focus, input:focus {
 	}
 	.b3_wrap {
 		&::after {
-			background-position: 32% 65%;
-			background-size: 270%;
+			background-position: 17% 65%;
+			// background-size: 270%;
 		}
 	}
 	.f_address {
@@ -816,6 +807,7 @@ select:focus, textarea:focus, input:focus {
 		}
 	}
 	.b2_wrap {
+		background: #e04141 url(../images/b2_bg.svg) 15% center no-repeat;
 		.b2b_all {
 			position: absolute;
 			z-index: 1;
@@ -1005,6 +997,11 @@ select:focus, textarea:focus, input:focus {
 		}
 		> div {
 			font-size: 20px;
+			&.looser{
+				>a{
+					font-size: 20px;
+				}
+			}
 			&:nth-child(2) {
 				font-size: 12px;
 			}
@@ -1484,7 +1481,8 @@ select:focus, textarea:focus, input:focus {
 		}
 	}
 	.ns_content {
-		max-width: 250px;
+		max-width: unset;
+		width: 50.01vw;
 	}
 	.b3_text {
 		font-size: 16px;
@@ -2309,11 +2307,11 @@ select:focus, textarea:focus, input:focus {
 		transform: translate3d(-40%, -50%, 0) scale(0.5);
 	}
 	.ft_l.resize {
-		transform: translate3d(-90%, -50%, 0) scale(0.7);
+		transform: translate3d(-131%, -50%, 0) scale(1.6);
 		opacity: 1;
 	}
 	.ft_r.resize {
-		transform: translate3d(-17%, -50%, 0) scale(0.7);
+		transform: translate3d(-17%, -50%, 0) scale(1.6);
 		opacity: 1;
 	}
 	.ft_r.resize_2 {
@@ -2338,6 +2336,11 @@ select:focus, textarea:focus, input:focus {
 		.nr_tags_slider {
 			transform: translateX(0);
 		}
+	}
+	.eb_btns{
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 } /*1025*/
 @media only screen and (min-width: 1025px) {
@@ -2660,14 +2663,10 @@ select:focus, textarea:focus, input:focus {
 	}*/
 	}
 	.eb_img {
-		width: 800px;
-		max-width: 800px;
+		width: 100%;
+		// max-width: 800px;
 		height: 450px;
 		min-height: auto;
-		&.ebi_2 {
-			height: auto;
-			width: auto;
-		}
 	}
 	.eb_text_4 {
 		font-size: 26px;
@@ -2722,7 +2721,7 @@ select:focus, textarea:focus, input:focus {
 	}
 	.event_inner_top {
 		bottom: 0;
-		height: 100dvh;
+		height: 100vh;
 		.bi_right {
 			display: block;
 			float: none;
@@ -3175,7 +3174,7 @@ select:focus, textarea:focus, input:focus {
 		height: 40px;
 		line-height: 40px;
 		font-size: 10px;
-		margin: 0 5px 8px 0;
+		margin: 0 8px 8px 0;
 		padding: 0 8px;
 	}
 	.nri_name {
@@ -3306,7 +3305,9 @@ select:focus, textarea:focus, input:focus {
 		font-size: 14px;
 	}
 	.eb_content {
-		top: 24px;
+		// top: 24px;
+		transform: translateY(calc(-50% - 68px));
+		top: 50%;
 	}
 	.eb_btns {
 		width: 100%;
@@ -3315,8 +3316,8 @@ select:focus, textarea:focus, input:focus {
 		text-align: center;
 		bottom: 10px;
 		padding: 0 15px;
-		left: 50%;
-		transform: translateX(-50%);
+		// left: 50%;
+		// transform: translateX(-50%);
 		> a {
 			display: block;
 			width: 100%;
@@ -3754,7 +3755,7 @@ select:focus, textarea:focus, input:focus {
 	}
 	.b1_2_content {
 		height: 150px;
-		bottom: 52%;
+		bottom: 43% !important;
 	}
 	.ch_top {
 		position: relative;
@@ -3934,14 +3935,17 @@ select:focus, textarea:focus, input:focus {
 		text-align: center;
 		overflow: hidden;
 		> img {
-			width: 170px !important;
+			// width: 31.389vw !important;
+			width: 185px !important;
 			height: auto !important;
 			position: absolute;
-			bottom: -30px;
+			bottom: 0;
 			left: -35px;
+			// left: -3vw;
 			&:nth-child(2) {
 				left: auto;
 				right: -35px;
+				// right: -3vw;
 			}
 		}
 	}
@@ -4035,6 +4039,11 @@ select:focus, textarea:focus, input:focus {
 			padding: 0;
 			text-align: center !important;
 			font-size: 16px;
+			&.looser{
+				>a{
+					font-size: 16px;
+				}
+			}
 			&:nth-child(2) {
 				font-size: 10px;
 				line-height: 140%;
@@ -4123,7 +4132,7 @@ select:focus, textarea:focus, input:focus {
 	.b2_wrap {
 		height: 100dvh;
 		padding-left: 0;
-		// 	background: #EE4B4A url(../images/b2_bg.svg) 9% no-repeat;
+		background: #e04141 url(../images/b2_bg.svg) 25% center no-repeat;
 		background-size: 130vh;
 		//   background-position-y: 57%;
 		&.b2w_main {
@@ -4141,10 +4150,8 @@ select:focus, textarea:focus, input:focus {
 	}
 	.b3_wrap {
 		&:after {
-			background: url(../images/b2_bg.svg) left 180px no-repeat;
-			background-size: 230vh;
-			background-position-y: 70%;
-			background-position-x: 28%;
+			background: url(../images/b2_bg.svg) 25% center no-repeat;
+			background-size: 230vmin;
 		}
 	}
 	.c_head {
@@ -4160,7 +4167,8 @@ select:focus, textarea:focus, input:focus {
 		}
 	}
 	.ns_content {
-		max-width: 155px;
+		// max-width: 155px;
+		width: 48.49vw;
 	}
 	.ns_bot {
 		margin-top: 10px;
@@ -4668,7 +4676,7 @@ select:focus, textarea:focus, input:focus {
 
 @media only screen and (max-width: 767px) and (max-height: 700px) {
 	.m_col img {
-		width: 35vh !important;
+		width: 44vh !important;
 	}
 	.m_col.mc_3 img {
 		transform: translate(20px);
@@ -4790,7 +4798,7 @@ select:focus, textarea:focus, input:focus {
 		max-width: none;
 	}
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
 	.e_twins > a {
 		float: none !important;
 		width: 100%;
